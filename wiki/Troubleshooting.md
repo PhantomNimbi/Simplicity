@@ -1,17 +1,17 @@
 # Troubleshooting
 
 > 🌐 **Translate this page:**
-> [🇪🇸 Español](https://translate.google.com/translate?sl=en&tl=es&u=https://github.com/PhantomNimbi/Simplicity/wiki/Troubleshooting) ·
-> [🇫🇷 Français](https://translate.google.com/translate?sl=en&tl=fr&u=https://github.com/PhantomNimbi/Simplicity/wiki/Troubleshooting) ·
-> [🇩🇪 Deutsch](https://translate.google.com/translate?sl=en&tl=de&u=https://github.com/PhantomNimbi/Simplicity/wiki/Troubleshooting) ·
-> [🇮🇹 Italiano](https://translate.google.com/translate?sl=en&tl=it&u=https://github.com/PhantomNimbi/Simplicity/wiki/Troubleshooting) ·
-> [🇧🇷 Português](https://translate.google.com/translate?sl=en&tl=pt&u=https://github.com/PhantomNimbi/Simplicity/wiki/Troubleshooting) ·
-> [🇷🇺 Русский](https://translate.google.com/translate?sl=en&tl=ru&u=https://github.com/PhantomNimbi/Simplicity/wiki/Troubleshooting) ·
-> [🇨🇳 中文](https://translate.google.com/translate?sl=en&tl=zh-CN&u=https://github.com/PhantomNimbi/Simplicity/wiki/Troubleshooting) ·
-> [🇯🇵 日本語](https://translate.google.com/translate?sl=en&tl=ja&u=https://github.com/PhantomNimbi/Simplicity/wiki/Troubleshooting) ·
-> [🇰🇷 한국어](https://translate.google.com/translate?sl=en&tl=ko&u=https://github.com/PhantomNimbi/Simplicity/wiki/Troubleshooting) ·
-> [🇸🇦 العربية](https://translate.google.com/translate?sl=en&tl=ar&u=https://github.com/PhantomNimbi/Simplicity/wiki/Troubleshooting) ·
-> [🇮🇳 हिन्दी](https://translate.google.com/translate?sl=en&tl=hi&u=https://github.com/PhantomNimbi/Simplicity/wiki/Troubleshooting)
+> [🇪🇸 Español](https://translate.google.com/translate?sl=en&tl=es&u=https://github.com/PhantomNimbi/Simplicity/blob/main/wiki/Troubleshooting.md) ·
+> [🇫🇷 Français](https://translate.google.com/translate?sl=en&tl=fr&u=https://github.com/PhantomNimbi/Simplicity/blob/main/wiki/Troubleshooting.md) ·
+> [🇩🇪 Deutsch](https://translate.google.com/translate?sl=en&tl=de&u=https://github.com/PhantomNimbi/Simplicity/blob/main/wiki/Troubleshooting.md) ·
+> [🇮🇹 Italiano](https://translate.google.com/translate?sl=en&tl=it&u=https://github.com/PhantomNimbi/Simplicity/blob/main/wiki/Troubleshooting.md) ·
+> [🇧🇷 Português](https://translate.google.com/translate?sl=en&tl=pt&u=https://github.com/PhantomNimbi/Simplicity/blob/main/wiki/Troubleshooting.md) ·
+> [🇷🇺 Русский](https://translate.google.com/translate?sl=en&tl=ru&u=https://github.com/PhantomNimbi/Simplicity/blob/main/wiki/Troubleshooting.md) ·
+> [🇨🇳 中文](https://translate.google.com/translate?sl=en&tl=zh-CN&u=https://github.com/PhantomNimbi/Simplicity/blob/main/wiki/Troubleshooting.md) ·
+> [🇯🇵 日本語](https://translate.google.com/translate?sl=en&tl=ja&u=https://github.com/PhantomNimbi/Simplicity/blob/main/wiki/Troubleshooting.md) ·
+> [🇰🇷 한국어](https://translate.google.com/translate?sl=en&tl=ko&u=https://github.com/PhantomNimbi/Simplicity/blob/main/wiki/Troubleshooting.md) ·
+> [🇸🇦 العربية](https://translate.google.com/translate?sl=en&tl=ar&u=https://github.com/PhantomNimbi/Simplicity/blob/main/wiki/Troubleshooting.md) ·
+> [🇮🇳 हिन्दी](https://translate.google.com/translate?sl=en&tl=hi&u=https://github.com/PhantomNimbi/Simplicity/blob/main/wiki/Troubleshooting.md)
 
 This page covers the most common issues encountered when installing or using Simplicity, along with step-by-step resolutions.
 
@@ -228,8 +228,8 @@ gtk-overlay-scrolling=false
 **Explanation:** The installer did not recognise your distribution ID and skipped the dependency installation step. The theme files were still copied.
 
 **Fix:**
-1. Manually install the GTK engine packages for your distribution (see [Installation — Manual Installation](Installation#method-3--manual-installation)).
-2. Then apply the theme manually (see [Installation — Applying the Theme Manually](Installation#method-4--applying-the-theme-manually)).
+1. Manually install the GTK engine packages for your distribution (see [Installation — Manual Installation](Installation.md#method-3--manual-installation)).
+2. Then apply the theme manually (see [Installation — Applying the Theme Manually](Installation.md#method-4--applying-the-theme-manually)).
 
 If you would like your distribution to be supported officially, see the [Contributing section in the README](../README.md#contributing).
 
