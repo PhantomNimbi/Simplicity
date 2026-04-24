@@ -21,18 +21,18 @@ A clean, modern dark theme suite for Linux desktop environments, with first-clas
 - 🪟 **Window Managers** — Metacity, XFWM4 (XFCE), and Openbox themes included
 - 🐧 **Multi-Distro** — Dedicated installers for 6 major Linux distributions
 - 🖥️ **Multi-DE** — Supports GNOME, KDE, XFCE, MATE, Cinnamon, Openbox, i3, Sway
-- 🌙 **Dark Theme** — Elegant dark colour palette with blue accent (`#5294e2`)
+- 🌗 **Default Theme** — Dark chrome with light content area (`Simplicity`)
 - ☀️ **Light Theme** — Clean light variant (`Simplicity-Light`)
-- 🌗 **Dual-Tone Theme** — Dark chrome with light content area (`Simplicity-DualTone`)
+- 🌙 **Dark Theme** — Full dark variant (`Simplicity-Dark`)
 - 🔧 **Auto-Detection** — Automatically detects your distro and desktop environment
 
 ## Theme Variants
 
 | Variant | Name | Description |
 |---------|------|-------------|
-| Dark (default) | `Simplicity-Dark` | Full dark palette — header, content, and chrome all dark |
+| Default | `Simplicity` | Dark chrome (header bar, sidebar, menus) with light content area |
 | Light | `Simplicity-Light` | Full light palette — header, content, and chrome all light |
-| Dual-Tone | `Simplicity-DualTone` | Dark chrome (header bar, sidebar, menus) with light content area |
+| Dark | `Simplicity-Dark` | Full dark palette — header, content, and chrome all dark |
 
 ## Colour Palette
 
@@ -86,7 +86,7 @@ chmod +x install.sh
 The installer will:
 1. Detect your Linux distribution and desktop environment
 2. Install any required dependencies via your package manager
-3. Copy theme files to `~/.themes/Simplicity-Dark/`
+3. Copy theme files to `~/.themes/Simplicity/`
 4. Apply the theme to your current session
 
 ### Manual Installation
@@ -98,30 +98,30 @@ The installer will:
 
 2. Copy the theme to your themes directory:
    ```bash
-   cp -r Deskthem/simplicity-dark ~/.themes/"Simplicity-Dark"
+   cp -r Deskthem/simplicity-dualtone ~/.themes/"Simplicity"
    ```
 
 3. Apply the theme:
 
    **GNOME:**
    ```bash
-   gsettings set org.gnome.desktop.interface gtk-theme "Simplicity-Dark"
-   gsettings set org.gnome.desktop.wm.preferences theme "Simplicity-Dark"
-   gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+   gsettings set org.gnome.desktop.interface gtk-theme "Simplicity"
+   gsettings set org.gnome.desktop.wm.preferences theme "Simplicity"
+   gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
    ```
 
    **XFCE:**
    ```bash
-   xfconf-query -c xsettings -p /Net/ThemeName -s "Simplicity-Dark"
-   xfconf-query -c xfwm4 -p /general/theme -s "Simplicity-Dark"
+   xfconf-query -c xsettings -p /Net/ThemeName -s "Simplicity"
+   xfconf-query -c xfwm4 -p /general/theme -s "Simplicity"
    ```
 
    **Other / Universal (GTK settings file):**
    ```ini
    # ~/.config/gtk-3.0/settings.ini
    [Settings]
-   gtk-theme-name=Simplicity-Dark
-   gtk-application-prefer-dark-theme=1
+   gtk-theme-name=Simplicity
+   gtk-application-prefer-dark-theme=0
    ```
 
 ## System-Wide Installation
@@ -139,20 +139,20 @@ sudo ./install.sh --system
   --system      Install to /usr/share/themes (requires root)
   --no-apply    Install files only; do not apply to current session
   --light       Also install the Simplicity-Light variant
-  --dual-tone   Also install the Simplicity-DualTone variant
+  --dark        Also install the Simplicity-Dark variant
   --help        Show help
 ```
 
 To install all variants at once:
 
 ```bash
-./install.sh --light --dual-tone
+./install.sh --light --dark
 ```
 
 To apply a specific variant after installation:
 
 ```bash
-./scripts/apply-theme.sh --dual-tone
+./scripts/apply-theme.sh --dark
 ./scripts/apply-theme.sh --light
 ```
 
@@ -164,7 +164,7 @@ To apply a specific variant after installation:
 
 Or manually:
 ```bash
-rm -rf ~/.themes/"Simplicity-Dark"
+rm -rf ~/.themes/"Simplicity"
 gsettings reset org.gnome.desktop.interface gtk-theme
 gsettings reset org.gnome.desktop.wm.preferences theme
 ```
@@ -177,7 +177,7 @@ Simplicity/
 ├── uninstall.sh                # Uninstaller
 ├── README.md                   # This file
 │
-├── simplicity-dark/                # Dark theme files
+├── simplicity-dualtone/          # Default theme files (dark chrome, light content)
 │   ├── index.theme             # Theme metadata
 │   ├── gtk-2.0/
 │   │   └── gtkrc               # GTK 2 theme
@@ -195,8 +195,7 @@ Simplicity/
 │
 ├── simplicity-light/             # Light theme files (same layout as above)
 │
-├── simplicity-dualtone/          # Dual-tone theme files (dark chrome, light content)
-│   └── ...                     # Same layout as simplicity/
+├── simplicity-dark/              # Dark theme files (same layout as above)
 │
 ├── distros/                    # Distribution-specific installers
 │   ├── ubuntu/                 # Ubuntu, Mint, Pop!_OS

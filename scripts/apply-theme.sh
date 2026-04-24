@@ -8,9 +8,9 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
-THEME_NAME="Simplicity-Dark"
+THEME_NAME="Simplicity"
 DRY_RUN=false
-PREFER_DARK=true
+PREFER_DARK=false
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -42,17 +42,17 @@ while [[ $# -gt 0 ]]; do
             THEME_NAME="Simplicity-Light"
             PREFER_DARK=false
             ;;
-        --dual-tone)
-            THEME_NAME="Simplicity-DualTone"
-            PREFER_DARK=false
+        --dark)
+            THEME_NAME="Simplicity-Dark"
+            PREFER_DARK=true
             ;;
         --help|-h)
-            echo "Usage: $0 [--dry-run] [--light] [--dual-tone]"
+            echo "Usage: $0 [--dry-run] [--light] [--dark]"
             echo ""
             echo "Options:"
             echo "  --dry-run, -n   Show what would be done without making changes"
-            echo "  --light         Apply the Simplicity-Light (light variant) theme"
-            echo "  --dual-tone     Apply the Simplicity-DualTone (dark chrome, light content) theme"
+            echo "  --light         Apply the Simplicity-Light (full light) theme"
+            echo "  --dark          Apply the Simplicity-Dark (full dark) theme"
             echo "  --help, -h      Show this help message"
             exit 0
             ;;

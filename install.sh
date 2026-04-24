@@ -7,18 +7,20 @@
 # Options:
 #   --system      Install to /usr/share/themes (requires root) instead of ~/.themes
 #   --no-apply    Install files only; do not apply the theme to the current session
+#   --dark        Also install the Simplicity-Dark (full dark) variant
+#   --light       Also install the Simplicity-Light (full light) variant
 #   --help        Show this help message
 
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-THEME_NAME="Simplicity-Dark"
+THEME_NAME="Simplicity"
+THEME_DARK_NAME="Simplicity-Dark"
 THEME_LIGHT_NAME="Simplicity-Light"
-THEME_DUALTONE_NAME="Simplicity-DualTone"
 SYSTEM_INSTALL=false
 NO_APPLY=false
+INSTALL_DARK=false
 INSTALL_LIGHT=false
-INSTALL_DUALTONE=false
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -46,8 +48,8 @@ while [[ $# -gt 0 ]]; do
         --light)
             INSTALL_LIGHT=true
             ;;
-        --dual-tone)
-            INSTALL_DUALTONE=true
+        --dark)
+            INSTALL_DARK=true
             ;;
         --help|-h)
             echo "Simplicity Theme Suite Installer"
@@ -57,8 +59,8 @@ while [[ $# -gt 0 ]]; do
             echo "Options:"
             echo "  --system      Install to /usr/share/themes (requires root)"
             echo "  --no-apply    Install files only; do not apply the theme"
-            echo "  --light       Also install the Simplicity-Light (light variant) theme"
-            echo "  --dual-tone   Also install the Simplicity-DualTone (dark chrome, light content) theme"
+            echo "  --light       Also install the Simplicity-Light (full light) variant"
+            echo "  --dark        Also install the Simplicity-Dark (full dark) variant"
             echo "  --help, -h    Show this help message"
             exit 0
             ;;
@@ -106,7 +108,7 @@ install_theme_files() {
     fi
 
     mkdir -p "${target_dir}"
-    cp -r "${SCRIPT_DIR}/simplicity-dark/." "${target_dir}/"
+    cp -r "${SCRIPT_DIR}/simplicity-dualtone/." "${target_dir}/"
     success "Theme files installed to: ${target_dir}"
 
     if "${INSTALL_LIGHT}"; then
@@ -122,17 +124,17 @@ install_theme_files() {
         success "Light variant installed to: ${light_target_dir}"
     fi
 
-    if "${INSTALL_DUALTONE}"; then
-        local dualtone_target_dir
+    if "${INSTALL_DARK}"; then
+        local dark_target_dir
         if "${SYSTEM_INSTALL}"; then
-            dualtone_target_dir="/usr/share/themes/${THEME_DUALTONE_NAME}"
+            dark_target_dir="/usr/share/themes/${THEME_DARK_NAME}"
         else
-            dualtone_target_dir="${HOME}/.themes/${THEME_DUALTONE_NAME}"
+            dark_target_dir="${HOME}/.themes/${THEME_DARK_NAME}"
         fi
-        info "Installing dual-tone variant to: ${dualtone_target_dir}"
-        mkdir -p "${dualtone_target_dir}"
-        cp -r "${SCRIPT_DIR}/simplicity-dualtone/." "${dualtone_target_dir}/"
-        success "Dual-tone variant installed to: ${dualtone_target_dir}"
+        info "Installing dark variant to: ${dark_target_dir}"
+        mkdir -p "${dark_target_dir}"
+        cp -r "${SCRIPT_DIR}/simplicity-dark/." "${dark_target_dir}/"
+        success "Dark variant installed to: ${dark_target_dir}"
     fi
 }
 
