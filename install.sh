@@ -12,7 +12,7 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-THEME_NAME="Simplicity Dark"
+THEME_NAME="Simplicity-Dark"
 THEME_LIGHT_NAME="Simplicity-Light"
 THEME_DUALTONE_NAME="Simplicity-DualTone"
 SYSTEM_INSTALL=false

@@ -19,13 +19,13 @@ chmod +x install.sh
 
 ## Manual Installation
 
-1. Copy the `simplicity-dark/` folder from the repository root to `~/.themes/Simplicity Dark/`
+1. Copy the `simplicity-dark/` folder from the repository root to `~/.themes/Simplicity-Dark/`
 2. Apply using YaST or the command line:
 
 ### GNOME
 ```bash
-gsettings set org.gnome.desktop.interface gtk-theme "Simplicity Dark"
-gsettings set org.gnome.desktop.wm.preferences theme "Simplicity Dark"
+gsettings set org.gnome.desktop.interface gtk-theme "Simplicity-Dark"
+gsettings set org.gnome.desktop.wm.preferences theme "Simplicity-Dark"
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 ```
 
@@ -50,6 +50,6 @@ The installer will install via zypper:
 ## Uninstallation
 
 ```bash
-rm -rf ~/.themes/"Simplicity Dark"
+rm -rf ~/.themes/"Simplicity-Dark"
 gsettings reset org.gnome.desktop.interface gtk-theme
 ```
