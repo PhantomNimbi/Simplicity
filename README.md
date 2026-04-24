@@ -63,8 +63,8 @@ A clean, modern dark theme suite for Linux desktop environments, with first-clas
 ### Automatic Installation (Recommended)
 
 ```bash
-git clone https://github.com/PhantomNimbi/linux-theme.git
-cd linux-theme
+git clone https://github.com/PhantomNimbi/Deskthem.git
+cd Deskthem
 chmod +x install.sh
 ./install.sh
 ```
@@ -79,12 +79,12 @@ The installer will:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/PhantomNimbi/linux-theme.git
+   git clone https://github.com/PhantomNimbi/Deskthem.git
    ```
 
 2. Copy the theme to your themes directory:
    ```bash
-   cp -r linux-theme/deskthem ~/.themes/Deskthem
+   cp -r Deskthem/deskthem ~/.themes/Deskthem
    ```
 
 3. Apply the theme:
@@ -143,7 +143,7 @@ gsettings reset org.gnome.desktop.wm.preferences theme
 ## Repository Structure
 
 ```
-linux-theme/
+Deskthem/
 ├── install.sh                  # Main installer (auto-detects distro)
 ├── uninstall.sh                # Uninstaller
 ├── README.md                   # This file
