@@ -1,16 +1,5 @@
 # Simplicity — GTK Theme Suite for Linux
 
-A clean, modern GTK theme suite for Linux desktop environments, offering dual-tone, light, and dark variants with support for all major distributions and desktop environments.
-
-```
-███████╗██╗███╗   ███╗██████╗ ██╗     ██╗ ██████╗██╗████████╗██╗   ██╗
-██╔════╝██║████╗ ████║██╔══██╗██║     ██║██╔════╝██║╚══██╔══╝╚██╗ ██╔╝
-███████╗██║██╔████╔██║██████╔╝██║     ██║██║     ██║   ██║    ╚████╔╝ 
-╚════██║██║██║╚██╔╝██║██╔═══╝ ██║     ██║██║     ██║   ██║     ╚██╔╝  
-███████║██║██║ ╚═╝ ██║██║     ███████╗██║╚██████╗██║   ██║      ██║   
-╚══════╝╚═╝╚═╝     ╚═╝╚═╝     ╚══════╝╚═╝ ╚═════╝╚═╝   ╚═╝      ╚═╝
-```
-
 > 🌐 **Translate this page:**
 > [🇪🇸 Español](https://translate.google.com/translate?sl=en&tl=es&u=https://github.com/PhantomNimbi/Simplicity/blob/main/README.md) ·
 > [🇫🇷 Français](https://translate.google.com/translate?sl=en&tl=fr&u=https://github.com/PhantomNimbi/Simplicity/blob/main/README.md) ·
@@ -23,6 +12,17 @@ A clean, modern GTK theme suite for Linux desktop environments, offering dual-to
 > [🇰🇷 한국어](https://translate.google.com/translate?sl=en&tl=ko&u=https://github.com/PhantomNimbi/Simplicity/blob/main/README.md) ·
 > [🇸🇦 العربية](https://translate.google.com/translate?sl=en&tl=ar&u=https://github.com/PhantomNimbi/Simplicity/blob/main/README.md) ·
 > [🇮🇳 हिन्दी](https://translate.google.com/translate?sl=en&tl=hi&u=https://github.com/PhantomNimbi/Simplicity/blob/main/README.md)
+
+A clean, modern GTK theme suite for Linux desktop environments, offering dual-tone, light, and dark variants with support for all major distributions and desktop environments.
+
+```
+███████╗██╗███╗   ███╗██████╗ ██╗     ██╗ ██████╗██╗████████╗██╗   ██╗
+██╔════╝██║████╗ ████║██╔══██╗██║     ██║██╔════╝██║╚══██╔══╝╚██╗ ██╔╝
+███████╗██║██╔████╔██║██████╔╝██║     ██║██║     ██║   ██║    ╚████╔╝ 
+╚════██║██║██║╚██╔╝██║██╔═══╝ ██║     ██║██║     ██║   ██║     ╚██╔╝  
+███████║██║██║ ╚═╝ ██║██║     ███████╗██║╚██████╗██║   ██║      ██║   
+╚══════╝╚═╝╚═╝     ╚═╝╚═╝     ╚══════╝╚═╝ ╚═════╝╚═╝   ╚═╝      ╚═╝
+```
 
 ## Screenshots
 
