@@ -63,7 +63,7 @@ jobs:
           ARCHIVE_BASE="Simplicity-${VERSION}"
 
           mkdir -p "dist/${ARCHIVE_BASE}"
-          cp -r simplicity/. "dist/${ARCHIVE_BASE}/"
+          cp -r simplicity-dualtone simplicity-dark simplicity-light "dist/${ARCHIVE_BASE}/"
           cp install.sh uninstall.sh README.md LICENSE "dist/${ARCHIVE_BASE}/"
           cp -r scripts distros "dist/${ARCHIVE_BASE}/"
           if [[ -f CHANGELOG.md ]]; then
@@ -118,15 +118,15 @@ jobs:
             echo ""
             echo "**From source (git clone):**"
             echo '```bash'
-            echo "git clone https://github.com/PhantomNimbi/Deskthem.git"
-            echo "cd Deskthem"
+            echo "git clone https://github.com/PhantomNimbi/Simplicity.git"
+            echo "cd Simplicity"
             echo "./install.sh"
             echo '```'
             echo ""
             echo "**Manual (theme files only):**"
             echo '```bash'
             echo "unzip Simplicity-${VERSION}.zip"
-            echo "cp -r Simplicity-${VERSION}/simplicity ~/.themes/Simplicity"
+            echo "cp -r Simplicity-${VERSION}/simplicity-dualtone ~/.themes/Simplicity"
             echo '```'
             echo ""
             echo "---"
@@ -137,6 +137,8 @@ jobs:
             echo "./install.sh [OPTIONS]"
             echo "  --system      Install to /usr/share/themes (requires root)"
             echo "  --no-apply    Install files only; do not apply to current session"
+            echo "  --dark        Also install the Simplicity-Dark (full dark) variant"
+            echo "  --light       Also install the Simplicity-Light (full light) variant"
             echo "  --help        Show help"
             echo '```'
             echo ""
