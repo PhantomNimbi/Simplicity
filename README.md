@@ -14,13 +14,13 @@ A clean, modern GTK theme suite for Linux desktop environments, offering dual-to
 ## Screenshots
 
 ### Dual-Tone (Default) — dark chrome · light content area
-![Simplicity Dual-Tone preview](screenshots/preview.svg)
+![Simplicity Dual-Tone preview](https://github.com/PhantomNimbi/Simplicity/raw/main/screenshots/preview.svg)
 
 ### Light — full light palette
-![Simplicity Light preview](screenshots/preview-light.svg)
+![Simplicity Light preview](https://github.com/PhantomNimbi/Simplicity/raw/main/screenshots/preview-light.svg)
 
 ### Dark — full dark palette
-![Simplicity Dark preview](screenshots/preview-dark.svg)
+![Simplicity Dark preview](https://github.com/PhantomNimbi/Simplicity/raw/main/screenshots/preview-dark.svg)
 
 ## Documentation
 
@@ -242,7 +242,7 @@ Simplicity/
 
 ## Using This Repository as a Template
 
-Want to build your own Linux theme using this project as a starting point? See **[TEMPLATE_USAGE.md](TEMPLATE_USAGE.md)** for a full step-by-step guide covering:
+Want to build your own Linux theme using this project as a starting point? See **[TEMPLATE_USAGE.md](https://github.com/PhantomNimbi/Simplicity/blob/main/TEMPLATE_USAGE.md)** for a full step-by-step guide covering:
 
 - Creating a repository from this template on GitHub
 - Renaming the theme throughout the codebase
@@ -257,7 +257,7 @@ For solutions to common issues, see the **[Troubleshooting wiki page](https://gi
 
 ## Contributing
 
-Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for full guidelines on reporting bugs, suggesting features, and submitting pull requests.
+Contributions are welcome! Please read [CONTRIBUTING.md](https://github.com/PhantomNimbi/Simplicity/blob/main/CONTRIBUTING.md) for full guidelines on reporting bugs, suggesting features, and submitting pull requests.
 
 To add support for a new distribution:
 
