@@ -22,7 +22,17 @@ A clean, modern dark theme suite for Linux desktop environments, with first-clas
 - 🐧 **Multi-Distro** — Dedicated installers for 6 major Linux distributions
 - 🖥️ **Multi-DE** — Supports GNOME, KDE, XFCE, MATE, Cinnamon, Openbox, i3, Sway
 - 🌙 **Dark Theme** — Elegant dark colour palette with blue accent (`#5294e2`)
+- ☀️ **Light Theme** — Clean light variant (`Simplicity-Light`)
+- 🌗 **Dual-Tone Theme** — Dark chrome with light content area (`Simplicity-DualTone`)
 - 🔧 **Auto-Detection** — Automatically detects your distro and desktop environment
+
+## Theme Variants
+
+| Variant | Name | Description |
+|---------|------|-------------|
+| Dark (default) | `Simplicity` | Full dark palette — header, content, and chrome all dark |
+| Light | `Simplicity-Light` | Full light palette — header, content, and chrome all light |
+| Dual-Tone | `Simplicity-DualTone` | Dark chrome (header bar, sidebar, menus) with light content area |
 
 ## Colour Palette
 
@@ -128,7 +138,22 @@ sudo ./install.sh --system
 ./install.sh [OPTIONS]
   --system      Install to /usr/share/themes (requires root)
   --no-apply    Install files only; do not apply to current session
+  --light       Also install the Simplicity-Light variant
+  --dual-tone   Also install the Simplicity-DualTone variant
   --help        Show help
+```
+
+To install all variants at once:
+
+```bash
+./install.sh --light --dual-tone
+```
+
+To apply a specific variant after installation:
+
+```bash
+./scripts/apply-theme.sh --dual-tone
+./scripts/apply-theme.sh --light
 ```
 
 ## Uninstallation
@@ -152,7 +177,7 @@ Simplicity/
 ├── uninstall.sh                # Uninstaller
 ├── README.md                   # This file
 │
-├── simplicity/                   # Theme files
+├── simplicity/                   # Dark theme files
 │   ├── index.theme             # Theme metadata
 │   ├── gtk-2.0/
 │   │   └── gtkrc               # GTK 2 theme
@@ -167,6 +192,11 @@ Simplicity/
 │   │   └── themerc             # XFCE window manager theme
 │   └── openbox-3/
 │       └── themerc             # Openbox window manager theme
+│
+├── simplicity-light/             # Light theme files (same layout as above)
+│
+├── simplicity-dualtone/          # Dual-tone theme files (dark chrome, light content)
+│   └── ...                     # Same layout as simplicity/
 │
 ├── distros/                    # Distribution-specific installers
 │   ├── ubuntu/                 # Ubuntu, Mint, Pop!_OS

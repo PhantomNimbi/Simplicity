@@ -1,0 +1,112 @@
+# Simplicity-DualTone GTK 2.0 Theme
+# Dark chrome (header/menus/toolbars) with light content area
+# Compatible with: Ubuntu, Debian, Fedora, Arch Linux, openSUSE, Manjaro
+
+gtk-color-scheme = "bg_color:#f5f5f5\nfg_color:#2d2d2d\nbase_color:#ffffff\ntext_color:#2d2d2d\nselected_bg_color:#5294e2\nselected_fg_color:#ffffff\ntooltip_bg_color:#1c1c1c\ntooltip_fg_color:#e0e0e0"
+
+style "default" {
+    bg[NORMAL]        = @bg_color
+    bg[PRELIGHT]      = shade(0.95, @bg_color)
+    bg[SELECTED]      = @selected_bg_color
+    bg[INSENSITIVE]   = shade(1.05, @bg_color)
+    bg[ACTIVE]        = shade(1.05, @bg_color)
+
+    fg[NORMAL]        = @fg_color
+    fg[PRELIGHT]      = @fg_color
+    fg[SELECTED]      = @selected_fg_color
+    fg[INSENSITIVE]   = shade(1.6, @fg_color)
+    fg[ACTIVE]        = @fg_color
+
+    base[NORMAL]      = @base_color
+    base[PRELIGHT]    = shade(0.97, @base_color)
+    base[SELECTED]    = @selected_bg_color
+    base[INSENSITIVE] = shade(0.97, @base_color)
+    base[ACTIVE]      = shade(0.95, @base_color)
+
+    text[NORMAL]      = @text_color
+    text[PRELIGHT]    = @text_color
+    text[SELECTED]    = @selected_fg_color
+    text[INSENSITIVE] = shade(1.6, @text_color)
+    text[ACTIVE]      = @text_color
+
+    xthickness = 1
+    ythickness = 1
+
+    GtkWidget::focus-padding        = 1
+    GtkWidget::focus-line-width     = 1
+    GtkButton::default-border       = { 0, 0, 0, 0 }
+    GtkButton::default-outside-border = { 0, 0, 0, 0 }
+    GtkButton::inner-border         = { 4, 4, 3, 3 }
+    GtkScrollbar::min-slider-length = 30
+    GtkCheckButton::indicator-size  = 14
+    GtkRadioButton::indicator-size  = 14
+    GtkComboBox::appears-as-list    = 0
+    GtkMenuBar::internal-padding    = 0
+    GtkExpander::expander-size      = 16
+    GtkToolbar::internal-padding    = 1
+    GtkTreeView::expander-size      = 14
+    GtkTreeView::vertical-separator = 0
+}
+class "GtkWidget" style "default"
+
+style "button" {
+    bg[NORMAL]      = shade(0.96, @bg_color)
+    bg[PRELIGHT]    = shade(0.92, @bg_color)
+    bg[ACTIVE]      = shade(0.88, @bg_color)
+    bg[INSENSITIVE] = shade(1.02, @bg_color)
+    fg[NORMAL]      = @fg_color
+    fg[PRELIGHT]    = @fg_color
+    fg[ACTIVE]      = @fg_color
+
+    xthickness = 3
+    ythickness = 3
+}
+widget_class "*<GtkButton>" style "button"
+
+style "entry" {
+    base[NORMAL]    = @base_color
+    base[ACTIVE]    = @base_color
+    bg[SELECTED]    = @selected_bg_color
+    text[SELECTED]  = @selected_fg_color
+    xthickness = 3
+    ythickness = 3
+}
+widget_class "*<GtkEntry>" style "entry"
+
+style "menu" {
+    bg[NORMAL]     = #252525
+    bg[PRELIGHT]   = @selected_bg_color
+    fg[NORMAL]     = #e0e0e0
+    fg[PRELIGHT]   = @selected_fg_color
+    text[NORMAL]   = #e0e0e0
+    text[PRELIGHT] = @selected_fg_color
+    xthickness = 0
+    ythickness = 0
+}
+class "*<GtkMenu>" style "menu"
+
+style "menubar" {
+    bg[NORMAL]   = #252525
+    fg[NORMAL]   = #e0e0e0
+    fg[PRELIGHT] = @selected_fg_color
+    bg[PRELIGHT] = @selected_bg_color
+    xthickness = 0
+    ythickness = 1
+}
+class "*<GtkMenuBar>" style "menubar"
+
+style "toolbar" {
+    bg[NORMAL] = #252525
+    fg[NORMAL] = #e0e0e0
+    xthickness = 0
+    ythickness = 0
+}
+widget_class "*<GtkToolbar>" style "toolbar"
+
+style "tooltip" {
+    bg[NORMAL] = @tooltip_bg_color
+    fg[NORMAL] = @tooltip_fg_color
+    xthickness = 4
+    ythickness = 4
+}
+widget "gtk-tooltip*" style "tooltip"
