@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Simplicity-DualTone Metacity/Mutter Window Manager Theme
+  Simplicity Metacity/Mutter Window Manager Theme
   Dark titlebar chrome with light window body
   Compatible with: GNOME, MATE desktop environments
   Distros: Ubuntu, Debian, Fedora, Arch Linux, openSUSE, Manjaro
 -->
 <metacity_theme>
   <info>
-    <name>Simplicity-DualTone</name>
+    <name>Simplicity</name>
     <author>Simplicity Contributors</author>
     <description>A clean and modern dual-tone window manager theme for Linux</description>
     <date>2024</date>
