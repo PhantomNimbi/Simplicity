@@ -13,6 +13,12 @@
 > [🇸🇦 العربية](https://translate.google.com/translate?sl=en&tl=ar&u=https://github.com/PhantomNimbi/Simplicity/blob/main/README.md) ·
 > [🇮🇳 हिन्दी](https://translate.google.com/translate?sl=en&tl=hi&u=https://github.com/PhantomNimbi/Simplicity/blob/main/README.md)
 
+[![Release](https://github.com/PhantomNimbi/Simplicity/actions/workflows/release.yml/badge.svg)](https://github.com/PhantomNimbi/Simplicity/actions/workflows/release.yml)
+[![Latest Release](https://img.shields.io/github/v/release/PhantomNimbi/Simplicity)](https://github.com/PhantomNimbi/Simplicity/releases/latest)
+[![License](https://img.shields.io/github/license/PhantomNimbi/Simplicity)](https://github.com/PhantomNimbi/Simplicity/blob/main/LICENSE)
+[![Last Commit](https://img.shields.io/github/last-commit/PhantomNimbi/Simplicity)](https://github.com/PhantomNimbi/Simplicity/commits/main)
+[![Open Issues](https://img.shields.io/github/issues/PhantomNimbi/Simplicity)](https://github.com/PhantomNimbi/Simplicity/issues)
+
 A clean, modern GTK theme suite for Linux desktop environments, offering dual-tone, light, and dark variants with support for all major distributions and desktop environments.
 
 ```
