@@ -69,8 +69,8 @@ Each variant provides complete coverage across:
 ## Quick Start
 
 ```bash
-git clone https://github.com/PhantomNimbi/Deskthem.git
-cd Deskthem
+git clone https://github.com/PhantomNimbi/Simplicity.git
+cd Simplicity
 chmod +x install.sh
 ./install.sh
 ```

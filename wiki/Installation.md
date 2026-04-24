@@ -25,8 +25,8 @@ The automatic installer detects your Linux distribution and desktop environment,
 ### Step 1 — Clone the repository
 
 ```bash
-git clone https://github.com/PhantomNimbi/Deskthem.git
-cd Deskthem
+git clone https://github.com/PhantomNimbi/Simplicity.git
+cd Simplicity
 ```
 
 ### Step 2 — Make the installer executable
@@ -97,7 +97,7 @@ Use this method if the automatic installer does not support your distribution, o
 ### Step 1 — Clone the repository
 
 ```bash
-git clone https://github.com/PhantomNimbi/Deskthem.git
+git clone https://github.com/PhantomNimbi/Simplicity.git
 ```
 
 ### Step 2 — Install required packages
@@ -137,17 +137,17 @@ Copy the desired variant to your themes directory:
 
 **Dual-Tone (default):**
 ```bash
-cp -r Deskthem/simplicity-dualtone ~/.themes/Simplicity
+cp -r Simplicity/simplicity-dualtone ~/.themes/Simplicity
 ```
 
 **Dark variant:**
 ```bash
-cp -r Deskthem/simplicity-dark ~/.themes/Simplicity-Dark
+cp -r Simplicity/simplicity-dark ~/.themes/Simplicity-Dark
 ```
 
 **Light variant:**
 ```bash
-cp -r Deskthem/simplicity-light ~/.themes/Simplicity-Light
+cp -r Simplicity/simplicity-light ~/.themes/Simplicity-Light
 ```
 
 ### Step 4 — Apply the theme
