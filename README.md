@@ -177,6 +177,17 @@ linux-theme/
     └── apply-theme.sh          # DE-aware theme applicator
 ```
 
+## Using This Repository as a Template
+
+Want to build your own Linux theme using this project as a starting point? See **[TEMPLATE_USAGE.md](TEMPLATE_USAGE.md)** for a full step-by-step guide covering:
+
+- Creating a repository from this template on GitHub
+- Renaming the theme throughout the codebase
+- Customising the colour palette
+- Updating theme metadata
+- Adding or removing distribution support
+- Testing your theme before publishing
+
 ## Contributing
 
 Contributions are welcome! To add support for a new distribution:
