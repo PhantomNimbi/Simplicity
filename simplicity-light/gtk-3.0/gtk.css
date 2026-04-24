@@ -1,0 +1,629 @@
+/* Simplicity-Light GTK 3.0 Theme
+ * Compatible with: GNOME, XFCE, MATE, Cinnamon desktop environments
+ * Distros: Ubuntu, Debian, Fedora, Arch Linux, openSUSE, Manjaro
+ */
+
+/* === Color Variables === */
+@define-color bg_color          #f5f5f5;
+@define-color fg_color          #2d2d2d;
+@define-color base_color        #ffffff;
+@define-color text_color        #2d2d2d;
+@define-color selected_bg_color #5294e2;
+@define-color selected_fg_color #ffffff;
+@define-color tooltip_bg_color  #f0f0f0;
+@define-color tooltip_fg_color  #2d2d2d;
+@define-color borders           #d0d0d0;
+@define-color link_color        #1a6bbf;
+@define-color warning_color     #e5a050;
+@define-color error_color       #cf6679;
+@define-color success_color     #4caf50;
+@define-color accent_color      #5294e2;
+@define-color dark_bg            #ebebeb;
+@define-color darker_bg          #e0e0e0;
+@define-color button_bg          #e8e8e8;
+@define-color button_hover_bg    #d8d8d8;
+@define-color button_active_bg   #c8c8c8;
+@define-color header_bg          #ebebeb;
+@define-color sidebar_bg         #f0f0f0;
+
+/* === Reset & Base === */
+* {
+    -GtkWidget-focus-padding:        0;
+    -GtkWidget-focus-line-width:     1;
+    -GtkScrolledWindow-scrollbar-spacing: 0;
+    outline-color: alpha(@selected_bg_color, 0.7);
+    outline-style: dashed;
+    outline-offset: -3px;
+    outline-width: 1px;
+}
+
+*:focus {
+    outline-color: alpha(@selected_bg_color, 0.7);
+}
+
+/* === Window === */
+window,
+.background {
+    background-color: @bg_color;
+    color: @fg_color;
+}
+
+window.popup,
+window.tooltip {
+    background-color: @tooltip_bg_color;
+    color: @tooltip_fg_color;
+    border: 1px solid @borders;
+    border-radius: 4px;
+    padding: 4px 8px;
+}
+
+/* === Header Bar === */
+headerbar {
+    background-color: @header_bg;
+    color: @fg_color;
+    border-bottom: 1px solid @borders;
+    padding: 4px 8px;
+    min-height: 46px;
+}
+
+headerbar .title {
+    font-weight: bold;
+    padding: 0 12px;
+}
+
+headerbar .subtitle {
+    font-size: smaller;
+    color: alpha(@fg_color, 0.6);
+}
+
+headerbar button {
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 4px 8px;
+    color: @fg_color;
+}
+
+headerbar button:hover {
+    background-color: alpha(@fg_color, 0.1);
+    border-color: alpha(@fg_color, 0.2);
+}
+
+headerbar button:active,
+headerbar button:checked {
+    background-color: alpha(@fg_color, 0.15);
+    border-color: alpha(@fg_color, 0.3);
+}
+
+/* Window buttons */
+headerbar .titlebutton {
+    border-radius: 50%;
+    padding: 4px;
+    min-width: 16px;
+    min-height: 16px;
+}
+
+/* === Buttons === */
+button {
+    background-color: @button_bg;
+    color: @fg_color;
+    border: 1px solid @borders;
+    border-radius: 4px;
+    padding: 6px 12px;
+    transition: background-color 200ms, border-color 200ms;
+}
+
+button:hover {
+    background-color: @button_hover_bg;
+    border-color: alpha(@selected_bg_color, 0.6);
+}
+
+button:active,
+button:checked {
+    background-color: @button_active_bg;
+    border-color: @selected_bg_color;
+    box-shadow: inset 0 1px 2px alpha(black, 0.1);
+}
+
+button:disabled {
+    background-color: alpha(@button_bg, 0.5);
+    color: alpha(@fg_color, 0.4);
+    border-color: alpha(@borders, 0.5);
+}
+
+button.suggested-action {
+    background-color: @selected_bg_color;
+    color: @selected_fg_color;
+    border-color: shade(@selected_bg_color, 0.8);
+}
+
+button.suggested-action:hover {
+    background-color: shade(@selected_bg_color, 1.1);
+}
+
+button.destructive-action {
+    background-color: @error_color;
+    color: white;
+    border-color: shade(@error_color, 0.8);
+}
+
+button.destructive-action:hover {
+    background-color: shade(@error_color, 1.1);
+}
+
+/* === Text Entries === */
+entry {
+    background-color: @base_color;
+    color: @text_color;
+    border: 1px solid @borders;
+    border-radius: 4px;
+    padding: 6px 10px;
+    transition: border-color 200ms;
+    caret-color: @selected_bg_color;
+}
+
+entry:focus {
+    border-color: @selected_bg_color;
+    box-shadow: 0 0 0 2px alpha(@selected_bg_color, 0.3);
+}
+
+entry:disabled {
+    background-color: alpha(@base_color, 0.5);
+    color: alpha(@text_color, 0.4);
+}
+
+entry selection {
+    background-color: @selected_bg_color;
+    color: @selected_fg_color;
+}
+
+/* === Labels === */
+label {
+    color: @fg_color;
+}
+
+label:disabled {
+    color: alpha(@fg_color, 0.4);
+}
+
+label.title {
+    font-size: 18pt;
+    font-weight: bold;
+}
+
+label.subtitle {
+    color: alpha(@fg_color, 0.6);
+    font-size: smaller;
+}
+
+/* === Links === */
+*:link {
+    color: @link_color;
+}
+
+*:visited {
+    color: shade(@link_color, 0.8);
+}
+
+/* === Menus === */
+menu,
+.menu,
+.context-menu {
+    background-color: @bg_color;
+    border: 1px solid @borders;
+    border-radius: 4px;
+    padding: 4px 0;
+    box-shadow: 0 4px 12px alpha(black, 0.15);
+}
+
+menuitem {
+    padding: 6px 20px;
+    border-radius: 2px;
+    color: @fg_color;
+}
+
+menuitem:hover {
+    background-color: @selected_bg_color;
+    color: @selected_fg_color;
+}
+
+menuitem:disabled {
+    color: alpha(@fg_color, 0.4);
+}
+
+separator.horizontal {
+    background-color: @borders;
+    margin: 4px 8px;
+}
+
+/* === Menu Bar === */
+menubar {
+    background-color: @header_bg;
+    color: @fg_color;
+    padding: 0 4px;
+}
+
+menubar > menuitem {
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+menubar > menuitem:hover,
+menubar > menuitem:selected {
+    background-color: @selected_bg_color;
+    color: @selected_fg_color;
+}
+
+/* === Toolbar === */
+toolbar {
+    background-color: @bg_color;
+    border-bottom: 1px solid @borders;
+    padding: 4px;
+}
+
+toolbar button {
+    border: 1px solid transparent;
+    background-color: transparent;
+}
+
+toolbar button:hover {
+    background-color: alpha(@fg_color, 0.1);
+    border-color: @borders;
+}
+
+/* === Scrollbars === */
+scrollbar {
+    background-color: @darker_bg;
+    border: none;
+}
+
+scrollbar slider {
+    background-color: alpha(@fg_color, 0.3);
+    border-radius: 10px;
+    min-width: 6px;
+    min-height: 6px;
+    margin: 2px;
+    transition: background-color 200ms;
+}
+
+scrollbar slider:hover {
+    background-color: alpha(@fg_color, 0.5);
+}
+
+scrollbar slider:active {
+    background-color: @selected_bg_color;
+}
+
+scrollbar.overlay-indicator slider {
+    background-color: alpha(@fg_color, 0.4);
+}
+
+/* === Progress Bar === */
+progressbar {
+    color: @fg_color;
+}
+
+progressbar trough {
+    background-color: @darker_bg;
+    border-radius: 4px;
+    border: 1px solid @borders;
+    min-height: 6px;
+}
+
+progressbar progress {
+    background-color: @selected_bg_color;
+    border-radius: 4px;
+    min-height: 6px;
+}
+
+/* === Scale / Slider === */
+scale trough {
+    background-color: @darker_bg;
+    border-radius: 4px;
+    border: 1px solid @borders;
+    min-height: 4px;
+    min-width: 4px;
+}
+
+scale highlight {
+    background-color: @selected_bg_color;
+    border-radius: 4px;
+}
+
+scale slider {
+    background-color: @selected_bg_color;
+    border-radius: 50%;
+    min-width: 16px;
+    min-height: 16px;
+    border: 2px solid shade(@selected_bg_color, 0.8);
+    transition: background-color 200ms;
+}
+
+scale slider:hover {
+    background-color: shade(@selected_bg_color, 1.1);
+}
+
+/* === Check / Radio Buttons === */
+checkbutton,
+radiobutton {
+    color: @fg_color;
+    padding: 4px;
+}
+
+checkbutton check,
+radiobutton radio {
+    background-color: @base_color;
+    border: 1px solid @borders;
+    border-radius: 3px;
+    min-width: 14px;
+    min-height: 14px;
+    transition: background-color 200ms, border-color 200ms;
+}
+
+radiobutton radio {
+    border-radius: 50%;
+}
+
+checkbutton check:checked,
+radiobutton radio:checked {
+    background-color: @selected_bg_color;
+    border-color: shade(@selected_bg_color, 0.8);
+    color: @selected_fg_color;
+}
+
+checkbutton check:hover,
+radiobutton radio:hover {
+    border-color: @selected_bg_color;
+}
+
+/* === Switch === */
+switch {
+    background-color: @darker_bg;
+    border: 1px solid @borders;
+    border-radius: 14px;
+    min-width: 42px;
+    min-height: 22px;
+    transition: background-color 200ms;
+}
+
+switch:checked {
+    background-color: @selected_bg_color;
+    border-color: shade(@selected_bg_color, 0.8);
+}
+
+switch slider {
+    background-color: white;
+    border-radius: 50%;
+    min-width: 16px;
+    min-height: 16px;
+    margin: 2px;
+    box-shadow: 0 1px 3px alpha(black, 0.2);
+}
+
+/* === Notebook / Tabs === */
+notebook {
+    background-color: @bg_color;
+}
+
+notebook header {
+    background-color: @dark_bg;
+    border-bottom: 1px solid @borders;
+    padding: 0;
+}
+
+notebook header tabs tab {
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+    color: alpha(@fg_color, 0.6);
+    transition: color 200ms, background-color 200ms;
+}
+
+notebook header tabs tab:hover {
+    color: @fg_color;
+    background-color: alpha(@fg_color, 0.05);
+}
+
+notebook header tabs tab:checked {
+    color: @fg_color;
+    background-color: @bg_color;
+    border-color: @borders;
+    border-bottom-color: @bg_color;
+}
+
+/* === Tree View / List === */
+treeview {
+    background-color: @base_color;
+    color: @text_color;
+    border: 1px solid @borders;
+}
+
+treeview header button {
+    background-color: @dark_bg;
+    border: none;
+    border-right: 1px solid @borders;
+    border-radius: 0;
+    padding: 6px 10px;
+    color: @fg_color;
+    font-weight: bold;
+}
+
+treeview header button:hover {
+    background-color: @button_hover_bg;
+}
+
+treeview:selected {
+    background-color: @selected_bg_color;
+    color: @selected_fg_color;
+}
+
+treeview:hover {
+    background-color: alpha(@fg_color, 0.05);
+}
+
+/* === Sidebar === */
+.sidebar {
+    background-color: @sidebar_bg;
+    border-right: 1px solid @borders;
+}
+
+.sidebar row {
+    padding: 6px 12px;
+    color: @fg_color;
+    border-radius: 4px;
+    margin: 1px 4px;
+}
+
+.sidebar row:hover {
+    background-color: alpha(@fg_color, 0.08);
+}
+
+.sidebar row:selected {
+    background-color: @selected_bg_color;
+    color: @selected_fg_color;
+}
+
+/* === Combo Box === */
+combobox button {
+    background-color: @button_bg;
+    border: 1px solid @borders;
+    border-radius: 4px;
+    padding: 6px 10px;
+}
+
+combobox button:hover {
+    background-color: @button_hover_bg;
+    border-color: alpha(@selected_bg_color, 0.6);
+}
+
+combobox window.popup {
+    background-color: @bg_color;
+    border: 1px solid @borders;
+}
+
+/* === Spinner === */
+spinner {
+    color: @selected_bg_color;
+}
+
+/* === Frame / Borders === */
+frame border,
+.frame {
+    border: 1px solid @borders;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+/* === Infobar === */
+infobar {
+    padding: 8px;
+    border: 1px solid;
+    border-radius: 4px;
+    margin: 4px;
+}
+
+infobar.info {
+    background-color: alpha(@link_color, 0.1);
+    border-color: @link_color;
+    color: @fg_color;
+}
+
+infobar.warning {
+    background-color: alpha(@warning_color, 0.1);
+    border-color: @warning_color;
+    color: @fg_color;
+}
+
+infobar.error {
+    background-color: alpha(@error_color, 0.1);
+    border-color: @error_color;
+    color: @fg_color;
+}
+
+infobar.success {
+    background-color: alpha(@success_color, 0.1);
+    border-color: @success_color;
+    color: @fg_color;
+}
+
+/* === Popover === */
+popover {
+    background-color: @bg_color;
+    border: 1px solid @borders;
+    border-radius: 6px;
+    box-shadow: 0 4px 16px alpha(black, 0.15);
+    padding: 8px;
+}
+
+/* === Statusbar === */
+statusbar {
+    background-color: @dark_bg;
+    color: alpha(@fg_color, 0.7);
+    border-top: 1px solid @borders;
+    padding: 2px 8px;
+    font-size: smaller;
+}
+
+/* === Expander === */
+expander arrow {
+    color: alpha(@fg_color, 0.6);
+    min-width: 16px;
+    min-height: 16px;
+}
+
+expander:hover arrow {
+    color: @fg_color;
+}
+
+expander:checked arrow {
+    color: @selected_bg_color;
+}
+
+/* === File Chooser === */
+.path-bar button {
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+/* === Paned === */
+paned > separator {
+    background-color: @borders;
+    min-width: 1px;
+    min-height: 1px;
+}
+
+paned > separator:hover {
+    background-color: @selected_bg_color;
+}
+
+/* === Calendar === */
+calendar {
+    background-color: @base_color;
+    color: @text_color;
+    border: 1px solid @borders;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+calendar:selected {
+    background-color: @selected_bg_color;
+    color: @selected_fg_color;
+    border-radius: 50%;
+}
+
+calendar.header {
+    background-color: @dark_bg;
+    color: @fg_color;
+    border-bottom: 1px solid @borders;
+    padding: 8px;
+}
+
+/* === OSD / Overlay === */
+.osd {
+    background-color: alpha(@dark_bg, 0.92);
+    color: @fg_color;
+    border: 1px solid @borders;
+    border-radius: 6px;
+    padding: 8px 16px;
+    box-shadow: 0 2px 8px alpha(black, 0.2);
+}

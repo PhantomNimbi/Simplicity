@@ -13,8 +13,10 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 THEME_NAME="Simplicity"
+THEME_LIGHT_NAME="Simplicity-Light"
 SYSTEM_INSTALL=false
 NO_APPLY=false
+INSTALL_LIGHT=false
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -39,6 +41,9 @@ while [[ $# -gt 0 ]]; do
         --no-apply)
             NO_APPLY=true
             ;;
+        --light)
+            INSTALL_LIGHT=true
+            ;;
         --help|-h)
             echo "Simplicity Theme Suite Installer"
             echo ""
@@ -47,6 +52,7 @@ while [[ $# -gt 0 ]]; do
             echo "Options:"
             echo "  --system      Install to /usr/share/themes (requires root)"
             echo "  --no-apply    Install files only; do not apply the theme"
+            echo "  --light       Also install the Simplicity-Light (light variant) theme"
             echo "  --help, -h    Show this help message"
             exit 0
             ;;
@@ -96,6 +102,19 @@ install_theme_files() {
     mkdir -p "${target_dir}"
     cp -r "${SCRIPT_DIR}/simplicity/." "${target_dir}/"
     success "Theme files installed to: ${target_dir}"
+
+    if "${INSTALL_LIGHT}"; then
+        local light_target_dir
+        if "${SYSTEM_INSTALL}"; then
+            light_target_dir="/usr/share/themes/${THEME_LIGHT_NAME}"
+        else
+            light_target_dir="${HOME}/.themes/${THEME_LIGHT_NAME}"
+        fi
+        info "Installing light variant to: ${light_target_dir}"
+        mkdir -p "${light_target_dir}"
+        cp -r "${SCRIPT_DIR}/simplicity-light/." "${light_target_dir}/"
+        success "Light variant installed to: ${light_target_dir}"
+    fi
 }
 
 install_distro_specific() {

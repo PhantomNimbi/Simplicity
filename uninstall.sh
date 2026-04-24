@@ -7,6 +7,7 @@
 set -euo pipefail
 
 THEME_NAME="Simplicity"
+THEME_LIGHT_NAME="Simplicity-Light"
 SYSTEM_UNINSTALL=false
 KEEP_SETTINGS=false
 
@@ -55,6 +56,8 @@ done
 remove_theme_files() {
     local user_theme_dir="${HOME}/.themes/${THEME_NAME}"
     local system_theme_dir="/usr/share/themes/${THEME_NAME}"
+    local user_light_dir="${HOME}/.themes/${THEME_LIGHT_NAME}"
+    local system_light_dir="/usr/share/themes/${THEME_LIGHT_NAME}"
 
     if [[ -d "${user_theme_dir}" ]]; then
         info "Removing user theme directory: ${user_theme_dir}"
@@ -62,6 +65,12 @@ remove_theme_files() {
         success "Removed: ${user_theme_dir}"
     else
         info "User theme directory not found: ${user_theme_dir}"
+    fi
+
+    if [[ -d "${user_light_dir}" ]]; then
+        info "Removing user light theme directory: ${user_light_dir}"
+        rm -rf "${user_light_dir}"
+        success "Removed: ${user_light_dir}"
     fi
 
     if "${SYSTEM_UNINSTALL}"; then
@@ -74,6 +83,12 @@ remove_theme_files() {
             success "Removed: ${system_theme_dir}"
         else
             info "System theme directory not found: ${system_theme_dir}"
+        fi
+
+        if [[ -d "${system_light_dir}" ]]; then
+            info "Removing system light theme directory: ${system_light_dir}"
+            rm -rf "${system_light_dir}"
+            success "Removed: ${system_light_dir}"
         fi
     fi
 }
@@ -140,14 +155,16 @@ remove_gtk_settings() {
 
     for settings_file in "${gtk3_settings}" "${gtk4_settings}"; do
         if [[ -f "${settings_file}" ]]; then
-            if grep -q "gtk-theme-name=${THEME_NAME}" "${settings_file}" 2>/dev/null; then
+            if grep -qE "^gtk-theme-name=(${THEME_NAME}|${THEME_LIGHT_NAME})" "${settings_file}" 2>/dev/null; then
                 info "Removing Simplicity settings from: ${settings_file}"
                 # Remove only the Simplicity-specific lines, keep other settings
                 sed -i \
                     -e "/^gtk-theme-name=${THEME_NAME}/d" \
+                    -e "/^gtk-theme-name=${THEME_LIGHT_NAME}/d" \
                     -e "/^gtk-icon-theme-name=Simplicity-Icons/d" \
                     -e "/^gtk-cursor-theme-name=Simplicity-Cursors/d" \
                     -e "/^gtk-application-prefer-dark-theme=1/d" \
+                    -e "/^gtk-application-prefer-dark-theme=0/d" \
                     "${settings_file}"
                 # If the file is now empty (just [Settings] header), remove it
                 if [[ "$(grep -cv '^\[' "${settings_file}" 2>/dev/null || echo 0)" -eq 0 ]]; then

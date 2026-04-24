@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Simplicity-Light
+Comment=A clean and modern light Linux desktop theme suite
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Simplicity-Light
+MetacityTheme=Simplicity-Light
+IconTheme=Simplicity-Icons
+CursorTheme=Simplicity-Cursors
+ButtonLayout=close,minimize,maximize:
