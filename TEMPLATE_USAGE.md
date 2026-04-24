@@ -1,4 +1,4 @@
-# Using This Repository
+# Using This Repository as a Template
 
 This repository is designed to be used as a starting point for creating your own Linux desktop theme suite. Follow the steps below to go from this template to a fully branded theme of your own.
 
