@@ -40,17 +40,17 @@ A clean, modern GTK theme suite for Linux desktop environments, offering dual-to
 
 ## Documentation
 
-Full documentation is available in the **[GitHub Wiki](https://github.com/PhantomNimbi/Simplicity/wiki)**:
+Full documentation is available in the **[GitHub Wiki](https://github.com/PhantomNimbi/Simplicity/blob/main/wiki/Home.md)**:
 
 | Page | Description |
 |------|-------------|
-| [Home](https://github.com/PhantomNimbi/Simplicity/wiki) | Overview and quick-start |
-| [Theme Variants](https://github.com/PhantomNimbi/Simplicity/wiki/Theme-Variants) | All three variants with screenshots |
-| [Theme Elements](https://github.com/PhantomNimbi/Simplicity/wiki/Theme-Elements) | Per-component styling breakdown |
-| [Colour Palette](https://github.com/PhantomNimbi/Simplicity/wiki/Colour-Palette) | Complete colour reference for every variant |
-| [Installation](https://github.com/PhantomNimbi/Simplicity/wiki/Installation) | Full installation guide for every distro and DE |
-| [Desktop Environments](https://github.com/PhantomNimbi/Simplicity/wiki/Desktop-Environments) | Per-DE configuration and manual application |
-| [Troubleshooting](https://github.com/PhantomNimbi/Simplicity/wiki/Troubleshooting) | Common problems and fixes |
+| [Home](https://github.com/PhantomNimbi/Simplicity/blob/main/wiki/Home.md) | Overview and quick-start |
+| [Theme Variants](https://github.com/PhantomNimbi/Simplicity/blob/main/wiki/Theme-Variants.md) | All three variants with screenshots |
+| [Theme Elements](https://github.com/PhantomNimbi/Simplicity/blob/main/wiki/Theme-Elements.md) | Per-component styling breakdown |
+| [Colour Palette](https://github.com/PhantomNimbi/Simplicity/blob/main/wiki/Colour-Palette.md) | Complete colour reference for every variant |
+| [Installation](https://github.com/PhantomNimbi/Simplicity/blob/main/wiki/Installation.md) | Full installation guide for every distro and DE |
+| [Desktop Environments](https://github.com/PhantomNimbi/Simplicity/blob/main/wiki/Desktop-Environments.md) | Per-DE configuration and manual application |
+| [Troubleshooting](https://github.com/PhantomNimbi/Simplicity/blob/main/wiki/Troubleshooting.md) | Common problems and fixes |
 
 ## Features
 
@@ -65,7 +65,7 @@ Full documentation is available in the **[GitHub Wiki](https://github.com/Phanto
 
 ## Theme Variants
 
-> 📖 See the [Theme Variants wiki page](https://github.com/PhantomNimbi/Simplicity/wiki/Theme-Variants) for screenshots and detailed descriptions.
+> 📖 See the [Theme Variants wiki page](https://github.com/PhantomNimbi/Simplicity/blob/main/wiki/Theme-Variants.md) for screenshots and detailed descriptions.
 
 | Variant | Name | Description |
 |---------|------|-------------|
@@ -75,7 +75,7 @@ Full documentation is available in the **[GitHub Wiki](https://github.com/Phanto
 
 ## Colour Palette
 
-> 📖 See the [Colour Palette wiki page](https://github.com/PhantomNimbi/Simplicity/wiki/Colour-Palette) for the full colour reference across all variants.
+> 📖 See the [Colour Palette wiki page](https://github.com/PhantomNimbi/Simplicity/blob/main/wiki/Colour-Palette.md) for the full colour reference across all variants.
 
 | Role               | Colour    |
 |--------------------|-----------|
@@ -91,7 +91,7 @@ Full documentation is available in the **[GitHub Wiki](https://github.com/Phanto
 
 ## Supported Desktop Environments
 
-> 📖 See the [Desktop Environments wiki page](https://github.com/PhantomNimbi/Simplicity/wiki/Desktop-Environments) for per-DE configuration and manual application instructions.
+> 📖 See the [Desktop Environments wiki page](https://github.com/PhantomNimbi/Simplicity/blob/main/wiki/Desktop-Environments.md) for per-DE configuration and manual application instructions.
 
 | Desktop       | GTK 2 | GTK 3 | GTK 4 | WM Theme |
 |--------------|:-----:|:-----:|:-----:|:--------:|
@@ -117,7 +117,7 @@ Full documentation is available in the **[GitHub Wiki](https://github.com/Phanto
 
 ## Quick Start
 
-> 📖 For the full installation guide including manual installation, system-wide setup, and per-variant options, see the [Installation wiki page](https://github.com/PhantomNimbi/Simplicity/wiki/Installation).
+> 📖 For the full installation guide including manual installation, system-wide setup, and per-variant options, see the [Installation wiki page](https://github.com/PhantomNimbi/Simplicity/blob/main/wiki/Installation.md).
 
 ### Automatic Installation (Recommended)
 
@@ -269,7 +269,7 @@ Want to build your own Linux theme using this project as a starting point? See *
 
 ## Troubleshooting
 
-For solutions to common issues, see the **[Troubleshooting wiki page](https://github.com/PhantomNimbi/Simplicity/wiki/Troubleshooting)**.
+For solutions to common issues, see the **[Troubleshooting wiki page](https://github.com/PhantomNimbi/Simplicity/blob/main/wiki/Troubleshooting.md)**.
 
 ## Contributing
 
