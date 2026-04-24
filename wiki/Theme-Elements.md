@@ -15,7 +15,7 @@
 
 This page documents every UI component in the Simplicity theme — what is styled, which GTK CSS classes are targeted, and how each element looks across the three variants.
 
-![UI elements showcase](screenshots/ui-elements.svg)
+![UI elements showcase](screenshots/ui-elements.png)
 
 ---
 
