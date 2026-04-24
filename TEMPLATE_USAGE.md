@@ -28,17 +28,22 @@ find . -not -path './.git/*' -type f \
   -exec sed -i 's/Simplicity/MY_THEME_NAME/g' {} +
 ```
 
-After running the command, also rename the theme directory itself:
+After running the command, also rename the three theme variant directories:
 
 ```bash
-mv simplicity <my-theme-name-lowercase>
+# The default (dual-tone) variant has no suffix — it becomes the primary theme name.
+mv simplicity-dualtone <my-theme-name-lowercase>
+mv simplicity-light    <my-theme-name-lowercase>-light
+mv simplicity-dark     <my-theme-name-lowercase>-dark
 ```
 
-Then update the path reference inside `install.sh`:
+Then update the three path references inside `install.sh`:
 
 ```bash
-# Line that copies theme files — update source directory name
-cp -r "${SCRIPT_DIR}/<my-theme-name-lowercase>/." "${target_dir}/"
+# Lines that copy theme files — update source directory names
+cp -r "${SCRIPT_DIR}/<my-theme-name-lowercase>/."       "${target_dir}/"
+cp -r "${SCRIPT_DIR}/<my-theme-name-lowercase>-light/." "${light_target_dir}/"
+cp -r "${SCRIPT_DIR}/<my-theme-name-lowercase>-dark/."  "${dark_target_dir}/"
 ```
 
 ### Files that reference the theme name
@@ -47,13 +52,15 @@ The following files all contain the theme name and will be updated by the comman
 
 | File | What it controls |
 |------|-----------------|
-| `simplicity/index.theme` | Theme metadata (name shown in desktop settings) |
-| `simplicity/gtk-2.0/gtkrc` | GTK 2 theme identifier |
-| `simplicity/gtk-3.0/settings.ini` | GTK 3 settings |
-| `simplicity/gtk-4.0/gtk.css` | GTK 4 theme header comment |
-| `simplicity/metacity-1/metacity-theme-3.xml` | GNOME/MATE window decorator name |
-| `simplicity/xfwm4/themerc` | XFCE window manager theme name |
-| `simplicity/openbox-3/themerc` | Openbox window manager theme name |
+| `simplicity-dualtone/index.theme` | Default variant metadata (name shown in desktop settings) |
+| `simplicity-dualtone/gtk-2.0/gtkrc` | GTK 2 theme identifier (default variant) |
+| `simplicity-dualtone/gtk-3.0/settings.ini` | GTK 3 settings (default variant) |
+| `simplicity-dualtone/gtk-4.0/gtk.css` | GTK 4 theme header comment (default variant) |
+| `simplicity-dualtone/metacity-1/metacity-theme-3.xml` | GNOME/MATE window decorator name |
+| `simplicity-dualtone/xfwm4/themerc` | XFCE window manager theme name |
+| `simplicity-dualtone/openbox-3/themerc` | Openbox window manager theme name |
+| `simplicity-light/index.theme` | Light variant metadata |
+| `simplicity-dark/index.theme` | Dark variant metadata |
 | `install.sh` | Installer — copies files and applies the theme |
 | `uninstall.sh` | Uninstaller — removes the theme |
 | `scripts/apply-theme.sh` | Per-DE theme applicator |
@@ -64,35 +71,49 @@ The following files all contain the theme name and will be updated by the comman
 
 ## 3. Customise Your Colour Palette
 
-All colours are defined as CSS variables at the top of the GTK stylesheet. Open `simplicity/gtk-3.0/gtk.css` (and similarly `gtk-4.0/gtk.css`) and update the `@define-color` block:
+All colours are defined as CSS variables at the top of the GTK stylesheet. The repository ships three pre-built variants — edit whichever best matches your intended palette.
+
+**Default (Dual-Tone) — `simplicity-dualtone/gtk-3.0/gtk.css`**
+
+The dual-tone variant keeps a dark chrome (header bar, sidebar, menus) over a light content area. It defines two colour groups:
 
 ```css
 /* === Color Variables === */
-@define-color bg_color          #2d2d2d;   /* Main background */
-@define-color fg_color          #e0e0e0;   /* Main foreground / text */
-@define-color base_color        #1e1e1e;   /* Input / text-area background */
+/* Content area — light */
+@define-color bg_color          #f5f5f5;   /* Main background */
+@define-color fg_color          #2d2d2d;   /* Main foreground / text */
+@define-color base_color        #ffffff;   /* Input / text-area background */
+@define-color borders           #d0d0d0;   /* Widget borders */
+
+/* Chrome area — dark */
+@define-color header_bg         #252525;   /* Header bar background */
+@define-color header_fg         #e0e0e0;   /* Header bar text */
+@define-color sidebar_bg        #2a2a2a;   /* Sidebar background */
+
+/* Shared */
 @define-color selected_bg_color #5294e2;   /* Accent / selection colour */
-@define-color borders           #404040;   /* Widget borders */
 @define-color warning_color     #e5a050;   /* Warnings */
 @define-color error_color       #cf6679;   /* Errors / close button */
 @define-color success_color     #4caf50;   /* Success / maximise button */
 /* … and more — see the full file for all variables */
 ```
 
-For a **light theme**, swap the dark and light values (e.g. `bg_color` to `#f5f5f5`, `fg_color` to `#1a1a1a`).
+**Full Dark — `simplicity-dark/gtk-3.0/gtk.css`** — uses dark values for `bg_color`, `base_color`, and `fg_color` throughout, with no separate chrome group.
 
-Apply the same colour changes to:
+**Full Light — `simplicity-light/gtk-3.0/gtk.css`** — uses light values throughout; swap `bg_color` to your desired light background and `fg_color` to a dark text colour.
 
-- `simplicity/gtk-2.0/gtkrc` — uses literal hex values (no CSS variables)
-- `simplicity/metacity-1/metacity-theme-3.xml` — window frame colours
-- `simplicity/xfwm4/themerc` — XFCE window manager colours
-- `simplicity/openbox-3/themerc` — Openbox window manager colours
+Apply the same colour changes to the matching files in each variant directory:
+
+- `<variant>/gtk-2.0/gtkrc` — uses literal hex values (no CSS variables)
+- `<variant>/metacity-1/metacity-theme-3.xml` — window frame colours
+- `<variant>/xfwm4/themerc` — XFCE window manager colours
+- `<variant>/openbox-3/themerc` — Openbox window manager colours
 
 ---
 
 ## 4. Update Theme Metadata
 
-Edit `simplicity/index.theme` to reflect your theme's name and description:
+Edit `simplicity-dualtone/index.theme` (and the equivalent file in each variant) to reflect your theme's name and description:
 
 ```ini
 [Desktop Entry]
@@ -180,9 +201,10 @@ Then apply and inspect the result:
 ├── install.sh                  # Main installer (auto-detects distro)
 ├── uninstall.sh                # Uninstaller
 ├── README.md                   # End-user documentation (update this)
+├── CHANGELOG.md                # Version history
 ├── TEMPLATE_USAGE.md           # This file (remove or keep for contributors)
 │
-├── <theme-name>/               # Theme files (rename from simplicity/)
+├── <theme-name>/               # Default (dual-tone) variant (rename from simplicity-dualtone/)
 │   ├── index.theme             # Theme metadata
 │   ├── gtk-2.0/gtkrc           # GTK 2 theme
 │   ├── gtk-3.0/gtk.css         # GTK 3 stylesheet  ← main colour file
@@ -192,6 +214,12 @@ Then apply and inspect the result:
 │   ├── xfwm4/                  # XFCE window manager
 │   └── openbox-3/              # Openbox window manager
 │
+├── <theme-name>-light/         # Light variant (rename from simplicity-light/)
+│   └── … (same layout as above)
+│
+├── <theme-name>-dark/          # Dark variant (rename from simplicity-dark/)
+│   └── … (same layout as above)
+│
 ├── distros/                    # Distribution-specific installers
 │   ├── ubuntu/
 │   ├── debian/
@@ -199,6 +227,10 @@ Then apply and inspect the result:
 │   ├── arch/
 │   ├── opensuse/
 │   └── manjaro/
+│
+├── screenshots/                # Preview images for README
+│
+├── wiki/                       # Extended documentation
 │
 └── scripts/
     ├── detect-distro.sh        # Distro detection (extend for new distros)
