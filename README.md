@@ -22,6 +22,20 @@ A clean, modern dark theme suite for Linux desktop environments, with first-clas
 ### Dark — full dark palette
 ![Simplicity Dark preview](screenshots/preview-dark.svg)
 
+## Documentation
+
+Full documentation is available in the **[GitHub Wiki](https://github.com/PhantomNimbi/Simplicity/wiki)**:
+
+| Page | Description |
+|------|-------------|
+| [Home](https://github.com/PhantomNimbi/Simplicity/wiki) | Overview and quick-start |
+| [Theme Variants](https://github.com/PhantomNimbi/Simplicity/wiki/Theme-Variants) | All three variants with screenshots |
+| [Theme Elements](https://github.com/PhantomNimbi/Simplicity/wiki/Theme-Elements) | Per-component styling breakdown |
+| [Colour Palette](https://github.com/PhantomNimbi/Simplicity/wiki/Colour-Palette) | Complete colour reference for every variant |
+| [Installation](https://github.com/PhantomNimbi/Simplicity/wiki/Installation) | Full installation guide for every distro and DE |
+| [Desktop Environments](https://github.com/PhantomNimbi/Simplicity/wiki/Desktop-Environments) | Per-DE configuration and manual application |
+| [Troubleshooting](https://github.com/PhantomNimbi/Simplicity/wiki/Troubleshooting) | Common problems and fixes |
+
 ## Features
 
 - 🎨 **GTK 2, 3 & 4** — Full theme support for modern and legacy GTK applications
@@ -35,6 +49,8 @@ A clean, modern dark theme suite for Linux desktop environments, with first-clas
 
 ## Theme Variants
 
+> 📖 See the [Theme Variants wiki page](https://github.com/PhantomNimbi/Simplicity/wiki/Theme-Variants) for screenshots and detailed descriptions.
+
 | Variant | Name | Description |
 |---------|------|-------------|
 | Dual-Tone (Default) | `Simplicity` | Dark chrome (header bar, sidebar, menus) with light content area |
@@ -42,6 +58,8 @@ A clean, modern dark theme suite for Linux desktop environments, with first-clas
 | Dark | `Simplicity-Dark` | Full dark palette — header, content, and chrome all dark |
 
 ## Colour Palette
+
+> 📖 See the [Colour Palette wiki page](https://github.com/PhantomNimbi/Simplicity/wiki/Colour-Palette) for the full colour reference across all variants.
 
 | Role               | Colour    |
 |--------------------|-----------|
@@ -56,6 +74,8 @@ A clean, modern dark theme suite for Linux desktop environments, with first-clas
 | Borders            | `#404040` |
 
 ## Supported Desktop Environments
+
+> 📖 See the [Desktop Environments wiki page](https://github.com/PhantomNimbi/Simplicity/wiki/Desktop-Environments) for per-DE configuration and manual application instructions.
 
 | Desktop       | GTK 2 | GTK 3 | GTK 4 | WM Theme |
 |--------------|:-----:|:-----:|:-----:|:--------:|
@@ -80,6 +100,8 @@ A clean, modern dark theme suite for Linux desktop environments, with first-clas
 | openSUSE Leap/Tumbleweed | `distros/opensuse/install.sh`    | zypper          |
 
 ## Quick Start
+
+> 📖 For the full installation guide including manual installation, system-wide setup, and per-variant options, see the [Installation wiki page](https://github.com/PhantomNimbi/Simplicity/wiki/Installation).
 
 ### Automatic Installation (Recommended)
 
@@ -228,6 +250,10 @@ Want to build your own Linux theme using this project as a starting point? See *
 - Updating theme metadata
 - Adding or removing distribution support
 - Testing your theme before publishing
+
+## Troubleshooting
+
+For solutions to common issues, see the **[Troubleshooting wiki page](https://github.com/PhantomNimbi/Simplicity/wiki/Troubleshooting)**.
 
 ## Contributing
 
