@@ -15,7 +15,7 @@
 
 Welcome to the official wiki for **Simplicity**, a clean, modern GTK theme suite for Linux desktop environments.
 
-![Simplicity preview](../screenshots/preview.svg)
+![Simplicity preview](../screenshots/preview.png)
 
 ---
 

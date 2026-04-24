@@ -30,13 +30,13 @@ A clean, modern GTK theme suite for Linux desktop environments, offering dual-to
 ## Screenshots
 
 ### Dual-Tone (Default) — dark chrome · light content area
-![Simplicity Dual-Tone preview](https://github.com/PhantomNimbi/Simplicity/raw/main/screenshots/preview.svg)
+![Simplicity Dual-Tone preview](https://github.com/PhantomNimbi/Simplicity/raw/main/screenshots/preview.png)
 
 ### Light — full light palette
-![Simplicity Light preview](https://github.com/PhantomNimbi/Simplicity/raw/main/screenshots/preview-light.svg)
+![Simplicity Light preview](https://github.com/PhantomNimbi/Simplicity/raw/main/screenshots/preview-light.png)
 
 ### Dark — full dark palette
-![Simplicity Dark preview](https://github.com/PhantomNimbi/Simplicity/raw/main/screenshots/preview-dark.svg)
+![Simplicity Dark preview](https://github.com/PhantomNimbi/Simplicity/raw/main/screenshots/preview-dark.png)
 
 ## Documentation
 
