@@ -11,6 +11,10 @@ A clean, modern dark theme suite for Linux desktop environments, with first-clas
   ╚═════╝ ╚══════╝╚══════╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚═╝     ╚═╝
 ```
 
+## Screenshot
+
+![Deskthem preview](screenshots/preview.svg)
+
 ## Features
 
 - 🎨 **GTK 2, 3 & 4** — Full theme support for modern and legacy GTK applications
