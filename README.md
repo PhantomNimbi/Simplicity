@@ -11,9 +11,16 @@ A clean, modern dark theme suite for Linux desktop environments, with first-clas
   ╚═════╝ ╚══════╝╚══════╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚═╝     ╚═╝
 ```
 
-## Screenshot
+## Screenshots
 
-![Simplicity preview](screenshots/preview.svg)
+### Dual-Tone (Default) — dark chrome · light content area
+![Simplicity Dual-Tone preview](screenshots/preview.svg)
+
+### Light — full light palette
+![Simplicity Light preview](screenshots/preview-light.svg)
+
+### Dark — full dark palette
+![Simplicity Dark preview](screenshots/preview-dark.svg)
 
 ## Features
 
@@ -21,7 +28,7 @@ A clean, modern dark theme suite for Linux desktop environments, with first-clas
 - 🪟 **Window Managers** — Metacity, XFWM4 (XFCE), and Openbox themes included
 - 🐧 **Multi-Distro** — Dedicated installers for 6 major Linux distributions
 - 🖥️ **Multi-DE** — Supports GNOME, KDE, XFCE, MATE, Cinnamon, Openbox, i3, Sway
-- 🌗 **Default Theme** — Dark chrome with light content area (`Simplicity`)
+- 🌗 **Dual-Tone Theme** — Dark chrome with light content area (`Simplicity`) — installed by default
 - ☀️ **Light Theme** — Clean light variant (`Simplicity-Light`)
 - 🌙 **Dark Theme** — Full dark variant (`Simplicity-Dark`)
 - 🔧 **Auto-Detection** — Automatically detects your distro and desktop environment
@@ -30,7 +37,7 @@ A clean, modern dark theme suite for Linux desktop environments, with first-clas
 
 | Variant | Name | Description |
 |---------|------|-------------|
-| Default | `Simplicity` | Dark chrome (header bar, sidebar, menus) with light content area |
+| Dual-Tone (Default) | `Simplicity` | Dark chrome (header bar, sidebar, menus) with light content area |
 | Light | `Simplicity-Light` | Full light palette — header, content, and chrome all light |
 | Dark | `Simplicity-Dark` | Full dark palette — header, content, and chrome all dark |
 
@@ -154,6 +161,7 @@ To apply a specific variant after installation:
 ```bash
 ./scripts/apply-theme.sh --dark
 ./scripts/apply-theme.sh --light
+./scripts/apply-theme.sh --dry-run   # preview changes without applying
 ```
 
 ## Uninstallation
