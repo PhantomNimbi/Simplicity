@@ -11,6 +11,22 @@ A clean, modern GTK theme suite for Linux desktop environments, offering dual-to
 ╚══════╝╚═╝╚═╝     ╚═╝╚═╝     ╚══════╝╚═╝ ╚═════╝╚═╝   ╚═╝      ╚═╝
 ```
 
+## 🌐 Translate this README
+
+> 🌍 View this page in your language using Google Translate:
+
+[🇪🇸 Spanish](https://translate.google.com/translate?sl=en&tl=es&u=https://github.com/PhantomNimbi/Simplicity/blob/main/README.md) &nbsp;|&nbsp;
+[🇫🇷 French](https://translate.google.com/translate?sl=en&tl=fr&u=https://github.com/PhantomNimbi/Simplicity/blob/main/README.md) &nbsp;|&nbsp;
+[🇩🇪 German](https://translate.google.com/translate?sl=en&tl=de&u=https://github.com/PhantomNimbi/Simplicity/blob/main/README.md) &nbsp;|&nbsp;
+[🇨🇳 Chinese](https://translate.google.com/translate?sl=en&tl=zh-CN&u=https://github.com/PhantomNimbi/Simplicity/blob/main/README.md) &nbsp;|&nbsp;
+[🇯🇵 Japanese](https://translate.google.com/translate?sl=en&tl=ja&u=https://github.com/PhantomNimbi/Simplicity/blob/main/README.md) &nbsp;|&nbsp;
+[🇰🇷 Korean](https://translate.google.com/translate?sl=en&tl=ko&u=https://github.com/PhantomNimbi/Simplicity/blob/main/README.md) &nbsp;|&nbsp;
+[🇧🇷 Portuguese](https://translate.google.com/translate?sl=en&tl=pt&u=https://github.com/PhantomNimbi/Simplicity/blob/main/README.md) &nbsp;|&nbsp;
+[🇷🇺 Russian](https://translate.google.com/translate?sl=en&tl=ru&u=https://github.com/PhantomNimbi/Simplicity/blob/main/README.md) &nbsp;|&nbsp;
+[🇸🇦 Arabic](https://translate.google.com/translate?sl=en&tl=ar&u=https://github.com/PhantomNimbi/Simplicity/blob/main/README.md) &nbsp;|&nbsp;
+[🇮🇹 Italian](https://translate.google.com/translate?sl=en&tl=it&u=https://github.com/PhantomNimbi/Simplicity/blob/main/README.md) &nbsp;|&nbsp;
+[🇮🇳 Hindi](https://translate.google.com/translate?sl=en&tl=hi&u=https://github.com/PhantomNimbi/Simplicity/blob/main/README.md)
+
 ## Screenshots
 
 ### Dual-Tone (Default) — dark chrome · light content area
