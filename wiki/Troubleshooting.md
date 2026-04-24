@@ -18,7 +18,7 @@ This page covers the most common issues encountered when installing or using Sim
    ```
    If the directory is missing or named differently, re-run the installer or manually copy the files:
    ```bash
-   cp -r Deskthem/simplicity-dualtone ~/.themes/Simplicity
+   cp -r Simplicity/simplicity-dualtone ~/.themes/Simplicity
    ```
 
 2. **Missing `index.theme`.**
