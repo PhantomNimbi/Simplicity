@@ -1,0 +1,186 @@
+#!/usr/bin/env bash
+# uninstall.sh — Deskthem Theme Suite Uninstaller
+# Removes the Deskthem theme and resets desktop environment settings
+#
+# Usage: ./uninstall.sh [--system] [--keep-settings] [--help]
+
+set -euo pipefail
+
+THEME_NAME="Deskthem"
+SYSTEM_UNINSTALL=false
+KEEP_SETTINGS=false
+
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+BOLD='\033[1m'
+NC='\033[0m'
+
+info()    { echo -e "${BLUE}[INFO]${NC}  $*"; }
+success() { echo -e "${GREEN}[OK]${NC}    $*"; }
+warning() { echo -e "${YELLOW}[WARN]${NC}  $*"; }
+error()   { echo -e "${RED}[ERROR]${NC} $*" >&2; }
+die()     { error "$*"; exit 1; }
+
+# Parse arguments
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+        --system)
+            SYSTEM_UNINSTALL=true
+            ;;
+        --keep-settings)
+            KEEP_SETTINGS=true
+            ;;
+        --help|-h)
+            echo "Deskthem Theme Suite Uninstaller"
+            echo ""
+            echo "Usage: $0 [OPTIONS]"
+            echo ""
+            echo "Options:"
+            echo "  --system          Remove from /usr/share/themes (requires root)"
+            echo "  --keep-settings   Do not reset desktop environment settings"
+            echo "  --help, -h        Show this help message"
+            exit 0
+            ;;
+        *)
+            error "Unknown option: $1"
+            echo "Run '$0 --help' for usage."
+            exit 1
+            ;;
+    esac
+    shift
+done
+
+remove_theme_files() {
+    local user_theme_dir="${HOME}/.themes/${THEME_NAME}"
+    local system_theme_dir="/usr/share/themes/${THEME_NAME}"
+
+    if [[ -d "${user_theme_dir}" ]]; then
+        info "Removing user theme directory: ${user_theme_dir}"
+        rm -rf "${user_theme_dir}"
+        success "Removed: ${user_theme_dir}"
+    else
+        info "User theme directory not found: ${user_theme_dir}"
+    fi
+
+    if "${SYSTEM_UNINSTALL}"; then
+        if [[ -d "${system_theme_dir}" ]]; then
+            if [[ "${EUID}" -ne 0 ]]; then
+                die "Removing system theme requires root privileges. Run with sudo."
+            fi
+            info "Removing system theme directory: ${system_theme_dir}"
+            rm -rf "${system_theme_dir}"
+            success "Removed: ${system_theme_dir}"
+        else
+            info "System theme directory not found: ${system_theme_dir}"
+        fi
+    fi
+}
+
+reset_gsettings() {
+    if "${KEEP_SETTINGS}"; then
+        info "Keeping desktop settings (--keep-settings specified)."
+        return
+    fi
+
+    if command -v gsettings &>/dev/null; then
+        info "Resetting GNOME/GTK settings..."
+        gsettings reset org.gnome.desktop.interface gtk-theme 2>/dev/null || true
+        gsettings reset org.gnome.desktop.wm.preferences theme 2>/dev/null || true
+        gsettings reset org.gnome.desktop.interface color-scheme 2>/dev/null || true
+        gsettings reset org.gnome.shell.extensions.user-theme name 2>/dev/null || true
+        success "GNOME settings reset."
+    fi
+}
+
+reset_mate_settings() {
+    if "${KEEP_SETTINGS}"; then
+        return
+    fi
+
+    if command -v gsettings &>/dev/null; then
+        gsettings reset org.mate.interface gtk-theme 2>/dev/null || true
+        gsettings reset org.mate.Marco.general theme 2>/dev/null || true
+    fi
+}
+
+reset_cinnamon_settings() {
+    if "${KEEP_SETTINGS}"; then
+        return
+    fi
+
+    if command -v gsettings &>/dev/null; then
+        gsettings reset org.cinnamon.desktop.interface gtk-theme 2>/dev/null || true
+        gsettings reset org.cinnamon.desktop.wm.preferences theme 2>/dev/null || true
+        gsettings reset org.cinnamon.theme name 2>/dev/null || true
+    fi
+}
+
+reset_xfce_settings() {
+    if "${KEEP_SETTINGS}"; then
+        return
+    fi
+
+    if command -v xfconf-query &>/dev/null; then
+        info "Resetting XFCE settings..."
+        xfconf-query -c xsettings -p /Net/ThemeName -r 2>/dev/null || true
+        xfconf-query -c xfwm4 -p /general/theme -r 2>/dev/null || true
+        success "XFCE settings reset."
+    fi
+}
+
+remove_gtk_settings() {
+    if "${KEEP_SETTINGS}"; then
+        return
+    fi
+
+    local gtk3_settings="${HOME}/.config/gtk-3.0/settings.ini"
+    local gtk4_settings="${HOME}/.config/gtk-4.0/settings.ini"
+
+    for settings_file in "${gtk3_settings}" "${gtk4_settings}"; do
+        if [[ -f "${settings_file}" ]]; then
+            if grep -q "gtk-theme-name=${THEME_NAME}" "${settings_file}" 2>/dev/null; then
+                info "Removing Deskthem settings from: ${settings_file}"
+                # Remove only the Deskthem-specific lines, keep other settings
+                sed -i \
+                    -e "/^gtk-theme-name=${THEME_NAME}/d" \
+                    -e "/^gtk-icon-theme-name=Deskthem-Icons/d" \
+                    -e "/^gtk-cursor-theme-name=Deskthem-Cursors/d" \
+                    -e "/^gtk-application-prefer-dark-theme=1/d" \
+                    "${settings_file}"
+                # If the file is now empty (just [Settings] header), remove it
+                if [[ "$(grep -cv '^\[' "${settings_file}" 2>/dev/null || echo 0)" -eq 0 ]]; then
+                    rm -f "${settings_file}"
+                    success "Removed empty settings file: ${settings_file}"
+                else
+                    success "Removed Deskthem entries from: ${settings_file}"
+                fi
+            fi
+        fi
+    done
+}
+
+main() {
+    echo ""
+    echo -e "${RED}"
+    echo "  Deskthem — Uninstaller"
+    echo -e "${NC}"
+    echo ""
+
+    info "Removing Deskthem theme files..."
+    remove_theme_files
+
+    info "Resetting desktop settings..."
+    reset_gsettings
+    reset_mate_settings
+    reset_cinnamon_settings
+    reset_xfce_settings
+    remove_gtk_settings
+
+    echo ""
+    success "Deskthem has been uninstalled."
+    info "You may need to log out and back in for all changes to take effect."
+}
+
+main "$@"
