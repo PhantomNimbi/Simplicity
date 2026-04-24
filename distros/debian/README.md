@@ -1,4 +1,4 @@
-# Deskthem Theme — Debian / MX Linux / antiX
+# Simplicity Theme — Debian / MX Linux / antiX
 
 This directory contains the installer script for Debian and Debian-based distributions.
 
@@ -21,26 +21,26 @@ chmod +x install.sh
 
 ## Manual Installation
 
-1. Copy the `deskthem/` folder from the repository root to `~/.themes/Deskthem/`
+1. Copy the `simplicity/` folder from the repository root to `~/.themes/Simplicity/`
 2. Apply the theme:
 
 ### GNOME
 ```bash
-gsettings set org.gnome.desktop.interface gtk-theme "Deskthem"
-gsettings set org.gnome.desktop.wm.preferences theme "Deskthem"
+gsettings set org.gnome.desktop.interface gtk-theme "Simplicity"
+gsettings set org.gnome.desktop.wm.preferences theme "Simplicity"
 ```
 
 ### XFCE
 ```bash
-xfconf-query -c xsettings -p /Net/ThemeName -s "Deskthem"
-xfconf-query -c xfwm4 -p /general/theme -s "Deskthem"
+xfconf-query -c xsettings -p /Net/ThemeName -s "Simplicity"
+xfconf-query -c xfwm4 -p /general/theme -s "Simplicity"
 ```
 
 ### GTK Settings (for lightweight DEs like LXDE, IceWM)
 ```ini
 # ~/.config/gtk-3.0/settings.ini
 [Settings]
-gtk-theme-name=Deskthem
+gtk-theme-name=Simplicity
 gtk-application-prefer-dark-theme=1
 ```
 
@@ -53,6 +53,6 @@ gtk-application-prefer-dark-theme=1
 ## Uninstallation
 
 ```bash
-rm -rf ~/.themes/Deskthem
+rm -rf ~/.themes/Simplicity
 gsettings reset org.gnome.desktop.interface gtk-theme
 ```

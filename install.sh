@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# install.sh — Deskthem Theme Suite Main Installer
-# Automatically detects your Linux distribution and installs the Deskthem theme
+# install.sh — Simplicity Theme Suite Main Installer
+# Automatically detects your Linux distribution and installs the Simplicity theme
 #
 # Usage: ./install.sh [--system] [--no-apply] [--help]
 #
@@ -12,7 +12,7 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-THEME_NAME="Deskthem"
+THEME_NAME="Simplicity"
 SYSTEM_INSTALL=false
 NO_APPLY=false
 
@@ -40,7 +40,7 @@ while [[ $# -gt 0 ]]; do
             NO_APPLY=true
             ;;
         --help|-h)
-            echo "Deskthem Theme Suite Installer"
+            echo "Simplicity Theme Suite Installer"
             echo ""
             echo "Usage: $0 [OPTIONS]"
             echo ""
@@ -94,7 +94,7 @@ install_theme_files() {
     fi
 
     mkdir -p "${target_dir}"
-    cp -r "${SCRIPT_DIR}/deskthem/." "${target_dir}/"
+    cp -r "${SCRIPT_DIR}/simplicity/." "${target_dir}/"
     success "Theme files installed to: ${target_dir}"
 }
 
@@ -166,7 +166,7 @@ main() {
     echo ""
 
     success "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-    success "  Deskthem installation complete!"
+    success "  Simplicity installation complete!"
     success "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
     echo ""
     info "To uninstall, run: ./uninstall.sh"

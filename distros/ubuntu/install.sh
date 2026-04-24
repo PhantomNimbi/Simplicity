@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Deskthem Theme - Ubuntu / Linux Mint / Pop!_OS Installer
+# Simplicity Theme - Ubuntu / Linux Mint / Pop!_OS Installer
 # Supports: Ubuntu 20.04+, Linux Mint 20+, Pop!_OS 20.04+
 # Package manager: apt
 
@@ -7,7 +7,7 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
-THEME_NAME="Deskthem"
+THEME_NAME="Simplicity"
 
 # Colors for output
 RED='\033[0;31m'
@@ -57,7 +57,7 @@ install_theme() {
     local target_dir="${HOME}/.themes/${THEME_NAME}"
     info "Installing ${THEME_NAME} theme to ${target_dir}..."
     mkdir -p "${target_dir}"
-    cp -r "${REPO_ROOT}/deskthem/." "${target_dir}/"
+    cp -r "${REPO_ROOT}/simplicity/." "${target_dir}/"
     success "Theme installed to ${target_dir}"
 }
 
@@ -106,7 +106,7 @@ main() {
     apply_xfce_theme
 
     echo ""
-    success "Deskthem installation complete!"
+    success "Simplicity installation complete!"
     info "You may need to log out and back in for all changes to take effect."
     info "Use GNOME Tweaks or the Appearance settings to switch themes."
 }

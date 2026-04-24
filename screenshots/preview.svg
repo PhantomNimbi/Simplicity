@@ -173,7 +173,7 @@
     <!-- Section: Theme -->
     <text x="608" y="116" class="sans" font-size="11" fill="#888888" letter-spacing="1">THEME</text>
     <rect x="608" y="122" width="242" height="36" rx="4" fill="#1e1e1e" stroke="#5294e2" stroke-width="1"/>
-    <text x="622" y="145" class="sans" font-size="13" fill="#e0e0e0">Deskthem</text>
+    <text x="622" y="145" class="sans" font-size="13" fill="#e0e0e0">Simplicity</text>
     <text x="838" y="145" text-anchor="end" class="sans" font-size="11" fill="#8a8a8a">▾</text>
 
     <!-- Section: Accent color -->
@@ -244,11 +244,11 @@
 
     <text x="46" y="527" class="mono" font-size="12" fill="#888888">✓ Detected: Arch Linux — GNOME</text>
     <text x="46" y="543" class="mono" font-size="12" fill="#5294e2">→</text>
-    <text x="58" y="543" class="mono" font-size="12" fill="#e0e0e0">Applying Deskthem...</text>
+    <text x="58" y="543" class="mono" font-size="12" fill="#e0e0e0">Applying Simplicity...</text>
     <!-- Cursor blink placeholder -->
     <rect x="214" y="530" width="8" height="14" fill="#e0e0e0" opacity="0.8"/>
   </g>
 
   <!-- Label -->
-  <text x="450" y="555" text-anchor="middle" class="sans" font-size="11" fill="#555555">Deskthem — Dark Theme Suite for Linux</text>
+  <text x="450" y="555" text-anchor="middle" class="sans" font-size="11" fill="#555555">Simplicity — Dark Theme Suite for Linux</text>
 </svg>
