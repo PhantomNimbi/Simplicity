@@ -6,41 +6,68 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ---
 
-## [Unreleased]
+## [1.1.0] — 2026-04-24
 
 ### ✨ Added
 
-#### Dual-Tone Variant (`simplicity-dualtone/`)
+#### New Theme Variants
 
-- **Concept** — A new `Simplicity-DualTone` theme that combines dark chrome
+- **Simplicity-Light** (`simplicity-light/`) — Full light palette variant:
+  header bar, content area, and chrome all use the light palette.
+  GTK 2, GTK 3, GTK 4, Metacity, XFWM4, and Openbox themes included.
+- **Dual-Tone default** (`simplicity-dualtone/`) — Combines dark chrome
   (header bar, sidebar, menus, toolbars, OSD) with a light content area
-  (window body, text entries, tree views, buttons). Delivers the readability
-  of a light theme with the polished look of a dark UI frame.
-- **GTK 2** (`gtk-2.0/gtkrc`) — Dark menubar and toolbar styles; light
-  default widget and button styles.
-- **GTK 3** (`gtk-3.0/gtk.css`) — Dual-palette CSS with `header_bg`/`header_fg`
-  colour variables for dark chrome and `bg_color`/`fg_color` for light content.
-- **GTK 3 settings** (`gtk-3.0/settings.ini`) — Sets `gtk-application-prefer-dark-theme=0`
-  so the content area renders light.
-- **GTK 4** (`gtk-4.0/gtk.css`) — Adwaita overrides with dark `headerbar_*`,
-  `sidebar_*`, and `popover_*` colours alongside light `window_*` and `view_*`
-  colours.
-- **Metacity** (`metacity-1/metacity-theme-3.xml`) — Dark titlebar on a light
-  window body; same coloured traffic-light buttons as the other variants.
-- **XFWM4** (`xfwm4/themerc`) — Dark active/inactive titlebar colours matching
-  the dark variant's chrome palette.
-- **Openbox** (`openbox-3/themerc`) — Dark titlebar and menu chrome.
-- **Theme metadata** (`index.theme`) — Registers `Simplicity-DualTone` as an
-  X-GNOME-Metatheme entry.
+  (window body, text entries, tree views, buttons). This variant replaces
+  the original dark theme as the default installation target (`Simplicity`).
+  - **GTK 2** (`gtk-2.0/gtkrc`) — Dark menubar and toolbar styles; light
+    default widget and button styles.
+  - **GTK 3** (`gtk-3.0/gtk.css`) — Dual-palette CSS with `header_bg`/`header_fg`
+    colour variables for dark chrome and `bg_color`/`fg_color` for light content.
+  - **GTK 3 settings** (`gtk-3.0/settings.ini`) — Sets
+    `gtk-application-prefer-dark-theme=0` so the content area renders light.
+  - **GTK 4** (`gtk-4.0/gtk.css`) — Adwaita overrides with dark `headerbar_*`,
+    `sidebar_*`, and `popover_*` colours alongside light `window_*` and `view_*`
+    colours.
+  - **Metacity** (`metacity-1/metacity-theme-3.xml`) — Dark titlebar on a light
+    window body; same traffic-light button colours as the other variants.
+  - **XFWM4** (`xfwm4/themerc`) — Dark active/inactive titlebar colours.
+  - **Openbox** (`openbox-3/themerc`) — Dark titlebar and menu chrome.
+  - **Theme metadata** (`index.theme`) — Registers `Simplicity` as the
+    X-GNOME-Metatheme entry.
 
-#### Installer / Scripts
+#### Documentation
 
-- `install.sh` — New `--dual-tone` flag installs `Simplicity-DualTone` in
-  addition to the default dark theme.
-- `scripts/apply-theme.sh` — New `--dual-tone` flag applies the dual-tone
-  variant to the current desktop session.
-- `uninstall.sh` — Dual-tone theme directory is removed automatically on
-  uninstall (both user and system paths).
+- **GitHub Wiki** — Comprehensive wiki added with pages for Home, Theme
+  Variants, Theme Elements, Colour Palette, Installation, Desktop
+  Environments, and Troubleshooting.
+- **`CONTRIBUTING.md`** — Added full contribution guidelines covering bug
+  reports, feature requests, pull requests, code style, and adding new
+  distribution support.
+- **`TEMPLATE_USAGE.md`** — Updated to reflect the three-variant directory
+  structure (`simplicity-dualtone/`, `simplicity-light/`, `simplicity-dark/`)
+  and the renamed default theme.
+- **`README.md`** — Updated with dual-tone variant information, corrected
+  screenshots, wiki links, ASCII art, and repository URL.
+
+#### GitHub Actions
+
+- **`release.yml`** — Release workflow updated to use correct theme
+  directories (`simplicity-dualtone`, `simplicity-dark`, `simplicity-light`),
+  the Simplicity repository URL, and current installer options.
+
+### 🔄 Changed
+
+- **Default theme** — The dual-tone variant (`simplicity-dualtone/`) is now
+  installed as the default theme (`Simplicity`). The original full-dark
+  variant is installed as `Simplicity-Dark` using the `--dark` flag.
+- **Installer** (`install.sh`) — Now copies `simplicity-dualtone/` to
+  `~/.themes/Simplicity` by default. The `--dark` and `--light` flags install
+  the additional variants as `Simplicity-Dark` and `Simplicity-Light`
+  respectively.
+- **`scripts/apply-theme.sh`** — Applies the `Simplicity` (dual-tone) theme
+  by default; `--dark` and `--light` flags apply the corresponding variants.
+- **Project name** — Renamed from Deskthem to Simplicity throughout the
+  codebase, scripts, metadata, and documentation.
 
 ---
 
