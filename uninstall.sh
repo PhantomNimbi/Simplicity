@@ -6,7 +6,7 @@
 
 set -euo pipefail
 
-THEME_NAME="Simplicity Dark"
+THEME_NAME="Simplicity-Dark"
 THEME_LIGHT_NAME="Simplicity-Light"
 THEME_DUALTONE_NAME="Simplicity-DualTone"
 SYSTEM_UNINSTALL=false

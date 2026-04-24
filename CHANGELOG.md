@@ -86,8 +86,8 @@ auto-detecting per-distro installers, and a desktop-environment-aware apply scri
 
 - Auto-detects the running Linux distribution via `/etc/os-release`.
 - Delegates to the appropriate per-distro installer to resolve dependencies.
-- Copies theme files to `~/.themes/Simplicity Dark/` (user install) or
-  `/usr/share/themes/Simplicity Dark/` (system install with `--system`).
+- Copies theme files to `~/.themes/Simplicity-Dark/` (user install) or
+  `/usr/share/themes/Simplicity-Dark/` (system install with `--system`).
 - Calls `apply-theme.sh` to apply the theme immediately after install.
 - Flags: `--system`, `--no-apply`, `--help`.
 
