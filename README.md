@@ -231,7 +231,9 @@ Want to build your own Linux theme using this project as a starting point? See *
 
 ## Contributing
 
-Contributions are welcome! To add support for a new distribution:
+Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for full guidelines on reporting bugs, suggesting features, and submitting pull requests.
+
+To add support for a new distribution:
 
 1. Create a new directory under `distros/<distro-name>/`
 2. Add an `install.sh` script following the existing pattern
