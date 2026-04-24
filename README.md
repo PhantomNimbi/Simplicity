@@ -1,6 +1,6 @@
-# Simplicity — Linux Desktop Theme Suite
+# Simplicity — GTK Theme Suite for Linux
 
-A clean, modern dark theme suite for Linux desktop environments, with first-class support for all major Linux distributions.
+A clean, modern GTK theme suite for Linux desktop environments, offering dual-tone, light, and dark variants with support for all major distributions and desktop environments.
 
 ```
 ███████╗██╗███╗   ███╗██████╗ ██╗     ██╗ ██████╗██╗████████╗██╗   ██╗
