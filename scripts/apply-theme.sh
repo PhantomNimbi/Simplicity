@@ -124,7 +124,7 @@ apply_gtk_settings() {
     local gtk3_dir="${HOME}/.config/gtk-3.0"
     local gtk4_dir="${HOME}/.config/gtk-4.0"
     local prefer_dark_value
-    prefer_dark_value="$( "${PREFER_DARK}" && echo 1 || echo 0 )"
+    if "${PREFER_DARK}"; then prefer_dark_value=1; else prefer_dark_value=0; fi
 
     run_cmd mkdir -p "${gtk3_dir}" "${gtk4_dir}"
 
