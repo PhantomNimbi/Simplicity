@@ -1,0 +1,121 @@
+/* Deskthem GTK 4.0 Theme
+ * Compatible with: GNOME 40+ desktop environment
+ * Distros: Ubuntu 22.04+, Fedora 34+, Arch Linux, openSUSE Leap 15.3+
+ *
+ * GTK 4 uses libadwaita - this provides custom color overrides
+ */
+
+/* === Adwaita Color Overrides === */
+@define-color accent_color          #5294e2;
+@define-color accent_bg_color       #5294e2;
+@define-color accent_fg_color       #ffffff;
+@define-color destructive_color     #cf6679;
+@define-color destructive_bg_color  #cf6679;
+@define-color destructive_fg_color  #ffffff;
+@define-color success_color         #4caf50;
+@define-color success_bg_color      #4caf50;
+@define-color success_fg_color      #ffffff;
+@define-color warning_color         #e5a050;
+@define-color warning_bg_color      #e5a050;
+@define-color warning_fg_color      rgba(0,0,0,.8);
+@define-color error_color           #cf6679;
+@define-color error_bg_color        #cf6679;
+@define-color error_fg_color        #ffffff;
+@define-color window_bg_color       #2d2d2d;
+@define-color window_fg_color       #e0e0e0;
+@define-color view_bg_color         #1e1e1e;
+@define-color view_fg_color         #e0e0e0;
+@define-color headerbar_bg_color    #252525;
+@define-color headerbar_fg_color    #e0e0e0;
+@define-color headerbar_border_color rgba(0,0,0,.6);
+@define-color headerbar_backdrop_color #2a2a2a;
+@define-color headerbar_shade_color rgba(0,0,0,.35);
+@define-color card_bg_color         rgba(255,255,255,.05);
+@define-color card_fg_color         #e0e0e0;
+@define-color card_shade_color      rgba(0,0,0,.25);
+@define-color dialog_bg_color       #313131;
+@define-color dialog_fg_color       #e0e0e0;
+@define-color popover_bg_color      #313131;
+@define-color popover_fg_color      #e0e0e0;
+@define-color shade_color           rgba(0,0,0,.25);
+@define-color scrollbar_outline_color rgba(0,0,0,.5);
+@define-color sidebar_bg_color      #2a2a2a;
+@define-color sidebar_fg_color      #e0e0e0;
+@define-color sidebar_backdrop_color #272727;
+@define-color sidebar_shade_color   rgba(0,0,0,.25);
+@define-color thumbnail_bg_color    #1e1e1e;
+@define-color thumbnail_fg_color    #e0e0e0;
+
+/* === Base Windows === */
+window,
+.background {
+    background-color: @window_bg_color;
+    color: @window_fg_color;
+}
+
+/* === Header Bar === */
+headerbar {
+    background-color: @headerbar_bg_color;
+    color: @headerbar_fg_color;
+    border-bottom: 1px solid @headerbar_border_color;
+}
+
+/* === Buttons === */
+button {
+    transition: background-color 200ms, border-color 200ms, box-shadow 200ms;
+}
+
+button.suggested-action {
+    background-color: @accent_bg_color;
+    color: @accent_fg_color;
+}
+
+button.destructive-action {
+    background-color: @destructive_bg_color;
+    color: @destructive_fg_color;
+}
+
+/* === Accent === */
+selection {
+    background-color: @accent_bg_color;
+    color: @accent_fg_color;
+}
+
+:focus {
+    outline-color: alpha(@accent_color, 0.7);
+}
+
+/* === Views === */
+.view,
+textview,
+listview {
+    background-color: @view_bg_color;
+    color: @view_fg_color;
+}
+
+/* === Cards === */
+.card {
+    background-color: @card_bg_color;
+    color: @card_fg_color;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px @card_shade_color;
+}
+
+/* === Sidebar === */
+.sidebar,
+.navigation-sidebar {
+    background-color: @sidebar_bg_color;
+    color: @sidebar_fg_color;
+}
+
+/* === Dialogs === */
+dialog {
+    background-color: @dialog_bg_color;
+    color: @dialog_fg_color;
+}
+
+/* === Popovers === */
+popover {
+    background-color: @popover_bg_color;
+    color: @popover_fg_color;
+}

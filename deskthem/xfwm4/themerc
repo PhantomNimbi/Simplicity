@@ -1,0 +1,60 @@
+# Deskthem XFWM4 Theme
+# Compatible with: XFCE desktop environment
+# Distros: Ubuntu, Debian, Arch Linux, Manjaro, openSUSE
+
+# Active window title bar
+active_text_color=#e0e0e0
+active_border_color=#5294e2
+active_color_1=#252525
+active_hilight_1=#303030
+active_shadow_1=#1a1a1a
+active_color_2=#2d2d2d
+active_hilight_2=#353535
+active_shadow_2=#202020
+active_mid_1=#282828
+active_mid_2=#2a2a2a
+active_frame_color=#5294e2
+
+# Inactive window title bar
+inactive_text_color=#808080
+inactive_border_color=#404040
+inactive_color_1=#2a2a2a
+inactive_hilight_1=#2e2e2e
+inactive_shadow_1=#1e1e1e
+inactive_color_2=#282828
+inactive_hilight_2=#2c2c2c
+inactive_shadow_2=#1c1c1c
+inactive_mid_1=#252525
+inactive_mid_2=#272727
+inactive_frame_color=#404040
+
+# Button layout
+button_layout=O|HMC
+
+# Fonts
+title_font=Sans Bold 9
+title_horizontal_offset=4
+title_vertical_offset=1
+title_shadow_active=under
+title_shadow_inactive=under
+
+# Dimensions
+full_width_title=true
+title_height=28
+button_offset=4
+button_spacing=2
+snap_width=10
+snap_resistance=10
+workspace_count=4
+
+# Decorations
+show_popup_shadow=true
+show_dock_shadow=true
+prevent_focus_stealing=true
+raise_with_any_button=true
+
+# Scrolling behavior
+scroll_workspaces=true
+
+# Theme engine
+theme_engine=xfwm4

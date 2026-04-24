@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Deskthem
+Comment=A clean and modern Linux desktop theme suite
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Deskthem
+MetacityTheme=Deskthem
+IconTheme=Deskthem-Icons
+CursorTheme=Deskthem-Cursors
+ButtonLayout=close,minimize,maximize:
