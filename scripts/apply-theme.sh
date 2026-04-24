@@ -42,12 +42,17 @@ while [[ $# -gt 0 ]]; do
             THEME_NAME="Simplicity-Light"
             PREFER_DARK=false
             ;;
+        --dual-tone)
+            THEME_NAME="Simplicity-DualTone"
+            PREFER_DARK=false
+            ;;
         --help|-h)
-            echo "Usage: $0 [--dry-run] [--light]"
+            echo "Usage: $0 [--dry-run] [--light] [--dual-tone]"
             echo ""
             echo "Options:"
             echo "  --dry-run, -n   Show what would be done without making changes"
             echo "  --light         Apply the Simplicity-Light (light variant) theme"
+            echo "  --dual-tone     Apply the Simplicity-DualTone (dark chrome, light content) theme"
             echo "  --help, -h      Show this help message"
             exit 0
             ;;

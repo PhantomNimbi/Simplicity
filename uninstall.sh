@@ -8,6 +8,7 @@ set -euo pipefail
 
 THEME_NAME="Simplicity"
 THEME_LIGHT_NAME="Simplicity-Light"
+THEME_DUALTONE_NAME="Simplicity-DualTone"
 SYSTEM_UNINSTALL=false
 KEEP_SETTINGS=false
 
@@ -58,6 +59,8 @@ remove_theme_files() {
     local system_theme_dir="/usr/share/themes/${THEME_NAME}"
     local user_light_dir="${HOME}/.themes/${THEME_LIGHT_NAME}"
     local system_light_dir="/usr/share/themes/${THEME_LIGHT_NAME}"
+    local user_dualtone_dir="${HOME}/.themes/${THEME_DUALTONE_NAME}"
+    local system_dualtone_dir="/usr/share/themes/${THEME_DUALTONE_NAME}"
 
     if [[ -d "${user_theme_dir}" ]]; then
         info "Removing user theme directory: ${user_theme_dir}"
@@ -71,6 +74,12 @@ remove_theme_files() {
         info "Removing user light theme directory: ${user_light_dir}"
         rm -rf "${user_light_dir}"
         success "Removed: ${user_light_dir}"
+    fi
+
+    if [[ -d "${user_dualtone_dir}" ]]; then
+        info "Removing user dual-tone theme directory: ${user_dualtone_dir}"
+        rm -rf "${user_dualtone_dir}"
+        success "Removed: ${user_dualtone_dir}"
     fi
 
     if "${SYSTEM_UNINSTALL}"; then
@@ -89,6 +98,12 @@ remove_theme_files() {
             info "Removing system light theme directory: ${system_light_dir}"
             rm -rf "${system_light_dir}"
             success "Removed: ${system_light_dir}"
+        fi
+
+        if [[ -d "${system_dualtone_dir}" ]]; then
+            info "Removing system dual-tone theme directory: ${system_dualtone_dir}"
+            rm -rf "${system_dualtone_dir}"
+            success "Removed: ${system_dualtone_dir}"
         fi
     fi
 }
@@ -155,12 +170,13 @@ remove_gtk_settings() {
 
     for settings_file in "${gtk3_settings}" "${gtk4_settings}"; do
         if [[ -f "${settings_file}" ]]; then
-            if grep -qE "^gtk-theme-name=(${THEME_NAME}|${THEME_LIGHT_NAME})" "${settings_file}" 2>/dev/null; then
+            if grep -qE "^gtk-theme-name=(${THEME_NAME}|${THEME_LIGHT_NAME}|${THEME_DUALTONE_NAME})" "${settings_file}" 2>/dev/null; then
                 info "Removing Simplicity settings from: ${settings_file}"
                 # Remove only the Simplicity-specific lines, keep other settings
                 sed -i \
                     -e "/^gtk-theme-name=${THEME_NAME}/d" \
                     -e "/^gtk-theme-name=${THEME_LIGHT_NAME}/d" \
+                    -e "/^gtk-theme-name=${THEME_DUALTONE_NAME}/d" \
                     -e "/^gtk-icon-theme-name=Simplicity-Icons/d" \
                     -e "/^gtk-cursor-theme-name=Simplicity-Cursors/d" \
                     -e "/^gtk-application-prefer-dark-theme=1/d" \
