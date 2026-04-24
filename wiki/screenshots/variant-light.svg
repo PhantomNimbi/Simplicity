@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560">
+  <defs>
+    <style>
+      .mono { font-family: 'DejaVu Sans Mono', 'Courier New', monospace; }
+      .sans { font-family: 'DejaVu Sans', 'Segoe UI', Arial, sans-serif; }
+    </style>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="112%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+    <linearGradient id="deskGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#c8d0e0;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#b8c4d8;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Desktop background — light blue-grey -->
+  <rect width="900" height="560" fill="url(#deskGrad)"/>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- TEXT EDITOR WINDOW                             -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <g filter="url(#shadow)">
+    <!-- Window body — all light -->
+    <rect x="30" y="30" width="560" height="420" rx="6" ry="6" fill="#f5f5f5" stroke="#d0d0d0" stroke-width="1"/>
+    <!-- Header bar — light chrome -->
+    <rect x="30" y="30" width="560" height="38" rx="6" ry="6" fill="#ebebeb" stroke="#d0d0d0" stroke-width="1"/>
+    <rect x="30" y="54" width="560" height="14" fill="#ebebeb"/>
+    <!-- Traffic-light buttons -->
+    <circle cx="54" cy="49" r="7" fill="#cf6679"/>
+    <circle cx="76" cy="49" r="7" fill="#e5a050"/>
+    <circle cx="98" cy="49" r="7" fill="#4caf50"/>
+    <!-- Title -->
+    <text x="310" y="54" text-anchor="middle" font-family="'DejaVu Sans',Arial,sans-serif" font-size="13" fill="#2d2d2d">notes.txt — Text Editor</text>
+
+    <!-- Tab bar -->
+    <rect x="30" y="68" width="560" height="28" fill="#e8e8e8" stroke="#d0d0d0" stroke-width="0.5"/>
+    <rect x="40" y="72" width="100" height="20" rx="3" fill="#f5f5f5" stroke="#5294e2" stroke-width="1"/>
+    <text x="90" y="86" text-anchor="middle" font-family="'DejaVu Sans',Arial,sans-serif" font-size="11" fill="#2d2d2d">notes.txt</text>
+    <rect x="144" y="72" width="110" height="20" rx="3" fill="#dcdcdc"/>
+    <text x="199" y="86" text-anchor="middle" font-family="'DejaVu Sans',Arial,sans-serif" font-size="11" fill="#888888">README.md</text>
+
+    <!-- Line numbers gutter -->
+    <rect x="30" y="96" width="48" height="354" fill="#ebebeb" stroke="#d0d0d0" stroke-width="0.5"/>
+
+    <!-- Editor content area — white -->
+    <rect x="78" y="96" width="512" height="354" fill="#ffffff"/>
+
+    <!-- Line numbers -->
+    <text x="44" y="116" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" fill="#aaaaaa">1</text>
+    <text x="44" y="134" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" fill="#aaaaaa">2</text>
+    <text x="44" y="152" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" fill="#aaaaaa">3</text>
+    <text x="44" y="170" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" fill="#aaaaaa">4</text>
+    <text x="44" y="188" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" fill="#aaaaaa">5</text>
+    <text x="44" y="206" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" fill="#aaaaaa">6</text>
+    <text x="44" y="224" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" fill="#aaaaaa">7</text>
+    <text x="44" y="242" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" fill="#aaaaaa">8</text>
+    <text x="44" y="260" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" fill="#aaaaaa">9</text>
+    <text x="44" y="278" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" fill="#aaaaaa">10</text>
+
+    <!-- Current line highlight — very light -->
+    <rect x="78" y="158" width="512" height="18" fill="#f0f4ff"/>
+
+    <!-- Code content -->
+    <text x="90" y="116" font-family="'Courier New',monospace" font-size="11" fill="#b5436a"># Simplicity Theme Notes</text>
+    <text x="90" y="134" font-family="'Courier New',monospace" font-size="11" fill="#999999">## ---</text>
+    <text x="90" y="152" font-family="'Courier New',monospace" font-size="11" fill="#2d2d2d">Version: </text>
+    <text x="154" y="152" font-family="'Courier New',monospace" font-size="11" fill="#2a7a2a">1.0.0</text>
+    <text x="90" y="170" font-family="'Courier New',monospace" font-size="11" fill="#2d2d2d">Accent:  </text>
+    <text x="154" y="170" font-family="'Courier New',monospace" font-size="11" fill="#1a6bbf">#5294e2</text>
+    <text x="90" y="188" font-family="'Courier New',monospace" font-size="11" fill="#2d2d2d">Author:  </text>
+    <text x="154" y="188" font-family="'Courier New',monospace" font-size="11" fill="#c07020">PhantomNimbi</text>
+    <text x="90" y="206" font-family="'Courier New',monospace" font-size="11" fill="#888888">## Features</text>
+    <text x="90" y="224" font-family="'Courier New',monospace" font-size="11" fill="#2d2d2d">- GTK 2, GTK 3, GTK 4 support</text>
+    <text x="90" y="242" font-family="'Courier New',monospace" font-size="11" fill="#2d2d2d">- Metacity, XFWM4, Openbox WM</text>
+    <text x="90" y="260" font-family="'Courier New',monospace" font-size="11" fill="#2d2d2d">- 6 distro installers</text>
+    <text x="90" y="278" font-family="'Courier New',monospace" font-size="11" fill="#2d2d2d">- Auto-detect DE and apply</text>
+
+    <!-- Cursor -->
+    <rect x="90" y="168" width="2" height="14" fill="#2d2d2d" opacity="0.9"/>
+
+    <!-- Scrollbar -->
+    <rect x="582" y="96" width="8" height="354" rx="4" fill="#e0e0e0"/>
+    <rect x="582" y="96" width="8" height="90" rx="4" fill="#aaaaaa"/>
+
+    <!-- Status bar -->
+    <rect x="30" y="418" width="560" height="32" fill="#ebebeb" stroke="#d0d0d0" stroke-width="0.5"/>
+    <text x="90" y="438" font-family="'DejaVu Sans',Arial,sans-serif" font-size="11" fill="#888888">Plain Text  ·  UTF-8  ·  LF  ·  Ln 5, Col 9</text>
+    <text x="560" y="438" text-anchor="end" font-family="'DejaVu Sans',Arial,sans-serif" font-size="11" fill="#5294e2">Simplicity-Light</text>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- WIDGET PANEL                                    -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <g filter="url(#shadow)">
+    <rect x="618" y="30" width="260" height="420" rx="6" ry="6" fill="#f0f0f0" stroke="#d0d0d0" stroke-width="1"/>
+
+    <!-- Panel header — light chrome -->
+    <rect x="618" y="30" width="260" height="38" rx="6" ry="6" fill="#ebebeb" stroke="#d0d0d0" stroke-width="1"/>
+    <rect x="618" y="54" width="260" height="14" fill="#ebebeb"/>
+    <circle cx="638" cy="49" r="7" fill="#cf6679"/>
+    <circle cx="660" cy="49" r="7" fill="#e5a050"/>
+    <circle cx="682" cy="49" r="7" fill="#4caf50"/>
+    <text x="748" y="54" text-anchor="middle" font-family="'DejaVu Sans',Arial,sans-serif" font-size="13" fill="#2d2d2d">Widget Panel</text>
+
+    <!-- Buttons -->
+    <text x="636" y="88" font-family="'DejaVu Sans',Arial,sans-serif" font-size="10" fill="#888888" letter-spacing="1">BUTTONS</text>
+    <rect x="636" y="94" width="80" height="26" rx="5" fill="#5294e2"/>
+    <text x="676" y="111" text-anchor="middle" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12" fill="#ffffff">Primary</text>
+    <rect x="724" y="94" width="80" height="26" rx="5" fill="#e8e8e8" stroke="#d0d0d0" stroke-width="1"/>
+    <text x="764" y="111" text-anchor="middle" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12" fill="#2d2d2d">Secondary</text>
+    <rect x="636" y="128" width="80" height="26" rx="5" fill="#ffffff" stroke="#cf6679" stroke-width="1"/>
+    <text x="676" y="145" text-anchor="middle" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12" fill="#cf6679">Danger</text>
+    <rect x="724" y="128" width="80" height="26" rx="5" fill="#4caf50"/>
+    <text x="764" y="145" text-anchor="middle" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12" fill="#ffffff">Success</text>
+
+    <!-- Inputs -->
+    <text x="636" y="176" font-family="'DejaVu Sans',Arial,sans-serif" font-size="10" fill="#888888" letter-spacing="1">INPUTS</text>
+    <rect x="636" y="182" width="224" height="26" rx="4" fill="#ffffff" stroke="#5294e2" stroke-width="1"/>
+    <text x="650" y="199" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12" fill="#2d2d2d">Focused text field</text>
+    <rect x="636" y="216" width="224" height="26" rx="4" fill="#ffffff" stroke="#d0d0d0" stroke-width="1"/>
+    <text x="650" y="233" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12" fill="#aaaaaa">Placeholder text…</text>
+
+    <!-- Toggles -->
+    <text x="636" y="262" font-family="'DejaVu Sans',Arial,sans-serif" font-size="10" fill="#888888" letter-spacing="1">TOGGLES</text>
+    <rect x="636" y="270" width="14" height="14" rx="2" fill="#5294e2"/>
+    <text x="657" y="282" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12" fill="#2d2d2d">✓ Enabled option</text>
+    <rect x="636" y="292" width="14" height="14" rx="2" fill="#f5f5f5" stroke="#cccccc" stroke-width="1"/>
+    <text x="657" y="304" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12" fill="#aaaaaa">Disabled option</text>
+    <circle cx="643" cy="322" r="7" fill="#ffffff" stroke="#5294e2" stroke-width="2"/>
+    <circle cx="643" cy="322" r="3" fill="#5294e2"/>
+    <text x="657" y="326" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12" fill="#2d2d2d">Radio selected</text>
+    <circle cx="643" cy="345" r="7" fill="#ffffff" stroke="#cccccc" stroke-width="1"/>
+    <text x="657" y="349" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12" fill="#aaaaaa">Radio unselected</text>
+
+    <!-- Progress -->
+    <text x="636" y="374" font-family="'DejaVu Sans',Arial,sans-serif" font-size="10" fill="#888888" letter-spacing="1">PROGRESS</text>
+    <rect x="636" y="382" width="224" height="10" rx="5" fill="#e0e0e0" stroke="#d0d0d0" stroke-width="0.5"/>
+    <rect x="636" y="382" width="158" height="10" rx="5" fill="#5294e2"/>
+    <text x="636" y="408" font-family="'DejaVu Sans',Arial,sans-serif" font-size="10" fill="#888888">70% complete</text>
+
+    <!-- Tooltip -->
+    <rect x="636" y="418" width="224" height="22" rx="4" fill="#f0f0f0" stroke="#d0d0d0" stroke-width="1"/>
+    <text x="748" y="433" text-anchor="middle" font-family="'DejaVu Sans',Arial,sans-serif" font-size="11" fill="#2d2d2d">Tooltip — light background</text>
+  </g>
+
+  <!-- Label -->
+  <text x="450" y="556" text-anchor="middle" font-family="'DejaVu Sans',Arial,sans-serif" font-size="11" fill="#666666">Simplicity-Light — Full light variant (GTK 3)</text>
+</svg>

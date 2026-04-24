@@ -1,0 +1,166 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="580" viewBox="0 0 900 580">
+  <defs>
+    <style>
+      .sans { font-family: 'DejaVu Sans', 'Segoe UI', Arial, sans-serif; }
+    </style>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="112%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="580" fill="#1a1a2e"/>
+
+  <!-- Title -->
+  <text x="450" y="34" text-anchor="middle" font-family="'DejaVu Sans',Arial,sans-serif" font-size="16" font-weight="bold" fill="#e0e0e0">Simplicity — UI Element Showcase (Dark Variant)</text>
+  <line x1="40" y1="46" x2="860" y2="46" stroke="#404040" stroke-width="1"/>
+
+  <!-- ══════════════════════════ -->
+  <!-- WINDOW FRAME ELEMENTS    -->
+  <!-- ══════════════════════════ -->
+  <text x="40" y="68" font-family="'DejaVu Sans',Arial,sans-serif" font-size="11" fill="#888888" letter-spacing="1">WINDOW CHROME</text>
+
+  <g filter="url(#shadow)">
+    <!-- Header bar -->
+    <rect x="40" y="76" width="380" height="36" rx="4" fill="#252525" stroke="#404040" stroke-width="1"/>
+    <circle cx="60" cy="94" r="7" fill="#cf6679"/>
+    <circle cx="80" cy="94" r="7" fill="#e5a050"/>
+    <circle cx="100" cy="94" r="7" fill="#4caf50"/>
+    <text x="210" y="99" text-anchor="middle" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12" fill="#e0e0e0">Application Window</text>
+  </g>
+  <text x="40" y="126" font-family="'DejaVu Sans',Arial,sans-serif" font-size="10" fill="#666666">Header bar: bg=#252525 · fg=#e0e0e0 · border=#404040</text>
+  <text x="40" y="140" font-family="'DejaVu Sans',Arial,sans-serif" font-size="10" fill="#666666">Buttons: close=#cf6679 · minimise=#e5a050 · maximise=#4caf50</text>
+
+  <!-- ══════════════════════════ -->
+  <!-- BUTTONS                  -->
+  <!-- ══════════════════════════ -->
+  <text x="460" y="68" font-family="'DejaVu Sans',Arial,sans-serif" font-size="11" fill="#888888" letter-spacing="1">BUTTONS</text>
+
+  <!-- Normal -->
+  <rect x="460" y="76" width="90" height="28" rx="5" fill="#3a3a3a" stroke="#404040" stroke-width="1"/>
+  <text x="505" y="94" text-anchor="middle" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12" fill="#e0e0e0">Normal</text>
+
+  <!-- Hover -->
+  <rect x="560" y="76" width="90" height="28" rx="5" fill="#484848" stroke="#505050" stroke-width="1"/>
+  <text x="605" y="94" text-anchor="middle" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12" fill="#e0e0e0">Hover</text>
+
+  <!-- Active / Pressed -->
+  <rect x="660" y="76" width="90" height="28" rx="5" fill="#2a2a2a" stroke="#404040" stroke-width="1"/>
+  <text x="705" y="94" text-anchor="middle" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12" fill="#e0e0e0">Pressed</text>
+
+  <!-- Suggested action -->
+  <rect x="760" y="76" width="90" height="28" rx="5" fill="#5294e2"/>
+  <text x="805" y="94" text-anchor="middle" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12" fill="#ffffff">Primary</text>
+
+  <text x="460" y="120" font-family="'DejaVu Sans',Arial,sans-serif" font-size="10" fill="#666666">Normal: #3a3a3a · Hover: #484848 · Active: #2a2a2a · Primary: #5294e2</text>
+
+  <line x1="40" y1="152" x2="860" y2="152" stroke="#404040" stroke-width="1"/>
+
+  <!-- ══════════════════════════ -->
+  <!-- ENTRY / INPUT FIELDS     -->
+  <!-- ══════════════════════════ -->
+  <text x="40" y="174" font-family="'DejaVu Sans',Arial,sans-serif" font-size="11" fill="#888888" letter-spacing="1">TEXT ENTRY FIELDS</text>
+
+  <!-- Normal entry -->
+  <rect x="40" y="184" width="200" height="28" rx="4" fill="#1e1e1e" stroke="#404040" stroke-width="1"/>
+  <text x="56" y="202" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12" fill="#888888">Placeholder text…</text>
+
+  <!-- Focused entry -->
+  <rect x="254" y="184" width="200" height="28" rx="4" fill="#1e1e1e" stroke="#5294e2" stroke-width="1.5"/>
+  <text x="270" y="202" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12" fill="#e0e0e0">Focused entry</text>
+  <rect x="434" y="190" width="2" height="16" fill="#e0e0e0"/>
+
+  <!-- Error entry -->
+  <rect x="468" y="184" width="200" height="28" rx="4" fill="#1e1e1e" stroke="#cf6679" stroke-width="1.5"/>
+  <text x="484" y="202" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12" fill="#cf6679">Invalid value</text>
+
+  <!-- Disabled entry -->
+  <rect x="682" y="184" width="178" height="28" rx="4" fill="#252525" stroke="#303030" stroke-width="1"/>
+  <text x="698" y="202" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12" fill="#555555">Disabled</text>
+
+  <text x="40" y="228" font-family="'DejaVu Sans',Arial,sans-serif" font-size="10" fill="#666666">Base: #1e1e1e · Normal border: #404040 · Focused: #5294e2 · Error: #cf6679 · Disabled: #252525</text>
+
+  <line x1="40" y1="242" x2="860" y2="242" stroke="#404040" stroke-width="1"/>
+
+  <!-- ══════════════════════════ -->
+  <!-- CHECKBOXES & RADIOS      -->
+  <!-- ══════════════════════════ -->
+  <text x="40" y="264" font-family="'DejaVu Sans',Arial,sans-serif" font-size="11" fill="#888888" letter-spacing="1">CHECKBOXES &amp; RADIO BUTTONS</text>
+
+  <!-- Checked -->
+  <rect x="40" y="274" width="16" height="16" rx="3" fill="#5294e2"/>
+  <text x="62" y="286" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12" fill="#e0e0e0">Checked</text>
+
+  <!-- Unchecked -->
+  <rect x="150" y="274" width="16" height="16" rx="3" fill="#1e1e1e" stroke="#555555" stroke-width="1.5"/>
+  <text x="172" y="286" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12" fill="#e0e0e0">Unchecked</text>
+
+  <!-- Indeterminate -->
+  <rect x="280" y="274" width="16" height="16" rx="3" fill="#3a3a3a" stroke="#5294e2" stroke-width="1.5"/>
+  <rect x="284" y="280" width="8" height="4" rx="1" fill="#5294e2"/>
+  <text x="302" y="286" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12" fill="#e0e0e0">Indeterminate</text>
+
+  <!-- Radio on -->
+  <circle cx="460" cy="282" r="8" fill="#1e1e1e" stroke="#5294e2" stroke-width="2"/>
+  <circle cx="460" cy="282" r="4" fill="#5294e2"/>
+  <text x="474" y="286" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12" fill="#e0e0e0">Selected</text>
+
+  <!-- Radio off -->
+  <circle cx="580" cy="282" r="8" fill="#1e1e1e" stroke="#555555" stroke-width="1.5"/>
+  <text x="594" y="286" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12" fill="#e0e0e0">Unselected</text>
+
+  <!-- Toggle on -->
+  <rect x="700" y="274" width="44" height="20" rx="10" fill="#5294e2"/>
+  <circle cx="734" cy="284" r="8" fill="#ffffff"/>
+  <text x="750" y="288" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12" fill="#e0e0e0">On</text>
+
+  <!-- Toggle off -->
+  <rect x="790" y="274" width="44" height="20" rx="10" fill="#555555"/>
+  <circle cx="800" cy="284" r="8" fill="#aaaaaa"/>
+  <text x="840" y="288" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12" fill="#e0e0e0">Off</text>
+
+  <line x1="40" y1="312" x2="860" y2="312" stroke="#404040" stroke-width="1"/>
+
+  <!-- ══════════════════════════ -->
+  <!-- PROGRESS & SCALES        -->
+  <!-- ══════════════════════════ -->
+  <text x="40" y="334" font-family="'DejaVu Sans',Arial,sans-serif" font-size="11" fill="#888888" letter-spacing="1">PROGRESS BARS &amp; SLIDERS</text>
+
+  <!-- Progress bar -->
+  <rect x="40" y="346" width="360" height="14" rx="7" fill="#1e1e1e" stroke="#404040" stroke-width="0.5"/>
+  <rect x="40" y="346" width="216" height="14" rx="7" fill="#5294e2"/>
+  <text x="40" y="376" font-family="'DejaVu Sans',Arial,sans-serif" font-size="10" fill="#666666">Progress bar  60%</text>
+
+  <!-- Slider track + thumb -->
+  <rect x="460" y="352" width="360" height="4" rx="2" fill="#1e1e1e" stroke="#404040" stroke-width="0.5"/>
+  <rect x="460" y="352" width="200" height="4" rx="2" fill="#5294e2"/>
+  <circle cx="660" cy="354" r="9" fill="#5294e2" stroke="#ffffff" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="460" y="376" font-family="'DejaVu Sans',Arial,sans-serif" font-size="10" fill="#666666">Slider</text>
+
+  <line x1="40" y1="392" x2="860" y2="392" stroke="#404040" stroke-width="1"/>
+
+  <!-- ══════════════════════════ -->
+  <!-- LIST VIEW / SELECTION    -->
+  <!-- ══════════════════════════ -->
+  <text x="40" y="414" font-family="'DejaVu Sans',Arial,sans-serif" font-size="11" fill="#888888" letter-spacing="1">LIST ROWS &amp; SELECTION</text>
+
+  <!-- List rows -->
+  <rect x="40" y="422" width="400" height="20" fill="#5294e2" fill-opacity="0.2"/>
+  <rect x="40" y="422" width="400" height="20" stroke="#5294e2" stroke-width="0.5" fill="none"/>
+  <text x="60" y="436" font-family="'DejaVu Sans',Arial,sans-serif" font-size="11" fill="#e0e0e0">Selected row — accent highlight</text>
+
+  <rect x="40" y="442" width="400" height="20" fill="transparent"/>
+  <text x="60" y="456" font-family="'DejaVu Sans',Arial,sans-serif" font-size="11" fill="#a0a0a0">Normal row — default background</text>
+
+  <rect x="40" y="462" width="400" height="20" fill="#383838"/>
+  <text x="60" y="476" font-family="'DejaVu Sans',Arial,sans-serif" font-size="11" fill="#e0e0e0">Hovered row — lighter background</text>
+
+  <!-- Tooltip sample -->
+  <rect x="480" y="422" width="340" height="70" rx="4" fill="#1c1c1c" stroke="#555555" stroke-width="1" filter="url(#shadow)"/>
+  <text x="650" y="448" text-anchor="middle" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12" font-weight="bold" fill="#e0e0e0">Tooltip</text>
+  <text x="650" y="466" text-anchor="middle" font-family="'DejaVu Sans',Arial,sans-serif" font-size="11" fill="#a0a0a0">bg: #1c1c1c  ·  fg: #e0e0e0</text>
+  <text x="650" y="482" text-anchor="middle" font-family="'DejaVu Sans',Arial,sans-serif" font-size="11" fill="#a0a0a0">border: #555555 · radius: 4px</text>
+
+  <!-- Footer -->
+  <text x="450" y="572" text-anchor="middle" font-family="'DejaVu Sans',Arial,sans-serif" font-size="11" fill="#555555">Simplicity — GTK widget showcase (Dark variant colours)</text>
+</svg>
