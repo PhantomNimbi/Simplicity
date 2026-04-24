@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Simplicity-Light Metacity/Mutter Window Manager Theme
+  Compatible with: GNOME, MATE desktop environments
+  Distros: Ubuntu, Debian, Fedora, Arch Linux, openSUSE, Manjaro
+-->
+<metacity_theme>
+  <info>
+    <name>Simplicity-Light</name>
+    <author>Simplicity Contributors</author>
+    <description>A clean and modern light window manager theme for Linux</description>
+    <date>2024</date>
+    <version>1.0</version>
+    <license>GPL-3.0</license>
+  </info>
+
+  <!-- Color constants -->
+  <constant name="COLOR_BG"          value="#f5f5f5"/>
+  <constant name="COLOR_TITLE_BG"    value="#ebebeb"/>
+  <constant name="COLOR_TITLE_FOCUS" value="#5294e2"/>
+  <constant name="COLOR_FG"          value="#2d2d2d"/>
+  <constant name="COLOR_BORDER"      value="#d0d0d0"/>
+  <constant name="COLOR_BTN_CLOSE"   value="#cf6679"/>
+  <constant name="COLOR_BTN_MIN"     value="#e5a050"/>
+  <constant name="COLOR_BTN_MAX"     value="#4caf50"/>
+
+  <!-- Frame geometry -->
+  <frame_geometry name="normal" title_scale="medium" rounded_top_left="4" rounded_top_right="4" has_title="true" hide_buttons="false">
+    <distance name="left_width" value="1"/>
+    <distance name="right_width" value="1"/>
+    <distance name="bottom_height" value="1"/>
+    <distance name="left_titlebar_edge" value="4"/>
+    <distance name="right_titlebar_edge" value="4"/>
+    <distance name="title_vertical_pad" value="4"/>
+    <border name="title_border" top="4" bottom="4" left="4" right="4"/>
+    <border name="button_border" top="2" bottom="2" left="2" right="2"/>
+    <distance name="button_width" value="14"/>
+    <distance name="button_height" value="14"/>
+  </frame_geometry>
+
+  <frame_geometry name="shaded" parent="normal" has_title="true">
+    <distance name="bottom_height" value="0"/>
+  </frame_geometry>
+
+  <frame_geometry name="utility" parent="normal" title_scale="small">
+    <distance name="button_width" value="11"/>
+    <distance name="button_height" value="11"/>
+  </frame_geometry>
+
+  <!-- Draw operations: titlebar focused -->
+  <draw_ops name="titlebar_focused">
+    <gradient type="vertical" x="0" y="0" width="width" height="height">
+      <color value="shade/1.03/COLOR_TITLE_BG"/>
+      <color value="COLOR_TITLE_BG"/>
+    </gradient>
+    <line color="COLOR_BORDER" x1="0" y1="height - 1" x2="width" y2="height - 1"/>
+  </draw_ops>
+
+  <!-- Draw operations: titlebar unfocused -->
+  <draw_ops name="titlebar_unfocused">
+    <gradient type="vertical" x="0" y="0" width="width" height="height">
+      <color value="shade/1.02/COLOR_BG"/>
+      <color value="COLOR_BG"/>
+    </gradient>
+    <line color="COLOR_BORDER" x1="0" y1="height - 1" x2="width" y2="height - 1"/>
+  </draw_ops>
+
+  <!-- Draw operations: close button -->
+  <draw_ops name="button_close_normal">
+    <arc color="COLOR_BTN_CLOSE" x="0" y="0" width="width" height="height" start_angle="0" extent_angle="360" filled="true"/>
+  </draw_ops>
+
+  <draw_ops name="button_close_prelight">
+    <arc color="shade/1.2/COLOR_BTN_CLOSE" x="0" y="0" width="width" height="height" start_angle="0" extent_angle="360" filled="true"/>
+  </draw_ops>
+
+  <!-- Draw operations: minimize button -->
+  <draw_ops name="button_min_normal">
+    <arc color="COLOR_BTN_MIN" x="0" y="0" width="width" height="height" start_angle="0" extent_angle="360" filled="true"/>
+  </draw_ops>
+
+  <draw_ops name="button_min_prelight">
+    <arc color="shade/1.2/COLOR_BTN_MIN" x="0" y="0" width="width" height="height" start_angle="0" extent_angle="360" filled="true"/>
+  </draw_ops>
+
+  <!-- Draw operations: maximize button -->
+  <draw_ops name="button_max_normal">
+    <arc color="COLOR_BTN_MAX" x="0" y="0" width="width" height="height" start_angle="0" extent_angle="360" filled="true"/>
+  </draw_ops>
+
+  <draw_ops name="button_max_prelight">
+    <arc color="shade/1.2/COLOR_BTN_MAX" x="0" y="0" width="width" height="height" start_angle="0" extent_angle="360" filled="true"/>
+  </draw_ops>
+
+  <!-- Draw operations: borders -->
+  <draw_ops name="border_focused">
+    <rectangle color="COLOR_TITLE_FOCUS" x="0" y="0" width="width" height="height" filled="true"/>
+  </draw_ops>
+
+  <draw_ops name="border_unfocused">
+    <rectangle color="COLOR_BORDER" x="0" y="0" width="width" height="height" filled="true"/>
+  </draw_ops>
+
+  <!-- Frame style: normal focused -->
+  <frame_style name="normal_focused" geometry="normal">
+    <piece position="entire_background">
+      <draw_ops>
+        <rectangle color="COLOR_BG" x="0" y="0" width="width" height="height" filled="true"/>
+      </draw_ops>
+    </piece>
+    <piece position="titlebar">
+      <draw_ops ref="titlebar_focused"/>
+    </piece>
+    <piece position="left_edge">
+      <draw_ops ref="border_focused"/>
+    </piece>
+    <piece position="right_edge">
+      <draw_ops ref="border_focused"/>
+    </piece>
+    <piece position="bottom_edge">
+      <draw_ops ref="border_focused"/>
+    </piece>
+    <button function="close" state="normal" draw_ops="button_close_normal"/>
+    <button function="close" state="prelight" draw_ops="button_close_prelight"/>
+    <button function="minimize" state="normal" draw_ops="button_min_normal"/>
+    <button function="minimize" state="prelight" draw_ops="button_min_prelight"/>
+    <button function="maximize" state="normal" draw_ops="button_max_normal"/>
+    <button function="maximize" state="prelight" draw_ops="button_max_prelight"/>
+  </frame_style>
+
+  <!-- Frame style: normal unfocused -->
+  <frame_style name="normal_unfocused" geometry="normal">
+    <piece position="entire_background">
+      <draw_ops>
+        <rectangle color="COLOR_BG" x="0" y="0" width="width" height="height" filled="true"/>
+      </draw_ops>
+    </piece>
+    <piece position="titlebar">
+      <draw_ops ref="titlebar_unfocused"/>
+    </piece>
+    <piece position="left_edge">
+      <draw_ops ref="border_unfocused"/>
+    </piece>
+    <piece position="right_edge">
+      <draw_ops ref="border_unfocused"/>
+    </piece>
+    <piece position="bottom_edge">
+      <draw_ops ref="border_unfocused"/>
+    </piece>
+    <button function="close" state="normal" draw_ops="button_close_normal"/>
+    <button function="close" state="prelight" draw_ops="button_close_prelight"/>
+    <button function="minimize" state="normal" draw_ops="button_min_normal"/>
+    <button function="minimize" state="prelight" draw_ops="button_min_prelight"/>
+    <button function="maximize" state="normal" draw_ops="button_max_normal"/>
+    <button function="maximize" state="prelight" draw_ops="button_max_prelight"/>
+  </frame_style>
+
+  <!-- Frame style sets -->
+  <frame_style_set name="normal">
+    <frame focus="yes" state="normal"  style="normal_focused"/>
+    <frame focus="yes" state="maximized" style="normal_focused"/>
+    <frame focus="yes" state="shaded" style="normal_focused"/>
+    <frame focus="no"  state="normal" style="normal_unfocused"/>
+    <frame focus="no"  state="maximized" style="normal_unfocused"/>
+    <frame focus="no"  state="shaded" style="normal_unfocused"/>
+  </frame_style_set>
+
+  <!-- Window types -->
+  <window type="normal"    style_set="normal"/>
+  <window type="dialog"    style_set="normal"/>
+  <window type="modal_dialog" style_set="normal"/>
+  <window type="utility"   style_set="normal"/>
+  <window type="menu"      style_set="normal"/>
+</metacity_theme>
