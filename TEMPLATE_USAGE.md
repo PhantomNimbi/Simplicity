@@ -18,20 +18,20 @@ This repository is designed to be used as a starting point for creating your own
 
 ## 2. Rename the Theme
 
-The default theme name throughout this repository is **Deskthem**. Replace it with your own theme name everywhere it appears.
+The default theme name throughout this repository is **Simplicity**. Replace it with your own theme name everywhere it appears.
 
 The quickest way is a global find-and-replace (case-sensitive):
 
 ```bash
 # Replace all occurrences — adjust MY_THEME_NAME as needed
 find . -not -path './.git/*' -type f \
-  -exec sed -i 's/Deskthem/MY_THEME_NAME/g' {} +
+  -exec sed -i 's/Simplicity/MY_THEME_NAME/g' {} +
 ```
 
 After running the command, also rename the theme directory itself:
 
 ```bash
-mv deskthem <my-theme-name-lowercase>
+mv simplicity <my-theme-name-lowercase>
 ```
 
 Then update the path reference inside `install.sh`:
@@ -47,13 +47,13 @@ The following files all contain the theme name and will be updated by the comman
 
 | File | What it controls |
 |------|-----------------|
-| `deskthem/index.theme` | Theme metadata (name shown in desktop settings) |
-| `deskthem/gtk-2.0/gtkrc` | GTK 2 theme identifier |
-| `deskthem/gtk-3.0/settings.ini` | GTK 3 settings |
-| `deskthem/gtk-4.0/gtk.css` | GTK 4 theme header comment |
-| `deskthem/metacity-1/metacity-theme-3.xml` | GNOME/MATE window decorator name |
-| `deskthem/xfwm4/themerc` | XFCE window manager theme name |
-| `deskthem/openbox-3/themerc` | Openbox window manager theme name |
+| `simplicity/index.theme` | Theme metadata (name shown in desktop settings) |
+| `simplicity/gtk-2.0/gtkrc` | GTK 2 theme identifier |
+| `simplicity/gtk-3.0/settings.ini` | GTK 3 settings |
+| `simplicity/gtk-4.0/gtk.css` | GTK 4 theme header comment |
+| `simplicity/metacity-1/metacity-theme-3.xml` | GNOME/MATE window decorator name |
+| `simplicity/xfwm4/themerc` | XFCE window manager theme name |
+| `simplicity/openbox-3/themerc` | Openbox window manager theme name |
 | `install.sh` | Installer — copies files and applies the theme |
 | `uninstall.sh` | Uninstaller — removes the theme |
 | `scripts/apply-theme.sh` | Per-DE theme applicator |
@@ -64,7 +64,7 @@ The following files all contain the theme name and will be updated by the comman
 
 ## 3. Customise Your Colour Palette
 
-All colours are defined as CSS variables at the top of the GTK stylesheet. Open `deskthem/gtk-3.0/gtk.css` (and similarly `gtk-4.0/gtk.css`) and update the `@define-color` block:
+All colours are defined as CSS variables at the top of the GTK stylesheet. Open `simplicity/gtk-3.0/gtk.css` (and similarly `gtk-4.0/gtk.css`) and update the `@define-color` block:
 
 ```css
 /* === Color Variables === */
@@ -83,16 +83,16 @@ For a **light theme**, swap the dark and light values (e.g. `bg_color` to `#f5f5
 
 Apply the same colour changes to:
 
-- `deskthem/gtk-2.0/gtkrc` — uses literal hex values (no CSS variables)
-- `deskthem/metacity-1/metacity-theme-3.xml` — window frame colours
-- `deskthem/xfwm4/themerc` — XFCE window manager colours
-- `deskthem/openbox-3/themerc` — Openbox window manager colours
+- `simplicity/gtk-2.0/gtkrc` — uses literal hex values (no CSS variables)
+- `simplicity/metacity-1/metacity-theme-3.xml` — window frame colours
+- `simplicity/xfwm4/themerc` — XFCE window manager colours
+- `simplicity/openbox-3/themerc` — Openbox window manager colours
 
 ---
 
 ## 4. Update Theme Metadata
 
-Edit `deskthem/index.theme` to reflect your theme's name and description:
+Edit `simplicity/index.theme` to reflect your theme's name and description:
 
 ```ini
 [Desktop Entry]
@@ -182,7 +182,7 @@ Then apply and inspect the result:
 ├── README.md                   # End-user documentation (update this)
 ├── TEMPLATE_USAGE.md           # This file (remove or keep for contributors)
 │
-├── <theme-name>/               # Theme files (rename from deskthem/)
+├── <theme-name>/               # Theme files (rename from simplicity/)
 │   ├── index.theme             # Theme metadata
 │   ├── gtk-2.0/gtkrc           # GTK 2 theme
 │   ├── gtk-3.0/gtk.css         # GTK 3 stylesheet  ← main colour file

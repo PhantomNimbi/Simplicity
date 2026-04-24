@@ -1,4 +1,4 @@
-# Deskthem GTK 2.0 Theme
+# Simplicity GTK 2.0 Theme
 # Compatible with: Ubuntu, Debian, Fedora, Arch Linux, openSUSE, Manjaro
 
 gtk-color-scheme = "bg_color:#2d2d2d\nfg_color:#e0e0e0\nbase_color:#1e1e1e\ntext_color:#e0e0e0\nselected_bg_color:#5294e2\nselected_fg_color:#ffffff\ntooltip_bg_color:#1c1c1c\ntooltip_fg_color:#e0e0e0"

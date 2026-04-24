@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Deskthem Metacity/Mutter Window Manager Theme
+  Simplicity Metacity/Mutter Window Manager Theme
   Compatible with: GNOME, MATE desktop environments
   Distros: Ubuntu, Debian, Fedora, Arch Linux, openSUSE, Manjaro
 -->
 <metacity_theme>
   <info>
-    <name>Deskthem</name>
-    <author>Deskthem Contributors</author>
+    <name>Simplicity</name>
+    <author>Simplicity Contributors</author>
     <description>A clean and modern window manager theme for Linux</description>
     <date>2024</date>
     <version>1.0</version>

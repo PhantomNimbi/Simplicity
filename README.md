@@ -1,4 +1,4 @@
-# Deskthem — Linux Desktop Theme Suite
+# Simplicity — Linux Desktop Theme Suite
 
 A clean, modern dark theme suite for Linux desktop environments, with first-class support for all major Linux distributions.
 
@@ -13,7 +13,7 @@ A clean, modern dark theme suite for Linux desktop environments, with first-clas
 
 ## Screenshot
 
-![Deskthem preview](screenshots/preview.svg)
+![Simplicity preview](screenshots/preview.svg)
 
 ## Features
 
@@ -76,7 +76,7 @@ chmod +x install.sh
 The installer will:
 1. Detect your Linux distribution and desktop environment
 2. Install any required dependencies via your package manager
-3. Copy theme files to `~/.themes/Deskthem/`
+3. Copy theme files to `~/.themes/Simplicity/`
 4. Apply the theme to your current session
 
 ### Manual Installation
@@ -88,29 +88,29 @@ The installer will:
 
 2. Copy the theme to your themes directory:
    ```bash
-   cp -r Deskthem/deskthem ~/.themes/Deskthem
+   cp -r Deskthem/simplicity ~/.themes/Simplicity
    ```
 
 3. Apply the theme:
 
    **GNOME:**
    ```bash
-   gsettings set org.gnome.desktop.interface gtk-theme "Deskthem"
-   gsettings set org.gnome.desktop.wm.preferences theme "Deskthem"
+   gsettings set org.gnome.desktop.interface gtk-theme "Simplicity"
+   gsettings set org.gnome.desktop.wm.preferences theme "Simplicity"
    gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
    ```
 
    **XFCE:**
    ```bash
-   xfconf-query -c xsettings -p /Net/ThemeName -s "Deskthem"
-   xfconf-query -c xfwm4 -p /general/theme -s "Deskthem"
+   xfconf-query -c xsettings -p /Net/ThemeName -s "Simplicity"
+   xfconf-query -c xfwm4 -p /general/theme -s "Simplicity"
    ```
 
    **Other / Universal (GTK settings file):**
    ```ini
    # ~/.config/gtk-3.0/settings.ini
    [Settings]
-   gtk-theme-name=Deskthem
+   gtk-theme-name=Simplicity
    gtk-application-prefer-dark-theme=1
    ```
 
@@ -139,7 +139,7 @@ sudo ./install.sh --system
 
 Or manually:
 ```bash
-rm -rf ~/.themes/Deskthem
+rm -rf ~/.themes/Simplicity
 gsettings reset org.gnome.desktop.interface gtk-theme
 gsettings reset org.gnome.desktop.wm.preferences theme
 ```
@@ -147,12 +147,12 @@ gsettings reset org.gnome.desktop.wm.preferences theme
 ## Repository Structure
 
 ```
-Deskthem/
+Simplicity/
 ├── install.sh                  # Main installer (auto-detects distro)
 ├── uninstall.sh                # Uninstaller
 ├── README.md                   # This file
 │
-├── deskthem/                   # Theme files
+├── simplicity/                   # Theme files
 │   ├── index.theme             # Theme metadata
 │   ├── gtk-2.0/
 │   │   └── gtkrc               # GTK 2 theme

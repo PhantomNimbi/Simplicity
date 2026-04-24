@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Deskthem Theme - openSUSE Leap / Tumbleweed Installer
+# Simplicity Theme - openSUSE Leap / Tumbleweed Installer
 # Supports: openSUSE Leap 15.4+, openSUSE Tumbleweed (rolling)
 # Package manager: zypper
 
@@ -7,7 +7,7 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
-THEME_NAME="Deskthem"
+THEME_NAME="Simplicity"
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -52,7 +52,7 @@ install_theme() {
     local target_dir="${HOME}/.themes/${THEME_NAME}"
     info "Installing ${THEME_NAME} theme to ${target_dir}..."
     mkdir -p "${target_dir}"
-    cp -r "${REPO_ROOT}/deskthem/." "${target_dir}/"
+    cp -r "${REPO_ROOT}/simplicity/." "${target_dir}/"
     success "Theme installed to ${target_dir}"
 }
 
@@ -79,7 +79,7 @@ configure_gtk_settings() {
     info "Configuring GTK settings..."
     mkdir -p "${HOME}/.config/gtk-3.0"
     if [[ ! -f "${gtk3_settings}" ]]; then
-        cp "${REPO_ROOT}/deskthem/gtk-3.0/settings.ini" "${gtk3_settings}"
+        cp "${REPO_ROOT}/simplicity/gtk-3.0/settings.ini" "${gtk3_settings}"
         success "GTK 3 settings configured."
     else
         warning "GTK 3 settings file already exists. Skipping."
@@ -109,7 +109,7 @@ main() {
     configure_gtk_settings
 
     echo ""
-    success "Deskthem installation complete!"
+    success "Simplicity installation complete!"
     info "You may need to log out and back in for all changes to take effect."
 }
 

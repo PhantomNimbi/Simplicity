@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to Deskthem are documented in this file.
+All notable changes to Simplicity are documented in this file.
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
@@ -10,7 +10,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### 🎉 Initial Release
 
-Deskthem is a clean, modern dark theme suite for Linux desktop environments.
+Simplicity is a clean, modern dark theme suite for Linux desktop environments.
 This first release ships full GTK 2 / 3 / 4 support, three window-manager themes,
 auto-detecting per-distro installers, and a desktop-environment-aware apply script.
 
@@ -18,18 +18,18 @@ auto-detecting per-distro installers, and a desktop-environment-aware apply scri
 
 ### ✨ Added
 
-#### GTK Theme Files (`deskthem/`)
+#### GTK Theme Files (`simplicity/`)
 
 - **GTK 2** (`gtk-2.0/gtkrc`) — Complete gtkrc stylesheet covering buttons,
   scrollbars, menus, tooltips, progress bars, and text entries using the
-  Deskthem dark colour palette.
+  Simplicity dark colour palette.
 - **GTK 3** (`gtk-3.0/gtk.css`) — Full CSS stylesheet with `@define-color`
   variables for all palette roles, making colour customisation a one-line change.
 - **GTK 3 settings** (`gtk-3.0/settings.ini`) — Preferences enabling dark
   mode, disabling overlay scrollbars, and setting icon/cursor theme hints.
 - **GTK 4** (`gtk-4.0/gtk.css`) — Modern stylesheet targeting GTK 4 /
   libadwaita applications with the same variable-driven palette.
-- **Theme metadata** (`index.theme`) — Desktop entry registering Deskthem as
+- **Theme metadata** (`index.theme`) — Desktop entry registering Simplicity as
   an X-GNOME-Metatheme with icon and cursor theme hints.
 
 #### Window Manager Themes
@@ -48,8 +48,8 @@ auto-detecting per-distro installers, and a desktop-environment-aware apply scri
 
 - Auto-detects the running Linux distribution via `/etc/os-release`.
 - Delegates to the appropriate per-distro installer to resolve dependencies.
-- Copies theme files to `~/.themes/Deskthem/` (user install) or
-  `/usr/share/themes/Deskthem/` (system install with `--system`).
+- Copies theme files to `~/.themes/Simplicity/` (user install) or
+  `/usr/share/themes/Simplicity/` (system install with `--system`).
 - Calls `apply-theme.sh` to apply the theme immediately after install.
 - Flags: `--system`, `--no-apply`, `--help`.
 

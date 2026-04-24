@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Deskthem Theme - Fedora / RHEL / CentOS Stream Installer
+# Simplicity Theme - Fedora / RHEL / CentOS Stream Installer
 # Supports: Fedora 36+, RHEL 9+, CentOS Stream 9+, AlmaLinux 9+, Rocky Linux 9+
 # Package manager: dnf
 
@@ -7,7 +7,7 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
-THEME_NAME="Deskthem"
+THEME_NAME="Simplicity"
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -50,7 +50,7 @@ install_theme() {
     local target_dir="${HOME}/.themes/${THEME_NAME}"
     info "Installing ${THEME_NAME} theme to ${target_dir}..."
     mkdir -p "${target_dir}"
-    cp -r "${REPO_ROOT}/deskthem/." "${target_dir}/"
+    cp -r "${REPO_ROOT}/simplicity/." "${target_dir}/"
     success "Theme installed to ${target_dir}"
 }
 
@@ -94,7 +94,7 @@ main() {
     apply_kde_theme
 
     echo ""
-    success "Deskthem installation complete!"
+    success "Simplicity installation complete!"
     info "You may need to log out and back in for all changes to take effect."
     info "Use GNOME Tweaks or System Settings to switch themes."
 }

@@ -54,16 +54,16 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git tag -a "${{ steps.version.outputs.VERSION }}" \
-            -m "Deskthem ${{ steps.version.outputs.VERSION }}"
+            -m "Simplicity ${{ steps.version.outputs.VERSION }}"
           git push origin "${{ steps.version.outputs.VERSION }}"
 
       - name: Build release archives
         run: |
           VERSION="${{ steps.version.outputs.VERSION }}"
-          ARCHIVE_BASE="Deskthem-${VERSION}"
+          ARCHIVE_BASE="Simplicity-${VERSION}"
 
           mkdir -p "dist/${ARCHIVE_BASE}"
-          cp -r deskthem/. "dist/${ARCHIVE_BASE}/"
+          cp -r simplicity/. "dist/${ARCHIVE_BASE}/"
           cp install.sh uninstall.sh README.md LICENSE "dist/${ARCHIVE_BASE}/"
           cp -r scripts distros "dist/${ARCHIVE_BASE}/"
           if [[ -f CHANGELOG.md ]]; then
@@ -98,7 +98,7 @@ jobs:
           CHANGELOG_ENTRY="$(cat /tmp/changelog-entry.md)"
 
           {
-            echo "## Deskthem ${VERSION}"
+            echo "## Simplicity ${VERSION}"
             echo ""
             echo "A clean, modern dark theme suite for Linux desktop environments,"
             echo "featuring full GTK 2 / 3 / 4 support, three window-manager themes,"
@@ -110,8 +110,8 @@ jobs:
             echo ""
             echo "**From archive:**"
             echo '```bash'
-            echo "tar -xzf Deskthem-${VERSION}.tar.gz"
-            echo "cd Deskthem-${VERSION}"
+            echo "tar -xzf Simplicity-${VERSION}.tar.gz"
+            echo "cd Simplicity-${VERSION}"
             echo "chmod +x install.sh"
             echo "./install.sh"
             echo '```'
@@ -125,8 +125,8 @@ jobs:
             echo ""
             echo "**Manual (theme files only):**"
             echo '```bash'
-            echo "unzip Deskthem-${VERSION}.zip"
-            echo "cp -r Deskthem-${VERSION}/deskthem ~/.themes/Deskthem"
+            echo "unzip Simplicity-${VERSION}.zip"
+            echo "cp -r Simplicity-${VERSION}/simplicity ~/.themes/Simplicity"
             echo '```'
             echo ""
             echo "---"
@@ -189,10 +189,10 @@ jobs:
             echo ""
             echo "| File | Description |"
             echo "|------|-------------|"
-            echo "| \`Deskthem-${VERSION}.tar.gz\` | Full release archive (tar.gz) |"
-            echo "| \`Deskthem-${VERSION}.zip\` | Full release archive (zip) |"
+            echo "| \`Simplicity-${VERSION}.tar.gz\` | Full release archive (tar.gz) |"
+            echo "| \`Simplicity-${VERSION}.zip\` | Full release archive (zip) |"
             echo ""
-            echo "Both archives include: theme files (\`deskthem/\`), installer"
+            echo "Both archives include: theme files (\`simplicity/\`), installer"
             echo "(\`install.sh\`), uninstaller (\`uninstall.sh\`), distro-specific"
             echo "scripts (\`distros/\`), helper scripts (\`scripts/\`), \`README.md\`,"
             echo "\`CHANGELOG.md\`, and \`LICENSE\`."
@@ -207,7 +207,7 @@ jobs:
             echo ""
             echo "Or manually:"
             echo '```bash'
-            echo "rm -rf ~/.themes/Deskthem"
+            echo "rm -rf ~/.themes/Simplicity"
             echo "gsettings reset org.gnome.desktop.interface gtk-theme"
             echo "gsettings reset org.gnome.desktop.wm.preferences theme"
             echo '```'
@@ -225,10 +225,10 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ steps.version.outputs.VERSION }}
-          name: "Deskthem ${{ steps.version.outputs.VERSION }}"
+          name: "Simplicity ${{ steps.version.outputs.VERSION }}"
           body_path: /tmp/release-notes.md
           files: |
-            dist/Deskthem-${{ steps.version.outputs.VERSION }}.tar.gz
-            dist/Deskthem-${{ steps.version.outputs.VERSION }}.zip
+            dist/Simplicity-${{ steps.version.outputs.VERSION }}.tar.gz
+            dist/Simplicity-${{ steps.version.outputs.VERSION }}.zip
           draft: false
           prerelease: ${{ fromJSON(steps.version.outputs.IS_PRERELEASE) }}

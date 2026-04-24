@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
-# uninstall.sh — Deskthem Theme Suite Uninstaller
-# Removes the Deskthem theme and resets desktop environment settings
+# uninstall.sh — Simplicity Theme Suite Uninstaller
+# Removes the Simplicity theme and resets desktop environment settings
 #
 # Usage: ./uninstall.sh [--system] [--keep-settings] [--help]
 
 set -euo pipefail
 
-THEME_NAME="Deskthem"
+THEME_NAME="Simplicity"
 SYSTEM_UNINSTALL=false
 KEEP_SETTINGS=false
 
@@ -33,7 +33,7 @@ while [[ $# -gt 0 ]]; do
             KEEP_SETTINGS=true
             ;;
         --help|-h)
-            echo "Deskthem Theme Suite Uninstaller"
+            echo "Simplicity Theme Suite Uninstaller"
             echo ""
             echo "Usage: $0 [OPTIONS]"
             echo ""
@@ -141,12 +141,12 @@ remove_gtk_settings() {
     for settings_file in "${gtk3_settings}" "${gtk4_settings}"; do
         if [[ -f "${settings_file}" ]]; then
             if grep -q "gtk-theme-name=${THEME_NAME}" "${settings_file}" 2>/dev/null; then
-                info "Removing Deskthem settings from: ${settings_file}"
-                # Remove only the Deskthem-specific lines, keep other settings
+                info "Removing Simplicity settings from: ${settings_file}"
+                # Remove only the Simplicity-specific lines, keep other settings
                 sed -i \
                     -e "/^gtk-theme-name=${THEME_NAME}/d" \
-                    -e "/^gtk-icon-theme-name=Deskthem-Icons/d" \
-                    -e "/^gtk-cursor-theme-name=Deskthem-Cursors/d" \
+                    -e "/^gtk-icon-theme-name=Simplicity-Icons/d" \
+                    -e "/^gtk-cursor-theme-name=Simplicity-Cursors/d" \
                     -e "/^gtk-application-prefer-dark-theme=1/d" \
                     "${settings_file}"
                 # If the file is now empty (just [Settings] header), remove it
@@ -154,7 +154,7 @@ remove_gtk_settings() {
                     rm -f "${settings_file}"
                     success "Removed empty settings file: ${settings_file}"
                 else
-                    success "Removed Deskthem entries from: ${settings_file}"
+                    success "Removed Simplicity entries from: ${settings_file}"
                 fi
             fi
         fi
@@ -164,11 +164,11 @@ remove_gtk_settings() {
 main() {
     echo ""
     echo -e "${RED}"
-    echo "  Deskthem — Uninstaller"
+    echo "  Simplicity — Uninstaller"
     echo -e "${NC}"
     echo ""
 
-    info "Removing Deskthem theme files..."
+    info "Removing Simplicity theme files..."
     remove_theme_files
 
     info "Resetting desktop settings..."
@@ -179,7 +179,7 @@ main() {
     remove_gtk_settings
 
     echo ""
-    success "Deskthem has been uninstalled."
+    success "Simplicity has been uninstalled."
     info "You may need to log out and back in for all changes to take effect."
 }
 

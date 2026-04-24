@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# apply-theme.sh — Apply the Deskthem theme to the current desktop environment
-# Part of the Deskthem theme suite
+# apply-theme.sh — Apply the Simplicity theme to the current desktop environment
+# Part of the Simplicity theme suite
 #
 # Usage: ./scripts/apply-theme.sh [--dry-run]
 
@@ -8,7 +8,7 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
-THEME_NAME="Deskthem"
+THEME_NAME="Simplicity"
 DRY_RUN=false
 
 RED='\033[0;31m'
@@ -74,7 +74,7 @@ check_theme_installed() {
 
 # Apply theme to GNOME
 apply_gnome() {
-    info "Applying Deskthem to GNOME..."
+    info "Applying Simplicity to GNOME..."
     run_cmd gsettings set org.gnome.desktop.interface gtk-theme "${THEME_NAME}"
     run_cmd gsettings set org.gnome.desktop.wm.preferences theme "${THEME_NAME}"
     run_cmd gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
@@ -85,7 +85,7 @@ apply_gnome() {
 
 # Apply theme to XFCE
 apply_xfce() {
-    info "Applying Deskthem to XFCE..."
+    info "Applying Simplicity to XFCE..."
     run_cmd xfconf-query -c xsettings -p /Net/ThemeName -s "${THEME_NAME}"
     run_cmd xfconf-query -c xfwm4 -p /general/theme -s "${THEME_NAME}"
     success "XFCE theme applied."
@@ -93,7 +93,7 @@ apply_xfce() {
 
 # Apply theme to MATE
 apply_mate() {
-    info "Applying Deskthem to MATE..."
+    info "Applying Simplicity to MATE..."
     run_cmd gsettings set org.mate.interface gtk-theme "${THEME_NAME}"
     run_cmd gsettings set org.mate.Marco.general theme "${THEME_NAME}"
     success "MATE theme applied."
@@ -101,7 +101,7 @@ apply_mate() {
 
 # Apply theme to Cinnamon
 apply_cinnamon() {
-    info "Applying Deskthem to Cinnamon..."
+    info "Applying Simplicity to Cinnamon..."
     run_cmd gsettings set org.cinnamon.desktop.interface gtk-theme "${THEME_NAME}"
     run_cmd gsettings set org.cinnamon.desktop.wm.preferences theme "${THEME_NAME}"
     run_cmd gsettings set org.cinnamon.theme name "${THEME_NAME}"
@@ -110,7 +110,7 @@ apply_cinnamon() {
 
 # Apply theme via GTK settings file (universal fallback)
 apply_gtk_settings() {
-    info "Applying Deskthem via GTK settings file..."
+    info "Applying Simplicity via GTK settings file..."
     local gtk3_dir="${HOME}/.config/gtk-3.0"
     local gtk4_dir="${HOME}/.config/gtk-4.0"
 
@@ -139,9 +139,9 @@ apply_gtk_settings() {
                 cat > "${settings_file}" << EOINI
 [Settings]
 gtk-theme-name=${THEME_NAME}
-gtk-icon-theme-name=Deskthem-Icons
+gtk-icon-theme-name=Simplicity-Icons
 gtk-font-name=Sans 10
-gtk-cursor-theme-name=Deskthem-Cursors
+gtk-cursor-theme-name=Simplicity-Cursors
 gtk-application-prefer-dark-theme=1
 EOINI
             fi
@@ -202,7 +202,7 @@ main() {
     esac
 
     echo ""
-    success "Deskthem theme applied successfully!"
+    success "Simplicity theme applied successfully!"
     info "You may need to log out and back in for all changes to take full effect."
 }
 

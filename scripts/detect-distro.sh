@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # detect-distro.sh — Detect Linux distribution and return distro info
-# Part of the Deskthem theme suite
+# Part of the Simplicity theme suite
 #
 # Usage: source ./scripts/detect-distro.sh
 #        detect_distro  → sets DISTRO_ID, DISTRO_VERSION, DISTRO_FAMILY, PKG_MANAGER

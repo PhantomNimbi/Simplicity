@@ -1,4 +1,4 @@
-# Deskthem Theme — openSUSE Leap / Tumbleweed
+# Simplicity Theme — openSUSE Leap / Tumbleweed
 
 This directory contains the installer script for openSUSE distributions.
 
@@ -19,20 +19,20 @@ chmod +x install.sh
 
 ## Manual Installation
 
-1. Copy the `deskthem/` folder from the repository root to `~/.themes/Deskthem/`
+1. Copy the `simplicity/` folder from the repository root to `~/.themes/Simplicity/`
 2. Apply using YaST or the command line:
 
 ### GNOME
 ```bash
-gsettings set org.gnome.desktop.interface gtk-theme "Deskthem"
-gsettings set org.gnome.desktop.wm.preferences theme "Deskthem"
+gsettings set org.gnome.desktop.interface gtk-theme "Simplicity"
+gsettings set org.gnome.desktop.wm.preferences theme "Simplicity"
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 ```
 
 ### KDE Plasma
 1. Open **System Settings** → **Appearance** → **Application Style**
 2. Select **Configure GNOME/GTK Application Style**
-3. Choose **Deskthem** from the dropdown
+3. Choose **Simplicity** from the dropdown
 
 ## Dependencies
 
@@ -50,6 +50,6 @@ The installer will install via zypper:
 ## Uninstallation
 
 ```bash
-rm -rf ~/.themes/Deskthem
+rm -rf ~/.themes/Simplicity
 gsettings reset org.gnome.desktop.interface gtk-theme
 ```

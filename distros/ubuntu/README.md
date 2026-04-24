@@ -1,4 +1,4 @@
-# Deskthem Theme — Ubuntu / Linux Mint / Pop!_OS
+# Simplicity Theme — Ubuntu / Linux Mint / Pop!_OS
 
 This directory contains the installer script for Ubuntu-based distributions.
 
@@ -21,13 +21,13 @@ chmod +x install.sh
 
 ## Manual Installation
 
-1. Copy the `deskthem/` folder from the repository root to `~/.themes/Deskthem/`
-2. Open **GNOME Tweaks** → **Appearance** → set **Shell** and **Legacy Applications** to `Deskthem`
+1. Copy the `simplicity/` folder from the repository root to `~/.themes/Simplicity/`
+2. Open **GNOME Tweaks** → **Appearance** → set **Shell** and **Legacy Applications** to `Simplicity`
 3. Or use `gsettings`:
 
 ```bash
-gsettings set org.gnome.desktop.interface gtk-theme "Deskthem"
-gsettings set org.gnome.desktop.wm.preferences theme "Deskthem"
+gsettings set org.gnome.desktop.interface gtk-theme "Simplicity"
+gsettings set org.gnome.desktop.wm.preferences theme "Simplicity"
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 ```
 
@@ -42,7 +42,7 @@ The installer will automatically install:
 ## Uninstallation
 
 ```bash
-rm -rf ~/.themes/Deskthem
+rm -rf ~/.themes/Simplicity
 gsettings reset org.gnome.desktop.interface gtk-theme
 gsettings reset org.gnome.desktop.wm.preferences theme
 ```

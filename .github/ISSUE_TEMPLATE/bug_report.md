@@ -1,6 +1,6 @@
 ---
 name: Bug Report
-about: Report a problem with the Deskthem theme installation or appearance
+about: Report a problem with the Simplicity theme installation or appearance
 title: "[Bug] "
 labels: bug
 assignees: ''
