@@ -168,6 +168,8 @@ Replace the content of `README.md` with documentation for your own theme:
 - Update the clone URL in **Quick Start** to your repository URL.
 - Update the **Repository Structure** tree to match any renamed directories.
 
+If you are keeping `CONTRIBUTING.md`, update any repository-specific links (issue tracker URL, project name) to point at your own repository.
+
 ---
 
 ## 7. Test Your Theme
@@ -202,6 +204,7 @@ Then apply and inspect the result:
 ├── uninstall.sh                # Uninstaller
 ├── README.md                   # End-user documentation (update this)
 ├── CHANGELOG.md                # Version history
+├── CONTRIBUTING.md             # Contribution guidelines (update or remove)
 ├── TEMPLATE_USAGE.md           # This file (remove or keep for contributors)
 │
 ├── <theme-name>/               # Default (dual-tone) variant (rename from simplicity-dualtone/)

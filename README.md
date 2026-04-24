@@ -84,8 +84,8 @@ A clean, modern dark theme suite for Linux desktop environments, with first-clas
 ### Automatic Installation (Recommended)
 
 ```bash
-git clone https://github.com/PhantomNimbi/Deskthem.git
-cd Deskthem
+git clone https://github.com/PhantomNimbi/Simplicity.git
+cd Simplicity
 chmod +x install.sh
 ./install.sh
 ```
@@ -100,12 +100,12 @@ The installer will:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/PhantomNimbi/Deskthem.git
+   git clone https://github.com/PhantomNimbi/Simplicity.git
    ```
 
 2. Copy the theme to your themes directory:
    ```bash
-   cp -r Deskthem/simplicity-dualtone ~/.themes/"Simplicity"
+   cp -r Simplicity/simplicity-dualtone ~/.themes/"Simplicity"
    ```
 
 3. Apply the theme:
