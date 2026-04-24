@@ -142,7 +142,7 @@ Each theme variant follows the same directory layout:
 
 ### Shell Scripts
 
-- All scripts must be **POSIX-compatible `bash`**. Do not use `zsh`, `fish`, or non-standard shell features.
+- All scripts must be written in **`bash`**. Do not use `zsh`, `fish`, or other shells.
 - Use `set -euo pipefail` at the top of any new script.
 - Print user-facing messages with consistent prefixes already used in the project (`[INFO]`, `[OK]`, `[WARN]`, `[ERROR]`).
 - New flags or options in `install.sh` or `apply-theme.sh` must be documented in the `--help` output and in `README.md`.
