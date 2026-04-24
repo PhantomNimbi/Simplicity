@@ -31,6 +31,7 @@ find . -not -path './.git/*' -type f \
 After running the command, also rename the three theme variant directories:
 
 ```bash
+# The default (dual-tone) variant has no suffix — it becomes the primary theme name.
 mv simplicity-dualtone <my-theme-name-lowercase>
 mv simplicity-light    <my-theme-name-lowercase>-light
 mv simplicity-dark     <my-theme-name-lowercase>-dark
