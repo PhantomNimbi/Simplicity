@@ -177,9 +177,9 @@ linux-theme/
     └── apply-theme.sh          # DE-aware theme applicator
 ```
 
-## Using This Repository as a Template
+## Using This Repository
 
-Want to build your own Linux theme using this project as a starting point? See **[TEMPLATE_USAGE.md](TEMPLATE_USAGE.md)** for a full step-by-step guide covering:
+Want to build your own Linux theme using this project as a starting point? See **[USAGE.md](USAGE.md)** for a full step-by-step guide covering:
 
 - Creating a repository from this template on GitHub
 - Renaming the theme throughout the codebase
