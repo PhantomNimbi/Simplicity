@@ -50,7 +50,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 #### Documentation
 
-- **GitHub Wiki** — Comprehensive wiki added with pages for Home, Theme
+- **[GitHub Wiki](https://github.com/PhantomNimbi/Simplicity/blob/main/wiki/Home.md)** — Comprehensive wiki added with pages for Home, Theme
   Variants, Theme Elements, Colour Palette, Installation, Desktop
   Environments, and Troubleshooting.
 - **`CONTRIBUTING.md`** — Added full contribution guidelines covering bug
