@@ -30,7 +30,7 @@ A clean, modern dark theme suite for Linux desktop environments, with first-clas
 
 | Variant | Name | Description |
 |---------|------|-------------|
-| Dark (default) | `Simplicity` | Full dark palette — header, content, and chrome all dark |
+| Dark (default) | `Simplicity Dark` | Full dark palette — header, content, and chrome all dark |
 | Light | `Simplicity-Light` | Full light palette — header, content, and chrome all light |
 | Dual-Tone | `Simplicity-DualTone` | Dark chrome (header bar, sidebar, menus) with light content area |
 
@@ -86,7 +86,7 @@ chmod +x install.sh
 The installer will:
 1. Detect your Linux distribution and desktop environment
 2. Install any required dependencies via your package manager
-3. Copy theme files to `~/.themes/Simplicity/`
+3. Copy theme files to `~/.themes/Simplicity Dark/`
 4. Apply the theme to your current session
 
 ### Manual Installation
@@ -98,29 +98,29 @@ The installer will:
 
 2. Copy the theme to your themes directory:
    ```bash
-   cp -r Deskthem/simplicity ~/.themes/Simplicity
+   cp -r Deskthem/simplicity-dark ~/.themes/"Simplicity Dark"
    ```
 
 3. Apply the theme:
 
    **GNOME:**
    ```bash
-   gsettings set org.gnome.desktop.interface gtk-theme "Simplicity"
-   gsettings set org.gnome.desktop.wm.preferences theme "Simplicity"
+   gsettings set org.gnome.desktop.interface gtk-theme "Simplicity Dark"
+   gsettings set org.gnome.desktop.wm.preferences theme "Simplicity Dark"
    gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
    ```
 
    **XFCE:**
    ```bash
-   xfconf-query -c xsettings -p /Net/ThemeName -s "Simplicity"
-   xfconf-query -c xfwm4 -p /general/theme -s "Simplicity"
+   xfconf-query -c xsettings -p /Net/ThemeName -s "Simplicity Dark"
+   xfconf-query -c xfwm4 -p /general/theme -s "Simplicity Dark"
    ```
 
    **Other / Universal (GTK settings file):**
    ```ini
    # ~/.config/gtk-3.0/settings.ini
    [Settings]
-   gtk-theme-name=Simplicity
+   gtk-theme-name=Simplicity Dark
    gtk-application-prefer-dark-theme=1
    ```
 
@@ -164,7 +164,7 @@ To apply a specific variant after installation:
 
 Or manually:
 ```bash
-rm -rf ~/.themes/Simplicity
+rm -rf ~/.themes/"Simplicity Dark"
 gsettings reset org.gnome.desktop.interface gtk-theme
 gsettings reset org.gnome.desktop.wm.preferences theme
 ```
@@ -177,7 +177,7 @@ Simplicity/
 ├── uninstall.sh                # Uninstaller
 ├── README.md                   # This file
 │
-├── simplicity/                   # Dark theme files
+├── simplicity-dark/                # Dark theme files
 │   ├── index.theme             # Theme metadata
 │   ├── gtk-2.0/
 │   │   └── gtkrc               # GTK 2 theme

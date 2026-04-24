@@ -12,7 +12,7 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-THEME_NAME="Simplicity"
+THEME_NAME="Simplicity Dark"
 THEME_LIGHT_NAME="Simplicity-Light"
 THEME_DUALTONE_NAME="Simplicity-DualTone"
 SYSTEM_INSTALL=false
@@ -106,7 +106,7 @@ install_theme_files() {
     fi
 
     mkdir -p "${target_dir}"
-    cp -r "${SCRIPT_DIR}/simplicity/." "${target_dir}/"
+    cp -r "${SCRIPT_DIR}/simplicity-dark/." "${target_dir}/"
     success "Theme files installed to: ${target_dir}"
 
     if "${INSTALL_LIGHT}"; then

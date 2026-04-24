@@ -7,7 +7,7 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
-THEME_NAME="Simplicity"
+THEME_NAME="Simplicity Dark"
 
 # Colors for output
 RED='\033[0;31m'
@@ -57,7 +57,7 @@ install_theme() {
     local target_dir="${HOME}/.themes/${THEME_NAME}"
     info "Installing ${THEME_NAME} theme to ${target_dir}..."
     mkdir -p "${target_dir}"
-    cp -r "${REPO_ROOT}/simplicity/." "${target_dir}/"
+    cp -r "${REPO_ROOT}/simplicity-dark/." "${target_dir}/"
     success "Theme installed to ${target_dir}"
 }
 
