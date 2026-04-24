@@ -15,7 +15,7 @@
 
 All colour variables are defined at the top of each GTK stylesheet as `@define-color` directives, making them easy to customise.
 
-![Colour palette overview](screenshots/colour-palette.svg)
+![Colour palette overview](screenshots/colour-palette.png)
 
 ---
 

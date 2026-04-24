@@ -24,7 +24,7 @@ Simplicity ships three distinct theme variants. Each is a self-contained set of 
 
 The default variant combines a **dark chrome** with a **light content area**, giving you the visual polish of a dark interface frame alongside the readability of a light document area.
 
-![Dual-Tone variant](screenshots/variant-dualtone.svg)
+![Dual-Tone variant](screenshots/variant-dualtone.png)
 
 ### What's dark
 - Header bar (title bar and toolbar)
@@ -64,7 +64,7 @@ Choose the Dual-Tone variant if you want:
 
 The full dark variant applies the dark palette consistently to every surface — header, content area, sidebars, inputs, and widgets.
 
-![Dark variant](screenshots/variant-dark.svg)
+![Dark variant](screenshots/variant-dark.png)
 
 ### Colour palette
 | Role | Value |
@@ -95,7 +95,7 @@ Choose the Dark variant if you:
 
 The full light variant applies a clean light palette consistently across all surfaces.
 
-![Light variant](screenshots/variant-light.svg)
+![Light variant](screenshots/variant-light.png)
 
 ### Colour palette
 | Role | Value |
