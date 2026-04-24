@@ -1,0 +1,81 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Create Release
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set version from tag
+        id: version
+        run: echo "VERSION=${GITHUB_REF_NAME}" >> "$GITHUB_OUTPUT"
+
+      - name: Build release archives
+        run: |
+          VERSION="${{ steps.version.outputs.VERSION }}"
+          ARCHIVE_BASE="Deskthem-${VERSION}"
+
+          # Create a staging directory with the theme files
+          mkdir -p "dist/${ARCHIVE_BASE}"
+          cp -r deskthem/. "dist/${ARCHIVE_BASE}/"
+          cp install.sh uninstall.sh README.md LICENSE "dist/${ARCHIVE_BASE}/"
+          cp -r scripts distros "dist/${ARCHIVE_BASE}/"
+
+          # Create .tar.gz
+          tar -czf "dist/${ARCHIVE_BASE}.tar.gz" -C dist "${ARCHIVE_BASE}"
+
+          # Create .zip
+          (cd dist && zip -r "${ARCHIVE_BASE}.zip" "${ARCHIVE_BASE}")
+
+      - name: Generate release notes
+        id: notes
+        run: |
+          VERSION="${{ steps.version.outputs.VERSION }}"
+          cat <<EOF > /tmp/release-notes.md
+          ## Deskthem ${VERSION}
+
+          A clean, modern dark theme suite for Linux desktop environments.
+
+          ### Installation
+
+          **Quick install:**
+          \`\`\`bash
+          tar -xzf Deskthem-${VERSION}.tar.gz
+          cd Deskthem-${VERSION}
+          ./install.sh
+          \`\`\`
+
+          **Manual (theme files only):**
+          \`\`\`bash
+          unzip Deskthem-${VERSION}.zip
+          cp -r Deskthem-${VERSION}/deskthem ~/.themes/Deskthem
+          \`\`\`
+
+          ### Supported Desktop Environments
+          GNOME · KDE · XFCE · MATE · Cinnamon · Openbox · i3 · Sway
+
+          ### Supported Distributions
+          Ubuntu · Debian · Fedora · Arch · openSUSE · Manjaro
+          EOF
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: "Deskthem ${{ steps.version.outputs.VERSION }}"
+          body_path: /tmp/release-notes.md
+          files: |
+            dist/Deskthem-${{ steps.version.outputs.VERSION }}.tar.gz
+            dist/Deskthem-${{ steps.version.outputs.VERSION }}.zip
+          draft: false
+          prerelease: ${{ contains(steps.version.outputs.VERSION, '-') }}
