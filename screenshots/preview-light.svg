@@ -6,33 +6,30 @@
     </style>
     <!-- Window drop shadow -->
     <filter id="shadow" x="-4%" y="-4%" width="108%" height="112%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.5"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.3"/>
     </filter>
   </defs>
 
-  <!-- Desktop background -->
-  <rect width="900" height="560" fill="#1a1a2e"/>
-  <!-- Subtle desktop gradient -->
-  <rect width="900" height="560" fill="url(#desktopGrad)"/>
+  <!-- Desktop background (light) -->
+  <rect width="900" height="560" fill="#d8dce2"/>
   <defs>
     <linearGradient id="desktopGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1"/>
-      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1"/>
+      <stop offset="0%" style="stop-color:#d8dce2;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#c8ccd4;stop-opacity:1"/>
     </linearGradient>
   </defs>
+  <rect width="900" height="560" fill="url(#desktopGrad)"/>
 
   <!-- ═══════════════════════════════════════════════ -->
-  <!-- FILE MANAGER WINDOW                             -->
-  <!-- Dark chrome (title bar, toolbar, sidebar) +     -->
-  <!-- Light content area — Dual-Tone default          -->
+  <!-- FILE MANAGER WINDOW — Full Light                -->
   <!-- ═══════════════════════════════════════════════ -->
   <g filter="url(#shadow)">
-    <!-- Window body (light content) -->
+    <!-- Window body (light) -->
     <rect x="30" y="40" width="530" height="390" rx="6" ry="6" fill="#f5f5f5" stroke="#d0d0d0" stroke-width="1"/>
 
-    <!-- Title bar (dark chrome) -->
-    <rect x="30" y="40" width="530" height="34" rx="6" ry="6" fill="#252525" stroke="#404040" stroke-width="1"/>
-    <rect x="30" y="60" width="530" height="14" fill="#252525"/>
+    <!-- Title bar (light chrome) -->
+    <rect x="30" y="40" width="530" height="34" rx="6" ry="6" fill="#ebebeb" stroke="#d0d0d0" stroke-width="1"/>
+    <rect x="30" y="60" width="530" height="14" fill="#ebebeb"/>
 
     <!-- Title bar buttons -->
     <circle cx="52" cy="57" r="7" fill="#cf6679"/>
@@ -40,101 +37,89 @@
     <circle cx="94" cy="57" r="7" fill="#4caf50"/>
 
     <!-- Window title -->
-    <text x="290" y="62" text-anchor="middle" class="sans" font-size="13" fill="#e0e0e0">Files — Home</text>
+    <text x="290" y="62" text-anchor="middle" class="sans" font-size="13" fill="#2d2d2d">Files — Home</text>
 
-    <!-- Toolbar (dark chrome) -->
-    <rect x="30" y="74" width="530" height="36" fill="#2a2a2a" stroke="#404040" stroke-width="0.5"/>
-    <!-- Back / Forward / Up buttons -->
-    <rect x="40" y="82" width="26" height="20" rx="4" fill="#383838" stroke="#404040" stroke-width="0.5"/>
-    <text x="53" y="96" text-anchor="middle" class="sans" font-size="11" fill="#8a8a8a">‹</text>
-    <rect x="70" y="82" width="26" height="20" rx="4" fill="#383838" stroke="#404040" stroke-width="0.5"/>
-    <text x="83" y="96" text-anchor="middle" class="sans" font-size="11" fill="#8a8a8a">›</text>
-    <rect x="100" y="82" width="26" height="20" rx="4" fill="#383838" stroke="#404040" stroke-width="0.5"/>
-    <text x="113" y="96" text-anchor="middle" class="sans" font-size="11" fill="#8a8a8a">↑</text>
+    <!-- Toolbar (light chrome) -->
+    <rect x="30" y="74" width="530" height="36" fill="#f0f0f0" stroke="#d0d0d0" stroke-width="0.5"/>
+    <rect x="40" y="82" width="26" height="20" rx="4" fill="#e8e8e8" stroke="#d0d0d0" stroke-width="0.5"/>
+    <text x="53" y="96" text-anchor="middle" class="sans" font-size="11" fill="#555555">‹</text>
+    <rect x="70" y="82" width="26" height="20" rx="4" fill="#e8e8e8" stroke="#d0d0d0" stroke-width="0.5"/>
+    <text x="83" y="96" text-anchor="middle" class="sans" font-size="11" fill="#555555">›</text>
+    <rect x="100" y="82" width="26" height="20" rx="4" fill="#e8e8e8" stroke="#d0d0d0" stroke-width="0.5"/>
+    <text x="113" y="96" text-anchor="middle" class="sans" font-size="11" fill="#555555">↑</text>
 
     <!-- Location bar -->
-    <rect x="136" y="82" width="280" height="20" rx="4" fill="#1e1e1e" stroke="#5294e2" stroke-width="1"/>
-    <text x="148" y="96" class="sans" font-size="11" fill="#e0e0e0">/home/user/Documents</text>
+    <rect x="136" y="82" width="280" height="20" rx="4" fill="#ffffff" stroke="#5294e2" stroke-width="1"/>
+    <text x="148" y="96" class="sans" font-size="11" fill="#2d2d2d">/home/user/Documents</text>
 
     <!-- Search button -->
-    <rect x="424" y="82" width="62" height="20" rx="4" fill="#383838" stroke="#404040" stroke-width="0.5"/>
-    <text x="455" y="96" text-anchor="middle" class="sans" font-size="11" fill="#a0a0a0">⌕ Search</text>
+    <rect x="424" y="82" width="62" height="20" rx="4" fill="#e8e8e8" stroke="#d0d0d0" stroke-width="0.5"/>
+    <text x="455" y="96" text-anchor="middle" class="sans" font-size="11" fill="#555555">⌕ Search</text>
 
-    <!-- Sidebar (dark chrome) -->
-    <rect x="30" y="110" width="140" height="320" fill="#2a2a2a" stroke="#404040" stroke-width="0.5"/>
+    <!-- Sidebar (light) -->
+    <rect x="30" y="110" width="140" height="320" fill="#f0f0f0" stroke="#d0d0d0" stroke-width="0.5"/>
 
-    <!-- Sidebar items -->
-    <!-- Selected item highlight -->
-    <rect x="30" y="148" width="140" height="24" fill="#5294e2" fill-opacity="0.25"/>
+    <rect x="30" y="148" width="140" height="24" fill="#5294e2" fill-opacity="0.15"/>
     <rect x="30" y="148" width="3" height="24" fill="#5294e2"/>
 
     <text x="50" y="128" class="sans" font-size="10" fill="#888888" letter-spacing="1">PLACES</text>
-    <text x="50" y="165" class="sans" font-size="12" fill="#e0e0e0">🏠 Home</text>
-    <text x="50" y="191" class="sans" font-size="12" fill="#a0a0a0">🖥 Desktop</text>
-    <text x="50" y="216" class="sans" font-size="12" fill="#a0a0a0">📄 Documents</text>
-    <text x="50" y="241" class="sans" font-size="12" fill="#a0a0a0">⬇ Downloads</text>
-    <text x="50" y="266" class="sans" font-size="12" fill="#a0a0a0">🎵 Music</text>
-    <text x="50" y="291" class="sans" font-size="12" fill="#a0a0a0">🖼 Pictures</text>
-    <text x="50" y="316" class="sans" font-size="12" fill="#a0a0a0">🎬 Videos</text>
-
+    <text x="50" y="165" class="sans" font-size="12" fill="#2d2d2d">🏠 Home</text>
+    <text x="50" y="191" class="sans" font-size="12" fill="#555555">🖥 Desktop</text>
+    <text x="50" y="216" class="sans" font-size="12" fill="#555555">📄 Documents</text>
+    <text x="50" y="241" class="sans" font-size="12" fill="#555555">⬇ Downloads</text>
+    <text x="50" y="266" class="sans" font-size="12" fill="#555555">🎵 Music</text>
+    <text x="50" y="291" class="sans" font-size="12" fill="#555555">🖼 Pictures</text>
+    <text x="50" y="316" class="sans" font-size="12" fill="#555555">🎬 Videos</text>
     <text x="50" y="345" class="sans" font-size="10" fill="#888888" letter-spacing="1">DEVICES</text>
-    <text x="50" y="365" class="sans" font-size="12" fill="#a0a0a0">💾 128 GB Drive</text>
-    <text x="50" y="390" class="sans" font-size="12" fill="#a0a0a0">📀 USB Drive</text>
+    <text x="50" y="365" class="sans" font-size="12" fill="#555555">💾 128 GB Drive</text>
+    <text x="50" y="390" class="sans" font-size="12" fill="#555555">📀 USB Drive</text>
 
-    <!-- Main file area (light content) -->
+    <!-- Main file area (light) -->
     <rect x="170" y="110" width="390" height="320" fill="#f5f5f5"/>
 
-    <!-- File grid header (slightly darker light) -->
+    <!-- File grid header -->
     <rect x="170" y="110" width="390" height="24" fill="#ebebeb" stroke="#d0d0d0" stroke-width="0.5"/>
     <text x="182" y="126" class="sans" font-size="11" fill="#888888">Name</text>
     <text x="380" y="126" class="sans" font-size="11" fill="#888888">Size</text>
     <text x="460" y="126" class="sans" font-size="11" fill="#888888">Modified</text>
 
     <!-- File rows -->
-    <!-- Row 1 - selected -->
     <rect x="170" y="134" width="390" height="24" fill="#5294e2" fill-opacity="0.15"/>
     <rect x="170" y="134" width="390" height="24" stroke="#5294e2" stroke-width="0.5" fill="none"/>
     <text x="200" y="150" class="sans" font-size="12" fill="#2d2d2d">📁 Projects</text>
     <text x="375" y="150" text-anchor="end" class="sans" font-size="11" fill="#555555">—</text>
     <text x="455" y="150" class="sans" font-size="11" fill="#555555">Apr 20 09:15</text>
 
-    <!-- Row 2 -->
     <rect x="170" y="158" width="390" height="24" fill="transparent"/>
     <text x="200" y="174" class="sans" font-size="12" fill="#555555">📁 Archive</text>
     <text x="375" y="174" text-anchor="end" class="sans" font-size="11" fill="#888888">—</text>
     <text x="455" y="174" class="sans" font-size="11" fill="#888888">Mar 14 17:30</text>
 
-    <!-- Row 3 (hover) -->
     <rect x="170" y="182" width="390" height="24" fill="#e8e8e8"/>
     <text x="200" y="198" class="sans" font-size="12" fill="#2d2d2d">📄 notes.txt</text>
     <text x="375" y="198" text-anchor="end" class="sans" font-size="11" fill="#555555">4.2 KB</text>
     <text x="455" y="198" class="sans" font-size="11" fill="#555555">Apr 22 11:00</text>
 
-    <!-- Row 4 -->
     <rect x="170" y="206" width="390" height="24" fill="transparent"/>
     <text x="200" y="222" class="sans" font-size="12" fill="#555555">📄 resume.pdf</text>
     <text x="375" y="222" text-anchor="end" class="sans" font-size="11" fill="#888888">218 KB</text>
     <text x="455" y="222" class="sans" font-size="11" fill="#888888">Jan 05 14:22</text>
 
-    <!-- Row 5 -->
     <rect x="170" y="230" width="390" height="24" fill="transparent"/>
     <text x="200" y="246" class="sans" font-size="12" fill="#555555">🎵 playlist.m3u</text>
     <text x="375" y="246" text-anchor="end" class="sans" font-size="11" fill="#888888">1.1 KB</text>
     <text x="455" y="246" class="sans" font-size="11" fill="#888888">Feb 18 20:10</text>
 
-    <!-- Row 6 -->
     <rect x="170" y="254" width="390" height="24" fill="transparent"/>
     <text x="200" y="270" class="sans" font-size="12" fill="#555555">🖼 wallpaper.png</text>
     <text x="375" y="270" text-anchor="end" class="sans" font-size="11" fill="#888888">3.4 MB</text>
     <text x="455" y="270" class="sans" font-size="11" fill="#888888">Mar 31 08:44</text>
 
-    <!-- Row 7 -->
     <rect x="170" y="278" width="390" height="24" fill="transparent"/>
     <text x="200" y="294" class="sans" font-size="12" fill="#555555">📦 backup.tar.gz</text>
     <text x="375" y="294" text-anchor="end" class="sans" font-size="11" fill="#888888">142 MB</text>
     <text x="455" y="294" class="sans" font-size="11" fill="#888888">Apr 01 23:55</text>
 
-    <!-- Row 8 -->
     <rect x="170" y="302" width="390" height="24" fill="transparent"/>
     <text x="200" y="318" class="sans" font-size="12" fill="#555555">📄 config.yaml</text>
     <text x="375" y="318" text-anchor="end" class="sans" font-size="11" fill="#888888">872 B</text>
@@ -150,35 +135,30 @@
   </g>
 
   <!-- ═══════════════════════════════════════════════ -->
-  <!-- SETTINGS / DIALOG WINDOW                        -->
-  <!-- Dark chrome title bar + light content area      -->
+  <!-- SETTINGS / DIALOG WINDOW — Full Light           -->
   <!-- ═══════════════════════════════════════════════ -->
   <g filter="url(#shadow)">
-    <!-- Window body (light content) -->
+    <!-- Window body (light) -->
     <rect x="590" y="60" width="278" height="340" rx="6" ry="6" fill="#f5f5f5" stroke="#d0d0d0" stroke-width="1"/>
 
-    <!-- Title bar (dark chrome) -->
-    <rect x="590" y="60" width="278" height="34" rx="6" ry="6" fill="#252525" stroke="#404040" stroke-width="1"/>
-    <rect x="590" y="80" width="278" height="14" fill="#252525"/>
+    <!-- Title bar (light chrome) -->
+    <rect x="590" y="60" width="278" height="34" rx="6" ry="6" fill="#ebebeb" stroke="#d0d0d0" stroke-width="1"/>
+    <rect x="590" y="80" width="278" height="14" fill="#ebebeb"/>
 
-    <!-- Buttons -->
     <circle cx="611" cy="77" r="7" fill="#cf6679"/>
     <circle cx="631" cy="77" r="7" fill="#e5a050"/>
     <circle cx="651" cy="77" r="7" fill="#4caf50"/>
 
-    <!-- Title -->
-    <text x="729" y="82" text-anchor="middle" class="sans" font-size="13" fill="#e0e0e0">Appearance</text>
+    <text x="729" y="82" text-anchor="middle" class="sans" font-size="13" fill="#2d2d2d">Appearance</text>
 
     <!-- Content area (light) -->
     <rect x="590" y="94" width="278" height="306" fill="#f5f5f5"/>
 
-    <!-- Section: Theme -->
     <text x="608" y="116" class="sans" font-size="11" fill="#888888" letter-spacing="1">THEME</text>
     <rect x="608" y="122" width="242" height="36" rx="4" fill="#ffffff" stroke="#5294e2" stroke-width="1"/>
-    <text x="622" y="145" class="sans" font-size="13" fill="#2d2d2d">Simplicity</text>
+    <text x="622" y="145" class="sans" font-size="13" fill="#2d2d2d">Simplicity-Light</text>
     <text x="838" y="145" text-anchor="end" class="sans" font-size="11" fill="#8a8a8a">▾</text>
 
-    <!-- Section: Accent color -->
     <text x="608" y="178" class="sans" font-size="11" fill="#888888" letter-spacing="1">ACCENT COLOUR</text>
     <circle cx="622" cy="198" r="10" fill="#5294e2" stroke="#2d2d2d" stroke-width="2"/>
     <circle cx="648" cy="198" r="10" fill="#cf6679"/>
@@ -186,26 +166,20 @@
     <circle cx="700" cy="198" r="10" fill="#e5a050"/>
     <circle cx="726" cy="198" r="10" fill="#9c6cd4"/>
 
-    <!-- Section: Font -->
     <text x="608" y="228" class="sans" font-size="11" fill="#888888" letter-spacing="1">FONT</text>
     <rect x="608" y="234" width="242" height="36" rx="4" fill="#e8e8e8" stroke="#d0d0d0" stroke-width="1"/>
     <text x="622" y="257" class="sans" font-size="13" fill="#2d2d2d">DejaVu Sans  11</text>
     <text x="838" y="257" text-anchor="end" class="sans" font-size="11" fill="#8a8a8a">▾</text>
 
-    <!-- Section: Toggles -->
     <text x="608" y="292" class="sans" font-size="11" fill="#888888" letter-spacing="1">OPTIONS</text>
-
     <text x="622" y="316" class="sans" font-size="12" fill="#2d2d2d">Dark mode</text>
-    <!-- Toggle ON -->
-    <rect x="795" y="306" width="36" height="18" rx="9" fill="#5294e2"/>
-    <circle cx="822" cy="315" r="7" fill="#ffffff"/>
-
+    <rect x="795" y="306" width="36" height="18" rx="9" fill="#cccccc"/>
+    <circle cx="804" cy="315" r="7" fill="#f5f5f5"/>
     <text x="622" y="342" class="sans" font-size="12" fill="#2d2d2d">Window animations</text>
-    <!-- Toggle OFF -->
-    <rect x="795" y="332" width="36" height="18" rx="9" fill="#cccccc"/>
-    <circle cx="804" cy="341" r="7" fill="#f5f5f5"/>
+    <rect x="795" y="332" width="36" height="18" rx="9" fill="#5294e2"/>
+    <circle cx="822" cy="341" r="7" fill="#ffffff"/>
 
-    <!-- Dialog buttons (light bottom bar) -->
+    <!-- Dialog buttons (light) -->
     <rect x="590" y="370" width="278" height="30" fill="#ebebeb" stroke="#d0d0d0" stroke-width="0.5"/>
     <rect x="690" y="377" width="70" height="17" rx="4" fill="#5294e2"/>
     <text x="725" y="389" text-anchor="middle" class="sans" font-size="11" fill="#ffffff">Apply</text>
@@ -215,43 +189,33 @@
 
   <!-- ═══════════════════════════════════════════════ -->
   <!-- TERMINAL WINDOW (bottom)                        -->
-  <!-- Always dark (terminal is its own app)           -->
   <!-- ═══════════════════════════════════════════════ -->
   <g filter="url(#shadow)">
-    <!-- Window body -->
     <rect x="30" y="460" width="840" height="84" rx="6" ry="6" fill="#1e1e1e" stroke="#404040" stroke-width="1"/>
+    <rect x="30" y="460" width="840" height="28" rx="6" ry="6" fill="#ebebeb" stroke="#d0d0d0" stroke-width="1"/>
+    <rect x="30" y="476" width="840" height="12" fill="#ebebeb"/>
 
-    <!-- Title bar (dark chrome) -->
-    <rect x="30" y="460" width="840" height="28" rx="6" ry="6" fill="#252525" stroke="#404040" stroke-width="1"/>
-    <rect x="30" y="476" width="840" height="12" fill="#252525"/>
-
-    <!-- Buttons -->
     <circle cx="51" cy="474" r="6" fill="#cf6679"/>
     <circle cx="70" cy="474" r="6" fill="#e5a050"/>
     <circle cx="89" cy="474" r="6" fill="#4caf50"/>
 
-    <!-- Tab -->
-    <rect x="108" y="462" width="110" height="26" rx="4" fill="#1e1e1e" stroke="#5294e2" stroke-width="1"/>
-    <text x="163" y="478" text-anchor="middle" class="sans" font-size="11" fill="#e0e0e0">bash — user@host</text>
+    <rect x="108" y="462" width="110" height="26" rx="4" fill="#f0f0f0" stroke="#5294e2" stroke-width="1"/>
+    <text x="163" y="478" text-anchor="middle" class="sans" font-size="11" fill="#2d2d2d">bash — user@host</text>
     <rect x="222" y="462" width="100" height="26" rx="4" fill="transparent"/>
     <text x="272" y="478" text-anchor="middle" class="sans" font-size="11" fill="#888888">vim config.yaml</text>
 
-    <!-- Terminal content -->
     <rect x="30" y="488" width="840" height="56" fill="#1e1e1e"/>
-
     <text x="46" y="507" class="mono" font-size="12" fill="#4caf50">user@host</text>
     <text x="121" y="507" class="mono" font-size="12" fill="#e0e0e0">:</text>
     <text x="130" y="507" class="mono" font-size="12" fill="#5294e2">~</text>
     <text x="145" y="507" class="mono" font-size="12" fill="#e0e0e0">$</text>
-    <text x="158" y="507" class="mono" font-size="12" fill="#e0e0e0">./install.sh</text>
-
-    <text x="46" y="527" class="mono" font-size="12" fill="#888888">✓ Detected: Arch Linux — GNOME</text>
+    <text x="158" y="507" class="mono" font-size="12" fill="#e0e0e0">./install.sh --light</text>
+    <text x="46" y="527" class="mono" font-size="12" fill="#888888">✓ Detected: Fedora — GNOME</text>
     <text x="46" y="543" class="mono" font-size="12" fill="#5294e2">→</text>
-    <text x="58" y="543" class="mono" font-size="12" fill="#e0e0e0">Applying Simplicity (Dual-Tone)...</text>
-    <!-- Cursor blink placeholder -->
-    <rect x="270" y="530" width="8" height="14" fill="#e0e0e0" opacity="0.8"/>
+    <text x="58" y="543" class="mono" font-size="12" fill="#e0e0e0">Applying Simplicity-Light...</text>
+    <rect x="258" y="530" width="8" height="14" fill="#e0e0e0" opacity="0.8"/>
   </g>
 
   <!-- Label -->
-  <text x="450" y="555" text-anchor="middle" class="sans" font-size="11" fill="#555555">Simplicity — Dual-Tone (dark chrome · light content) · Default</text>
+  <text x="450" y="555" text-anchor="middle" class="sans" font-size="11" fill="#555555">Simplicity-Light — Full light palette</text>
 </svg>
