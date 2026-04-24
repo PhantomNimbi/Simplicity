@@ -10,12 +10,12 @@ Welcome to the official wiki for **Simplicity**, a clean, modern GTK theme suite
 
 | Page | Description |
 |------|-------------|
-| [Theme Variants](Theme-Variants) | Overview of all three theme variants with screenshots |
-| [Theme Elements](Theme-Elements) | Breakdown of every UI component and how it's styled |
-| [Colour Palette](Colour-Palette) | Complete colour reference for every variant |
-| [Installation](Installation) | Step-by-step installation guide for every distro and DE |
-| [Desktop Environments](Desktop-Environments) | Per-DE configuration and manual application instructions |
-| [Troubleshooting](Troubleshooting) | Common problems and how to fix them |
+| [Theme Variants](Theme-Variants.md) | Overview of all three theme variants with screenshots |
+| [Theme Elements](Theme-Elements.md) | Breakdown of every UI component and how it's styled |
+| [Colour Palette](Colour-Palette.md) | Complete colour reference for every variant |
+| [Installation](Installation.md) | Step-by-step installation guide for every distro and DE |
+| [Desktop Environments](Desktop-Environments.md) | Per-DE configuration and manual application instructions |
+| [Troubleshooting](Troubleshooting.md) | Common problems and how to fix them |
 
 ---
 
