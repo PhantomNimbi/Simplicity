@@ -53,7 +53,7 @@ Full documentation is available in the **[GitHub Wiki](https://github.com/Phanto
 | Page | Description |
 |------|-------------|
 | [Home](https://github.com/PhantomNimbi/Simplicity/blob/main/wiki/Home.md) | Overview and quick-start |
-| [Theme Variants](https://github.com/PhantomNimbi/Simplicity/blob/main/wiki/Theme-Variants.md) | All three variants with screenshots |
+| [Theme Variants](https://github.com/PhantomNimbi/Simplicity/blob/main/wiki/Theme-Variants.md) | All four variants with screenshots |
 | [Theme Elements](https://github.com/PhantomNimbi/Simplicity/blob/main/wiki/Theme-Elements.md) | Per-component styling breakdown |
 | [Colour Palette](https://github.com/PhantomNimbi/Simplicity/blob/main/wiki/Colour-Palette.md) | Complete colour reference for every variant |
 | [Installation](https://github.com/PhantomNimbi/Simplicity/blob/main/wiki/Installation.md) | Full installation guide for every distro and DE |

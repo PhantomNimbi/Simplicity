@@ -48,6 +48,7 @@ Each variant provides complete coverage across:
 - **GTK 3** — most modern GTK apps
 - **GTK 4 / libadwaita** — GNOME 40+ applications
 - **GNOME Shell** — top panel, Activities overview, Quick Settings, notifications, and more
+- **Cinnamon** — panel, popup menus, notifications, and calendar
 - **Metacity** — GNOME Shell (Mutter) and MATE (Marco) window decorator
 - **XFWM4** — XFCE window manager
 - **Openbox** — also used by LXDE and LXQt
@@ -64,7 +65,7 @@ Additionally, the suite ships a shared **Windows 11-inspired icon theme**:
 | GNOME | ✅ | ✅ | ✅ | Metacity | ✅ |
 | XFCE | ✅ | ✅ | — | XFWM4 | — |
 | MATE | ✅ | ✅ | — | Metacity | — |
-| Cinnamon | ✅ | ✅ | — | Metacity | — |
+| Cinnamon | ✅ | ✅ | — | Metacity | ✅ |
 | KDE Plasma | ✅ | ✅ | ✅ | — | — |
 | Openbox / LXDE / LXQt | ✅ | ✅ | — | Openbox | — |
 | i3 / Sway | ✅ | ✅ | ✅ | — | — |

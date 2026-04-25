@@ -19,6 +19,52 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ---
 
+## [1.6.0] — 2026-04-25
+
+### ✨ Added
+
+#### Cinnamon Shell Theme
+
+- **`cinnamon/cinnamon.css`** added to all four theme variants
+  (`simplicity-dualtone/`, `simplicity-dark/`, `simplicity-light/`,
+  `simplicity-dracula/`). Each stylesheet themes the full Cinnamon shell
+  chrome — top/bottom/side panels, panel applets and the window list,
+  popup and context menus, tooltips, notifications, OSD (volume / brightness)
+  overlays, modal dialogs, and the date/time calendar widget — using the
+  respective variant's colour palette.
+  - **Dual-Tone** — dark panel and chrome (`#252525`) with blue accent (`#5294e2`)
+  - **Dark** — full dark chrome (`#1e1e1e`/`#2d2d2d`) with blue accent
+  - **Light** — light panel and chrome (`#ebebeb`/`#f5f5f5`) with blue accent
+  - **Dracula** — deep-navy chrome (`#21222c`/`#191a21`) with purple accent (`#bd93f9`)
+- **`CinnamonTheme`** key added to all four `index.theme` files, registering
+  the Cinnamon shell theme in the `[X-GNOME-Metatheme]` section so Cinnamon
+  System Settings can discover and apply the shell theme automatically.
+
+#### Documentation
+
+- **`README.md`** — Repository structure updated to show `cinnamon/` directory
+  for the dual-tone variant. Supported Desktop Environments table updated with
+  a **Shell Theme** ✅ for Cinnamon.
+- **`CONTRIBUTING.md`** — Variant directory layout tree updated to include
+  `cinnamon/cinnamon.css`. The "Apply the same colour change" guideline now
+  lists `cinnamon/cinnamon.css` alongside the other per-variant files.
+- **`TEMPLATE_USAGE.md`** — Files-that-reference-the-theme-name table updated
+  to include `cinnamon/cinnamon.css` entries for all four variants. Repository
+  Structure Reference updated to show `cinnamon/cinnamon.css` in the variant
+  directory layout.
+- **`wiki/Home.md`** — Cinnamon shell added to the Quick Overview coverage list.
+  Cinnamon row updated in the Supported Desktop Environments table (Shell Theme ✅).
+- **`wiki/Desktop-Environments.md`** — Cinnamon section updated with Shell Theme
+  metadata line and GUI method updated to include the Desktop (shell theme) step.
+- **`wiki/Installation.md`** — Expected `ls` output updated to include the
+  `cinnamon` directory.
+- **`wiki/Theme-Elements.md`** — New **Cinnamon Shell** section added, covering
+  panel, popup menus, notifications, OSD, modal dialogs, and calendar widget with
+  colour references per variant.
+- **`CHANGELOG.md`** — This entry.
+
+---
+
 ## [1.5.0] — 2026-04-25
 
 ### ✨ Added

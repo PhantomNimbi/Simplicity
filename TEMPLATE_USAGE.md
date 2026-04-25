@@ -68,6 +68,7 @@ The following files all contain the theme name and will be updated by the comman
 | File | What it controls |
 |------|-----------------|
 | `simplicity-dualtone/index.theme` | Default variant metadata (name shown in desktop settings) |
+| `simplicity-dualtone/cinnamon/cinnamon.css` | Cinnamon shell theme — default variant |
 | `simplicity-dualtone/gnome-shell/gnome-shell.css` | GNOME Shell theme (panel, overview, menus) — default variant |
 | `simplicity-dualtone/gtk-2.0/gtkrc` | GTK 2 theme identifier (default variant) |
 | `simplicity-dualtone/gtk-3.0/settings.ini` | GTK 3 settings (default variant) |
@@ -76,10 +77,13 @@ The following files all contain the theme name and will be updated by the comman
 | `simplicity-dualtone/xfwm4/themerc` | XFCE window manager theme name |
 | `simplicity-dualtone/openbox-3/themerc` | Openbox window manager theme name |
 | `simplicity-light/index.theme` | Light variant metadata |
+| `simplicity-light/cinnamon/cinnamon.css` | Cinnamon shell theme — light variant |
 | `simplicity-light/gnome-shell/gnome-shell.css` | GNOME Shell theme — light variant |
 | `simplicity-dark/index.theme` | Dark variant metadata |
+| `simplicity-dark/cinnamon/cinnamon.css` | Cinnamon shell theme — dark variant |
 | `simplicity-dark/gnome-shell/gnome-shell.css` | GNOME Shell theme — dark variant |
 | `simplicity-dracula/index.theme` | Dracula variant metadata |
+| `simplicity-dracula/cinnamon/cinnamon.css` | Cinnamon shell theme — Dracula variant |
 | `simplicity-dracula/gnome-shell/gnome-shell.css` | GNOME Shell theme — Dracula variant |
 | `install.sh` | Installer — copies files and applies the theme |
 | `uninstall.sh` | Uninstaller — removes the theme |
@@ -229,6 +233,7 @@ Then apply and inspect the result:
 │
 ├── <theme-name>/               # Default (dual-tone) variant (rename from simplicity-dualtone/)
 │   ├── index.theme             # Theme metadata
+│   ├── cinnamon/cinnamon.css        # Cinnamon shell theme ← panel, menus, notifications
 │   ├── gnome-shell/gnome-shell.css  # GNOME Shell theme ← panel, overview, Quick Settings
 │   ├── gtk-2.0/gtkrc           # GTK 2 theme
 │   ├── gtk-3.0/gtk.css         # GTK 3 stylesheet  ← main colour file
