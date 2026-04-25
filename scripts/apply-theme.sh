@@ -83,6 +83,39 @@ check_theme_installed() {
     return 1
 }
 
+# Enable the GNOME Shell user-theme extension if it is installed but not yet enabled
+enable_user_theme_extension() {
+    # Check whether the extension is installed (system-wide or per-user)
+    local ext_uuid="user-theme@gnome-shell-extensions.gcampax.github.com"
+    local found=false
+    local ext_dirs=(
+        "/usr/share/gnome-shell/extensions/${ext_uuid}"
+        "/usr/lib/gnome-shell/extensions/${ext_uuid}"
+        "${HOME}/.local/share/gnome-shell/extensions/${ext_uuid}"
+    )
+    for d in "${ext_dirs[@]}"; do
+        if [[ -d "${d}" ]]; then
+            found=true
+            break
+        fi
+    done
+
+    if ! ${found}; then
+        warning "GNOME Shell user-theme extension not found."
+        info "Install it with your package manager (e.g. gnome-shell-extension-user-theme)"
+        info "or via https://extensions.gnome.org/extension/19/user-themes/"
+        return 1
+    fi
+
+    # Enable the extension if gnome-extensions CLI is available
+    if command -v gnome-extensions &>/dev/null; then
+        if ! gnome-extensions info "${ext_uuid}" 2>/dev/null | grep -q "State: ENABLED"; then
+            run_cmd gnome-extensions enable "${ext_uuid}" 2>/dev/null || true
+        fi
+    fi
+    return 0
+}
+
 # Apply theme to GNOME
 apply_gnome() {
     info "Applying ${THEME_NAME} to GNOME..."
@@ -93,8 +126,13 @@ apply_gnome() {
     else
         run_cmd gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
     fi
-    # Try to apply shell theme if user-theme extension is active
-    run_cmd bash -c "gsettings set org.gnome.shell.extensions.user-theme name '${THEME_NAME}' 2>/dev/null || true"
+    # Apply GNOME Shell theme via the user-theme extension
+    if enable_user_theme_extension; then
+        run_cmd gsettings set org.gnome.shell.extensions.user-theme name "${THEME_NAME}"
+        success "GNOME Shell theme applied via user-theme extension."
+    else
+        warning "Skipping GNOME Shell theme — user-theme extension unavailable."
+    fi
     success "GNOME theme applied."
 }
 
