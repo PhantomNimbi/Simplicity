@@ -9,6 +9,7 @@ set -euo pipefail
 THEME_NAME="Simplicity"
 THEME_DARK_NAME="Simplicity-Dark"
 THEME_LIGHT_NAME="Simplicity-Light"
+THEME_DRACULA_NAME="Simplicity-Dracula"
 SYSTEM_UNINSTALL=false
 KEEP_SETTINGS=false
 
@@ -61,6 +62,8 @@ remove_theme_files() {
     local system_light_dir="/usr/share/themes/${THEME_LIGHT_NAME}"
     local user_dark_dir="${HOME}/.themes/${THEME_DARK_NAME}"
     local system_dark_dir="/usr/share/themes/${THEME_DARK_NAME}"
+    local user_dracula_dir="${HOME}/.themes/${THEME_DRACULA_NAME}"
+    local system_dracula_dir="/usr/share/themes/${THEME_DRACULA_NAME}"
 
     if [[ -d "${user_theme_dir}" ]]; then
         info "Removing user theme directory: ${user_theme_dir}"
@@ -80,6 +83,12 @@ remove_theme_files() {
         info "Removing user dark theme directory: ${user_dark_dir}"
         rm -rf "${user_dark_dir}"
         success "Removed: ${user_dark_dir}"
+    fi
+
+    if [[ -d "${user_dracula_dir}" ]]; then
+        info "Removing user Dracula theme directory: ${user_dracula_dir}"
+        rm -rf "${user_dracula_dir}"
+        success "Removed: ${user_dracula_dir}"
     fi
 
     if "${SYSTEM_UNINSTALL}"; then
@@ -104,6 +113,12 @@ remove_theme_files() {
             info "Removing system dark theme directory: ${system_dark_dir}"
             rm -rf "${system_dark_dir}"
             success "Removed: ${system_dark_dir}"
+        fi
+
+        if [[ -d "${system_dracula_dir}" ]]; then
+            info "Removing system Dracula theme directory: ${system_dracula_dir}"
+            rm -rf "${system_dracula_dir}"
+            success "Removed: ${system_dracula_dir}"
         fi
     fi
 }
@@ -170,13 +185,14 @@ remove_gtk_settings() {
 
     for settings_file in "${gtk3_settings}" "${gtk4_settings}"; do
         if [[ -f "${settings_file}" ]]; then
-            if grep -qE "^gtk-theme-name=(${THEME_NAME}|${THEME_LIGHT_NAME}|${THEME_DARK_NAME})" "${settings_file}" 2>/dev/null; then
+            if grep -qE "^gtk-theme-name=(${THEME_NAME}|${THEME_LIGHT_NAME}|${THEME_DARK_NAME}|${THEME_DRACULA_NAME})" "${settings_file}" 2>/dev/null; then
                 info "Removing Simplicity settings from: ${settings_file}"
                 # Remove only the Simplicity-specific lines, keep other settings
                 sed -i \
                     -e "/^gtk-theme-name=${THEME_NAME}/d" \
                     -e "/^gtk-theme-name=${THEME_LIGHT_NAME}/d" \
                     -e "/^gtk-theme-name=${THEME_DARK_NAME}/d" \
+                    -e "/^gtk-theme-name=${THEME_DRACULA_NAME}/d" \
                     -e "/^gtk-icon-theme-name=Simplicity-Icons/d" \
                     -e "/^gtk-cursor-theme-name=Simplicity-Cursors/d" \
                     -e "/^gtk-application-prefer-dark-theme=1/d" \

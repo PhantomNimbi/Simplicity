@@ -9,6 +9,7 @@
 #   --no-apply    Install files only; do not apply the theme to the current session
 #   --dark        Also install the Simplicity-Dark (full dark) variant
 #   --light       Also install the Simplicity-Light (full light) variant
+#   --dracula     Also install the Simplicity-Dracula variant
 #   --help        Show this help message
 
 set -euo pipefail
@@ -17,10 +18,12 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 THEME_NAME="Simplicity"
 THEME_DARK_NAME="Simplicity-Dark"
 THEME_LIGHT_NAME="Simplicity-Light"
+THEME_DRACULA_NAME="Simplicity-Dracula"
 SYSTEM_INSTALL=false
 NO_APPLY=false
 INSTALL_DARK=false
 INSTALL_LIGHT=false
+INSTALL_DRACULA=false
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -51,6 +54,9 @@ while [[ $# -gt 0 ]]; do
         --dark)
             INSTALL_DARK=true
             ;;
+        --dracula)
+            INSTALL_DRACULA=true
+            ;;
         --help|-h)
             echo "Simplicity Theme Suite Installer"
             echo ""
@@ -61,6 +67,7 @@ while [[ $# -gt 0 ]]; do
             echo "  --no-apply    Install files only; do not apply the theme"
             echo "  --light       Also install the Simplicity-Light (full light) variant"
             echo "  --dark        Also install the Simplicity-Dark (full dark) variant"
+            echo "  --dracula     Also install the Simplicity-Dracula variant"
             echo "  --help, -h    Show this help message"
             exit 0
             ;;
@@ -135,6 +142,19 @@ install_theme_files() {
         mkdir -p "${dark_target_dir}"
         cp -r "${SCRIPT_DIR}/simplicity-dark/." "${dark_target_dir}/"
         success "Dark variant installed to: ${dark_target_dir}"
+    fi
+
+    if "${INSTALL_DRACULA}"; then
+        local dracula_target_dir
+        if "${SYSTEM_INSTALL}"; then
+            dracula_target_dir="/usr/share/themes/${THEME_DRACULA_NAME}"
+        else
+            dracula_target_dir="${HOME}/.themes/${THEME_DRACULA_NAME}"
+        fi
+        info "Installing Dracula variant to: ${dracula_target_dir}"
+        mkdir -p "${dracula_target_dir}"
+        cp -r "${SCRIPT_DIR}/simplicity-dracula/." "${dracula_target_dir}/"
+        success "Dracula variant installed to: ${dracula_target_dir}"
     fi
 }
 

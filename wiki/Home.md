@@ -34,13 +34,14 @@ Welcome to the official wiki for **Simplicity**, a clean, modern GTK theme suite
 
 ## Quick Overview
 
-**Simplicity** ships three ready-to-use theme variants:
+**Simplicity** ships four ready-to-use theme variants:
 
 | Variant | Theme Name | Style |
 |---------|-----------|-------|
 | **Dual-Tone** (default) | `Simplicity` | Dark chrome (header/sidebar/menus) + light content area |
 | **Dark** | `Simplicity-Dark` | Fully dark — every surface uses the dark palette |
 | **Light** | `Simplicity-Light` | Fully light — every surface uses the light palette |
+| **Dracula** | `Simplicity-Dracula` | Dracula colour palette — deep navy background with purple accent |
 
 Each variant provides complete coverage across:
 - **GTK 2** — legacy applications

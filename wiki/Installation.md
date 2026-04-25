@@ -85,11 +85,11 @@ The installer will:
 
 ## Method 2 — Automatic Installation with Additional Variants
 
-To install the Light and/or Dark variants in addition to the default Dual-Tone variant:
+To install the Light and/or Dark and/or Dracula variants in addition to the default Dual-Tone variant:
 
 ```bash
-# Install all three variants
-./install.sh --dark --light
+# Install all variants
+./install.sh --dark --light --dracula
 ```
 
 After this, your `~/.themes/` directory will contain:
@@ -98,7 +98,8 @@ After this, your `~/.themes/` directory will contain:
 ~/.themes/
 ├── Simplicity/          ← Dual-Tone (default)
 ├── Simplicity-Dark/     ← Full dark
-└── Simplicity-Light/    ← Full light
+├── Simplicity-Light/    ← Full light
+└── Simplicity-Dracula/  ← Dracula palette
 ```
 
 ---
@@ -163,6 +164,11 @@ cp -r Simplicity/simplicity-dark ~/.themes/Simplicity-Dark
 cp -r Simplicity/simplicity-light ~/.themes/Simplicity-Light
 ```
 
+**Dracula variant:**
+```bash
+cp -r Simplicity/simplicity-dracula ~/.themes/Simplicity-Dracula
+```
+
 ### Step 4 — Apply the theme
 
 See [Method 4: Applying the Theme Manually](#method-4--applying-the-theme-manually) below for per-DE application commands.
@@ -185,9 +191,13 @@ After installation, use the `apply-theme.sh` script or apply via your desktop en
 # Apply the light variant
 ./scripts/apply-theme.sh --light
 
+# Apply the Dracula variant
+./scripts/apply-theme.sh --dracula
+
 # Preview what would happen without making changes
 ./scripts/apply-theme.sh --dry-run
 ./scripts/apply-theme.sh --dark --dry-run
+./scripts/apply-theme.sh --dracula --dry-run
 ```
 
 ### GNOME
@@ -312,6 +322,7 @@ Options:
   --no-apply    Install files only; do not apply the theme to the current session
   --dark        Also install the Simplicity-Dark (full dark) variant
   --light       Also install the Simplicity-Light (full light) variant
+  --dracula     Also install the Simplicity-Dracula variant
   --help, -h    Show this help message
 ```
 
@@ -322,7 +333,8 @@ Options:
 | `--no-apply` | Copies files but skips applying the theme |
 | `--dark` | Also installs `Simplicity-Dark` |
 | `--light` | Also installs `Simplicity-Light` |
-| `--dark --light` | Installs all three variants |
+| `--dracula` | Also installs `Simplicity-Dracula` |
+| `--dark --light --dracula` | Installs all four variants |
 
 ---
 
@@ -335,6 +347,7 @@ Options:
   --dry-run, -n   Show what would be done without making changes
   --light         Apply the Simplicity-Light theme
   --dark          Apply the Simplicity-Dark theme
+  --dracula       Apply the Simplicity-Dracula theme
   --help, -h      Show this help message
 ```
 

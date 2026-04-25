@@ -45,6 +45,9 @@ A clean, modern GTK theme suite for Linux desktop environments, offering dual-to
 ### Dark — full dark palette
 ![Simplicity Dark preview](https://github.com/PhantomNimbi/Simplicity/raw/main/screenshots/preview-dark.png)
 
+### Dracula — Dracula colour palette
+![Simplicity Dracula preview](https://github.com/PhantomNimbi/Simplicity/raw/main/screenshots/preview-dracula.png)
+
 ## Documentation
 
 Full documentation is available in the **[GitHub Wiki](https://github.com/PhantomNimbi/Simplicity/blob/main/wiki/Home.md)**:
@@ -80,6 +83,7 @@ Full documentation is available in the **[GitHub Wiki](https://github.com/Phanto
 | Dual-Tone (Default) | `Simplicity` | Dark chrome (header bar, sidebar, menus) with light content area |
 | Light | `Simplicity-Light` | Full light palette — header, content, and chrome all light |
 | Dark | `Simplicity-Dark` | Full dark palette — header, content, and chrome all dark |
+| Dracula | `Simplicity-Dracula` | Dracula colour palette — deep navy background with purple accent |
 
 ## Colour Palette
 
@@ -193,13 +197,14 @@ sudo ./install.sh --system
   --no-apply    Install files only; do not apply to current session
   --light       Also install the Simplicity-Light variant
   --dark        Also install the Simplicity-Dark variant
+  --dracula     Also install the Simplicity-Dracula variant
   --help        Show help
 ```
 
 To install all variants at once:
 
 ```bash
-./install.sh --light --dark
+./install.sh --light --dark --dracula
 ```
 
 To apply a specific variant after installation:
@@ -207,6 +212,7 @@ To apply a specific variant after installation:
 ```bash
 ./scripts/apply-theme.sh --dark
 ./scripts/apply-theme.sh --light
+./scripts/apply-theme.sh --dracula
 ./scripts/apply-theme.sh --dry-run   # preview changes without applying
 ```
 
@@ -230,6 +236,7 @@ The updater will:
   --no-apply    Update files only; do not re-apply to current session
   --dark        Also update the Simplicity-Dark variant
   --light       Also update the Simplicity-Light variant
+  --dracula     Also update the Simplicity-Dracula variant
   --help        Show help
 ```
 
@@ -251,6 +258,9 @@ The updater will:
 Or manually:
 ```bash
 rm -rf ~/.themes/"Simplicity"
+rm -rf ~/.themes/"Simplicity-Dark"
+rm -rf ~/.themes/"Simplicity-Light"
+rm -rf ~/.themes/"Simplicity-Dracula"
 gsettings reset org.gnome.desktop.interface gtk-theme
 gsettings reset org.gnome.desktop.wm.preferences theme
 ```
@@ -289,6 +299,8 @@ Simplicity/
 ├── simplicity-light/             # Light theme files (same layout as above)
 │
 ├── simplicity-dark/              # Dark theme files (same layout as above)
+│
+├── simplicity-dracula/           # Dracula theme files (same layout as above)
 │
 ├── screenshots/                # Preview images
 │

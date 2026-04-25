@@ -41,22 +41,24 @@ find . -not -path './.git/*' -type f \
   -exec sed -i 's/Simplicity/MY_THEME_NAME/g' {} +
 ```
 
-After running the command, also rename the three theme variant directories:
+After running the command, also rename the four theme variant directories:
 
 ```bash
 # The default (dual-tone) variant has no suffix — it becomes the primary theme name.
 mv simplicity-dualtone <my-theme-name-lowercase>
 mv simplicity-light    <my-theme-name-lowercase>-light
 mv simplicity-dark     <my-theme-name-lowercase>-dark
+mv simplicity-dracula  <my-theme-name-lowercase>-dracula
 ```
 
-Then update the three path references inside `install.sh`:
+Then update the path references inside `install.sh`:
 
 ```bash
 # Lines that copy theme files — update source directory names
-cp -r "${SCRIPT_DIR}/<my-theme-name-lowercase>/."       "${target_dir}/"
-cp -r "${SCRIPT_DIR}/<my-theme-name-lowercase>-light/." "${light_target_dir}/"
-cp -r "${SCRIPT_DIR}/<my-theme-name-lowercase>-dark/."  "${dark_target_dir}/"
+cp -r "${SCRIPT_DIR}/<my-theme-name-lowercase>/."         "${target_dir}/"
+cp -r "${SCRIPT_DIR}/<my-theme-name-lowercase>-light/."   "${light_target_dir}/"
+cp -r "${SCRIPT_DIR}/<my-theme-name-lowercase>-dark/."    "${dark_target_dir}/"
+cp -r "${SCRIPT_DIR}/<my-theme-name-lowercase>-dracula/." "${dracula_target_dir}/"
 ```
 
 ### Files that reference the theme name
@@ -77,6 +79,8 @@ The following files all contain the theme name and will be updated by the comman
 | `simplicity-light/gnome-shell/gnome-shell.css` | GNOME Shell theme — light variant |
 | `simplicity-dark/index.theme` | Dark variant metadata |
 | `simplicity-dark/gnome-shell/gnome-shell.css` | GNOME Shell theme — dark variant |
+| `simplicity-dracula/index.theme` | Dracula variant metadata |
+| `simplicity-dracula/gnome-shell/gnome-shell.css` | GNOME Shell theme — Dracula variant |
 | `install.sh` | Installer — copies files and applies the theme |
 | `uninstall.sh` | Uninstaller — removes the theme |
 | `scripts/apply-theme.sh` | Per-DE theme applicator |
@@ -238,6 +242,9 @@ Then apply and inspect the result:
 │   └── … (same layout as above)
 │
 ├── <theme-name>-dark/          # Dark variant (rename from simplicity-dark/)
+│   └── … (same layout as above)
+│
+├── <theme-name>-dracula/       # Dracula variant (rename from simplicity-dracula/, or remove)
 │   └── … (same layout as above)
 │
 ├── distros/                    # Distribution-specific installers
