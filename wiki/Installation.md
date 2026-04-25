@@ -385,6 +385,9 @@ rm -rf ~/.themes/Simplicity-Dark
 rm -rf ~/.themes/Simplicity-Light
 rm -rf ~/.themes/Simplicity-Dracula
 
+# Remove GTK4 libadwaita override symlink (created by apply-theme.sh)
+rm -f ~/.config/gtk-4.0/gtk.css
+
 # Reset GNOME settings
 gsettings reset org.gnome.desktop.interface gtk-theme
 gsettings reset org.gnome.desktop.wm.preferences theme

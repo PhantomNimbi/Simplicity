@@ -19,6 +19,34 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ---
 
+## [1.11.0] — 2026-04-25
+
+### 🐛 Fixed
+
+#### Uninstaller — Dangling GTK4 Symlink
+
+- **`uninstall.sh`** — Extended `remove_gtk_settings()` to also remove the
+  `~/.config/gtk-4.0/gtk.css` symlink when it points into a Simplicity theme
+  directory. The `apply_gtk4_libadwaita` helper in `scripts/apply-theme.sh`
+  (added in v1.10.x) creates this symlink so that libadwaita applications
+  (Nautilus, GNOME Settings, etc.) pick up the theme colours. Previously,
+  running `uninstall.sh` removed the theme directories but left the symlink in
+  place, causing it to become a dangling reference and potentially breaking
+  GTK4 application styling until the symlink was removed manually. The fix
+  checks whether the symlink target contains `Simplicity` before removing it,
+  so user-created `gtk.css` overrides that are unrelated to this theme are
+  never touched.
+
+#### Documentation
+
+- **`wiki/Installation.md`** — Added
+  `rm -f ~/.config/gtk-4.0/gtk.css` to the **Manual Uninstall** section.
+  The command was missing from the manual steps even though `uninstall.sh`
+  now handles it automatically.
+- **`CHANGELOG.md`** — This entry.
+
+---
+
 ## [1.10.0] — 2026-04-25
 
 ### 🐛 Fixed
