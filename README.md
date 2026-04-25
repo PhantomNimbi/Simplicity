@@ -13,8 +13,6 @@
 > [🇸🇦 العربية](https://translate.google.com/translate?sl=en&tl=ar&u=https://github.com/PhantomNimbi/Simplicity/blob/main/README.md) ·
 > [🇮🇳 हिन्दी](https://translate.google.com/translate?sl=en&tl=hi&u=https://github.com/PhantomNimbi/Simplicity/blob/main/README.md)
 
-[![Release](https://github.com/PhantomNimbi/Simplicity/actions/workflows/release.yml/badge.svg)](https://github.com/PhantomNimbi/Simplicity/actions/workflows/release.yml)
-[![Latest Release](https://img.shields.io/github/v/release/PhantomNimbi/Simplicity)](https://github.com/PhantomNimbi/Simplicity/releases/latest)
 [![License](https://img.shields.io/badge/license-BSD--3--Clause-blue)](https://github.com/PhantomNimbi/Simplicity/blob/main/LICENSE)
 [![Last Commit](https://img.shields.io/github/last-commit/PhantomNimbi/Simplicity)](https://github.com/PhantomNimbi/Simplicity/commits/main)
 [![Open Issues](https://img.shields.io/github/issues/PhantomNimbi/Simplicity)](https://github.com/PhantomNimbi/Simplicity/issues)
