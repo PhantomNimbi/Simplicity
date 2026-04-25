@@ -368,6 +368,18 @@ To add support for a new distribution:
 3. Add a `README.md` with distribution-specific notes
 4. Update this README with the new distro entry
 
+## Share
+
+If you enjoy Simplicity, help spread the word!
+
+[![Share on X](https://img.shields.io/badge/Share_on-X-black?logo=x)](https://twitter.com/intent/tweet?text=Check%20out%20Simplicity%20%E2%80%94%20a%20clean%2C%20modern%20Linux%20desktop%20theme%20suite%21&url=https%3A%2F%2Fgithub.com%2FPhantomNimbi%2FSimplicity)
+[![Share on Reddit](https://img.shields.io/badge/Share_on-Reddit-FF4500?logo=reddit&logoColor=white)](https://www.reddit.com/submit?url=https%3A%2F%2Fgithub.com%2FPhantomNimbi%2FSimplicity&title=Simplicity%20%E2%80%94%20Linux%20Desktop%20Theme%20Suite)
+[![Share on LinkedIn](https://img.shields.io/badge/Share_on-LinkedIn-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fgithub.com%2FPhantomNimbi%2FSimplicity)
+[![Share on Facebook](https://img.shields.io/badge/Share_on-Facebook-1877F2?logo=facebook&logoColor=white)](https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgithub.com%2FPhantomNimbi%2FSimplicity)
+[![Share on Hacker News](https://img.shields.io/badge/Share_on-Hacker%20News-FF6600?logo=ycombinator&logoColor=white)](https://news.ycombinator.com/submitlink?u=https%3A%2F%2Fgithub.com%2FPhantomNimbi%2FSimplicity&t=Simplicity%20%E2%80%94%20Linux%20Desktop%20Theme%20Suite)
+[![Share on WhatsApp](https://img.shields.io/badge/Share_on-WhatsApp-25D366?logo=whatsapp&logoColor=white)](https://api.whatsapp.com/send?text=Check%20out%20Simplicity%20%E2%80%94%20a%20clean%2C%20modern%20Linux%20desktop%20theme%20suite%21%20https%3A%2F%2Fgithub.com%2FPhantomNimbi%2FSimplicity)
+[![Share on Telegram](https://img.shields.io/badge/Share_on-Telegram-26A5E4?logo=telegram&logoColor=white)](https://t.me/share/url?url=https%3A%2F%2Fgithub.com%2FPhantomNimbi%2FSimplicity&text=Check%20out%20Simplicity%20%E2%80%94%20a%20clean%2C%20modern%20Linux%20desktop%20theme%20suite%21)
+
 ## Changelog
 
 See **[CHANGELOG.md](https://github.com/PhantomNimbi/Simplicity/blob/main/CHANGELOG.md)** for the full version history and release notes.
