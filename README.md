@@ -31,7 +31,7 @@ A clean, modern desktop theme for Linux, available in dual-tone, light, dark, an
 ███████╗██║██╔████╔██║██████╔╝██║     ██║██║     ██║   ██║    ╚████╔╝ 
 ╚════██║██║██║╚██╔╝██║██╔═══╝ ██║     ██║██║     ██║   ██║     ╚██╔╝  
 ███████║██║██║ ╚═╝ ██║██║     ███████╗██║╚██████╗██║   ██║      ██║   
-╚══════╝╚═╝╚═╝     ╚═╝╚═╝     ╚══════╝╚═╝ ╚═════╝╚═╝   ╚═╝      ╚═╝
+╚══════╝╚═╝╚═╝     ╚═╝╚═╝     ╚══════╝╚═╝ ╚═════╝╚═╝   ╚═╝      ╚═╝   
 </pre>
    
    <img width="48%" height="auto" src="https://github.com/PhantomNimbi/Simplicity/raw/main/screenshots/preview.png" alt="Simplicity Dual-Tone preview" />
