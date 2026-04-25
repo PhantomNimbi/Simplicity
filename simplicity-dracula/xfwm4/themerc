@@ -1,0 +1,60 @@
+# Simplicity XFWM4 Theme (Dracula variant)
+# Compatible with: XFCE desktop environment
+# Distros: Ubuntu, Debian, Arch Linux, Manjaro, openSUSE
+
+# Active window title bar
+active_text_color=#f8f8f2
+active_border_color=#bd93f9
+active_color_1=#21222c
+active_hilight_1=#383a4b
+active_shadow_1=#191a21
+active_color_2=#282a36
+active_hilight_2=#313341
+active_shadow_2=#1e1f29
+active_mid_1=#282a36
+active_mid_2=#21222c
+active_frame_color=#bd93f9
+
+# Inactive window title bar
+inactive_text_color=#6272a4
+inactive_border_color=#44475a
+inactive_color_1=#282a36
+inactive_hilight_1=#313341
+inactive_shadow_1=#1e1f29
+inactive_color_2=#21222c
+inactive_hilight_2=#282a36
+inactive_shadow_2=#191a21
+inactive_mid_1=#21222c
+inactive_mid_2=#282a36
+inactive_frame_color=#44475a
+
+# Button layout
+button_layout=O|HMC
+
+# Fonts
+title_font=Sans Bold 9
+title_horizontal_offset=4
+title_vertical_offset=1
+title_shadow_active=under
+title_shadow_inactive=under
+
+# Dimensions
+full_width_title=true
+title_height=28
+button_offset=4
+button_spacing=2
+snap_width=10
+snap_resistance=10
+workspace_count=4
+
+# Decorations
+show_popup_shadow=true
+show_dock_shadow=true
+prevent_focus_stealing=true
+raise_with_any_button=true
+
+# Scrolling behavior
+scroll_workspaces=true
+
+# Theme engine
+theme_engine=xfwm4
