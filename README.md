@@ -62,6 +62,7 @@ Full documentation is available in the **[GitHub Wiki](https://github.com/Phanto
 ## Features
 
 - 🎨 **GTK 2, 3 & 4** — Full theme support for modern and legacy GTK applications
+- 🐚 **GNOME Shell** — Full shell theme: panel, Activities overview, Quick Settings, notifications, OSD, lock screen, and more
 - 🪟 **Window Managers** — Metacity, XFWM4 (XFCE), and Openbox themes included
 - 🐧 **Multi-Distro** — Dedicated installers for 6 major Linux distributions
 - 🖥️ **Multi-DE** — Supports GNOME, KDE, XFCE, MATE, Cinnamon, Openbox, i3, Sway

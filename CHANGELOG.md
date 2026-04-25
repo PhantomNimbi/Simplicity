@@ -19,6 +19,25 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ---
 
+## [1.3.1] — 2026-04-25
+
+### 📝 Docs
+
+- **`CONTRIBUTING.md`** — Variant directory layout tree updated to include
+  `gnome-shell/gnome-shell.css`. The "Apply the same colour change" guideline
+  in the **Theme Files** section now lists `gnome-shell/gnome-shell.css`
+  alongside the other per-variant files.
+- **`TEMPLATE_USAGE.md`** — Files-that-reference-the-theme-name table updated
+  to include `gnome-shell/gnome-shell.css` entries for all three variants
+  (`simplicity-dualtone/`, `simplicity-light/`, `simplicity-dark/`). Repository
+  Structure Reference updated to show `gnome-shell/gnome-shell.css` in the
+  variant directory layout.
+- **`README.md`** — GNOME Shell added as a dedicated bullet in the **Features**
+  section, covering panel, Activities overview, Quick Settings, notifications,
+  OSD, and lock screen.
+
+---
+
 ## [1.3.0] — 2026-04-25
 
 ### ✨ Added
