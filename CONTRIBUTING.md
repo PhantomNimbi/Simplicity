@@ -136,6 +136,7 @@ Each theme variant follows the same directory layout:
 ```
 <variant>/
 ├── index.theme
+├── gnome-shell/gnome-shell.css
 ├── gtk-2.0/gtkrc
 ├── gtk-3.0/gtk.css
 ├── gtk-3.0/settings.ini
@@ -148,7 +149,7 @@ Each theme variant follows the same directory layout:
 ### Theme Files
 
 - **Colour changes** should be made through the `@define-color` variables at the top of each `gtk.css` file. Avoid hard-coding hex values in widget rules.
-- **Apply the same colour change** consistently across all relevant files in a variant: `gtk-2.0/gtkrc`, `gtk-3.0/gtk.css`, `gtk-4.0/gtk.css`, `metacity-1/metacity-theme-3.xml`, `xfwm4/themerc`, and `openbox-3/themerc`.
+- **Apply the same colour change** consistently across all relevant files in a variant: `gtk-2.0/gtkrc`, `gtk-3.0/gtk.css`, `gtk-4.0/gtk.css`, `gnome-shell/gnome-shell.css`, `metacity-1/metacity-theme-3.xml`, `xfwm4/themerc`, and `openbox-3/themerc`.
 - **Test all three variants** (dual-tone, light, dark) if your change affects shared logic or colours.
 - Preserve the existing comment style (`/* === Section === */`) in CSS files.
 - Do not introduce external assets (fonts, icon sets, images) without prior discussion.

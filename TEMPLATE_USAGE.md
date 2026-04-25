@@ -66,6 +66,7 @@ The following files all contain the theme name and will be updated by the comman
 | File | What it controls |
 |------|-----------------|
 | `simplicity-dualtone/index.theme` | Default variant metadata (name shown in desktop settings) |
+| `simplicity-dualtone/gnome-shell/gnome-shell.css` | GNOME Shell theme (panel, overview, menus) — default variant |
 | `simplicity-dualtone/gtk-2.0/gtkrc` | GTK 2 theme identifier (default variant) |
 | `simplicity-dualtone/gtk-3.0/settings.ini` | GTK 3 settings (default variant) |
 | `simplicity-dualtone/gtk-4.0/gtk.css` | GTK 4 theme header comment (default variant) |
@@ -73,7 +74,9 @@ The following files all contain the theme name and will be updated by the comman
 | `simplicity-dualtone/xfwm4/themerc` | XFCE window manager theme name |
 | `simplicity-dualtone/openbox-3/themerc` | Openbox window manager theme name |
 | `simplicity-light/index.theme` | Light variant metadata |
+| `simplicity-light/gnome-shell/gnome-shell.css` | GNOME Shell theme — light variant |
 | `simplicity-dark/index.theme` | Dark variant metadata |
+| `simplicity-dark/gnome-shell/gnome-shell.css` | GNOME Shell theme — dark variant |
 | `install.sh` | Installer — copies files and applies the theme |
 | `uninstall.sh` | Uninstaller — removes the theme |
 | `scripts/apply-theme.sh` | Per-DE theme applicator |
@@ -222,6 +225,7 @@ Then apply and inspect the result:
 │
 ├── <theme-name>/               # Default (dual-tone) variant (rename from simplicity-dualtone/)
 │   ├── index.theme             # Theme metadata
+│   ├── gnome-shell/gnome-shell.css  # GNOME Shell theme ← panel, overview, Quick Settings
 │   ├── gtk-2.0/gtkrc           # GTK 2 theme
 │   ├── gtk-3.0/gtk.css         # GTK 3 stylesheet  ← main colour file
 │   ├── gtk-3.0/settings.ini    # GTK 3 settings
