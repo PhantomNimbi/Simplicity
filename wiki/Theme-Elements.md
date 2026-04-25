@@ -264,6 +264,74 @@ GTK CSS target: `statusbar`
 
 ---
 
+## GNOME Shell
+
+The GNOME Shell theme (`gnome-shell/gnome-shell.css`) styles the shell chrome that lives outside individual application windows. It requires the **User Themes** GNOME extension to be active (installed automatically by the Ubuntu/Debian distro installers).
+
+### Top Panel (`#panel`)
+
+| Property | Dark | Light | Dual-Tone |
+|----------|------|-------|-----------|
+| Background | `#1e1e1e` | `#ebebeb` | `#252525` |
+| Text colour | `#e0e0e0` | `#2d2d2d` | `#e0e0e0` |
+| Bottom border | `#404040` | `#d0d0d0` | `#404040` |
+| Height | 32 px | 32 px | 32 px |
+
+Panel buttons gain a subtle hover highlight (`rgba(255,255,255,0.10)` on dark variants; `rgba(0,0,0,0.08)` on light) and a slightly stronger active/checked state.
+
+### Overview / Activities
+
+The search entry uses a rounded pill shape (border-radius 20 px) with the accent colour (`#5294e2`) applied to the focus border and caret. Workspace thumbnail indicators are outlined in the accent colour.
+
+### App Grid
+
+App icons in the overview show a rounded hover/active highlight; the active state uses `rgba(#5294e2, 0.20–0.30)` to tie into the accent colour without fully covering the icon.
+
+### Panel Menus and Popovers (`.popup-menu`, `.panel-menu`)
+
+| Property | Dark / Dual-Tone | Light |
+|----------|-----------------|-------|
+| Background | `#2d2d2d` / `#252525` | `#f5f5f5` |
+| Border | `#404040` | `#d0d0d0` |
+| Border radius | 8 px | 8 px |
+| Item hover | `#5294e2` bg, `#ffffff` text | same |
+| Separator | `#404040` | `#d0d0d0` |
+
+### Quick Settings (GNOME 43+, `.quick-settings`)
+
+Quick-toggle tiles use a rounded card style (border-radius 8 px). Enabled toggles are filled with the accent colour (`#5294e2`); disabled toggles use a low-opacity neutral background.
+
+### Notifications (`.notification-banner`)
+
+| Property | Dark / Dual-Tone | Light |
+|----------|-----------------|-------|
+| Background | `rgba(26–30, 26–30, 26–30, 0.92–0.94)` | `rgba(235,235,235,0.96)` |
+| Border radius | 10 px | 10 px |
+| Title | `#ffffff` / `#1a1a1a` (bold) | `#1a1a1a` |
+| Body | `rgba(224,224,224,0.85)` | `rgba(45,45,45,0.80)` |
+
+### OSD Overlay (`.osd`)
+
+Volume and brightness overlays use the same semi-transparent background as notifications. The progress fill track is always `#5294e2` against a neutral empty-track.
+
+### Dash (`#dash`)
+
+The app dock in the overview uses a frosted-glass panel with `border-radius 16px`. Running-app indicators use `rgba(#5294e2, 0.15)` to subtly highlight active launchers.
+
+### Modal Dialogs (`.modal-dialog`)
+
+Dialogs share the menu background colour. Suggested-action buttons use the accent colour (`#5294e2`); destructive-action buttons use `#cf6679` — consistent with GTK button colours.
+
+### Lock Screen (`.unlock-dialog`)
+
+The clock face uses a large (4em, weight 300) white/dark text with a subtler date line beneath it, on a semi-transparent overlay matching the variant's background tone.
+
+### Tooltips (`.tooltip`)
+
+Shell tooltips match the application-level tooltip colours: near-black background on dark/dual-tone, near-white on light, always with 4 px border-radius and the variant's border colour.
+
+---
+
 ## Window Manager Decorations
 
 ### Metacity (GNOME / MATE)

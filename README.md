@@ -100,16 +100,16 @@ Full documentation is available in the **[GitHub Wiki](https://github.com/Phanto
 
 > 📖 See the [Desktop Environments wiki page](https://github.com/PhantomNimbi/Simplicity/blob/main/wiki/Desktop-Environments.md) for per-DE configuration and manual application instructions.
 
-| Desktop       | GTK 2 | GTK 3 | GTK 4 | WM Theme |
-|--------------|:-----:|:-----:|:-----:|:--------:|
-| GNOME        | ✅    | ✅    | ✅    | Metacity |
-| XFCE         | ✅    | ✅    | —     | XFWM4    |
-| MATE         | ✅    | ✅    | —     | Metacity |
-| Cinnamon     | ✅    | ✅    | —     | Metacity |
-| KDE Plasma   | ✅    | ✅    | ✅    | —        |
-| Openbox      | ✅    | ✅    | —     | Openbox  |
-| LXDE / LXQt  | ✅    | ✅    | —     | Openbox  |
-| i3 / Sway    | ✅    | ✅    | ✅    | —        |
+| Desktop       | GTK 2 | GTK 3 | GTK 4 | WM Theme | Shell Theme |
+|--------------|:-----:|:-----:|:-----:|:--------:|:-----------:|
+| GNOME        | ✅    | ✅    | ✅    | Metacity | ✅          |
+| XFCE         | ✅    | ✅    | —     | XFWM4    | —           |
+| MATE         | ✅    | ✅    | —     | Metacity | —           |
+| Cinnamon     | ✅    | ✅    | —     | Metacity | —           |
+| KDE Plasma   | ✅    | ✅    | ✅    | —        | —           |
+| Openbox      | ✅    | ✅    | —     | Openbox  | —           |
+| LXDE / LXQt  | ✅    | ✅    | —     | Openbox  | —           |
+| i3 / Sway    | ✅    | ✅    | ✅    | —        | —           |
 
 ## Supported Linux Distributions
 
@@ -245,6 +245,8 @@ Simplicity/
 │
 ├── simplicity-dualtone/          # Default theme files (dark chrome, light content)
 │   ├── index.theme             # Theme metadata
+│   ├── gnome-shell/
+│   │   └── gnome-shell.css     # GNOME Shell theme (panel, overview, menus)
 │   ├── gtk-2.0/
 │   │   └── gtkrc               # GTK 2 theme
 │   ├── gtk-3.0/
