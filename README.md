@@ -15,7 +15,7 @@
 
 [![Release](https://github.com/PhantomNimbi/Simplicity/actions/workflows/release.yml/badge.svg)](https://github.com/PhantomNimbi/Simplicity/actions/workflows/release.yml)
 [![Latest Release](https://img.shields.io/github/v/release/PhantomNimbi/Simplicity)](https://github.com/PhantomNimbi/Simplicity/releases/latest)
-[![License](https://img.shields.io/github/license/PhantomNimbi/Simplicity)](https://github.com/PhantomNimbi/Simplicity/blob/main/LICENSE)
+[![License](https://img.shields.io/badge/license-BSD--3--Clause-blue)](https://github.com/PhantomNimbi/Simplicity/blob/main/LICENSE)
 [![Last Commit](https://img.shields.io/github/last-commit/PhantomNimbi/Simplicity)](https://github.com/PhantomNimbi/Simplicity/commits/main)
 [![Open Issues](https://img.shields.io/github/issues/PhantomNimbi/Simplicity)](https://github.com/PhantomNimbi/Simplicity/issues)
 [![Stars](https://img.shields.io/github/stars/PhantomNimbi/Simplicity)](https://github.com/PhantomNimbi/Simplicity/stargazers)
