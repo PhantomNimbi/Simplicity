@@ -287,4 +287,4 @@ To add support for a new distribution:
 
 ## License
 
-This project is licensed under the **GNU General Public License v3.0**.
+This project is licensed under the **BSD 3-Clause License**.

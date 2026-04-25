@@ -266,4 +266,4 @@ If you do not have access to a suitable test environment, note that in the PR de
 
 ## Licence
 
-By contributing to Simplicity you agree that your contributions will be licensed under the **GNU General Public License v3.0**, the same licence that covers the project. See [LICENSE](LICENSE) for the full text.
+By contributing to Simplicity you agree that your contributions will be licensed under the **BSD 3-Clause License**, the same licence that covers the project. See [LICENSE](LICENSE) for the full text.
