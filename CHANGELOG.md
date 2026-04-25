@@ -19,6 +19,38 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ---
 
+## [1.6.0] — 2026-04-25
+
+### ✨ Added
+
+#### Cinnamon Shell Themes
+
+- **`cinnamon/cinnamon.css`** added to all four theme variants
+  (`simplicity-dualtone/`, `simplicity-dark/`, `simplicity-light/`,
+  `simplicity-dracula/`). Each stylesheet themes the full Cinnamon shell
+  chrome — top panel, panel buttons, window list/taskbar, workspace switcher,
+  panel menus and popovers, context menus, notifications, OSD overlays,
+  calendar, and tooltips — using the respective variant's colour palette.
+  - **Dual-Tone** — dark panel (`#252525`) and menus (`#252525`) with blue accent (`#5294e2`)
+  - **Dark** — dark panel (`#1e1e1e`) and menus (`#2d2d2d`) with blue accent (`#5294e2`)
+  - **Light** — light panel (`#ebebeb`) and menus (`#f5f5f5`) with blue accent (`#5294e2`)
+  - **Dracula** — deep-navy panel (`#191a21`) and menus (`#282a36`) with purple accent (`#bd93f9`)
+- **`CinnShellTheme`** key added to all four `index.theme` files, registering
+  the Cinnamon shell theme so Cinnamon's Theme Settings can discover it.
+
+#### Documentation
+
+- **`README.md`** — Cinnamon Shell added to the GNOME Shell feature bullet.
+  Repository structure updated to show `cinnamon/` directory for each variant.
+- **`wiki/Theme-Elements.md`** — New **Cinnamon Shell** section added covering
+  every themed shell component with colour references per variant.
+- **`wiki/Desktop-Environments.md`** — Cinnamon section updated with a
+  **Shell Theme** subsection describing the `cinnamon/` directory and how
+  to apply it via System Settings → Themes → Desktop.
+- **`CHANGELOG.md`** — This entry.
+
+---
+
 ## [1.5.0] — 2026-04-25
 
 ### ✨ Added

@@ -1,0 +1,325 @@
+/* Simplicity Cinnamon Shell Theme
+ * Dark chrome (panel, menus) with blue accent — dual-tone variant
+ * Compatible with: Cinnamon 5.x+
+ */
+
+/* === Colour Variables === */
+/* (Cinnamon CSS does not support @define-color universally, so values are inlined) */
+
+/* panel_bg:       #252525  */
+/* panel_fg:       #e0e0e0  */
+/* panel_border:   #404040  */
+/* menu_bg:        #252525  */
+/* menu_fg:        #e0e0e0  */
+/* menu_border:    #404040  */
+/* menu_hover_bg:  #5294e2  */
+/* menu_hover_fg:  #ffffff  */
+/* accent_color:   #5294e2  */
+/* notification_bg: rgba(30, 30, 30, 0.92) */
+
+/* =========================================================
+ * Panel
+ * ========================================================= */
+
+#panel {
+    background-color: #252525;
+    color: #e0e0e0;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #404040;
+    height: 32px;
+    font-size: 0.9em;
+    font-weight: normal;
+}
+
+.panel-button, .panel-status-button {
+    color: #e0e0e0;
+    padding: 0 8px;
+    border-radius: 4px;
+    transition-duration: 150ms;
+}
+
+.panel-button:hover, .panel-status-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+.panel-button:active, .panel-button:checked,
+.panel-status-button:active, .panel-status-button:checked {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+}
+
+.panel-button:focus, .panel-status-button:focus {
+    color: #e0e0e0;
+}
+
+/* System status icons */
+.system-status-icon {
+    icon-size: 16px;
+}
+
+/* Clock label */
+.clock-display {
+    color: #e0e0e0;
+}
+
+/* =========================================================
+ * Panel Menus / Popovers
+ * ========================================================= */
+
+.popup-menu,
+.menu {
+    background-color: #252525;
+    color: #e0e0e0;
+    border: 1px solid #404040;
+    border-radius: 8px;
+    padding: 4px 0;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+.popup-menu-item,
+.menu-item {
+    padding: 7px 18px;
+    border-radius: 4px;
+    color: #e0e0e0;
+    transition-duration: 150ms;
+}
+
+.popup-menu-item:hover,
+.popup-menu-item:focus,
+.menu-item:hover,
+.menu-item:focus {
+    background-color: #5294e2;
+    color: #ffffff;
+}
+
+.popup-menu-item:active,
+.menu-item:active {
+    background-color: rgba(82, 148, 226, 0.7);
+    color: #ffffff;
+}
+
+.popup-menu-item:disabled,
+.menu-item:disabled {
+    color: rgba(224, 224, 224, 0.4);
+}
+
+/* Separator */
+.popup-separator-menu-item,
+.menu-separator {
+    background-color: #404040;
+    height: 1px;
+    margin: 4px 8px;
+    padding: 0;
+}
+
+/* Submenu arrow */
+.popup-menu-item .popup-menu-arrow {
+    color: rgba(224, 224, 224, 0.6);
+}
+
+/* =========================================================
+ * Panel Launchers / Application menu
+ * ========================================================= */
+
+.applet-box {
+    color: #e0e0e0;
+    spacing: 4px;
+}
+
+.applet-label {
+    color: #e0e0e0;
+    font-size: 0.9em;
+}
+
+/* =========================================================
+ * Window List (taskbar)
+ * ========================================================= */
+
+.window-list-item-box {
+    background-color: transparent;
+    color: #e0e0e0;
+    border-radius: 4px;
+    padding: 0 6px;
+    spacing: 4px;
+    transition-duration: 150ms;
+}
+
+.window-list-item-box:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.window-list-item-box:active,
+.window-list-item-box:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.window-list-item-box.running {
+    border-bottom: 2px solid #5294e2;
+}
+
+/* =========================================================
+ * Workspace Switcher
+ * ========================================================= */
+
+.workspace-button {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid #404040;
+    border-radius: 4px;
+    color: #e0e0e0;
+    padding: 2px 6px;
+    transition-duration: 150ms;
+}
+
+.workspace-button:hover {
+    background-color: rgba(255, 255, 255, 0.14);
+}
+
+.workspace-button:active,
+.workspace-button.active {
+    background-color: #5294e2;
+    border-color: rgba(82, 148, 226, 0.7);
+    color: #ffffff;
+}
+
+/* =========================================================
+ * Notifications
+ * ========================================================= */
+
+.notification-banner {
+    background-color: rgba(30, 30, 30, 0.92);
+    color: #e0e0e0;
+    border: 1px solid #404040;
+    border-radius: 10px;
+    padding: 12px 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.notification-banner .notification-title {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.notification-banner .notification-body {
+    color: rgba(224, 224, 224, 0.85);
+}
+
+.notification-button {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+    color: #e0e0e0;
+    padding: 4px 10px;
+    transition-duration: 150ms;
+}
+
+.notification-button:hover {
+    background-color: rgba(255, 255, 255, 0.18);
+}
+
+/* =========================================================
+ * OSD (Volume / Brightness overlay)
+ * ========================================================= */
+
+.osd-info-box,
+.osd-popup-box {
+    background-color: rgba(37, 37, 37, 0.92);
+    color: #e0e0e0;
+    border: 1px solid #404040;
+    border-radius: 10px;
+    padding: 14px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.osd-info-box StProgressBar,
+.osd-popup-box StProgressBar {
+    height: 4px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* =========================================================
+ * Calendar (in date/time applet)
+ * ========================================================= */
+
+.calendar-popup {
+    background-color: #252525;
+    border: 1px solid #404040;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.calendar {
+    background-color: #252525;
+    color: #e0e0e0;
+}
+
+.calendar .calendar-day-base {
+    border-radius: 4px;
+    padding: 2px 4px;
+    color: #e0e0e0;
+}
+
+.calendar .calendar-day-base:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.calendar .calendar-today {
+    background-color: #5294e2;
+    color: #ffffff;
+    border-radius: 4px;
+}
+
+.calendar .calendar-selected-day {
+    background-color: rgba(82, 148, 226, 0.4);
+    color: #ffffff;
+    border-radius: 4px;
+}
+
+.calendar .calendar-month-label {
+    font-weight: bold;
+    color: #e0e0e0;
+}
+
+.calendar .calendar-day-heading {
+    color: rgba(224, 224, 224, 0.6);
+    font-size: 0.85em;
+}
+
+/* =========================================================
+ * Tooltip
+ * ========================================================= */
+
+.tooltip {
+    background-color: rgba(28, 28, 28, 0.95);
+    color: #e0e0e0;
+    border: 1px solid #404040;
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 0.9em;
+}
+
+/* =========================================================
+ * Context Menus (right-click)
+ * ========================================================= */
+
+.context-menu {
+    background-color: #252525;
+    border: 1px solid #404040;
+    border-radius: 8px;
+    padding: 4px 0;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+.context-menu .menu-item {
+    padding: 7px 18px;
+    border-radius: 4px;
+    color: #e0e0e0;
+    transition-duration: 150ms;
+}
+
+.context-menu .menu-item:hover {
+    background-color: #5294e2;
+    color: #ffffff;
+}

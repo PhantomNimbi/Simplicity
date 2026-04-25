@@ -8,6 +8,7 @@ Encoding=UTF-8
 GtkTheme=Simplicity-Dracula
 MetacityTheme=Simplicity-Dracula
 GnomeShellTheme=Simplicity-Dracula
+CinnShellTheme=Simplicity-Dracula
 IconTheme=Simplicity-Icons
 CursorTheme=Simplicity-Cursors
 ButtonLayout=close,minimize,maximize:

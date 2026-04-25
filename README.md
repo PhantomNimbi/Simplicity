@@ -65,7 +65,7 @@ Full documentation is available in the **[GitHub Wiki](https://github.com/Phanto
 ## Features
 
 - 🎨 **GTK 2, 3 & 4** — Full theme support for modern and legacy GTK applications
-- 🐚 **GNOME Shell** — Full shell theme: panel, Activities overview, Quick Settings, notifications, OSD, lock screen, and more
+- 🐚 **Shell Themes** — Full GNOME Shell theme (panel, Activities, Quick Settings, notifications, OSD, lock screen) and Cinnamon shell theme (panel, window list, menus, OSD, calendar)
 - 🪟 **Window Managers** — Metacity, XFWM4 (XFCE), and Openbox themes included
 - 🖼️ **Icon Theme** — Windows 11-inspired `Simplicity-Icons` with scalable SVG icons for applications, places, actions, status, and mimetypes
 - 🐧 **Multi-Distro** — Dedicated installers for 6 major Linux distributions
@@ -111,7 +111,7 @@ Full documentation is available in the **[GitHub Wiki](https://github.com/Phanto
 | GNOME        | ✅    | ✅    | ✅    | Metacity | ✅          |
 | XFCE         | ✅    | ✅    | —     | XFWM4    | —           |
 | MATE         | ✅    | ✅    | —     | Metacity | —           |
-| Cinnamon     | ✅    | ✅    | —     | Metacity | —           |
+| Cinnamon     | ✅    | ✅    | —     | Metacity | ✅          |
 | KDE Plasma   | ✅    | ✅    | ✅    | —        | —           |
 | Openbox      | ✅    | ✅    | —     | Openbox  | —           |
 | LXDE / LXQt  | ✅    | ✅    | —     | Openbox  | —           |
@@ -294,6 +294,8 @@ Simplicity/
 │   ├── index.theme             # Theme metadata
 │   ├── gnome-shell/
 │   │   └── gnome-shell.css     # GNOME Shell theme (panel, overview, menus)
+│   ├── cinnamon/
+│   │   └── cinnamon.css        # Cinnamon shell theme (panel, taskbar, menus)
 │   ├── gtk-2.0/
 │   │   └── gtkrc               # GTK 2 theme
 │   ├── gtk-3.0/
