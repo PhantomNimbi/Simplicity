@@ -19,6 +19,89 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ---
 
+## [1.5.0] — 2026-04-25
+
+### ✨ Added
+
+#### Simplicity-Icons — Windows 11-Inspired Icon Theme
+
+- **`simplicity-icons/`** — New Windows 11-inspired icon theme (`Simplicity-Icons`)
+  delivering scalable SVG icons across five icon contexts. All icons follow the
+  Fluent Design language: rounded shapes, vibrant gradients, and a consistent
+  visual weight.
+
+  - **`index.theme`** — Freedesktop-compliant icon theme metadata. Registers five
+    scalable directories (`apps`, `places`, `actions`, `status`, `mimetypes`) and
+    inherits from `hicolor` so that any icon not yet provided by the theme falls
+    back gracefully.
+
+  - **`scalable/places/`** — Nine place icons:
+    `folder`, `folder-open`, `folder-home`, `folder-downloads`,
+    `folder-documents`, `folder-pictures`, `folder-music`,
+    `user-trash`, `user-trash-full`.
+    Folders use a warm golden gradient (`#FFD04A` → `#FFA000`) with a
+    distinctive tab and a themed badge indicating the folder type.
+
+  - **`scalable/apps/`** — Six application icons:
+    `utilities-terminal`, `text-editor`, `system-file-manager`,
+    `preferences-system`, `web-browser`, `system-software-install`.
+    Each uses a rounded-rectangle app background (Windows 11 tile style) with
+    a white icon inside.
+
+  - **`scalable/actions/`** — Twelve action/toolbar icons:
+    `document-new`, `document-open`, `document-save`,
+    `edit-copy`, `edit-paste`, `edit-cut`, `edit-delete`,
+    `edit-undo`, `edit-redo`, `go-home`, `view-refresh`, `list-add`.
+    Rendered in the Simplicity accent blue (`#5294e2`) on a transparent
+    background for clean toolbar integration.
+
+  - **`scalable/status/`** — Five status icons:
+    `dialog-information` (blue), `dialog-warning` (yellow),
+    `dialog-error` (red), `dialog-question` (blue), `network-wireless`.
+    Colour-coded with Windows 11 system colours (`#0078D4`, `#FFB900`,
+    `#D13438`).
+
+  - **`scalable/mimetypes/`** — Five file-type icons:
+    `text-x-generic`, `image-x-generic`, `audio-x-generic`,
+    `video-x-generic`, `application-x-executable`.
+    Each uses a document base shape with a colour-coded top bar and a
+    representative content badge.
+
+#### Installer / Updater / Uninstaller / Apply-Theme
+
+- **`install.sh`** — `install_icon_theme()` function added. Installs
+  `simplicity-icons/` to `~/.local/share/icons/Simplicity-Icons/` (user
+  install) or `/usr/share/icons/Simplicity-Icons/` (system install).
+  Runs `gtk-update-icon-cache` automatically when available.
+- **`update.sh`** — `update_icon_theme()` function added. Refreshes the
+  installed icon theme from the repository, then regenerates the icon cache.
+- **`uninstall.sh`** — `remove_icon_theme()` function added. Removes
+  `~/.local/share/icons/Simplicity-Icons/` (and the system path when
+  `--system` is passed). `reset_gsettings()` now also resets
+  `org.gnome.desktop.interface icon-theme`.
+- **`scripts/apply-theme.sh`** — `apply_icon_theme()` helper added. Sets
+  `org.gnome.desktop.interface icon-theme` via `gsettings` (GNOME, MATE,
+  Cinnamon) or `/Net/IconThemeName` via `xfconf-query` (XFCE). Called
+  automatically from each DE-specific apply function. GTK settings-file
+  fallback also merges `gtk-icon-theme-name` into existing `settings.ini`
+  files.
+
+#### Documentation
+
+- **`README.md`** — Icon Theme bullet added to the Features section.
+  `simplicity-icons/` with full directory tree added to the Repository
+  Structure section. Manual uninstall commands updated to include
+  `~/.local/share/icons/Simplicity-Icons` and `icon-theme` gsettings reset.
+- **`wiki/Home.md`** — Icon Theme row added to the Quick Overview coverage list.
+- **`wiki/Installation.md`** — Icon theme installation path and
+  `gtk-update-icon-cache` note added to the prerequisites and manual
+  installation sections.
+- **`wiki/Theme-Elements.md`** — New **Icon Theme** section added, covering
+  all five icon contexts with colour references and design language notes.
+- **`CHANGELOG.md`** — This entry.
+
+---
+
 ## [1.4.0] — 2026-04-25
 
 ### ✨ Added

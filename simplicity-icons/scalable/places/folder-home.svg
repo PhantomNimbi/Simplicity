@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <defs>
+    <linearGradient id="folderBody" x1="0" y1="16" x2="0" y2="44" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFD04A"/>
+      <stop offset="1" stop-color="#FFA000"/>
+    </linearGradient>
+  </defs>
+  <!-- Folder tab -->
+  <path d="M4 16 L4 12 Q4 10 6 10 L19 10 Q21 10 22 12 L25 16 Z" fill="#FFBA3C"/>
+  <!-- Folder body -->
+  <path d="M4 16 L44 16 L44 40 Q44 44 40 44 L8 44 Q4 44 4 40 Z" fill="url(#folderBody)"/>
+  <!-- House icon -->
+  <polygon points="24,20 16,28 32,28" fill="white" opacity="0.9"/>
+  <rect x="18" y="28" width="12" height="10" rx="1" fill="white" opacity="0.9"/>
+  <rect x="21" y="32" width="6" height="6" rx="1" fill="#FFA000"/>
+</svg>

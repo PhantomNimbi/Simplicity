@@ -22,6 +22,7 @@ THEME_NAME="Simplicity"
 THEME_DARK_NAME="Simplicity-Dark"
 THEME_LIGHT_NAME="Simplicity-Light"
 THEME_DRACULA_NAME="Simplicity-Dracula"
+ICON_THEME_NAME="Simplicity-Icons"
 SYSTEM_INSTALL=false
 NO_APPLY=false
 UPDATE_DARK=false
@@ -104,6 +105,29 @@ update_variant() {
     success "Updated: ${target_dir}"
 }
 
+update_icon_theme() {
+    local icon_target_dir
+
+    if "${SYSTEM_INSTALL}"; then
+        icon_target_dir="/usr/share/icons/${ICON_THEME_NAME}"
+    else
+        icon_target_dir="${HOME}/.local/share/icons/${ICON_THEME_NAME}"
+    fi
+
+    if [[ ! -d "${icon_target_dir}" ]]; then
+        warning "Icon theme '${ICON_THEME_NAME}' is not installed at ${icon_target_dir}. Skipping."
+        return
+    fi
+
+    info "Updating icon theme at ${icon_target_dir}..."
+    cp -r "${SCRIPT_DIR}/simplicity-icons/." "${icon_target_dir}/"
+    success "Updated: ${icon_target_dir}"
+
+    if command -v gtk-update-icon-cache &>/dev/null; then
+        gtk-update-icon-cache -f -t "${icon_target_dir}" 2>/dev/null || true
+    fi
+}
+
 update_theme_files() {
     if "${SYSTEM_INSTALL}" && [[ "${EUID}" -ne 0 ]]; then
         die "System update requires root privileges. Run with sudo."
@@ -145,6 +169,7 @@ main() {
 
     header "Step 1/2: Updating theme files..."
     update_theme_files
+    update_icon_theme
     echo ""
 
     header "Step 2/2: Re-applying theme..."

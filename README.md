@@ -67,6 +67,7 @@ Full documentation is available in the **[GitHub Wiki](https://github.com/Phanto
 - 🎨 **GTK 2, 3 & 4** — Full theme support for modern and legacy GTK applications
 - 🐚 **GNOME Shell** — Full shell theme: panel, Activities overview, Quick Settings, notifications, OSD, lock screen, and more
 - 🪟 **Window Managers** — Metacity, XFWM4 (XFCE), and Openbox themes included
+- 🖼️ **Icon Theme** — Windows 11-inspired `Simplicity-Icons` with scalable SVG icons for applications, places, actions, status, and mimetypes
 - 🐧 **Multi-Distro** — Dedicated installers for 6 major Linux distributions
 - 🖥️ **Multi-DE** — Supports GNOME, KDE, XFCE, MATE, Cinnamon, Openbox, i3, Sway
 - 🌗 **Dual-Tone Theme** — Dark chrome with light content area (`Simplicity`) — installed by default
@@ -261,8 +262,10 @@ rm -rf ~/.themes/"Simplicity"
 rm -rf ~/.themes/"Simplicity-Dark"
 rm -rf ~/.themes/"Simplicity-Light"
 rm -rf ~/.themes/"Simplicity-Dracula"
+rm -rf ~/.local/share/icons/"Simplicity-Icons"
 gsettings reset org.gnome.desktop.interface gtk-theme
 gsettings reset org.gnome.desktop.wm.preferences theme
+gsettings reset org.gnome.desktop.interface icon-theme
 ```
 
 ## Repository Structure
@@ -277,6 +280,15 @@ Simplicity/
 ├── CONTRIBUTING.md             # Contribution guidelines
 ├── TEMPLATE_USAGE.md           # Guide to using this repo as a template
 ├── LICENSE                     # BSD 3-Clause License
+│
+├── simplicity-icons/             # Windows 11-inspired icon theme
+│   ├── index.theme             # Icon theme metadata
+│   └── scalable/
+│       ├── apps/               # Application icons (terminal, browser, etc.)
+│       ├── places/             # Place icons (folders, trash, drives)
+│       ├── actions/            # Action icons (copy, paste, undo, etc.)
+│       ├── status/             # Status icons (info, warning, error, wifi)
+│       └── mimetypes/          # File-type icons (text, image, audio, etc.)
 │
 ├── simplicity-dualtone/          # Default theme files (dark chrome, light content)
 │   ├── index.theme             # Theme metadata

@@ -9,6 +9,7 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
 THEME_NAME="Simplicity"
+ICON_THEME_NAME="Simplicity-Icons"
 DRY_RUN=false
 PREFER_DARK=false
 
@@ -121,6 +122,25 @@ enable_user_theme_extension() {
     return 0
 }
 
+# Apply icon theme via the appropriate DE mechanism
+apply_icon_theme() {
+    local desktop="$1"
+    case "${desktop}" in
+        *gnome*|*unity*|*mate*|*cinnamon*)
+            if command -v gsettings &>/dev/null; then
+                run_cmd gsettings set org.gnome.desktop.interface icon-theme "${ICON_THEME_NAME}" 2>/dev/null || \
+                    warning "Could not set icon theme via gsettings."
+            fi
+            ;;
+        *xfce*)
+            if command -v xfconf-query &>/dev/null; then
+                run_cmd xfconf-query -c xsettings -p /Net/IconThemeName -s "${ICON_THEME_NAME}" 2>/dev/null || \
+                    warning "Could not set icon theme via xfconf-query."
+            fi
+            ;;
+    esac
+}
+
 # Apply theme to GNOME
 apply_gnome() {
     info "Applying ${THEME_NAME} to GNOME..."
@@ -131,6 +151,7 @@ apply_gnome() {
     else
         run_cmd gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
     fi
+    apply_icon_theme "gnome"
     # Apply GNOME Shell theme via the user-theme extension
     if enable_user_theme_extension; then
         run_cmd gsettings set org.gnome.shell.extensions.user-theme name "${THEME_NAME}"
@@ -146,6 +167,7 @@ apply_xfce() {
     info "Applying ${THEME_NAME} to XFCE..."
     run_cmd xfconf-query -c xsettings -p /Net/ThemeName -s "${THEME_NAME}"
     run_cmd xfconf-query -c xfwm4 -p /general/theme -s "${THEME_NAME}"
+    apply_icon_theme "xfce"
     success "XFCE theme applied."
 }
 
@@ -154,6 +176,7 @@ apply_mate() {
     info "Applying ${THEME_NAME} to MATE..."
     run_cmd gsettings set org.mate.interface gtk-theme "${THEME_NAME}"
     run_cmd gsettings set org.mate.Marco.general theme "${THEME_NAME}"
+    apply_icon_theme "mate"
     success "MATE theme applied."
 }
 
@@ -163,6 +186,7 @@ apply_cinnamon() {
     run_cmd gsettings set org.cinnamon.desktop.interface gtk-theme "${THEME_NAME}"
     run_cmd gsettings set org.cinnamon.desktop.wm.preferences theme "${THEME_NAME}"
     run_cmd gsettings set org.cinnamon.theme name "${THEME_NAME}"
+    apply_icon_theme "cinnamon"
     success "Cinnamon theme applied."
 }
 
@@ -195,11 +219,17 @@ apply_gtk_settings() {
                 else
                     sed -i '/^\[Settings\]/a gtk-application-prefer-dark-theme='"${prefer_dark_value}" "${settings_file}"
                 fi
+                # Update or add gtk-icon-theme-name
+                if grep -q "^gtk-icon-theme-name=" "${settings_file}"; then
+                    sed -i "s|^gtk-icon-theme-name=.*|gtk-icon-theme-name=${ICON_THEME_NAME}|" "${settings_file}"
+                else
+                    sed -i '/^\[Settings\]/a gtk-icon-theme-name='"${ICON_THEME_NAME}" "${settings_file}"
+                fi
             else
                 cat > "${settings_file}" << EOINI
 [Settings]
 gtk-theme-name=${THEME_NAME}
-gtk-icon-theme-name=Simplicity-Icons
+gtk-icon-theme-name=${ICON_THEME_NAME}
 gtk-font-name=Sans 10
 gtk-cursor-theme-name=Simplicity-Cursors
 gtk-application-prefer-dark-theme=${prefer_dark_value}
