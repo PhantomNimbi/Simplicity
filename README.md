@@ -46,6 +46,8 @@ A clean, modern desktop theme suite for Linux, offering dual-tone, light, dark, 
 ### Dracula — Dracula colour palette
 ![Simplicity Dracula preview](https://github.com/PhantomNimbi/Simplicity/raw/main/screenshots/preview-dracula.png)
 
+> **Note:** Icons in the preview screenshots may not display correctly. The previews are generated programmatically, which can cause some icons to appear missing or fall back to defaults. The actual icon theme will display correctly once installed.
+
 ## Documentation
 
 Full documentation is available in the **[GitHub Wiki](https://github.com/PhantomNimbi/Simplicity/blob/main/wiki/Home.md)**:
