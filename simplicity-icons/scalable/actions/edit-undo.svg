@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <!-- Undo: counter-clockwise arc from right side, arrow head at start pointing left-up -->
+  <path d="M38 24 C38 12 10 12 10 24" fill="none" stroke="#5294E2" stroke-width="4"
+        stroke-linecap="round"/>
+  <!-- Arrow head at start of arc (top-left end) -->
+  <polyline points="4,18 10,24 16,18" fill="none" stroke="#5294E2" stroke-width="4"
+            stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

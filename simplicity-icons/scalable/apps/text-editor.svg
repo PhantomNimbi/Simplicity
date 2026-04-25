@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <defs>
+    <linearGradient id="editorBg" x1="4" y1="4" x2="4" y2="44" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#42A5F5"/>
+      <stop offset="1" stop-color="#1565C0"/>
+    </linearGradient>
+  </defs>
+  <!-- App background -->
+  <rect x="4" y="4" width="40" height="40" rx="10" fill="url(#editorBg)"/>
+  <!-- Document shape in white -->
+  <path d="M13 10 L13 38 L35 38 L35 19 L26 10 Z" fill="white" opacity="0.9"/>
+  <path d="M26 10 L26 19 L35 19" fill="none" stroke="#BBDEFB" stroke-width="1.5"/>
+  <!-- Text lines -->
+  <line x1="17" y1="24" x2="31" y2="24" stroke="#1565C0" stroke-width="2"
+        stroke-linecap="round" opacity="0.5"/>
+  <line x1="17" y1="28" x2="31" y2="28" stroke="#1565C0" stroke-width="2"
+        stroke-linecap="round" opacity="0.35"/>
+  <line x1="17" y1="32" x2="25" y2="32" stroke="#1565C0" stroke-width="2"
+        stroke-linecap="round" opacity="0.35"/>
+</svg>

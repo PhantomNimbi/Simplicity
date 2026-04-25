@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <!-- Circular refresh arc (most of a circle, clockwise) -->
+  <path d="M24 8 C36 8 42 18 40 28 C38 38 28 42 20 40 C12 38 8 30 10 22"
+        fill="none" stroke="#5294E2" stroke-width="4" stroke-linecap="round"/>
+  <!-- Arrow head at the start of the arc (top, pointing clockwise / right) -->
+  <polyline points="18,4 24,8 20,14" fill="none" stroke="#5294E2" stroke-width="4"
+            stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

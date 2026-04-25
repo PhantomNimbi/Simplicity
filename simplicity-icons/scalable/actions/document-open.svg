@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <defs>
+    <linearGradient id="folderBody" x1="0" y1="16" x2="0" y2="40" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFD04A"/>
+      <stop offset="1" stop-color="#FFA000"/>
+    </linearGradient>
+  </defs>
+  <!-- Folder (compact) -->
+  <path d="M4 18 L4 14 Q4 12 6 12 L18 12 Q20 12 21 14 L23.5 18 Z" fill="#FFBA3C"/>
+  <path d="M4 18 L40 18 L40 36 Q40 39 37 39 L7 39 Q4 39 4 36 Z" fill="url(#folderBody)"/>
+  <!-- Open/load arrow pointing up-right out of the folder -->
+  <line x1="36" y1="30" x2="36" y2="14" stroke="#5294E2" stroke-width="3" stroke-linecap="round"/>
+  <polyline points="30,20 36,14 42,20" fill="none" stroke="#5294E2" stroke-width="3"
+            stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <!-- Warning triangle -->
+  <path d="M24 6 L44 40 L4 40 Z" fill="#FFB900"/>
+  <path d="M24 6 L44 40 L4 40 Z" fill="none" stroke="#E09800" stroke-width="1.5"/>
+  <!-- '!' exclamation body -->
+  <rect x="21.5" y="15" width="5" height="14" rx="2.5" fill="white"/>
+  <!-- '!' dot -->
+  <circle cx="24" cy="34" r="2.5" fill="white"/>
+</svg>

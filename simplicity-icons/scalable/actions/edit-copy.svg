@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <!-- Back document (shadow) -->
+  <path d="M16 10 L16 40 L42 40 L42 19 L33 10 Z" fill="#E0E0E0" stroke="#BDBDBD"
+        stroke-width="1.5"/>
+  <path d="M33 10 L33 19 L42 19" fill="none" stroke="#BDBDBD" stroke-width="1.5"/>
+  <path d="M33 10 L42 19" fill="#D0D0D0"/>
+  <!-- Front document -->
+  <path d="M6 14 L6 44 L32 44 L32 23 L23 14 Z" fill="white" stroke="#9E9E9E" stroke-width="1.5"/>
+  <path d="M23 14 L23 23 L32 23" fill="none" stroke="#9E9E9E" stroke-width="1.5"/>
+  <path d="M23 14 L32 23" fill="#EEEEEE"/>
+</svg>

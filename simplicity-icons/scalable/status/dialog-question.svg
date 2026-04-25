@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <!-- Blue circle -->
+  <circle cx="24" cy="24" r="20" fill="#0078D4"/>
+  <!-- '?' curved top -->
+  <path d="M18 18 C18 14 30 12 30 18 C30 22 24 22 24 27"
+        fill="none" stroke="white" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- '?' dot -->
+  <circle cx="24" cy="33" r="2.5" fill="white"/>
+</svg>
