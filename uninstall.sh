@@ -207,6 +207,20 @@ remove_gtk_settings() {
             fi
         fi
     done
+
+    # Remove the GTK4 libadwaita gtk.css symlink created by apply_gtk4_libadwaita
+    # in scripts/apply-theme.sh.  Only remove it if it is a symlink pointing into
+    # a Simplicity theme directory so that user-created overrides are not touched.
+    local gtk4_css="${HOME}/.config/gtk-4.0/gtk.css"
+    if [[ -L "${gtk4_css}" ]]; then
+        local target
+        target="$(readlink "${gtk4_css}")"
+        if [[ "${target}" == *"Simplicity"* ]]; then
+            info "Removing GTK4 libadwaita Simplicity override: ${gtk4_css}"
+            rm -f "${gtk4_css}"
+            success "Removed: ${gtk4_css}"
+        fi
+    fi
 }
 
 main() {
