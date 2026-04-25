@@ -54,6 +54,17 @@ install_theme() {
     success "Theme installed to ${target_dir}"
 }
 
+install_icon_theme() {
+    local icon_target_dir="${HOME}/.local/share/icons/Simplicity-Icons"
+    info "Installing Simplicity-Icons icon theme to ${icon_target_dir}..."
+    mkdir -p "${icon_target_dir}"
+    cp -r "${REPO_ROOT}/simplicity-icons/." "${icon_target_dir}/"
+    success "Icon theme installed to ${icon_target_dir}"
+    if command -v gtk-update-icon-cache &>/dev/null; then
+        gtk-update-icon-cache -f -t "${icon_target_dir}" 2>/dev/null || true
+    fi
+}
+
 apply_gnome_theme() {
     if command -v gsettings &>/dev/null; then
         info "Applying ${THEME_NAME} theme via gsettings..."
@@ -69,6 +80,18 @@ apply_gnome_theme() {
 apply_kde_theme() {
     if command -v plasma-apply-colorscheme &>/dev/null; then
         info "KDE Plasma detected. Please use System Settings to apply the theme."
+    fi
+}
+
+configure_gtk_settings() {
+    local gtk3_settings="${HOME}/.config/gtk-3.0/settings.ini"
+    info "Configuring GTK settings..."
+    mkdir -p "${HOME}/.config/gtk-3.0"
+    if [[ ! -f "${gtk3_settings}" ]]; then
+        cp "${REPO_ROOT}/simplicity-dualtone/gtk-3.0/settings.ini" "${gtk3_settings}"
+        success "GTK 3 settings configured."
+    else
+        warning "GTK 3 settings file already exists. Skipping."
     fi
 }
 
@@ -90,8 +113,10 @@ main() {
     install_dependencies
     install_gnome_extensions
     install_theme
+    install_icon_theme
     apply_gnome_theme
     apply_kde_theme
+    configure_gtk_settings
 
     echo ""
     success "Simplicity installation complete!"
