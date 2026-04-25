@@ -96,6 +96,35 @@ configure_gtk_settings() {
     fi
 }
 
+# Symlink the GTK4 theme CSS so that Nautilus and other libadwaita apps
+# respect the Simplicity theme on Ubuntu 22.04+ / GNOME 42+.
+# On Ubuntu 26.04 LTS this is the only supported way to theme these apps,
+# because libadwaita no longer reads the gtk-theme gsetting.
+apply_nautilus_gtk4_theme() {
+    local gtk4_config_dir="${HOME}/.config/gtk-4.0"
+    local gtk4_theme_css=""
+
+    # Prefer user-installed theme location; fall back to system-wide.
+    for base in "${HOME}/.themes" "/usr/share/themes"; do
+        local candidate="${base}/${THEME_NAME}/gtk-4.0/gtk.css"
+        if [[ -f "${candidate}" ]]; then
+            gtk4_theme_css="${candidate}"
+            break
+        fi
+    done
+
+    if [[ -z "${gtk4_theme_css}" ]]; then
+        warning "GTK4 theme CSS not found for '${THEME_NAME}'. Skipping Nautilus fix."
+        return 0
+    fi
+
+    info "Applying GTK4 theme for Nautilus and libadwaita apps (Ubuntu 26.04 fix)..."
+    mkdir -p "${gtk4_config_dir}"
+    rm -f "${gtk4_config_dir}/gtk.css"
+    ln -sf "${gtk4_theme_css}" "${gtk4_config_dir}/gtk.css"
+    success "Nautilus GTK4 theme applied."
+}
+
 main() {
     echo ""
     echo "  ██████╗ ███████╗███████╗██╗  ██╗████████╗██╗  ██╗███████╗███╗   ███╗"
@@ -120,6 +149,7 @@ main() {
         install_theme
         apply_gnome_theme
         apply_xfce_theme
+        apply_nautilus_gtk4_theme
         configure_gtk_settings
 
         echo ""
