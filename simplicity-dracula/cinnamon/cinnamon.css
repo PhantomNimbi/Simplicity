@@ -1,0 +1,475 @@
+/* Simplicity-Dracula Cinnamon Shell Theme
+ * Dracula color palette for panel, menus, and notifications
+ * Based on the Dracula color palette (https://draculatheme.com)
+ * Compatible with: Cinnamon 3.x – 6.x
+ */
+
+/* =========================================================
+ * Panel
+ * ========================================================= */
+
+.panel-top,
+.panel-bottom,
+.panel-left,
+.panel-right {
+    background-color: #191a21;
+    color: #f8f8f2;
+    border-color: #44475a;
+    font-size: 0.9em;
+}
+
+.panel-top {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #44475a;
+}
+
+.panel-bottom {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #44475a;
+}
+
+/* Panel buttons / applets */
+.panel-button {
+    color: #f8f8f2;
+    padding: 0px 8px;
+    border-radius: 4px;
+    transition-duration: 150ms;
+}
+
+.panel-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+.panel-button:active,
+.panel-button:checked {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+}
+
+/* Clock applet */
+.panel-button.clock-display {
+    color: #f8f8f2;
+}
+
+/* System tray icons */
+.systray-icon {
+    padding: 0px 2px;
+}
+
+/* =========================================================
+ * Window List
+ * ========================================================= */
+
+.window-list-item-box {
+    background-color: transparent;
+    color: #f8f8f2;
+    padding: 0px 6px;
+    border-radius: 4px;
+    spacing: 4px;
+    transition-duration: 150ms;
+}
+
+.window-list-item-box:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.window-list-item-box:checked,
+.window-list-item-box:active {
+    background-color: rgba(189, 147, 249, 0.2);
+    border-bottom: 2px solid #bd93f9;
+}
+
+.window-list-item-box.grouped-window-list-item-box:checked,
+.window-list-item-box.grouped-window-list-item-box:active {
+    background-color: rgba(189, 147, 249, 0.2);
+}
+
+/* =========================================================
+ * Popup Menus
+ * ========================================================= */
+
+.popup-menu,
+.popup-menu-boxpointer {
+    background-color: #282a36;
+    color: #f8f8f2;
+    border: 1px solid #44475a;
+    border-radius: 8px;
+    padding: 4px 0px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+.popup-menu-boxpointer .popup-menu-content {
+    padding: 4px 0px;
+}
+
+.popup-menu-item {
+    padding: 7px 18px;
+    border-radius: 4px;
+    color: #f8f8f2;
+    spacing: 8px;
+    transition-duration: 150ms;
+}
+
+.popup-menu-item:hover,
+.popup-menu-item:focus {
+    background-color: #bd93f9;
+    color: #f8f8f2;
+}
+
+.popup-menu-item:active {
+    background-color: rgba(189, 147, 249, 0.7);
+    color: #f8f8f2;
+}
+
+.popup-menu-item:disabled,
+.popup-menu-item.insensitive {
+    color: rgba(248, 248, 242, 0.4);
+}
+
+/* Separators */
+.popup-separator-menu-item {
+    background-color: #44475a;
+    height: 1px;
+    margin: 4px 8px;
+    padding: 0px;
+}
+
+.popup-separator-menu-item .popup-separator-menu-item-separator {
+    background-color: #44475a;
+    height: 1px;
+}
+
+/* Submenu arrow */
+.popup-menu-item .popup-menu-arrow {
+    color: rgba(248, 248, 242, 0.6);
+}
+
+/* Submenu */
+.popup-sub-menu {
+    background-color: rgba(0, 0, 0, 0.15);
+    border: none;
+    padding: 2px 0px;
+}
+
+/* =========================================================
+ * Context Menu (right-click)
+ * ========================================================= */
+
+.menu,
+.context-menu {
+    background-color: #282a36;
+    color: #f8f8f2;
+    border: 1px solid #44475a;
+    border-radius: 8px;
+    padding: 4px 0px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+.menu-item {
+    padding: 7px 18px;
+    color: #f8f8f2;
+    spacing: 8px;
+    transition-duration: 150ms;
+}
+
+.menu-item:hover {
+    background-color: #bd93f9;
+    color: #f8f8f2;
+}
+
+/* =========================================================
+ * Tooltips
+ * ========================================================= */
+
+.tooltip {
+    background-color: rgba(25, 26, 33, 0.96);
+    color: #f8f8f2;
+    border: 1px solid #44475a;
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 0.9em;
+}
+
+/* =========================================================
+ * Notifications
+ * ========================================================= */
+
+.notification-applet-padding {
+    padding: 4px;
+}
+
+.notification-summary-source {
+    spacing: 8px;
+    padding: 6px 8px;
+}
+
+.notification-summary-source:hover {
+    background-color: rgba(255, 255, 255, 0.06);
+    border-radius: 4px;
+}
+
+.notification-summary-count {
+    background-color: #bd93f9;
+    border-radius: 10px;
+    padding: 1px 6px;
+    color: #f8f8f2;
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+.notification {
+    background-color: rgba(33, 34, 44, 0.94);
+    color: #f8f8f2;
+    border: 1px solid #44475a;
+    border-radius: 10px;
+    padding: 12px 16px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+    spacing: 4px;
+}
+
+.notification .notification-title {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.notification .notification-body {
+    color: rgba(248, 248, 242, 0.85);
+}
+
+/* =========================================================
+ * OSD Notifications (volume / brightness overlay)
+ * ========================================================= */
+
+.osd-notification,
+.osd-popup {
+    background-color: rgba(25, 26, 33, 0.94);
+    color: #f8f8f2;
+    border: 1px solid #44475a;
+    border-radius: 10px;
+    padding: 14px 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+    spacing: 8px;
+}
+
+.osd-notification .osd-progress-bar {
+    height: 4px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.osd-notification .osd-progress-bar > StWidget {
+    background-color: #bd93f9;
+    border-radius: 4px;
+}
+
+/* =========================================================
+ * Modal Dialogs
+ * ========================================================= */
+
+.modal-dialog {
+    background-color: #282a36;
+    color: #f8f8f2;
+    border: 1px solid #44475a;
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+.modal-dialog .header-text {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.modal-dialog-button-box {
+    spacing: 8px;
+    padding: 8px 0px 0px 0px;
+}
+
+.modal-dialog StButton,
+.modal-dialog-button {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+    color: #f8f8f2;
+    padding: 8px 18px;
+    transition-duration: 150ms;
+}
+
+.modal-dialog StButton:hover,
+.modal-dialog-button:hover {
+    background-color: rgba(255, 255, 255, 0.18);
+}
+
+.modal-dialog StButton.suggested-action {
+    background-color: #bd93f9;
+    border-color: rgba(189, 147, 249, 0.7);
+    color: #f8f8f2;
+}
+
+.modal-dialog StButton.destructive-action {
+    background-color: #ff5555;
+    border-color: rgba(255, 85, 85, 0.7);
+    color: #f8f8f2;
+}
+
+/* =========================================================
+ * Calendar (date/time menu)
+ * ========================================================= */
+
+.calendar {
+    background-color: #282a36;
+    color: #f8f8f2;
+    border: none;
+    padding: 4px;
+    spacing-rows: 4px;
+    spacing-columns: 4px;
+}
+
+.calendar-month-label {
+    color: #f8f8f2;
+    font-weight: bold;
+    padding: 6px 0px;
+}
+
+.calendar-day-base {
+    padding: 4px 6px;
+    border-radius: 4px;
+    color: #f8f8f2;
+    font-size: 0.85em;
+}
+
+.calendar-day-base.calendar-work-day:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.calendar-day-base.calendar-today {
+    background-color: rgba(189, 147, 249, 0.3);
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.calendar-day-base.calendar-today:hover {
+    background-color: rgba(189, 147, 249, 0.45);
+}
+
+.calendar-day-base.calendar-nonwork-day {
+    color: rgba(248, 248, 242, 0.45);
+}
+
+.calendar-day-base.calendar-other-month-day {
+    color: rgba(248, 248, 242, 0.3);
+}
+
+.calendar-day-heading {
+    color: rgba(248, 248, 242, 0.6);
+    font-size: 0.8em;
+    padding: 2px 4px;
+}
+
+/* =========================================================
+ * Workspace Switcher
+ * ========================================================= */
+
+.workspace-switcher {
+    padding: 0px 4px;
+    spacing: 4px;
+}
+
+.workspace-button {
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.15);
+    width: 24px;
+    height: 14px;
+}
+
+.workspace-button.active {
+    background-color: #bd93f9;
+}
+
+.workspace-button:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* =========================================================
+ * Expo (workspace overview)
+ * ========================================================= */
+
+#expo-background {
+    background-color: rgba(25, 26, 33, 0.97);
+}
+
+.expo-workspaces-name {
+    color: #f8f8f2;
+    font-size: 1.0em;
+}
+
+.expo-workspaces-name:selected {
+    color: #bd93f9;
+}
+
+/* =========================================================
+ * Scale (window overview / Exposé)
+ * ========================================================= */
+
+#scale-overlay {
+    background-color: rgba(25, 26, 33, 0.97);
+}
+
+/* =========================================================
+ * Overview Search
+ * ========================================================= */
+
+.search-entry {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #f8f8f2;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 20px;
+    padding: 6px 14px;
+    caret-color: #bd93f9;
+    selection-background-color: #bd93f9;
+}
+
+.search-entry:focus {
+    border-color: #bd93f9;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* =========================================================
+ * Scrollbars
+ * ========================================================= */
+
+.vscrollbar-slider,
+.hscrollbar-slider {
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 4px;
+}
+
+.vscrollbar-slider:hover,
+.hscrollbar-slider:hover {
+    background-color: rgba(255, 255, 255, 0.35);
+}
+
+.vscrollbar-slider:active,
+.hscrollbar-slider:active {
+    background-color: #bd93f9;
+}
+
+/* =========================================================
+ * Slider (volume / brightness controls in menus)
+ * ========================================================= */
+
+.slider {
+    height: 4px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #bd93f9;
+}
+
+.slider > StWidget {
+    background-color: #bd93f9;
+    border-radius: 4px;
+}

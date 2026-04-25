@@ -435,7 +435,7 @@ After installation, confirm the theme files are present:
 ```bash
 ls ~/.themes/Simplicity/
 # Expected output:
-# gnome-shell  gtk-2.0  gtk-3.0  gtk-4.0  index.theme  metacity-1  openbox-3  xfwm4
+# cinnamon  gnome-shell  gtk-2.0  gtk-3.0  gtk-4.0  index.theme  metacity-1  openbox-3  xfwm4
 ```
 
 To preview what `apply-theme.sh` would do without making changes:
