@@ -19,6 +19,32 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ---
 
+## [1.12.0] — 2026-04-25
+
+### 🔧 Changed
+
+#### Scripts — ASCII Art Banner
+
+- **`install.sh`**, **`uninstall.sh`**, **`update.sh`** — Replaced the previous
+  startup banner text with a full block-letter ASCII art rendition of
+  "SIMPLICITY" using Unicode box-drawing characters. The new banner is rendered
+  in the terminal accent colour (blue for the installer, matching the existing
+  colour scheme of each script) and is displayed once at the start of each
+  script's main execution.
+
+#### Documentation — README Preview Presentation
+
+- **`README.md`** — Restructured the theme preview section. The ASCII art banner
+  and all four variant screenshot images (`preview.png`, `preview-light.png`,
+  `preview-dark.png`, `preview-dracula.png`) are now wrapped in a centred
+  `<div align="center">` block. The four screenshots are displayed in a 2 × 2
+  grid layout (48 % width each), giving a compact side-by-side comparison of
+  the Dual-Tone, Light, Dark, and Dracula variants without requiring the reader
+  to scroll past a single tall column of images.
+- **`CHANGELOG.md`** — This entry.
+
+---
+
 ## [1.11.0] — 2026-04-25
 
 ### 🐛 Fixed
