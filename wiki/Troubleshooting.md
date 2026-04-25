@@ -76,6 +76,137 @@ After installing, restart your GTK 2 applications.
 
 ---
 
+## Icon Theme Not Applying
+
+**Symptom:** Icons do not change after installation — applications still show the previous icon set, or fall back to generic Tango/Hicolor icons.
+
+**Causes and fixes:**
+
+1. **Icon cache not regenerated.**
+   After installing or updating the icon theme, GTK needs a fresh cache file:
+   ```bash
+   gtk-update-icon-cache -f -t ~/.local/share/icons/Simplicity-Icons
+   ```
+   If the theme was installed system-wide (`--system`):
+   ```bash
+   sudo gtk-update-icon-cache -f -t /usr/share/icons/Simplicity-Icons
+   ```
+
+2. **Icon theme installed to the wrong location.**
+   Confirm the theme directory exists:
+   ```bash
+   ls ~/.local/share/icons/Simplicity-Icons/
+   # Expected: index.theme  scalable/
+   ls ~/.local/share/icons/Simplicity-Icons/scalable/
+   # Expected: actions  apps  mimetypes  places  status
+   ```
+   If it is missing, re-run the installer or copy it manually:
+   ```bash
+   cp -r simplicity-icons ~/.local/share/icons/Simplicity-Icons
+   gtk-update-icon-cache -f -t ~/.local/share/icons/Simplicity-Icons
+   ```
+
+3. **Icon theme not set as the active icon theme.**
+   Check what is currently configured:
+   ```bash
+   gsettings get org.gnome.desktop.interface icon-theme
+   ```
+   Set it manually if needed:
+   ```bash
+   # GNOME / MATE / Cinnamon
+   gsettings set org.gnome.desktop.interface icon-theme "Simplicity-Icons"
+
+   # XFCE
+   xfconf-query -c xsettings -p /Net/IconThemeName -s "Simplicity-Icons"
+   ```
+   Or re-run the apply script, which handles this automatically:
+   ```bash
+   ./scripts/apply-theme.sh
+   ```
+
+4. **Some icons are not overridden.**
+   Simplicity-Icons only provides icons for common categories (`apps`, `places`, `actions`, `status`, `mimetypes`). Any icon not included in the theme will automatically fall back to `hicolor` and then to the system default. This is expected behaviour.
+
+---
+
+## GNOME Shell Theme Not Applying
+
+**Symptom:** The GNOME panel, Activities overview, Quick Settings, or notifications do not adopt the Simplicity style; they continue to show the default Adwaita shell look.
+
+**Causes and fixes:**
+
+1. **The user-theme GNOME Shell extension is not installed.**
+   Applying a custom shell theme in GNOME requires the `user-themes` extension:
+   ```bash
+   # Check whether it is installed
+   gnome-extensions list | grep user-theme
+
+   # Install via your package manager — example on Ubuntu/Debian
+   sudo apt install gnome-shell-extension-user-theme
+   ```
+   Alternatively, install it from [extensions.gnome.org/extension/19/user-themes/](https://extensions.gnome.org/extension/19/user-themes/).
+
+2. **The extension is installed but not enabled.**
+   ```bash
+   gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
+   ```
+   Then re-run the apply script to set the shell theme:
+   ```bash
+   ./scripts/apply-theme.sh
+   ```
+
+3. **Set the shell theme manually** (if the apply script is unavailable):
+   ```bash
+   gsettings set org.gnome.shell.extensions.user-theme name "Simplicity"
+   ```
+
+4. **GNOME Shell version mismatch.**
+   If GNOME Shell displays a warning that the theme is incompatible, the theme may need a version bump in `gnome-shell/gnome-shell.css`. The `@import` block at the top of the file contains a version string — update it to match the output of:
+   ```bash
+   gnome-shell --version
+   ```
+
+---
+
+## Cinnamon Shell Theme Not Applying
+
+**Symptom:** The Cinnamon panel, applets, menus, notifications, or OSD overlays still show the default Cinnamon appearance after installation.
+
+**Causes and fixes:**
+
+1. **Shell theme not set.**
+   The Cinnamon shell theme (`cinnamon/cinnamon.css`) is separate from the GTK theme. Apply it with:
+   ```bash
+   gsettings set org.cinnamon.theme name "Simplicity"
+   ```
+   The `apply-theme.sh` script does this automatically on Cinnamon desktops. Re-run it to ensure all three settings are written:
+   ```bash
+   ./scripts/apply-theme.sh
+   # This sets:
+   #   org.cinnamon.desktop.interface gtk-theme
+   #   org.cinnamon.desktop.wm.preferences theme
+   #   org.cinnamon.theme name
+   ```
+
+2. **Cinnamon System Settings — applying via the GUI.**
+   Open **System Settings → Themes** and select **Simplicity** under the *Desktop* (shell theme) selector as well as the *Controls* (GTK) and *Window borders* selectors.
+
+3. **Theme not detected by Cinnamon System Settings.**
+   Confirm the `CinnamonTheme` key is present in `~/.themes/Simplicity/index.theme`:
+   ```bash
+   grep CinnamonTheme ~/.themes/Simplicity/index.theme
+   # Expected output:  CinnamonTheme=Simplicity
+   ```
+   If it is missing, the `cinnamon.css` file may not have been installed. Re-run the installer.
+
+4. **Changes visible only after a shell restart.**
+   After applying the shell theme, restart the Cinnamon shell without logging out:
+   ```bash
+   cinnamon --replace &
+   ```
+
+---
+
 ## GTK 4 / libadwaita Applications Ignore the Theme
 
 **Symptom:** GNOME 40+ applications (Files, Settings, Builder, etc.) still show the default Adwaita styling.
@@ -244,18 +375,36 @@ gsettings get org.gnome.desktop.interface gtk-theme
 # Show currently active WM theme (GNOME)
 gsettings get org.gnome.desktop.wm.preferences theme
 
+# Show currently active icon theme (GNOME / MATE / Cinnamon)
+gsettings get org.gnome.desktop.interface icon-theme
+
+# Show currently active GNOME Shell theme
+gsettings get org.gnome.shell.extensions.user-theme name
+
+# Show currently active Cinnamon shell theme
+gsettings get org.cinnamon.theme name
+
 # Show detected desktop environment
 echo "$XDG_CURRENT_DESKTOP"
 
 # List all installed themes
 ls ~/.themes/ /usr/share/themes/ 2>/dev/null
 
+# List all installed icon themes
+ls ~/.local/share/icons/ /usr/share/icons/ 2>/dev/null
+
 # Verify theme file structure
 ls -1 ~/.themes/Simplicity/
+
+# Verify icon theme file structure
+ls ~/.local/share/icons/Simplicity-Icons/scalable/
 
 # Test apply-theme script without making changes
 ./scripts/apply-theme.sh --dry-run
 
 # Detect your distribution info
 bash scripts/detect-distro.sh
+
+# Manually rebuild the icon cache
+gtk-update-icon-cache -f -t ~/.local/share/icons/Simplicity-Icons
 ```
