@@ -332,6 +332,53 @@ Shell tooltips match the application-level tooltip colours: near-black backgroun
 
 ---
 
+## Cinnamon Shell
+
+The Cinnamon shell theme (`cinnamon/cinnamon.css`) styles the Cinnamon desktop shell chrome — the panel, popup menus, notifications, OSD overlays, modal dialogs, and calendar widget. It is compatible with Cinnamon 3.x – 6.x.
+
+### Panel (`.panel-top`, `.panel-bottom`)
+
+| Property | Dark / Dual-Tone | Light | Dracula |
+|----------|-----------------|-------|---------|
+| Background | `#1e1e1e` / `#252525` | `#ebebeb` | `#21222c` |
+| Text colour | `#e0e0e0` | `#2d2d2d` | `#f8f8f2` |
+| Bottom border | `#404040` | `#d0d0d0` | `#44475a` |
+
+Panel buttons (`.panel-button`) gain a subtle hover highlight (`rgba(255,255,255,0.10)` on dark variants; `rgba(0,0,0,0.08)` on light) and a stronger active/checked state.
+
+### Popup Menus (`.popup-menu`)
+
+| Property | Dark / Dual-Tone | Light | Dracula |
+|----------|-----------------|-------|---------|
+| Background | `#252525` | `#f0f0f0` | `#21222c` |
+| Border | `#404040` | `#d0d0d0` | `#44475a` |
+| Border radius | 8 px | 8 px | 8 px |
+| Item hover | `#5294e2` bg, `#ffffff` text | same | `#bd93f9` bg, `#ffffff` text |
+| Separator | `#404040` | `#d0d0d0` | `#44475a` |
+
+### Notifications (`.notification`)
+
+| Property | Dark / Dual-Tone | Light | Dracula |
+|----------|-----------------|-------|---------|
+| Background | `rgba(30–37, 30–37, 30–37, 0.92)` | `rgba(235,235,235,0.96)` | `rgba(25, 26, 33, 0.92)` |
+| Border radius | 10 px | 10 px | 10 px |
+| Title | `#ffffff` / `#1a1a1a` (bold) | `#1a1a1a` | `#f8f8f2` |
+| Body | `rgba(224,224,224,0.85)` | `rgba(45,45,45,0.80)` | `rgba(248,248,242,0.85)` |
+
+### OSD Overlay (`.osd-notification`)
+
+Volume and brightness overlays use a semi-transparent panel background with a `#5294e2` (Dracula: `#bd93f9`) progress fill bar against a neutral empty-track.
+
+### Modal Dialogs (`.modal-dialog`)
+
+Dialogs share the menu background colour and border. Suggested-action buttons use the accent colour (`#5294e2`); destructive-action buttons use `#cf6679` — consistent with GTK button colours.
+
+### Calendar (`.calendar`)
+
+The date/time calendar widget uses the menu background with the accent colour highlighting today's date and selected days.
+
+---
+
 ## Window Manager Decorations
 
 ### Metacity (GNOME / MATE)
