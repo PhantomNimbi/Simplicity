@@ -229,7 +229,7 @@ apply_gtk_settings() {
                 cat > "${settings_file}" << EOINI
 [Settings]
 gtk-theme-name=${THEME_NAME}
-gtk-icon-theme-name=Simplicity-Icons
+gtk-icon-theme-name=${ICON_THEME_NAME}
 gtk-font-name=Sans 10
 gtk-cursor-theme-name=Simplicity-Cursors
 gtk-application-prefer-dark-theme=${prefer_dark_value}
