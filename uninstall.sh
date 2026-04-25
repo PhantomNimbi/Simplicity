@@ -198,6 +198,7 @@ reset_xfce_settings() {
     if command -v xfconf-query &>/dev/null; then
         info "Resetting XFCE settings..."
         xfconf-query -c xsettings -p /Net/ThemeName -r 2>/dev/null || true
+        xfconf-query -c xsettings -p /Net/IconThemeName -r 2>/dev/null || true
         xfconf-query -c xfwm4 -p /general/theme -r 2>/dev/null || true
         success "XFCE settings reset."
     fi

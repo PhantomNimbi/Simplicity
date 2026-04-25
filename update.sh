@@ -13,6 +13,7 @@
 #   --dark        Also update the Simplicity-Dark variant (if installed)
 #   --light       Also update the Simplicity-Light variant (if installed)
 #   --dracula     Also update the Simplicity-Dracula variant (if installed)
+#   --all         Update all variants (dark, light, and dracula) if installed
 #   --help        Show this help message
 
 set -euo pipefail
@@ -61,6 +62,11 @@ while [[ $# -gt 0 ]]; do
         --dracula)
             UPDATE_DRACULA=true
             ;;
+        --all)
+            UPDATE_DARK=true
+            UPDATE_LIGHT=true
+            UPDATE_DRACULA=true
+            ;;
         --help|-h)
             echo "Simplicity Theme Suite Updater"
             echo ""
@@ -72,6 +78,7 @@ while [[ $# -gt 0 ]]; do
             echo "  --dark        Also update the Simplicity-Dark variant"
             echo "  --light       Also update the Simplicity-Light variant"
             echo "  --dracula     Also update the Simplicity-Dracula variant"
+            echo "  --all         Update all variants (dark, light, and dracula)"
             echo "  --help, -h    Show this help message"
             exit 0
             ;;

@@ -10,6 +10,7 @@
 #   --dark        Also install the Simplicity-Dark (full dark) variant
 #   --light       Also install the Simplicity-Light (full light) variant
 #   --dracula     Also install the Simplicity-Dracula variant
+#   --all         Install all variants (dark, light, and dracula)
 #   --help        Show this help message
 
 set -euo pipefail
@@ -58,6 +59,11 @@ while [[ $# -gt 0 ]]; do
         --dracula)
             INSTALL_DRACULA=true
             ;;
+        --all)
+            INSTALL_DARK=true
+            INSTALL_LIGHT=true
+            INSTALL_DRACULA=true
+            ;;
         --help|-h)
             echo "Simplicity Theme Suite Installer"
             echo ""
@@ -69,6 +75,7 @@ while [[ $# -gt 0 ]]; do
             echo "  --light       Also install the Simplicity-Light (full light) variant"
             echo "  --dark        Also install the Simplicity-Dark (full dark) variant"
             echo "  --dracula     Also install the Simplicity-Dracula variant"
+            echo "  --all         Install all variants (dark, light, and dracula)"
             echo "  --help, -h    Show this help message"
             exit 0
             ;;
@@ -183,7 +190,6 @@ install_icon_theme() {
 }
 
 install_distro_specific() {
-    detect_distro
     info "Detected: ${DISTRO_ID} (family: ${DISTRO_FAMILY}, package manager: ${PKG_MANAGER})"
 
     local distro_installer=""
@@ -214,8 +220,8 @@ install_distro_specific() {
     esac
 
     if [[ -n "${distro_installer}" ]] && [[ -f "${distro_installer}" ]]; then
-        info "Running distribution-specific installer..."
-        bash "${distro_installer}"
+        info "Running distribution-specific dependency installer..."
+        SIMPLICITY_DEPS_ONLY=1 bash "${distro_installer}"
     fi
 }
 
