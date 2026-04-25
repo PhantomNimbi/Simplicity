@@ -23,6 +23,8 @@
 
 A clean, modern desktop theme for Linux, available in dual-tone, light, dark, and Dracula variants with GTK 2/3/4, GNOME Shell, Cinnamon Shell, and window manager themes across all major distributions and desktop environments.
 
+<div align="center">
+   
 ```
 ███████╗██╗███╗   ███╗██████╗ ██╗     ██╗ ██████╗██╗████████╗██╗   ██╗
 ██╔════╝██║████╗ ████║██╔══██╗██║     ██║██╔════╝██║╚══██╔══╝╚██╗ ██╔╝
@@ -31,22 +33,18 @@ A clean, modern desktop theme for Linux, available in dual-tone, light, dark, an
 ███████║██║██║ ╚═╝ ██║██║     ███████╗██║╚██████╗██║   ██║      ██║   
 ╚══════╝╚═╝╚═╝     ╚═╝╚═╝     ╚══════╝╚═╝ ╚═════╝╚═╝   ╚═╝      ╚═╝
 ```
+   
+   <img width="48%" height="auto" src="https://github.com/PhantomNimbi/Simplicity/raw/main/screenshots/preview.png" alt="Simplicity Dual-Tone preview" />
+   <img width="48%" height="auto" src="https://github.com/PhantomNimbi/Simplicity/raw/main/screenshots/preview-light.png" alt="Simplicity Light preview" />
+   
+   <img width="48%" height="auto" src="https://github.com/PhantomNimbi/Simplicity/raw/main/screenshots/preview-dark.png" alt="Simplicity Dark preview" />
+   <img width="48%" height="auto" src="https://github.com/PhantomNimbi/Simplicity/raw/main/screenshots/preview-dracula.png" alt="Simplicity Dracula preview" />
 
-## Screenshots
+</div>
 
-### Dual-Tone (Default) — dark chrome · light content area
-![Simplicity Dual-Tone preview](https://github.com/PhantomNimbi/Simplicity/raw/main/screenshots/preview.png)
 
-### Light — full light palette
-![Simplicity Light preview](https://github.com/PhantomNimbi/Simplicity/raw/main/screenshots/preview-light.png)
-
-### Dark — full dark palette
-![Simplicity Dark preview](https://github.com/PhantomNimbi/Simplicity/raw/main/screenshots/preview-dark.png)
-
-### Dracula — Dracula colour palette
-![Simplicity Dracula preview](https://github.com/PhantomNimbi/Simplicity/raw/main/screenshots/preview-dracula.png)
-
-> **Note:** The previews are generated programmatically, which can cause some icons to appear missing or fall back to defaults.
+> [!NOTE]
+> The previews are generated programmatically, which can cause some elements to appear different. Keep in mind that they are intended as a general concept of what the theme actually looks like on your distribution.
 
 ## Documentation
 
