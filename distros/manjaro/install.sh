@@ -62,6 +62,21 @@ install_dependencies() {
     success "Dependencies installed."
 }
 
+install_gnome_extensions() {
+    if ! command -v gnome-shell &>/dev/null; then
+        return
+    fi
+    local pkg_mgr
+    pkg_mgr="$(detect_pkg_manager)"
+    info "Installing GNOME user theme extension..."
+    if [[ "${pkg_mgr}" == "pamac" ]]; then
+        pamac install --no-confirm gnome-shell-extension-user-theme 2>/dev/null || true
+    else
+        sudo pacman -S --needed --noconfirm gnome-shell-extension-user-theme 2>/dev/null || true
+    fi
+    success "GNOME user theme extension installed."
+}
+
 install_theme() {
     local target_dir="${HOME}/.themes/${THEME_NAME}"
     info "Installing ${THEME_NAME} theme to ${target_dir}..."
@@ -123,6 +138,7 @@ main() {
     info "Detected Manjaro Linux (edition: ${edition})"
 
     install_dependencies
+    install_gnome_extensions
     install_theme
     apply_gnome_theme
     apply_kde_theme

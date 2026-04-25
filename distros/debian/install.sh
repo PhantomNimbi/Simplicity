@@ -41,6 +41,14 @@ install_dependencies() {
     success "Dependencies installed."
 }
 
+install_gnome_extensions() {
+    if command -v gnome-shell &>/dev/null; then
+        info "Installing GNOME user theme extension support..."
+        sudo apt-get install -y gnome-shell-extension-user-theme 2>/dev/null || true
+        success "GNOME Shell extension support installed."
+    fi
+}
+
 install_theme() {
     local target_dir="${HOME}/.themes/${THEME_NAME}"
     info "Installing ${THEME_NAME} theme to ${target_dir}..."
@@ -98,6 +106,7 @@ main() {
     info "Detected Debian-based system (version: ${debian_ver})"
 
     install_dependencies
+    install_gnome_extensions
     install_theme
     apply_gnome_theme
     apply_xfce_theme
