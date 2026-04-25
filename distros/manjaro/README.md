@@ -21,20 +21,20 @@ chmod +x install.sh
 
 ## Manual Installation
 
-1. Copy the `simplicity-dark/` folder from the repository root to `~/.themes/Simplicity-Dark/`
+1. Copy the `simplicity-dualtone/` folder from the repository root to `~/.themes/Simplicity/`
 2. Apply using pamac or the command line:
 
 ### GNOME
 ```bash
-gsettings set org.gnome.desktop.interface gtk-theme "Simplicity-Dark"
-gsettings set org.gnome.desktop.wm.preferences theme "Simplicity-Dark"
-gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+gsettings set org.gnome.desktop.interface gtk-theme "Simplicity"
+gsettings set org.gnome.desktop.wm.preferences theme "Simplicity"
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
 ```
 
 ### XFCE
 ```bash
-xfconf-query -c xsettings -p /Net/ThemeName -s "Simplicity-Dark"
-xfconf-query -c xfwm4 -p /general/theme -s "Simplicity-Dark"
+xfconf-query -c xsettings -p /Net/ThemeName -s "Simplicity"
+xfconf-query -c xfwm4 -p /general/theme -s "Simplicity"
 ```
 
 ### KDE Plasma
@@ -45,8 +45,8 @@ xfconf-query -c xfwm4 -p /general/theme -s "Simplicity-Dark"
 ```ini
 # ~/.config/gtk-3.0/settings.ini
 [Settings]
-gtk-theme-name=Simplicity-Dark
-gtk-application-prefer-dark-theme=1
+gtk-theme-name=Simplicity
+gtk-application-prefer-dark-theme=0
 ```
 
 ## Pamac vs Pacman
@@ -56,6 +56,6 @@ Manjaro ships with `pamac` as the default package manager GUI, but `pacman` is a
 ## Uninstallation
 
 ```bash
-rm -rf ~/.themes/"Simplicity-Dark"
+rm -rf ~/.themes/"Simplicity"
 gsettings reset org.gnome.desktop.interface gtk-theme
 ```

@@ -19,6 +19,22 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ---
 
+## [1.2.1] — 2026-04-25
+
+### 🔄 Changed
+
+- **All distro-specific installers** (`distros/*/install.sh`) — Updated default
+  theme from `Simplicity-Dark` (full dark) to `Simplicity` (dual-tone) to match
+  the v1.1.0 default. Source directory corrected from `simplicity-dark/` to
+  `simplicity-dualtone/`, GNOME color-scheme updated from `prefer-dark` to
+  `prefer-light`, and GTK settings source path updated accordingly.
+- **All distro README files** (`distros/*/README.md`) — Manual installation
+  instructions updated to reference `simplicity-dualtone/` → `~/.themes/Simplicity`
+  and the correct `prefer-light` color-scheme and `gtk-application-prefer-dark-theme=0`
+  settings for the dual-tone default variant.
+
+---
+
 ## [1.2.0] — 2026-04-25
 
 ### ✨ Added

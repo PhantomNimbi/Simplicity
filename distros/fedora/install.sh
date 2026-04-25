@@ -7,7 +7,7 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
-THEME_NAME="Simplicity-Dark"
+THEME_NAME="Simplicity"
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -50,7 +50,7 @@ install_theme() {
     local target_dir="${HOME}/.themes/${THEME_NAME}"
     info "Installing ${THEME_NAME} theme to ${target_dir}..."
     mkdir -p "${target_dir}"
-    cp -r "${REPO_ROOT}/simplicity-dark/." "${target_dir}/"
+    cp -r "${REPO_ROOT}/simplicity-dualtone/." "${target_dir}/"
     success "Theme installed to ${target_dir}"
 }
 
@@ -59,7 +59,7 @@ apply_gnome_theme() {
         info "Applying ${THEME_NAME} theme via gsettings..."
         gsettings set org.gnome.desktop.interface gtk-theme "${THEME_NAME}" 2>/dev/null || true
         gsettings set org.gnome.desktop.wm.preferences theme "${THEME_NAME}" 2>/dev/null || true
-        gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark' 2>/dev/null || true
+        gsettings set org.gnome.desktop.interface color-scheme 'prefer-light' 2>/dev/null || true
         success "GNOME theme applied."
     else
         warning "gsettings not found. Please apply the theme manually via GNOME Tweaks."
