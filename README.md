@@ -210,6 +210,29 @@ To apply a specific variant after installation:
 ./scripts/apply-theme.sh --dry-run   # preview changes without applying
 ```
 
+## Updating
+
+To refresh the installed theme files from the repository (e.g. after a `git pull`):
+
+```bash
+./update.sh
+```
+
+The updater will:
+1. Overwrite the installed theme files with the latest version from the repository
+2. Re-apply the theme to the current desktop session
+
+### Updater Options
+
+```
+./update.sh [OPTIONS]
+  --system      Update the system installation in /usr/share/themes (requires root)
+  --no-apply    Update files only; do not re-apply to current session
+  --dark        Also update the Simplicity-Dark variant
+  --light       Also update the Simplicity-Light variant
+  --help        Show help
+```
+
 ## Uninstallation
 
 ```bash
@@ -237,6 +260,7 @@ gsettings reset org.gnome.desktop.wm.preferences theme
 ```
 Simplicity/
 ├── install.sh                  # Main installer (auto-detects distro)
+├── update.sh                   # Updater (refreshes installed theme files)
 ├── uninstall.sh                # Uninstaller
 ├── README.md                   # This file
 ├── CHANGELOG.md                # Version history
