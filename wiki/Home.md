@@ -46,6 +46,7 @@ Each variant provides complete coverage across:
 - **GTK 2** — legacy applications
 - **GTK 3** — most modern GTK apps
 - **GTK 4 / libadwaita** — GNOME 40+ applications
+- **GNOME Shell** — top panel, Activities overview, Quick Settings, notifications, and more
 - **Metacity** — GNOME Shell (Mutter) and MATE (Marco) window decorator
 - **XFWM4** — XFCE window manager
 - **Openbox** — also used by LXDE and LXQt
@@ -54,15 +55,15 @@ Each variant provides complete coverage across:
 
 ## Supported Desktop Environments
 
-| Desktop | GTK 2 | GTK 3 | GTK 4 | WM Theme |
-|---------|:-----:|:-----:|:-----:|:--------:|
-| GNOME | ✅ | ✅ | ✅ | Metacity |
-| XFCE | ✅ | ✅ | — | XFWM4 |
-| MATE | ✅ | ✅ | — | Metacity |
-| Cinnamon | ✅ | ✅ | — | Metacity |
-| KDE Plasma | ✅ | ✅ | ✅ | — |
-| Openbox / LXDE / LXQt | ✅ | ✅ | — | Openbox |
-| i3 / Sway | ✅ | ✅ | ✅ | — |
+| Desktop | GTK 2 | GTK 3 | GTK 4 | WM Theme | Shell Theme |
+|---------|:-----:|:-----:|:-----:|:--------:|:-----------:|
+| GNOME | ✅ | ✅ | ✅ | Metacity | ✅ |
+| XFCE | ✅ | ✅ | — | XFWM4 | — |
+| MATE | ✅ | ✅ | — | Metacity | — |
+| Cinnamon | ✅ | ✅ | — | Metacity | — |
+| KDE Plasma | ✅ | ✅ | ✅ | — | — |
+| Openbox / LXDE / LXQt | ✅ | ✅ | — | Openbox | — |
+| i3 / Sway | ✅ | ✅ | ✅ | — | — |
 
 ---
 
