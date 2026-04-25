@@ -324,6 +324,7 @@ Options:
   --dark        Also install the Simplicity-Dark (full dark) variant
   --light       Also install the Simplicity-Light (full light) variant
   --dracula     Also install the Simplicity-Dracula variant
+  --all         Install all variants (dark, light, and dracula)
   --help, -h    Show this help message
 ```
 
@@ -335,6 +336,7 @@ Options:
 | `--dark` | Also installs `Simplicity-Dark` |
 | `--light` | Also installs `Simplicity-Light` |
 | `--dracula` | Also installs `Simplicity-Dracula` |
+| `--all` | Installs all four variants (equivalent to `--dark --light --dracula`) |
 | `--dark --light --dracula` | Installs all four variants |
 
 ---

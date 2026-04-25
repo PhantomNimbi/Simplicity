@@ -197,6 +197,7 @@ sudo ./install.sh --system
   --light       Also install the Simplicity-Light variant
   --dark        Also install the Simplicity-Dark variant
   --dracula     Also install the Simplicity-Dracula variant
+  --all         Install all variants (dark, light, and dracula)
   --help        Show help
 ```
 
@@ -236,6 +237,7 @@ The updater will:
   --dark        Also update the Simplicity-Dark variant
   --light       Also update the Simplicity-Light variant
   --dracula     Also update the Simplicity-Dracula variant
+  --all         Update all variants (dark, light, and dracula)
   --help        Show help
 ```
 
