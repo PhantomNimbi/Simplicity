@@ -113,14 +113,14 @@ Full documentation is available in the **[GitHub Wiki](https://github.com/Phanto
 
 ## Supported Linux Distributions
 
-| Distribution              | Installer                        | Package Manager |
-|--------------------------|----------------------------------|-----------------|
-| Ubuntu / Mint / Pop!_OS  | `distros/ubuntu/install.sh`      | apt             |
-| Debian / MX Linux / Kali | `distros/debian/install.sh`      | apt             |
-| Fedora / RHEL / CentOS   | `distros/fedora/install.sh`      | dnf             |
-| Arch Linux / EndeavourOS | `distros/arch/install.sh`        | pacman / yay    |
-| Manjaro Linux            | `distros/manjaro/install.sh`     | pamac / pacman  |
-| openSUSE Leap/Tumbleweed | `distros/opensuse/install.sh`    | zypper          |
+| Distribution                                                      | Installer                        | Package Manager    |
+|------------------------------------------------------------------|----------------------------------|--------------------|
+| Ubuntu · Linux Mint · Pop!\_OS · Elementary · Zorin · KDE Neon · Kubuntu · Xubuntu · Lubuntu | `distros/ubuntu/install.sh` | apt |
+| Debian · Raspbian · MX Linux · AntiX · Kali · Parrot · Devuan   | `distros/debian/install.sh`      | apt                |
+| Fedora · RHEL · CentOS · AlmaLinux · Rocky · Oracle · Nobara     | `distros/fedora/install.sh`      | dnf                |
+| Arch Linux · EndeavourOS · Garuda · ArcoLinux · Artix            | `distros/arch/install.sh`        | pacman / yay / paru |
+| Manjaro Linux                                                     | `distros/manjaro/install.sh`     | pamac / pacman     |
+| openSUSE Leap / Tumbleweed · SLES · SLED                         | `distros/opensuse/install.sh`    | zypper             |
 
 ## Quick Start
 
@@ -215,6 +215,15 @@ To apply a specific variant after installation:
 ./uninstall.sh
 ```
 
+### Uninstaller Options
+
+```
+./uninstall.sh [OPTIONS]
+  --system          Remove from /usr/share/themes (requires root)
+  --keep-settings   Do not reset desktop environment settings
+  --help            Show help
+```
+
 Or manually:
 ```bash
 rm -rf ~/.themes/"Simplicity"
@@ -229,6 +238,10 @@ Simplicity/
 ├── install.sh                  # Main installer (auto-detects distro)
 ├── uninstall.sh                # Uninstaller
 ├── README.md                   # This file
+├── CHANGELOG.md                # Version history
+├── CONTRIBUTING.md             # Contribution guidelines
+├── TEMPLATE_USAGE.md           # Guide to using this repo as a template
+├── LICENSE                     # BSD 3-Clause License
 │
 ├── simplicity-dualtone/          # Default theme files (dark chrome, light content)
 │   ├── index.theme             # Theme metadata
@@ -250,12 +263,23 @@ Simplicity/
 │
 ├── simplicity-dark/              # Dark theme files (same layout as above)
 │
+├── screenshots/                # Preview images
+│
+├── wiki/                       # Extended documentation
+│   ├── Home.md
+│   ├── Theme-Variants.md
+│   ├── Theme-Elements.md
+│   ├── Colour-Palette.md
+│   ├── Installation.md
+│   ├── Desktop-Environments.md
+│   └── Troubleshooting.md
+│
 ├── distros/                    # Distribution-specific installers
-│   ├── ubuntu/                 # Ubuntu, Mint, Pop!_OS
-│   ├── fedora/                 # Fedora, RHEL, CentOS
-│   ├── arch/                   # Arch, EndeavourOS, Garuda
-│   ├── debian/                 # Debian, MX, Kali
-│   ├── opensuse/               # openSUSE Leap & Tumbleweed
+│   ├── ubuntu/                 # Ubuntu, Mint, Pop!_OS, Elementary, Zorin, and more
+│   ├── fedora/                 # Fedora, RHEL, CentOS, AlmaLinux, Rocky, and more
+│   ├── arch/                   # Arch, EndeavourOS, Garuda, ArcoLinux, Artix
+│   ├── debian/                 # Debian, Raspbian, MX, Kali, Parrot, Devuan
+│   ├── opensuse/               # openSUSE Leap & Tumbleweed, SLES, SLED
 │   └── manjaro/                # Manjaro Linux
 │
 └── scripts/
