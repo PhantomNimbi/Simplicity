@@ -21,7 +21,7 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](https://github.com/PhantomNimbi/Simplicity/blob/main/CONTRIBUTING.md)
 [![Platform](https://img.shields.io/badge/platform-Linux-blue)](https://github.com/PhantomNimbi/Simplicity)
 
-A clean, modern desktop theme suite for Linux, offering dual-tone, light, dark, and Dracula variants with GTK 2/3/4, GNOME Shell, Cinnamon Shell, window manager, and icon themes across all major distributions and desktop environments.
+A clean, modern desktop theme suite for Linux, offering dual-tone, light, dark, and Dracula variants with GTK 2/3/4, GNOME Shell, Cinnamon Shell, and window manager themes across all major distributions and desktop environments.
 
 ```
 ███████╗██╗███╗   ███╗██████╗ ██╗     ██╗ ██████╗██╗████████╗██╗   ██╗
@@ -46,7 +46,7 @@ A clean, modern desktop theme suite for Linux, offering dual-tone, light, dark, 
 ### Dracula — Dracula colour palette
 ![Simplicity Dracula preview](https://github.com/PhantomNimbi/Simplicity/raw/main/screenshots/preview-dracula.png)
 
-> **Note:** Icons in the preview screenshots may not display correctly. The previews are generated programmatically, which can cause some icons to appear missing or fall back to defaults. The actual icon theme will display correctly once installed.
+> **Note:** The previews are generated programmatically, which can cause some icons to appear missing or fall back to defaults.
 
 ## Documentation
 
@@ -68,7 +68,6 @@ Full documentation is available in the **[GitHub Wiki](https://github.com/Phanto
 - 🐚 **GNOME Shell** — Full shell theme: panel, Activities overview, Quick Settings, notifications, OSD, lock screen, and more
 - 🍂 **Cinnamon Shell** — Full Cinnamon shell theme: panels, panel applets, popup menus, notifications, OSD overlays, and calendar
 - 🪟 **Window Managers** — Metacity, XFWM4 (XFCE), and Openbox themes included
-- 🖼️ **Icon Theme** — Windows 11-inspired `Simplicity-Icons` with scalable SVG icons for applications, places, actions, status, and mimetypes
 - 🐧 **Multi-Distro** — Dedicated installers for 6 major Linux distributions
 - 🖥️ **Multi-DE** — Supports GNOME, KDE, XFCE, MATE, Cinnamon, Openbox, i3, Sway
 - 🌗 **Dual-Tone Theme** — Dark chrome with light content area (`Simplicity`) — installed by default
@@ -266,10 +265,8 @@ rm -rf ~/.themes/"Simplicity"
 rm -rf ~/.themes/"Simplicity-Dark"
 rm -rf ~/.themes/"Simplicity-Light"
 rm -rf ~/.themes/"Simplicity-Dracula"
-rm -rf ~/.local/share/icons/"Simplicity-Icons"
 gsettings reset org.gnome.desktop.interface gtk-theme
 gsettings reset org.gnome.desktop.wm.preferences theme
-gsettings reset org.gnome.desktop.interface icon-theme
 ```
 
 ## Repository Structure
@@ -284,15 +281,6 @@ Simplicity/
 ├── CONTRIBUTING.md             # Contribution guidelines
 ├── TEMPLATE_USAGE.md           # Guide to using this repo as a template
 ├── LICENSE                     # BSD 3-Clause License
-│
-├── simplicity-icons/             # Windows 11-inspired icon theme
-│   ├── index.theme             # Icon theme metadata
-│   └── scalable/
-│       ├── apps/               # Application icons (terminal, browser, etc.)
-│       ├── places/             # Place icons (folders, trash, drives)
-│       ├── actions/            # Action icons (copy, paste, undo, etc.)
-│       ├── status/             # Status icons (info, warning, error, wifi)
-│       └── mimetypes/          # File-type icons (text, image, audio, etc.)
 │
 ├── simplicity-dualtone/          # Default theme files (dark chrome, light content)
 │   ├── index.theme             # Theme metadata

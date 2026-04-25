@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
-  <!-- Redo: clockwise arc from left side, arrow head at end pointing right-up -->
-  <path d="M10 24 C10 12 38 12 38 24" fill="none" stroke="#5294E2" stroke-width="4"
-        stroke-linecap="round"/>
-  <!-- Arrow head at end of arc (top-right end) -->
-  <polyline points="32,18 38,24 44,18" fill="none" stroke="#5294E2" stroke-width="4"
-            stroke-linecap="round" stroke-linejoin="round"/>
-</svg>

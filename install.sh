@@ -20,7 +20,6 @@ THEME_NAME="Simplicity"
 THEME_DARK_NAME="Simplicity-Dark"
 THEME_LIGHT_NAME="Simplicity-Light"
 THEME_DRACULA_NAME="Simplicity-Dracula"
-ICON_THEME_NAME="Simplicity-Icons"
 SYSTEM_INSTALL=false
 NO_APPLY=false
 INSTALL_DARK=false
@@ -166,29 +165,6 @@ install_theme_files() {
     fi
 }
 
-install_icon_theme() {
-    local icon_target_dir
-
-    if "${SYSTEM_INSTALL}"; then
-        icon_target_dir="/usr/share/icons/${ICON_THEME_NAME}"
-        if [[ "${EUID}" -ne 0 ]]; then
-            die "System installation requires root privileges. Run with sudo or use --system after sudo."
-        fi
-    else
-        icon_target_dir="${HOME}/.local/share/icons/${ICON_THEME_NAME}"
-    fi
-
-    info "Installing icon theme to: ${icon_target_dir}"
-    mkdir -p "${icon_target_dir}"
-    cp -r "${SCRIPT_DIR}/simplicity-icons/." "${icon_target_dir}/"
-    success "Icon theme installed to: ${icon_target_dir}"
-
-    # Regenerate icon cache so the theme is immediately discoverable
-    if command -v gtk-update-icon-cache &>/dev/null; then
-        gtk-update-icon-cache -f -t "${icon_target_dir}" 2>/dev/null || true
-    fi
-}
-
 install_distro_specific() {
     info "Detected: ${DISTRO_ID} (family: ${DISTRO_FAMILY}, package manager: ${PKG_MANAGER})"
 
@@ -248,7 +224,6 @@ main() {
 
     header "Step 2/3: Installing theme files..."
     install_theme_files
-    install_icon_theme
     echo ""
 
     header "Step 3/3: Installing dependencies and applying theme..."

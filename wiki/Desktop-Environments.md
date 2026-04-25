@@ -174,7 +174,6 @@ KDE Plasma does not use a GTK window manager theme for its own windows. However,
 [Settings]
 gtk-theme-name=Simplicity
 gtk-application-prefer-dark-theme=0
-gtk-icon-theme-name=Simplicity-Icons
 ```
 
 ```ini

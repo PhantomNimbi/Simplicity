@@ -76,59 +76,6 @@ After installing, restart your GTK 2 applications.
 
 ---
 
-## Icon Theme Not Applying
-
-**Symptom:** Icons do not change after installation — applications still show the previous icon set, or fall back to generic Tango/Hicolor icons.
-
-**Causes and fixes:**
-
-1. **Icon cache not regenerated.**
-   After installing or updating the icon theme, GTK needs a fresh cache file:
-   ```bash
-   gtk-update-icon-cache -f -t ~/.local/share/icons/Simplicity-Icons
-   ```
-   If the theme was installed system-wide (`--system`):
-   ```bash
-   sudo gtk-update-icon-cache -f -t /usr/share/icons/Simplicity-Icons
-   ```
-
-2. **Icon theme installed to the wrong location.**
-   Confirm the theme directory exists:
-   ```bash
-   ls ~/.local/share/icons/Simplicity-Icons/
-   # Expected: index.theme  scalable/
-   ls ~/.local/share/icons/Simplicity-Icons/scalable/
-   # Expected: actions  apps  mimetypes  places  status
-   ```
-   If it is missing, re-run the installer or copy it manually:
-   ```bash
-   cp -r simplicity-icons ~/.local/share/icons/Simplicity-Icons
-   gtk-update-icon-cache -f -t ~/.local/share/icons/Simplicity-Icons
-   ```
-
-3. **Icon theme not set as the active icon theme.**
-   Check what is currently configured:
-   ```bash
-   gsettings get org.gnome.desktop.interface icon-theme
-   ```
-   Set it manually if needed:
-   ```bash
-   # GNOME / MATE / Cinnamon
-   gsettings set org.gnome.desktop.interface icon-theme "Simplicity-Icons"
-
-   # XFCE
-   xfconf-query -c xsettings -p /Net/IconThemeName -s "Simplicity-Icons"
-   ```
-   Or re-run the apply script, which handles this automatically:
-   ```bash
-   ./scripts/apply-theme.sh
-   ```
-
-4. **Some icons are not overridden.**
-   Simplicity-Icons only provides icons for common categories (`apps`, `places`, `actions`, `status`, `mimetypes`). Any icon not included in the theme will automatically fall back to `hicolor` and then to the system default. This is expected behaviour.
-
----
-
 ## GNOME Shell Theme Not Applying
 
 **Symptom:** The GNOME panel, Activities overview, Quick Settings, or notifications do not adopt the Simplicity style; they continue to show the default Adwaita shell look.
@@ -375,9 +322,6 @@ gsettings get org.gnome.desktop.interface gtk-theme
 # Show currently active WM theme (GNOME)
 gsettings get org.gnome.desktop.wm.preferences theme
 
-# Show currently active icon theme (GNOME / MATE / Cinnamon)
-gsettings get org.gnome.desktop.interface icon-theme
-
 # Show currently active GNOME Shell theme
 gsettings get org.gnome.shell.extensions.user-theme name
 
@@ -390,21 +334,12 @@ echo "$XDG_CURRENT_DESKTOP"
 # List all installed themes
 ls ~/.themes/ /usr/share/themes/ 2>/dev/null
 
-# List all installed icon themes
-ls ~/.local/share/icons/ /usr/share/icons/ 2>/dev/null
-
 # Verify theme file structure
 ls -1 ~/.themes/Simplicity/
-
-# Verify icon theme file structure
-ls ~/.local/share/icons/Simplicity-Icons/scalable/
 
 # Test apply-theme script without making changes
 ./scripts/apply-theme.sh --dry-run
 
 # Detect your distribution info
 bash scripts/detect-distro.sh
-
-# Manually rebuild the icon cache
-gtk-update-icon-cache -f -t ~/.local/share/icons/Simplicity-Icons
 ```

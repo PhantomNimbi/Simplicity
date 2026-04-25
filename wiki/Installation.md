@@ -57,9 +57,8 @@ chmod +x install.sh
 The installer will:
 1. Print the detected distribution, version, and package manager
 2. Copy the **Simplicity** (dual-tone) theme files to `~/.themes/Simplicity/`
-3. Install the **Simplicity-Icons** icon theme to `~/.local/share/icons/Simplicity-Icons/`
-4. Install the required GTK engine packages via your package manager
-5. Apply the theme and icon theme to your current desktop session
+3. Install the required GTK engine packages via your package manager
+4. Apply the theme to your current desktop session
 
 **Expected output:**
 
@@ -281,7 +280,6 @@ Write the GTK settings file manually:
 # ~/.config/gtk-3.0/settings.ini
 [Settings]
 gtk-theme-name=Simplicity
-gtk-icon-theme-name=Simplicity-Icons
 gtk-font-name=Sans 10
 gtk-application-prefer-dark-theme=0
 ```

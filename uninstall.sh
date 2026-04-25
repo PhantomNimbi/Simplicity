@@ -10,7 +10,6 @@ THEME_NAME="Simplicity"
 THEME_DARK_NAME="Simplicity-Dark"
 THEME_LIGHT_NAME="Simplicity-Light"
 THEME_DRACULA_NAME="Simplicity-Dracula"
-ICON_THEME_NAME="Simplicity-Icons"
 SYSTEM_UNINSTALL=false
 KEEP_SETTINGS=false
 
@@ -124,32 +123,6 @@ remove_theme_files() {
     fi
 }
 
-remove_icon_theme() {
-    local user_icon_dir="${HOME}/.local/share/icons/${ICON_THEME_NAME}"
-    local system_icon_dir="/usr/share/icons/${ICON_THEME_NAME}"
-
-    if [[ -d "${user_icon_dir}" ]]; then
-        info "Removing user icon theme directory: ${user_icon_dir}"
-        rm -rf "${user_icon_dir}"
-        success "Removed: ${user_icon_dir}"
-    else
-        info "User icon theme directory not found: ${user_icon_dir}"
-    fi
-
-    if "${SYSTEM_UNINSTALL}"; then
-        if [[ -d "${system_icon_dir}" ]]; then
-            if [[ "${EUID}" -ne 0 ]]; then
-                die "Removing system icon theme requires root privileges. Run with sudo."
-            fi
-            info "Removing system icon theme directory: ${system_icon_dir}"
-            rm -rf "${system_icon_dir}"
-            success "Removed: ${system_icon_dir}"
-        else
-            info "System icon theme directory not found: ${system_icon_dir}"
-        fi
-    fi
-}
-
 reset_gsettings() {
     if "${KEEP_SETTINGS}"; then
         info "Keeping desktop settings (--keep-settings specified)."
@@ -161,7 +134,6 @@ reset_gsettings() {
         gsettings reset org.gnome.desktop.interface gtk-theme 2>/dev/null || true
         gsettings reset org.gnome.desktop.wm.preferences theme 2>/dev/null || true
         gsettings reset org.gnome.desktop.interface color-scheme 2>/dev/null || true
-        gsettings reset org.gnome.desktop.interface icon-theme 2>/dev/null || true
         gsettings reset org.gnome.shell.extensions.user-theme name 2>/dev/null || true
         success "GNOME settings reset."
     fi
@@ -222,8 +194,6 @@ remove_gtk_settings() {
                     -e "/^gtk-theme-name=${THEME_LIGHT_NAME}/d" \
                     -e "/^gtk-theme-name=${THEME_DARK_NAME}/d" \
                     -e "/^gtk-theme-name=${THEME_DRACULA_NAME}/d" \
-                    -e "/^gtk-icon-theme-name=Simplicity-Icons/d" \
-                    -e "/^gtk-cursor-theme-name=Simplicity-Cursors/d" \
                     -e "/^gtk-application-prefer-dark-theme=1/d" \
                     -e "/^gtk-application-prefer-dark-theme=0/d" \
                     "${settings_file}"
@@ -248,7 +218,6 @@ main() {
 
     info "Removing Simplicity theme files..."
     remove_theme_files
-    remove_icon_theme
 
     info "Resetting desktop settings..."
     reset_gsettings
