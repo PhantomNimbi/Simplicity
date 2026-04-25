@@ -19,6 +19,32 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ---
 
+## [1.10.0] — 2026-04-25
+
+### 🐛 Fixed
+
+#### Installer — Devuan Routing
+
+- **`install.sh`** — Added `devuan` to the `install_distro_specific` Debian
+  case. Devuan was already detected as a Debian-family distribution by
+  `scripts/detect-distro.sh` and was listed in the **Supported Linux
+  Distributions** table in `README.md`, but the routing in the installer did
+  not include it, so Devuan users received a "not specifically supported"
+  warning instead of running the Debian dependency installer.
+
+#### Documentation
+
+- **`distros/debian/install.sh`** — Updated the header comment to include
+  Devuan in the supported-distros list.
+- **`wiki/Installation.md`** — Added the missing
+  `rm -rf ~/.themes/Simplicity-Dracula` line to the **Manual Uninstall**
+  section. The Dracula variant directory was already removed by `uninstall.sh`
+  and listed in the manual uninstall commands in `README.md`, but was omitted
+  from the wiki copy of those commands.
+- **`CHANGELOG.md`** — This entry.
+
+---
+
 ## [1.9.0] — 2026-04-25
 
 ### 🗑️ Removed

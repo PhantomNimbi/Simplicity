@@ -383,6 +383,7 @@ To remove the theme files but keep your desktop environment settings unchanged:
 rm -rf ~/.themes/Simplicity
 rm -rf ~/.themes/Simplicity-Dark
 rm -rf ~/.themes/Simplicity-Light
+rm -rf ~/.themes/Simplicity-Dracula
 
 # Reset GNOME settings
 gsettings reset org.gnome.desktop.interface gtk-theme
