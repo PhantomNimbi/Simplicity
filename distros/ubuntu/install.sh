@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Simplicity Theme - Ubuntu / Linux Mint / Pop!_OS Installer
-# Supports: Ubuntu 20.04+, Ubuntu 26.04 LTS, Linux Mint 20+, Pop!_OS 20.04+
+# Supports: Ubuntu 20.04 – 26.04 LTS, Linux Mint 20+, Pop!_OS 20.04+
 # Package manager: apt
 
 set -euo pipefail
