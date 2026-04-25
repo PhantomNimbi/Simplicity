@@ -21,14 +21,14 @@ chmod +x install.sh
 
 ## Manual Installation
 
-1. Copy the `simplicity-dark/` folder from the repository root to `~/.themes/Simplicity-Dark/`
+1. Copy the `simplicity-dualtone/` folder from the repository root to `~/.themes/Simplicity/`
 2. Open **GNOME Tweaks** → **Appearance** → set **Shell** and **Legacy Applications** to `Simplicity`
 3. Or use `gsettings`:
 
 ```bash
-gsettings set org.gnome.desktop.interface gtk-theme "Simplicity-Dark"
-gsettings set org.gnome.desktop.wm.preferences theme "Simplicity-Dark"
-gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+gsettings set org.gnome.desktop.interface gtk-theme "Simplicity"
+gsettings set org.gnome.desktop.wm.preferences theme "Simplicity"
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
 ```
 
 ## Dependencies
@@ -42,7 +42,7 @@ The installer will automatically install:
 ## Uninstallation
 
 ```bash
-rm -rf ~/.themes/"Simplicity-Dark"
+rm -rf ~/.themes/"Simplicity"
 gsettings reset org.gnome.desktop.interface gtk-theme
 gsettings reset org.gnome.desktop.wm.preferences theme
 ```
