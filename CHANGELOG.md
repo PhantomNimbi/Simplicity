@@ -19,6 +19,84 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ---
 
+## [1.9.0] — 2026-04-25
+
+### 🗑️ Removed
+
+#### Cursor Pack References (Simplicity-Cursors)
+
+- **`simplicity-dark/index.theme`**, **`simplicity-dracula/index.theme`**,
+  **`simplicity-dualtone/index.theme`**, **`simplicity-light/index.theme`** —
+  Removed `CursorTheme=Simplicity-Cursors` key from the `[X-GNOME-Metatheme]`
+  section of all four variant metadata files.
+- **`simplicity-dark/gtk-3.0/settings.ini`**,
+  **`simplicity-dracula/gtk-3.0/settings.ini`**,
+  **`simplicity-dualtone/gtk-3.0/settings.ini`**,
+  **`simplicity-light/gtk-3.0/settings.ini`** — Removed
+  `gtk-cursor-theme-name=Simplicity-Cursors` and
+  `gtk-cursor-theme-size=24` from all four GTK 3 settings files.
+- **`scripts/apply-theme.sh`** — Removed `gtk-cursor-theme-name=Simplicity-Cursors`
+  from the GTK settings-file fallback block written during theme application.
+
+#### Documentation
+
+- **`TEMPLATE_USAGE.md`** — Removed `CursorTheme=My-Cursors` from the
+  `[X-GNOME-Metatheme]` example block. Updated guidance note to reference only
+  the icon theme key (no longer mentions cursor theme bundling).
+- **`CHANGELOG.md`** — This entry.
+
+---
+
+## [1.8.0] — 2026-04-25
+
+### 🗑️ Removed
+
+#### Icon Pack (Simplicity-Icons)
+
+- **`simplicity-icons/`** — Entire Windows 11-inspired icon theme directory
+  removed from the repository. This includes the `index.theme` metadata file
+  and all scalable SVG icons previously in
+  `scalable/{apps,places,actions,status,mimetypes}/`.
+- **`install.sh`** — `install_icon_theme()` function removed. Icon theme
+  installation (including `gtk-update-icon-cache` invocation) is no longer
+  performed by the installer.
+- **`update.sh`** — `update_icon_theme()` function removed. Icon cache
+  regeneration is no longer triggered on update.
+- **`uninstall.sh`** — `remove_icon_theme()` function removed. The uninstaller
+  no longer deletes `~/.local/share/icons/Simplicity-Icons/` (or the system
+  path). `reset_gsettings()` no longer resets
+  `org.gnome.desktop.interface icon-theme`.
+- **`scripts/apply-theme.sh`** — `apply_icon_theme()` helper removed. Setting
+  `org.gnome.desktop.interface icon-theme` (GNOME/MATE/Cinnamon) and
+  `/Net/IconThemeName` (XFCE) is no longer performed. The GTK settings-file
+  fallback no longer writes `gtk-icon-theme-name`.
+- **`simplicity-dark/index.theme`**, **`simplicity-dracula/index.theme`**,
+  **`simplicity-dualtone/index.theme`**, **`simplicity-light/index.theme`** —
+  Removed `IconTheme=Simplicity-Icons` key from the `[X-GNOME-Metatheme]`
+  section of all four variant metadata files.
+
+#### Documentation
+
+- **`README.md`** — Icon Theme bullet removed from the Features section.
+  `simplicity-icons/` directory tree removed from the Repository Structure
+  section. Manual uninstall commands for
+  `~/.local/share/icons/Simplicity-Icons` removed.
+- **`CONTRIBUTING.md`** — `simplicity-icons/` subtree removed from the
+  Repository Structure tree. `cinnamon/cinnamon.css` guideline no longer
+  references icon-theme files.
+- **`TEMPLATE_USAGE.md`** — `simplicity-icons/index.theme` rows removed from
+  the Files-that-reference-the-theme-name table. `simplicity-icons/` removed
+  from the Repository Structure Reference.
+- **`wiki/Home.md`** — Icon Theme row removed from the Quick Overview coverage
+  list.
+- **`wiki/Installation.md`** — Icon theme installation path and
+  `gtk-update-icon-cache` notes removed from prerequisites and manual
+  installation sections.
+- **`wiki/Theme-Elements.md`** — **Icon Theme** section removed.
+- **`CHANGELOG.md`** — This entry.
+
+---
+
 ## [1.7.0] — 2026-04-25
 
 ### 📝 Docs
