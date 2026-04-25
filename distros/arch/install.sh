@@ -128,17 +128,22 @@ main() {
     info "Detected Arch-based system"
 
     install_dependencies
-    install_theme
-    install_icon_theme
-    apply_gnome_theme
-    apply_kde_theme
-    apply_xfce_theme
-    configure_gtk_settings
 
-    echo ""
-    success "Simplicity installation complete!"
-    info "You may need to log out and back in for all changes to take effect."
-    info "Arch Wiki: https://wiki.archlinux.org/title/GTK#Themes"
+    # When called from the main install.sh, theme files and application are
+    # handled by the parent script; only dependencies are needed here.
+    if [[ "${SIMPLICITY_DEPS_ONLY:-0}" != "1" ]]; then
+        install_theme
+        install_icon_theme
+        apply_gnome_theme
+        apply_kde_theme
+        apply_xfce_theme
+        configure_gtk_settings
+
+        echo ""
+        success "Simplicity installation complete!"
+        info "You may need to log out and back in for all changes to take effect."
+        info "Arch Wiki: https://wiki.archlinux.org/title/GTK#Themes"
+    fi
 }
 
 main "$@"
