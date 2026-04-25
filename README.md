@@ -368,6 +368,10 @@ To add support for a new distribution:
 3. Add a `README.md` with distribution-specific notes
 4. Update this README with the new distro entry
 
+## Changelog
+
+See **[CHANGELOG.md](https://github.com/PhantomNimbi/Simplicity/blob/main/CHANGELOG.md)** for the full version history and release notes.
+
 ## License
 
 This project is licensed under the **BSD 3-Clause License**.
