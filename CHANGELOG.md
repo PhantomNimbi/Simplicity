@@ -19,6 +19,27 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ---
 
+## [1.7.0] — 2026-04-25
+
+### 📝 Docs
+
+- **`README.md`** — Added **Cinnamon Shell** as a dedicated bullet in the Features
+  section, covering panels, panel applets, popup menus, notifications, OSD
+  overlays, and calendar. Added **Dracula Theme** bullet to the Features section
+  (`Simplicity-Dracula` — deep navy background with purple accent).
+- **`CONTRIBUTING.md`** — Repository Structure tree updated to reflect the full
+  current layout: `update.sh`, `simplicity-dracula/`, `simplicity-icons/`
+  (with full subdirectory breakdown), `screenshots/`, `wiki/`, and top-level
+  documentation files added. Shell Scripts guideline updated to reference
+  `update.sh` alongside `install.sh` and `apply-theme.sh` for flag documentation.
+- **`TEMPLATE_USAGE.md`** — `update.sh` added to the Files-that-reference-the-
+  theme-name table. `simplicity-icons/index.theme` added to the same table.
+  Repository Structure Reference updated to include `update.sh` and the full
+  `simplicity-icons/` directory tree.
+- **`CHANGELOG.md`** — This entry.
+
+---
+
 ## [1.6.0] — 2026-04-25
 
 ### ✨ Added

@@ -64,6 +64,7 @@ Full documentation is available in the **[GitHub Wiki](https://github.com/Phanto
 
 - 🎨 **GTK 2, 3 & 4** — Full theme support for modern and legacy GTK applications
 - 🐚 **GNOME Shell** — Full shell theme: panel, Activities overview, Quick Settings, notifications, OSD, lock screen, and more
+- 🍂 **Cinnamon Shell** — Full Cinnamon shell theme: panels, panel applets, popup menus, notifications, OSD overlays, and calendar
 - 🪟 **Window Managers** — Metacity, XFWM4 (XFCE), and Openbox themes included
 - 🖼️ **Icon Theme** — Windows 11-inspired `Simplicity-Icons` with scalable SVG icons for applications, places, actions, status, and mimetypes
 - 🐧 **Multi-Distro** — Dedicated installers for 6 major Linux distributions
@@ -71,6 +72,7 @@ Full documentation is available in the **[GitHub Wiki](https://github.com/Phanto
 - 🌗 **Dual-Tone Theme** — Dark chrome with light content area (`Simplicity`) — installed by default
 - ☀️ **Light Theme** — Clean light variant (`Simplicity-Light`)
 - 🌙 **Dark Theme** — Full dark variant (`Simplicity-Dark`)
+- 🧛 **Dracula Theme** — Dracula colour palette variant (`Simplicity-Dracula`) — deep navy background with purple accent
 - 🔧 **Auto-Detection** — Automatically detects your distro and desktop environment
 
 ## Theme Variants
