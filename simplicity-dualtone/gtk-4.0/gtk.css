@@ -123,3 +123,301 @@ popover {
     background-color: @popover_bg_color;
     color: @popover_fg_color;
 }
+
+/* === Interactive Button States === */
+button:hover {
+    background-color: alpha(@window_fg_color, 0.1);
+}
+
+button:active {
+    background-color: alpha(@window_fg_color, 0.15);
+}
+
+button:disabled {
+    opacity: 0.5;
+}
+
+button.suggested-action:hover {
+    background-color: shade(@accent_bg_color, 1.1);
+}
+
+button.destructive-action:hover {
+    background-color: shade(@destructive_bg_color, 1.1);
+}
+
+/* === Text Entries === */
+entry {
+    background-color: @view_bg_color;
+    color: @view_fg_color;
+    caret-color: @accent_color;
+}
+
+entry:focus {
+    outline: 2px solid @accent_color;
+    outline-offset: -2px;
+}
+
+entry:disabled {
+    opacity: 0.5;
+}
+
+searchentry {
+    border-radius: 20px;
+}
+
+/* === Scrollbar === */
+scrollbar {
+    background-color: transparent;
+}
+
+scrollbar slider {
+    background-color: @scrollbar_outline_color;
+    border-radius: 10px;
+    min-width: 6px;
+    min-height: 6px;
+    margin: 2px;
+    transition: background-color 200ms;
+}
+
+scrollbar slider:hover {
+    background-color: alpha(@window_fg_color, 0.4);
+}
+
+scrollbar slider:active {
+    background-color: @accent_color;
+}
+
+/* === Progress Bar === */
+progressbar trough {
+    background-color: @shade_color;
+    border-radius: 4px;
+    min-height: 6px;
+}
+
+progressbar progress {
+    background-color: @accent_bg_color;
+    border-radius: 4px;
+    min-height: 6px;
+}
+
+/* === Spinner === */
+spinner {
+    color: @accent_color;
+}
+
+/* === Switch === */
+switch {
+    background-color: @shade_color;
+    border-radius: 14px;
+    border: none;
+    transition: background-color 200ms;
+}
+
+switch:checked {
+    background-color: @accent_bg_color;
+    color: @accent_fg_color;
+}
+
+switch:disabled {
+    opacity: 0.5;
+}
+
+/* === Check and Radio === */
+checkbutton check,
+radiobutton radio {
+    background-color: @view_bg_color;
+    border: 2px solid alpha(@window_fg_color, 0.3);
+    border-radius: 4px;
+    min-width: 18px;
+    min-height: 18px;
+    transition: background-color 200ms, border-color 200ms;
+}
+
+radiobutton radio {
+    border-radius: 50%;
+}
+
+checkbutton check:checked,
+radiobutton radio:checked {
+    background-color: @accent_bg_color;
+    border-color: @accent_bg_color;
+    color: @accent_fg_color;
+}
+
+checkbutton:disabled,
+radiobutton:disabled {
+    opacity: 0.5;
+}
+
+/* === Scale === */
+scale trough {
+    background-color: @shade_color;
+    border-radius: 4px;
+    min-height: 4px;
+    min-width: 4px;
+}
+
+scale highlight {
+    background-color: @accent_bg_color;
+    border-radius: 4px;
+}
+
+scale slider {
+    background-color: @accent_bg_color;
+    border-radius: 50%;
+    min-width: 20px;
+    min-height: 20px;
+    border: none;
+    box-shadow: 0 1px 4px @card_shade_color;
+    transition: background-color 200ms;
+}
+
+/* === List View Rows (light content) === */
+listview > row:selected {
+    background-color: alpha(@accent_bg_color, 0.2);
+    color: @window_fg_color;
+}
+
+listview > row:selected:hover {
+    background-color: alpha(@accent_bg_color, 0.3);
+}
+
+/* === Libadwaita: Activatable Rows === */
+row.activatable {
+    border-radius: 8px;
+    transition: background-color 200ms;
+}
+
+row.activatable:hover {
+    background-color: alpha(@window_fg_color, 0.06);
+}
+
+row.activatable:active {
+    background-color: alpha(@window_fg_color, 0.12);
+}
+
+/* === Libadwaita: Boxed List === */
+.boxed-list {
+    border-radius: 12px;
+    background-color: @card_bg_color;
+}
+
+.boxed-list > row {
+    border-radius: 0;
+}
+
+.boxed-list > row:first-child {
+    border-radius: 12px 12px 0 0;
+}
+
+.boxed-list > row:last-child {
+    border-radius: 0 0 12px 12px;
+}
+
+.boxed-list > row:only-child {
+    border-radius: 12px;
+}
+
+/* === Libadwaita: Preferences Group === */
+preferencesgroup > .header > label {
+    font-size: smaller;
+    color: @accent_color;
+    font-weight: bold;
+}
+
+/* === Libadwaita: Navigation Sidebar Rows (dark chrome) === */
+.navigation-sidebar > row {
+    border-radius: 8px;
+    margin: 2px 8px;
+    padding: 6px 12px;
+    transition: background-color 200ms;
+}
+
+.navigation-sidebar > row:hover {
+    background-color: alpha(@sidebar_fg_color, 0.08);
+}
+
+.navigation-sidebar > row:selected {
+    background-color: alpha(@accent_bg_color, 0.25);
+    color: @sidebar_fg_color;
+}
+
+.navigation-sidebar > row:selected:hover {
+    background-color: alpha(@accent_bg_color, 0.35);
+}
+
+/* === Libadwaita: Tab Bar (dark chrome) === */
+tabbar {
+    background-color: @headerbar_bg_color;
+    color: @headerbar_fg_color;
+    border-bottom: 1px solid @headerbar_border_color;
+}
+
+tabbar .tab {
+    border-radius: 6px;
+    transition: background-color 200ms;
+}
+
+tabbar .tab:hover {
+    background-color: alpha(@headerbar_fg_color, 0.1);
+}
+
+tabbar .tab:checked {
+    background-color: @window_bg_color;
+}
+
+tabbar .tab-separator {
+    background-color: alpha(@headerbar_fg_color, 0.15);
+}
+
+/* === Libadwaita: Banner === */
+banner > revealer > widget {
+    background-color: @accent_bg_color;
+    color: @accent_fg_color;
+    padding: 8px 16px;
+}
+
+/* === Libadwaita: Toast (dark chrome) === */
+.toast {
+    background-color: @popover_bg_color;
+    color: @popover_fg_color;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px @card_shade_color;
+}
+
+.toast button {
+    background-color: transparent;
+    border: none;
+    color: @accent_color;
+    font-weight: bold;
+}
+
+/* === Libadwaita: Status Page === */
+statuspage .icon {
+    color: alpha(@window_fg_color, 0.5);
+}
+
+statuspage .title {
+    color: @window_fg_color;
+    font-weight: bold;
+}
+
+statuspage .description {
+    color: alpha(@window_fg_color, 0.7);
+}
+
+/* === OSD === */
+.osd {
+    background-color: @popover_bg_color;
+    color: @popover_fg_color;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px @card_shade_color;
+}
+
+/* === Tooltip === */
+tooltip {
+    background-color: @popover_bg_color;
+    color: @popover_fg_color;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px @card_shade_color;
+}
