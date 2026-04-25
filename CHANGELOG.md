@@ -19,6 +19,35 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ---
 
+## [1.3.0] — 2026-04-25
+
+### ✨ Added
+
+#### GNOME Shell Themes
+
+- **`gnome-shell/gnome-shell.css`** added to all three theme variants
+  (`simplicity-dualtone/`, `simplicity-dark/`, `simplicity-light/`).
+  Each stylesheet themes the full GNOME Shell chrome — top panel, Activities
+  overview, app grid, panel menus and popovers, Quick Settings (GNOME 43+),
+  notifications, OSD overlays, dash dock, calendar, modal dialogs, lock screen,
+  and tooltips — using the respective variant's colour palette.
+  - **Dual-Tone** — dark panel and chrome (`#252525`) with blue accent (`#5294e2`)
+  - **Dark** — full dark chrome (`#1e1e1e`/`#2d2d2d`) with blue accent
+  - **Light** — light panel and chrome (`#ebebeb`/`#f5f5f5`) with blue accent
+- **`GnomeShellTheme`** key added to all three `index.theme` files, registering
+  the shell theme in the `[X-GNOME-Metatheme]` section so tools such as
+  GNOME Tweaks can discover and apply the shell theme automatically.
+
+#### Documentation
+
+- **`README.md`** — Repository structure updated to show `gnome-shell/` directory
+  for each variant. Supported Desktop Environments table updated with a
+  **Shell Theme** column (✅ for GNOME).
+- **`wiki/Theme-Elements.md`** — New **GNOME Shell** section added, covering
+  every themed shell component with colour references per variant.
+
+---
+
 ## [1.2.1] — 2026-04-25
 
 ### 🔄 Changed
