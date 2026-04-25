@@ -121,6 +121,40 @@ enable_user_theme_extension() {
     return 0
 }
 
+# Symlink GTK4 theme CSS so libadwaita apps (e.g. Nautilus) pick it up.
+# On GNOME 42+ (Ubuntu 22.04+, Fedora 36+) libadwaita ignores the gtk-theme
+# gsetting; placing a gtk.css in ~/.config/gtk-4.0/ is the supported way to
+# customise these apps.  This is required on Ubuntu 26.04 LTS and later.
+apply_gtk4_libadwaita() {
+    local gtk4_config_dir="${HOME}/.config/gtk-4.0"
+    local gtk4_theme_css=""
+
+    # Prefer user-installed theme location; fall back to system-wide.
+    for base in "${HOME}/.themes" "/usr/share/themes"; do
+        local candidate="${base}/${THEME_NAME}/gtk-4.0/gtk.css"
+        if [[ -f "${candidate}" ]]; then
+            gtk4_theme_css="${candidate}"
+            break
+        fi
+    done
+
+    if [[ -z "${gtk4_theme_css}" ]]; then
+        warning "GTK4 theme CSS not found for '${THEME_NAME}'. Skipping libadwaita override."
+        return 0
+    fi
+
+    info "Applying GTK4 libadwaita overrides (Nautilus / Ubuntu 26.04 fix)..."
+    run_cmd mkdir -p "${gtk4_config_dir}"
+    if ! "${DRY_RUN}"; then
+        # Remove any previous symlink or file so it can be updated cleanly.
+        rm -f "${gtk4_config_dir}/gtk.css"
+        ln -sf "${gtk4_theme_css}" "${gtk4_config_dir}/gtk.css"
+    else
+        info "[DRY-RUN] Would symlink ${gtk4_theme_css} → ${gtk4_config_dir}/gtk.css"
+    fi
+    success "GTK4 libadwaita override applied (Nautilus theme fix)."
+}
+
 # Apply theme to GNOME
 apply_gnome() {
     info "Applying ${THEME_NAME} to GNOME..."
@@ -138,6 +172,9 @@ apply_gnome() {
     else
         warning "Skipping GNOME Shell theme — user-theme extension unavailable."
     fi
+    # Symlink the GTK4 CSS so libadwaita apps (Nautilus, etc.) pick up the
+    # theme.  Required on Ubuntu 26.04+ where libadwaita ignores gtk-theme.
+    apply_gtk4_libadwaita
     success "GNOME theme applied."
 }
 
