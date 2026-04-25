@@ -150,11 +150,10 @@ Comment=A description of your theme
 GtkTheme=My Theme Name
 MetacityTheme=My Theme Name
 IconTheme=My-Icons          # optional — remove if you are not bundling icons
-CursorTheme=My-Cursors      # optional — remove if you are not bundling cursors
 ButtonLayout=close,minimize,maximize:
 ```
 
-If you are not bundling a custom icon or cursor theme, remove those keys or point them to an existing system theme (e.g. `IconTheme=Papirus-Dark`).
+If you are not bundling a custom icon theme, remove that key or point it to an existing system theme (e.g. `IconTheme=Papirus-Dark`).
 
 ---
 
