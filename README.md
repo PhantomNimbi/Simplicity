@@ -109,7 +109,7 @@ Full documentation is available in the **[GitHub Wiki](https://github.com/Phanto
 | GNOME        | ✅    | ✅    | ✅    | Metacity | ✅          |
 | XFCE         | ✅    | ✅    | —     | XFWM4    | —           |
 | MATE         | ✅    | ✅    | —     | Metacity | —           |
-| Cinnamon     | ✅    | ✅    | —     | Metacity | —           |
+| Cinnamon     | ✅    | ✅    | —     | Metacity | ✅          |
 | KDE Plasma   | ✅    | ✅    | ✅    | —        | —           |
 | Openbox      | ✅    | ✅    | —     | Openbox  | —           |
 | LXDE / LXQt  | ✅    | ✅    | —     | Openbox  | —           |
@@ -290,6 +290,8 @@ Simplicity/
 │
 ├── simplicity-dualtone/          # Default theme files (dark chrome, light content)
 │   ├── index.theme             # Theme metadata
+│   ├── cinnamon/
+│   │   └── cinnamon.css        # Cinnamon shell theme (panel, menus, notifications)
 │   ├── gnome-shell/
 │   │   └── gnome-shell.css     # GNOME Shell theme (panel, overview, menus)
 │   ├── gtk-2.0/

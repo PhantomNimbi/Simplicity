@@ -132,6 +132,7 @@ gsettings set org.mate.Marco.general theme "Simplicity"
 
 **WM theme:** Muffin (Metacity-compatible)  
 **GTK versions:** GTK 2, GTK 3  
+**Shell theme:** Cinnamon panel, menus, notifications  
 **Applied via:** `gsettings` (Cinnamon schema)
 
 ### Applying the theme
@@ -147,6 +148,7 @@ gsettings set org.cinnamon.theme name "Simplicity"
 **System Settings → Themes** → set each category:
 - **Window borders** → Simplicity
 - **Controls** → Simplicity
+- **Desktop** → Simplicity (Cinnamon shell theme)
 
 ---
 
