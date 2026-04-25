@@ -1,4 +1,4 @@
-# Simplicity — GTK Theme Suite for Linux
+# Simplicity — Linux Desktop Theme Suite
 
 > 🌐 **Translate this page:**
 > [🇪🇸 Español](https://translate.google.com/translate?sl=en&tl=es&u=https://github.com/PhantomNimbi/Simplicity/blob/main/README.md) ·
@@ -21,7 +21,7 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](https://github.com/PhantomNimbi/Simplicity/blob/main/CONTRIBUTING.md)
 [![Platform](https://img.shields.io/badge/platform-Linux-blue)](https://github.com/PhantomNimbi/Simplicity)
 
-A clean, modern GTK theme suite for Linux desktop environments, offering dual-tone, light, and dark variants with support for all major distributions and desktop environments.
+A clean, modern desktop theme suite for Linux, offering dual-tone, light, dark, and Dracula variants with GTK 2/3/4, GNOME Shell, Cinnamon Shell, window manager, and icon themes across all major distributions and desktop environments.
 
 ```
 ███████╗██╗███╗   ███╗██████╗ ██╗     ██╗ ██████╗██╗████████╗██╗   ██╗
