@@ -85,7 +85,6 @@ The following files all contain the theme name and will be updated by the comman
 | `simplicity-dracula/index.theme` | Dracula variant metadata |
 | `simplicity-dracula/cinnamon/cinnamon.css` | Cinnamon shell theme — Dracula variant |
 | `simplicity-dracula/gnome-shell/gnome-shell.css` | GNOME Shell theme — Dracula variant |
-| `simplicity-icons/index.theme` | Icon theme metadata (`Name`, `Comment`) |
 | `install.sh` | Installer — copies files and applies the theme |
 | `update.sh` | Updater — refreshes installed theme files |
 | `uninstall.sh` | Uninstaller — removes the theme |
@@ -233,15 +232,6 @@ Then apply and inspect the result:
 ├── CHANGELOG.md                # Version history
 ├── CONTRIBUTING.md             # Contribution guidelines (update or remove)
 ├── TEMPLATE_USAGE.md           # This file (remove or keep for contributors)
-│
-├── simplicity-icons/           # Icon theme (rename or remove if not bundling icons)
-│   ├── index.theme             # Icon theme metadata (Name, Comment)
-│   └── scalable/
-│       ├── apps/
-│       ├── places/
-│       ├── actions/
-│       ├── status/
-│       └── mimetypes/
 │
 ├── <theme-name>/               # Default (dual-tone) variant (rename from simplicity-dualtone/)
 │   ├── index.theme             # Theme metadata

@@ -123,15 +123,6 @@ Simplicity/
 ├── TEMPLATE_USAGE.md           # Guide to using this repo as a template
 ├── LICENSE                     # BSD 3-Clause License
 │
-├── simplicity-icons/           # Windows 11-inspired icon theme
-│   ├── index.theme             # Icon theme metadata
-│   └── scalable/
-│       ├── apps/               # Application icons
-│       ├── places/             # Place icons (folders, trash, drives)
-│       ├── actions/            # Action icons (copy, paste, undo, etc.)
-│       ├── status/             # Status icons (info, warning, error, wifi)
-│       └── mimetypes/          # File-type icons
-│
 ├── simplicity-dualtone/        # Default (dual-tone) theme variant
 ├── simplicity-light/           # Full light theme variant
 ├── simplicity-dark/            # Full dark theme variant

@@ -53,9 +53,6 @@ Each variant provides complete coverage across:
 - **XFWM4** — XFCE window manager
 - **Openbox** — also used by LXDE and LXQt
 
-Additionally, the suite ships a shared **Windows 11-inspired icon theme**:
-- **`Simplicity-Icons`** — scalable SVG icons for applications, places, actions, status indicators, and file types. Installed automatically and applied alongside the GTK theme.
-
 ---
 
 ## Supported Desktop Environments

@@ -61,18 +61,6 @@ install_theme() {
     success "Theme installed to ${target_dir}"
 }
 
-# Install the Simplicity icon theme
-install_icon_theme() {
-    local icon_target_dir="${HOME}/.local/share/icons/Simplicity-Icons"
-    info "Installing Simplicity-Icons icon theme to ${icon_target_dir}..."
-    mkdir -p "${icon_target_dir}"
-    cp -r "${REPO_ROOT}/simplicity-icons/." "${icon_target_dir}/"
-    success "Icon theme installed to ${icon_target_dir}"
-    if command -v gtk-update-icon-cache &>/dev/null; then
-        gtk-update-icon-cache -f -t "${icon_target_dir}" 2>/dev/null || true
-    fi
-}
-
 # Apply the theme using gsettings (GNOME)
 apply_gnome_theme() {
     if command -v gsettings &>/dev/null; then
@@ -130,7 +118,6 @@ main() {
     # handled by the parent script; only dependencies are needed here.
     if [[ "${SIMPLICITY_DEPS_ONLY:-0}" != "1" ]]; then
         install_theme
-        install_icon_theme
         apply_gnome_theme
         apply_xfce_theme
         configure_gtk_settings
