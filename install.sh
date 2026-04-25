@@ -174,7 +174,7 @@ install_distro_specific() {
         ubuntu|linuxmint|pop|elementary|zorin|neon|kubuntu|xubuntu|lubuntu)
             distro_installer="${SCRIPT_DIR}/distros/ubuntu/install.sh"
             ;;
-        debian|raspbian|mx|antix|kali|parrot)
+        debian|raspbian|mx|antix|kali|parrot|devuan)
             distro_installer="${SCRIPT_DIR}/distros/debian/install.sh"
             ;;
         fedora|rhel|centos|almalinux|rocky|ol|nobara)

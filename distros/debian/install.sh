@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# Simplicity Theme - Debian / MX Linux / antiX Installer
-# Supports: Debian 11 (Bullseye)+, Debian 12 (Bookworm), MX Linux 21+
+# Simplicity Theme - Debian / MX Linux / antiX / Devuan Installer
+# Supports: Debian 11 (Bullseye)+, Debian 12 (Bookworm), MX Linux 21+, Devuan
 # Package manager: apt
 
 set -euo pipefail
