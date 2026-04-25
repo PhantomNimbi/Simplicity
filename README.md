@@ -18,6 +18,10 @@
 [![License](https://img.shields.io/github/license/PhantomNimbi/Simplicity)](https://github.com/PhantomNimbi/Simplicity/blob/main/LICENSE)
 [![Last Commit](https://img.shields.io/github/last-commit/PhantomNimbi/Simplicity)](https://github.com/PhantomNimbi/Simplicity/commits/main)
 [![Open Issues](https://img.shields.io/github/issues/PhantomNimbi/Simplicity)](https://github.com/PhantomNimbi/Simplicity/issues)
+[![Stars](https://img.shields.io/github/stars/PhantomNimbi/Simplicity)](https://github.com/PhantomNimbi/Simplicity/stargazers)
+[![Forks](https://img.shields.io/github/forks/PhantomNimbi/Simplicity)](https://github.com/PhantomNimbi/Simplicity/network/members)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](https://github.com/PhantomNimbi/Simplicity/blob/main/CONTRIBUTING.md)
+[![Platform](https://img.shields.io/badge/platform-Linux-blue)](https://github.com/PhantomNimbi/Simplicity)
 
 A clean, modern GTK theme suite for Linux desktop environments, offering dual-tone, light, and dark variants with support for all major distributions and desktop environments.
 
