@@ -19,6 +19,18 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ---
 
+## [1.2.0] — 2026-04-25
+
+### ✨ Added
+
+- **Ubuntu 26.04 LTS support** — `distros/ubuntu/install.sh` and
+  `distros/ubuntu/README.md` updated to explicitly support Ubuntu 26.04 LTS
+  (Noble Numbat successor). No installer logic changes required; existing
+  apt-based dependency installation and GNOME/XFCE theme application are
+  fully compatible with Ubuntu 26.04.
+
+---
+
 ## [1.1.0] — 2026-04-24
 
 ### ✨ Added

@@ -6,7 +6,7 @@ This directory contains the installer script for Ubuntu-based distributions.
 
 | Distribution     | Versions         | Desktop Environments          |
 |-----------------|------------------|-------------------------------|
-| Ubuntu          | 20.04, 22.04, 24.04 | GNOME, XFCE, MATE, KDE       |
+| Ubuntu          | 20.04, 22.04, 24.04, 26.04 | GNOME, XFCE, MATE, KDE  |
 | Linux Mint      | 20, 21           | Cinnamon, XFCE, MATE          |
 | Pop!_OS         | 20.04, 22.04     | GNOME (COSMIC)                |
 | elementaryOS    | 6, 7             | Pantheon                      |
