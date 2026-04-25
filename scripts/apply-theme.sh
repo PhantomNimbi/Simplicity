@@ -46,13 +46,18 @@ while [[ $# -gt 0 ]]; do
             THEME_NAME="Simplicity-Dark"
             PREFER_DARK=true
             ;;
+        --dracula)
+            THEME_NAME="Simplicity-Dracula"
+            PREFER_DARK=true
+            ;;
         --help|-h)
-            echo "Usage: $0 [--dry-run] [--light] [--dark]"
+            echo "Usage: $0 [--dry-run] [--light] [--dark] [--dracula]"
             echo ""
             echo "Options:"
             echo "  --dry-run, -n   Show what would be done without making changes"
             echo "  --light         Apply the Simplicity-Light (full light) theme"
             echo "  --dark          Apply the Simplicity-Dark (full dark) theme"
+            echo "  --dracula       Apply the Simplicity-Dracula theme"
             echo "  --help, -h      Show this help message"
             exit 0
             ;;

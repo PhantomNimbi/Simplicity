@@ -19,6 +19,59 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ---
 
+## [1.4.0] — 2026-04-25
+
+### ✨ Added
+
+#### Dracula Theme Variant
+
+- **`simplicity-dracula/`** — New theme variant based on the
+  [Dracula colour palette](https://draculatheme.com). A full dark theme using
+  Dracula's signature deep-navy backgrounds with a purple accent colour.
+  - **GTK 2** (`gtk-2.0/gtkrc`) — Complete Dracula-palette gtkrc stylesheet.
+  - **GTK 3** (`gtk-3.0/gtk.css`) — Full CSS stylesheet with Dracula
+    `@define-color` variables.
+  - **GTK 3 settings** (`gtk-3.0/settings.ini`) — Sets
+    `gtk-application-prefer-dark-theme=1`.
+  - **GTK 4** (`gtk-4.0/gtk.css`) — Dracula-palette overrides for header bars,
+    sidebars, and popovers.
+  - **GNOME Shell** (`gnome-shell/gnome-shell.css`) — Full shell chrome theme
+    with `#191a21` panel and `#bd93f9` accent.
+  - **Metacity** (`metacity-1/metacity-theme-3.xml`) — Dracula-palette window
+    decorator.
+  - **XFWM4** (`xfwm4/themerc`) — XFCE window manager theme with `#21222c`
+    active titlebar and `#bd93f9` frame accent.
+  - **Openbox** (`openbox-3/themerc`) — Openbox window manager theme.
+  - **Theme metadata** (`index.theme`) — Registers `Simplicity-Dracula` with
+    `GnomeShellTheme` key so GNOME Tweaks can discover it automatically.
+
+#### Installer / Updater / Apply-Theme
+
+- **`install.sh`** — `--dracula` flag added to install `Simplicity-Dracula`
+  alongside the default dual-tone variant.
+- **`update.sh`** — `--dracula` flag added to update an existing
+  `Simplicity-Dracula` installation.
+- **`scripts/apply-theme.sh`** — `--dracula` flag added to apply the Dracula
+  variant to the current desktop session.
+
+#### Documentation
+
+- **`README.md`** — Dracula variant added to the Theme Variants table.
+  `--dracula` flag added to the Installer Options, Updater Options, and
+  apply-theme examples. `simplicity-dracula/` added to the Repository Structure
+  tree.
+- **`wiki/Home.md`** — Dracula added to the Quick Overview table.
+- **`wiki/Theme-Variants.md`** — Full Dracula section added with colour palette
+  table and usage guidance.
+- **`wiki/Colour-Palette.md`** — Dracula palette section added with all CSS
+  variable definitions.
+- **`wiki/Installation.md`** — `--dracula` flag added to the Installer
+  Reference, Apply-Theme Script Reference, and variant installation examples.
+- **`TEMPLATE_USAGE.md`** — Updated to reflect four available theme variants.
+- **`CHANGELOG.md`** — This entry.
+
+---
+
 ## [1.3.1] — 2026-04-25
 
 ### 📝 Docs

@@ -3,7 +3,7 @@
 # Refreshes installed Simplicity theme files from the repository without
 # changing any desktop-environment settings.
 #
-# Usage: ./update.sh [--system] [--no-apply] [--dark] [--light] [--help]
+# Usage: ./update.sh [--system] [--no-apply] [--dark] [--light] [--dracula] [--help]
 #
 # Options:
 #   --system      Update the system-wide installation in /usr/share/themes
@@ -12,6 +12,7 @@
 #                 session
 #   --dark        Also update the Simplicity-Dark variant (if installed)
 #   --light       Also update the Simplicity-Light variant (if installed)
+#   --dracula     Also update the Simplicity-Dracula variant (if installed)
 #   --help        Show this help message
 
 set -euo pipefail
@@ -20,10 +21,12 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 THEME_NAME="Simplicity"
 THEME_DARK_NAME="Simplicity-Dark"
 THEME_LIGHT_NAME="Simplicity-Light"
+THEME_DRACULA_NAME="Simplicity-Dracula"
 SYSTEM_INSTALL=false
 NO_APPLY=false
 UPDATE_DARK=false
 UPDATE_LIGHT=false
+UPDATE_DRACULA=false
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -54,6 +57,9 @@ while [[ $# -gt 0 ]]; do
         --light)
             UPDATE_LIGHT=true
             ;;
+        --dracula)
+            UPDATE_DRACULA=true
+            ;;
         --help|-h)
             echo "Simplicity Theme Suite Updater"
             echo ""
@@ -64,6 +70,7 @@ while [[ $# -gt 0 ]]; do
             echo "  --no-apply    Update files only; do not re-apply the theme"
             echo "  --dark        Also update the Simplicity-Dark variant"
             echo "  --light       Also update the Simplicity-Light variant"
+            echo "  --dracula     Also update the Simplicity-Dracula variant"
             echo "  --help, -h    Show this help message"
             exit 0
             ;;
@@ -110,6 +117,10 @@ update_theme_files() {
 
     if "${UPDATE_DARK}"; then
         update_variant "${THEME_DARK_NAME}" "${SCRIPT_DIR}/simplicity-dark"
+    fi
+
+    if "${UPDATE_DRACULA}"; then
+        update_variant "${THEME_DRACULA_NAME}" "${SCRIPT_DIR}/simplicity-dracula"
     fi
 }
 

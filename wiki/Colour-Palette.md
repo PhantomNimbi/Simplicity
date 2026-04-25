@@ -102,6 +102,33 @@ The dual-tone variant defines two distinct sets of variables — one for the dar
 
 ---
 
+## Dracula Variant Palette (`simplicity-dracula/`)
+
+The Dracula variant uses the [Dracula colour palette](https://draculatheme.com) — a full dark theme with deep-navy backgrounds and a purple accent.
+
+| CSS Variable | Hex | Role |
+|-------------|-----|------|
+| `bg_color` | `#282a36` | Main window and widget backgrounds |
+| `dark_bg` | `#21222c` | Sidebars, header bars, panels |
+| `darker_bg` | `#191a21` | Deepest dark surfaces (tooltips, menus) |
+| `base_color` | `#1e1f29` | Text entry, list view, tree view backgrounds |
+| `fg_color` / `text_color` | `#f8f8f2` | Primary text colour |
+| `borders` | `#44475a` | Widget and window frame borders |
+| `button_bg` | `#383a4b` | Default button background |
+| `button_hover_bg` | `#44475a` | Button background on hover |
+| `button_active_bg` | `#282a36` | Button background when pressed |
+| `header_bg` | `#21222c` | Header bar background |
+| `sidebar_bg` | `#21222c` | Sidebar background |
+| `selected_bg_color` / `accent_color` | `#bd93f9` | Selection / accent highlight (purple) |
+| `tooltip_bg_color` | `#191a21` | Tooltip background |
+| `tooltip_fg_color` | `#f8f8f2` | Tooltip text |
+| `link_color` | `#8be9fd` | Hyperlinks (cyan) |
+| `warning_color` | `#ffb86c` | Warning notifications |
+| `error_color` | `#ff5555` | Error states, close button |
+| `success_color` | `#50fa7b` | Success messages, maximise button |
+
+---
+
 ## GTK Dark-Mode Flag
 
 The `gtk-application-prefer-dark-theme` setting in each variant's `gtk-3.0/settings.ini` controls whether GTK applications use their internal dark styling:
@@ -111,6 +138,7 @@ The `gtk-application-prefer-dark-theme` setting in each variant's `gtk-3.0/setti
 | `Simplicity-Dark` | `gtk-application-prefer-dark-theme=1` | Applications render dark-mode widgets |
 | `Simplicity` | `gtk-application-prefer-dark-theme=0` | Applications render light-mode widgets |
 | `Simplicity-Light` | `gtk-application-prefer-dark-theme=0` | Applications render light-mode widgets |
+| `Simplicity-Dracula` | `gtk-application-prefer-dark-theme=1` | Applications render dark-mode widgets |
 
 ---
 

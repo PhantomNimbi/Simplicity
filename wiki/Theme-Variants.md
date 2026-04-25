@@ -13,7 +13,7 @@
 > [🇸🇦 العربية](https://translate.google.com/translate?sl=en&tl=ar&u=https://github.com/PhantomNimbi/Simplicity/blob/main/wiki/Theme-Variants.md) ·
 > [🇮🇳 हिन्दी](https://translate.google.com/translate?sl=en&tl=hi&u=https://github.com/PhantomNimbi/Simplicity/blob/main/wiki/Theme-Variants.md)
 
-Simplicity ships three distinct theme variants. Each is a self-contained set of files covering GTK 2, GTK 3, GTK 4, and all supported window managers.
+Simplicity ships four distinct theme variants. Each is a self-contained set of files covering GTK 2, GTK 3, GTK 4, and all supported window managers.
 
 ---
 
@@ -119,18 +119,55 @@ Choose the Light variant if you:
 
 ---
 
+## Simplicity-Dracula — Dracula Palette
+
+> **Theme name:** `Simplicity-Dracula`  
+> **Source directory:** `simplicity-dracula/`
+
+The Dracula variant applies the iconic [Dracula colour palette](https://draculatheme.com) consistently across all surfaces — a full dark theme with deep-navy backgrounds and a distinctive purple accent colour.
+
+![Dracula variant](screenshots/variant-dracula.png)
+
+### Colour palette
+| Role | Value |
+|------|-------|
+| Main background | `#282a36` |
+| Dark background (panels) | `#21222c` |
+| Deepest background | `#191a21` |
+| Base (inputs, trees) | `#1e1f29` |
+| Foreground / text | `#f8f8f2` |
+| Borders | `#44475a` |
+| Button background | `#383a4b` |
+| Button hover | `#44475a` |
+| Button pressed | `#282a36` |
+| Accent / selection | `#bd93f9` (purple) |
+| Error | `#ff5555` |
+| Warning | `#ffb86c` |
+| Success | `#50fa7b` |
+| Link | `#8be9fd` |
+| Tooltip background | `#191a21` |
+
+### When to use
+Choose the Dracula variant if you:
+- Are already using the Dracula colour scheme across your terminal, editor, or other tools and want a consistent desktop
+- Prefer the distinctive purple accent over the default blue
+- Want a fully dark environment with a well-established, community-recognised palette
+
+---
+
 ## Side-by-Side Comparison
 
-| Element | Dark | Light | Dual-Tone |
-|---------|------|-------|-----------|
-| Header bar | `#252525` dark | `#ebebeb` light | `#252525` **dark** |
-| Sidebar | `#2a2a2a` dark | `#f0f0f0` light | `#2a2a2a` **dark** |
-| Window body | `#2d2d2d` dark | `#f5f5f5` light | `#f5f5f5` **light** |
-| Text entries | `#1e1e1e` dark | `#ffffff` light | `#ffffff` **light** |
-| Primary text | `#e0e0e0` light | `#2d2d2d` dark | mixed |
-| GTK dark-mode flag | `1` (on) | `0` (off) | `0` (off) |
+| Element | Dark | Light | Dual-Tone | Dracula |
+|---------|------|-------|-----------|---------|
+| Header bar | `#252525` dark | `#ebebeb` light | `#252525` **dark** | `#21222c` dark |
+| Sidebar | `#2a2a2a` dark | `#f0f0f0` light | `#2a2a2a` **dark** | `#21222c` dark |
+| Window body | `#2d2d2d` dark | `#f5f5f5` light | `#f5f5f5` **light** | `#282a36` dark |
+| Text entries | `#1e1e1e` dark | `#ffffff` light | `#ffffff` **light** | `#1e1f29` dark |
+| Primary text | `#e0e0e0` light | `#2d2d2d` dark | mixed | `#f8f8f2` light |
+| Accent colour | `#5294e2` blue | `#5294e2` blue | `#5294e2` blue | `#bd93f9` **purple** |
+| GTK dark-mode flag | `1` (on) | `0` (off) | `0` (off) | `1` (on) |
 
-All three variants share the same accent, error, warning, and success colours (`#5294e2`, `#cf6679`, `#e5a050`, `#4caf50`).
+All variants share the same error (`#cf6679` / `#ff5555`), warning (`#e5a050` / `#ffb86c`), and success (`#4caf50` / `#50fa7b`) colours within their respective palettes. The Dracula variant uses the Dracula-specific versions of these state colours.
 
 ---
 
@@ -139,13 +176,14 @@ All three variants share the same accent, error, warning, and success colours (`
 You can install all variants in a single command:
 
 ```bash
-./install.sh --dark --light
+./install.sh --dark --light --dracula
 ```
 
 This installs:
 - `Simplicity` (dual-tone) → `~/.themes/Simplicity/`
 - `Simplicity-Dark` → `~/.themes/Simplicity-Dark/`
 - `Simplicity-Light` → `~/.themes/Simplicity-Light/`
+- `Simplicity-Dracula` → `~/.themes/Simplicity-Dracula/`
 
 To switch between installed variants without reinstalling:
 
@@ -155,6 +193,9 @@ To switch between installed variants without reinstalling:
 
 # Apply the light variant
 ./scripts/apply-theme.sh --light
+
+# Apply the Dracula variant
+./scripts/apply-theme.sh --dracula
 
 # Apply the default dual-tone variant
 ./scripts/apply-theme.sh
