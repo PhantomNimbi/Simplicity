@@ -115,20 +115,50 @@ Before making changes, familiarise yourself with how the project is organised:
 ```
 Simplicity/
 ├── install.sh                  # Main installer (auto-detects distro)
+├── update.sh                   # Updater (refreshes installed theme files)
 ├── uninstall.sh                # Uninstaller
-├── scripts/
-│   ├── detect-distro.sh        # Distro and package-manager detection
-│   └── apply-theme.sh          # Desktop-environment-aware theme applicator
+├── README.md                   # End-user documentation
+├── CHANGELOG.md                # Version history
+├── CONTRIBUTING.md             # This file
+├── TEMPLATE_USAGE.md           # Guide to using this repo as a template
+├── LICENSE                     # BSD 3-Clause License
+│
+├── simplicity-icons/           # Windows 11-inspired icon theme
+│   ├── index.theme             # Icon theme metadata
+│   └── scalable/
+│       ├── apps/               # Application icons
+│       ├── places/             # Place icons (folders, trash, drives)
+│       ├── actions/            # Action icons (copy, paste, undo, etc.)
+│       ├── status/             # Status icons (info, warning, error, wifi)
+│       └── mimetypes/          # File-type icons
+│
 ├── simplicity-dualtone/        # Default (dual-tone) theme variant
 ├── simplicity-light/           # Full light theme variant
 ├── simplicity-dark/            # Full dark theme variant
-└── distros/                    # Per-distro dependency installers
-    ├── ubuntu/
-    ├── debian/
-    ├── fedora/
-    ├── arch/
-    ├── manjaro/
-    └── opensuse/
+├── simplicity-dracula/         # Dracula colour palette variant
+│
+├── screenshots/                # Preview images
+│
+├── wiki/                       # Extended documentation
+│   ├── Home.md
+│   ├── Theme-Variants.md
+│   ├── Theme-Elements.md
+│   ├── Colour-Palette.md
+│   ├── Installation.md
+│   ├── Desktop-Environments.md
+│   └── Troubleshooting.md
+│
+├── distros/                    # Per-distro dependency installers
+│   ├── ubuntu/
+│   ├── debian/
+│   ├── fedora/
+│   ├── arch/
+│   ├── manjaro/
+│   └── opensuse/
+│
+└── scripts/
+    ├── detect-distro.sh        # Distro and package-manager detection
+    └── apply-theme.sh          # Desktop-environment-aware theme applicator
 ```
 
 Each theme variant follows the same directory layout:
@@ -160,7 +190,7 @@ Each theme variant follows the same directory layout:
 - All scripts must be written in **`bash`**. Do not use `zsh`, `fish`, or other shells.
 - Use `set -euo pipefail` at the top of any new script.
 - Print user-facing messages with consistent prefixes already used in the project (`[INFO]`, `[OK]`, `[WARN]`, `[ERROR]`).
-- New flags or options in `install.sh` or `apply-theme.sh` must be documented in the `--help` output and in `README.md`.
+- New flags or options in `install.sh`, `update.sh`, or `apply-theme.sh` must be documented in the `--help` output and in `README.md`.
 - Keep scripts idempotent where possible — running them a second time should not break anything.
 
 ### Adding Distribution Support
