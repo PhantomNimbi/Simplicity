@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Simplicity-Dracula
+Comment=A clean and modern Linux desktop theme suite with Dracula color palette
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Simplicity-Dracula
+MetacityTheme=Simplicity-Dracula
+GnomeShellTheme=Simplicity-Dracula
+IconTheme=Simplicity-Icons
+CursorTheme=Simplicity-Cursors
+ButtonLayout=close,minimize,maximize:

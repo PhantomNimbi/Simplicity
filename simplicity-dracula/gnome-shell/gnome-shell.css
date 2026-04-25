@@ -1,0 +1,354 @@
+/* Simplicity-Dracula GNOME Shell Theme
+ * Full dark theme for panel, overview, menus, and notifications
+ * Based on the Dracula color palette (https://draculatheme.com)
+ * Requires: GNOME Shell User Themes extension
+ * Compatible with: GNOME Shell 40+
+ */
+
+/* === Color Variables === */
+@panel_bg:          #191a21;
+@panel_fg:          #f8f8f2;
+@panel_border:      #44475a;
+
+@overview_bg:       rgba(25, 26, 33, 0.97);
+
+@menu_bg:           #282a36;
+@menu_fg:           #f8f8f2;
+@menu_border:       #44475a;
+@menu_hover_bg:     #bd93f9;
+@menu_hover_fg:     #f8f8f2;
+
+@notification_bg:   rgba(33, 34, 44, 0.94);
+@notification_fg:   #f8f8f2;
+
+@accent_color:      #bd93f9;
+
+/* =========================================================
+ * Top Panel
+ * ========================================================= */
+
+#panel {
+    background-color: @panel_bg;
+    color: @panel_fg;
+    border-bottom: 1px solid @panel_border;
+    height: 32px;
+    font-size: 0.9em;
+    font-weight: normal;
+}
+
+#panel .panel-button {
+    color: @panel_fg;
+    padding: 0 8px;
+    border-radius: 4px;
+    transition-duration: 150ms;
+}
+
+#panel .panel-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+#panel .panel-button:active,
+#panel .panel-button:checked {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+}
+
+#panel .panel-button .system-status-icon {
+    icon-size: 16px;
+}
+
+#panel #panelActivities {
+    padding: 0 10px;
+}
+
+#panel .clock-display {
+    color: @panel_fg;
+}
+
+#panel .panel-status-indicators-box {
+    spacing: 2px;
+}
+
+/* =========================================================
+ * Overview / Activities
+ * ========================================================= */
+
+.overview-controls {
+    spacing: 16px;
+}
+
+.search-entry {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: @panel_fg;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 20px;
+    padding: 6px 14px;
+    caret-color: @accent_color;
+}
+
+.search-entry:focus {
+    border-color: @accent_color;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.workspace-thumbnail-indicator {
+    border: 2px solid @accent_color;
+    border-radius: 4px;
+}
+
+/* =========================================================
+ * App Grid (overview)
+ * ========================================================= */
+
+.icon-grid .overview-icon {
+    color: #ffffff;
+}
+
+.app-well-app:hover .overview-icon,
+.app-well-app:focus .overview-icon {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+}
+
+.app-well-app:active .overview-icon {
+    background-color: rgba(189, 147, 249, 0.3);
+    border-radius: 12px;
+}
+
+/* =========================================================
+ * Panel Menus / Popovers
+ * ========================================================= */
+
+.panel-menu,
+.popup-menu {
+    background-color: @menu_bg;
+    color: @menu_fg;
+    border: 1px solid @menu_border;
+    border-radius: 8px;
+    padding: 4px 0;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+}
+
+.popup-menu-item {
+    padding: 7px 18px;
+    border-radius: 4px;
+    color: @menu_fg;
+    transition-duration: 150ms;
+}
+
+.popup-menu-item:hover,
+.popup-menu-item:focus {
+    background-color: @menu_hover_bg;
+    color: @menu_hover_fg;
+}
+
+.popup-menu-item:active {
+    background-color: rgba(189, 147, 249, 0.7);
+    color: @menu_hover_fg;
+}
+
+.popup-menu-item:disabled {
+    color: rgba(248, 248, 242, 0.4);
+}
+
+.popup-separator-menu-item {
+    background-color: @menu_border;
+    height: 1px;
+    margin: 4px 8px;
+    padding: 0;
+}
+
+.popup-menu-item > StIcon.popup-menu-arrow {
+    color: rgba(248, 248, 242, 0.6);
+}
+
+/* =========================================================
+ * Quick Settings (GNOME 43+)
+ * ========================================================= */
+
+.quick-settings {
+    background-color: @menu_bg;
+    border: 1px solid @menu_border;
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+    color: @menu_fg;
+}
+
+.quick-toggle {
+    background-color: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: @menu_fg;
+    transition-duration: 150ms;
+}
+
+.quick-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+.quick-toggle:checked {
+    background-color: @accent_color;
+    border-color: rgba(189, 147, 249, 0.6);
+    color: #f8f8f2;
+}
+
+/* =========================================================
+ * Notifications
+ * ========================================================= */
+
+.notification-banner {
+    background-color: @notification_bg;
+    color: @notification_fg;
+    border: 1px solid @panel_border;
+    border-radius: 10px;
+    padding: 12px 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.notification-banner .notification-title {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.notification-banner .notification-body {
+    color: rgba(248, 248, 242, 0.85);
+}
+
+/* =========================================================
+ * OSD (Volume / Brightness overlay)
+ * ========================================================= */
+
+.osd {
+    background-color: rgba(33, 34, 44, 0.94);
+    color: @notification_fg;
+    border: 1px solid @panel_border;
+    border-radius: 10px;
+    padding: 14px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.osd-progress {
+    height: 4px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.osd-progress > StWidget {
+    background-color: @accent_color;
+    border-radius: 4px;
+}
+
+/* =========================================================
+ * Dash (app dock in overview)
+ * ========================================================= */
+
+#dash {
+    background-color: rgba(25, 26, 33, 0.85);
+    border: 1px solid @panel_border;
+    border-radius: 16px;
+    padding: 4px 8px;
+}
+
+#dash .dash-item-container > StWidget.app-well-app > .overview-icon {
+    border-radius: 10px;
+}
+
+#dash .dash-item-container > StWidget.app-well-app:hover > .overview-icon {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#dash .dash-item-container > StWidget.app-well-app.running-app > .overview-icon {
+    background-color: rgba(189, 147, 249, 0.15);
+}
+
+/* =========================================================
+ * Calendar
+ * ========================================================= */
+
+.datemenu-today-button {
+    border-radius: 6px;
+    padding: 4px 10px;
+}
+
+.datemenu-today-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* =========================================================
+ * Modal dialogs
+ * ========================================================= */
+
+.modal-dialog {
+    background-color: @menu_bg;
+    color: @menu_fg;
+    border: 1px solid @menu_border;
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7);
+}
+
+.modal-dialog .header-text {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.modal-dialog StButton {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+    color: @menu_fg;
+    padding: 8px 18px;
+    transition-duration: 150ms;
+}
+
+.modal-dialog StButton:hover {
+    background-color: rgba(255, 255, 255, 0.18);
+}
+
+.modal-dialog StButton.suggested-action {
+    background-color: @accent_color;
+    border-color: rgba(189, 147, 249, 0.7);
+    color: #f8f8f2;
+}
+
+.modal-dialog StButton.destructive-action {
+    background-color: #ff5555;
+    border-color: rgba(255, 85, 85, 0.7);
+    color: #ffffff;
+}
+
+/* =========================================================
+ * Lock Screen
+ * ========================================================= */
+
+.unlock-dialog {
+    background-color: rgba(25, 26, 33, 0.9);
+    color: @notification_fg;
+}
+
+.unlock-dialog-clock {
+    color: #ffffff;
+    font-size: 4em;
+    font-weight: 300;
+}
+
+.unlock-dialog-clock-date {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.1em;
+}
+
+/* =========================================================
+ * Tooltip
+ * ========================================================= */
+
+.tooltip {
+    background-color: rgba(25, 26, 33, 0.97);
+    color: @notification_fg;
+    border: 1px solid @panel_border;
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 0.9em;
+}
