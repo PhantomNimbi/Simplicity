@@ -48,7 +48,7 @@ A clean, modern desktop theme for Linux, available in dual-tone, light, dark, an
 
 ## Documentation
 
-Full documentation is available in the **[GitHub Wiki](https://github.com/PhantomNimbi/Simplicity/blob/main/wiki/Home.md)**:
+Full documentation is available in the **[Wiki](https://github.com/PhantomNimbi/Simplicity/blob/main/wiki/Home.md)**:
 
 | Page | Description |
 |------|-------------|
